@@ -1,0 +1,96 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../../bower_components/paper-fab/paper-fab.html">
+
+<dom-module id="hero-fab">
+  <template>
+    <style>
+      :host {
+        display: inline-block;
+        border-radius: 50%;
+        position: fixed;
+        right: -5px;
+        bottom: 10px;
+        background: inherit;
+        transition: transform ease .3s;
+      }
+      paper-fab {
+        color: inherit;
+        background: inherit;
+        z-index: 10000;
+      }
+      #hero {
+        top: 35%;
+        left: 35%;
+        position: absolute;
+        height: 20px;
+        width: 20px;
+        clip-path: circle(50% at center);
+        shape-inside: circle(50% at center);
+        background: white;
+        transition: ease .3s;
+        z-index: 9999;
+      }
+      #hero.anim {
+        top: -90vw;
+        left: -90vw;
+        height: 180vw;
+        width: 180vw;
+      }
+      @media screen and (max-width: 600px) {
+        #hero.anim {
+          top: -200vw;
+          left: -200vw;
+          height: 400vw;
+          width: 400vw;
+        }
+      }
+      @media screen and (min-width: 501px) {
+        :host {
+          position: absolute;
+          right: -25px;
+          bottom: -25px;
+          transform: none !important;
+        }
+      }
+    </style>
+    <div id="hero"></div>
+    <paper-fab icon="{{icon}}" on-tap="animateRedirect" mini="{{mini}}">
+    </paper-fab>
+  </template>
+  <script>
+    class HeroFab extends Polymer.Element {
+      static get is() { return 'hero-fab'; }
+      static get properties() {
+        return {
+          icon: String,
+          href: String,
+          mini: Boolean
+        };
+      }
+      constructor() {
+        super();
+      }
+      connectedCallback() {
+        super.connectedCallback();
+      }
+
+      animateRedirect(e) {
+        this.$.hero.classList.add('anim');
+        document.body.style.transition = 'opacity ease .3s';
+        setTimeout(function() {
+          document.body.style.opacity = '0';
+        }.bind(this), 200);
+        setTimeout(function() {
+          location.href = location.origin + this.href;
+        }.bind(this), 400);
+      }
+      fadeOut() {
+        this.style.transform = 'scale(0)';
+      }
+      fadeIn() {
+        this.style.transform = 'scale(1)';
+      }
+    }
+    customElements.define(HeroFab.is, HeroFab);
+  </script>
+</dom-module>

@@ -1,0 +1,343 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+
+<dom-module id="main-theme">
+  <template>
+    <style>
+      app-toolbar.tall { height: calc(100vh - 64px); }
+      .slogan {
+        display: inline-flex;
+        pointer-events: auto;
+        margin-top: -190px;
+        text-align: center;
+      }
+      .slogan .left {
+        padding-top: 30vh;
+        float: left;
+      }
+      .slogan .right {
+        float: right;
+      }
+      .slogan h1 {
+        font-size: 3rem;
+        font-weight: bold;
+        font-family: 'Roboto';
+        line-height: 45px;
+      }
+      .slogan div {
+        font-size: 1.4rem;
+      }
+      .slogan  paper-icon-button {
+        font-weight: bold;
+        color: #2d2d2d;
+        padding: 0;
+      }
+      .slogan  paper-button {
+        margin-top: 20px;
+        background: var(--default-contact-color);
+        border-radius: 5px;
+        color: white;
+        font-weight: bold;
+        padding: 10px;
+      }
+      .slogan img {
+        margin-top: 20vh;
+        height: 75vh;
+        right: 0;
+      }
+      .vertical-content {
+          display: block;
+      }
+      .button {
+        text-align: center;
+        --paper-icon-button: {
+          width: 96px;
+          height: 96px;
+        }
+      }
+      .home-section {
+        position: relative;
+        height: calc(100vh - 134px);
+      }
+      .home-section h2 {
+        font-size: 2.5rem;
+        margin: 20px;
+      }
+      .home-section .image {
+        float: left;
+        background: #f2f2f2;
+      }
+      .home-section .main-img {
+        width: 70vh;
+        height: 70vh;
+        max-width: 60%;
+      }
+      .home-section .resume {
+        font-size: 1.4rem;
+        float: left;
+        max-height: 64vh;
+        width: calc(100% - 70vh - 130px);
+        min-width: 35%;
+        overflow: hidden;
+        padding: 0 20px 0 30px;
+      }
+      .home-section .divider {
+        position: relative;
+        height: 5px;
+        max-width: 90%;
+        margin-top: -5px;
+        clear: both;
+        color: white;
+      }
+
+      #artist .divider {
+        background: var(--default-artist-color);
+      }
+
+      #project .divider {
+        background: var(--default-project-color);
+      }
+
+      #collection .divider {
+        background: var(--default-collection-color);
+      }
+      #collection .divider hero-fab {
+      }
+
+      #collection .resume,
+      #collection .image {
+         float: right;
+      }
+      #collection .main-img {
+         width: 70vh;
+         height: 70vh;
+      }
+      #collection .resume {
+        width: calc(100% - 70vh - 20px);
+        padding: 10px;
+        min-width: unset;
+      }
+      #collection .divider {
+        left:10%;
+      }
+      #collection hero-fab {
+        position: absolute;
+        right: unset;
+        background: inherit;
+      }
+
+      @media only screen and (min-width: 400px) {
+        .masonry {
+          -moz-column-count: 2;
+          -webkit-column-count: 2;
+           column-count: 2;
+        }
+      }
+
+      @media only screen and (min-width: 700px) {
+        .masonry {
+          -moz-column-count: 3;
+          -webkit-column-count: 3;
+          column-count: 3;
+        }
+      }
+
+      #contact {
+        height: 360px;
+        min-height: 0;
+      }
+      .contact-wrapper {
+        display: flex;
+        flex-direction: row;
+        height: 200px;
+
+      }
+      .contact-wrapper .description {
+        padding: 20px 30px 0 0;
+        font-size: 1rem;
+      }
+      .email iron-icon {
+        color: white;
+        background: @default-contact-color;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        padding: 7px;
+        margin: 0 10px;
+      }
+      .contact-wrapper .formfields,
+      .contact-wrapper .description {
+        flex: 1;
+        width: 100%;
+      }
+      @media screen and (min-width: 1101px) {
+        .home-section .resume p {
+          line-height: 8vh;
+        }
+      }
+      @media screen and (max-width: 1100px) {
+        .home-section .resume {
+          font-size: 1.2rem;
+        }
+        .home-section p {
+          line-height: 7vh;
+        }
+      }
+
+      @media screen and (max-width: 960px) {
+        #collection,
+        #project,
+        .home-section {
+          height: auto;
+        }
+        .home-section .main-img {
+          width: 50%;
+          height: 70vh;
+        }
+        #project .resume,
+        .home-section .resume {
+          width: calc(50% - 40px);
+          max-height: 62vh;
+          font-size: 1rem;
+          padding: 0 20px;
+          overflow: hidden;
+        }
+        #project .main-img,
+        .home-section .main-img {
+            width: 50%;
+            height: 70vh;
+        }
+      }
+
+      @media screen and (max-width: 660px) {
+        .image {
+          float: none;
+        }
+        #collection,
+        #project,
+        .container > section.home-section {
+          min-height: calc(100vh - 100px);
+        }
+        #collection section.home-section h2,
+        .container > section.home-section h2 {
+          font-size: 1.6rem;
+          margin: 20px;
+        }
+        #collection .main-img,
+        #project .main-img,
+        .container > section.home-section .main-img {
+          max-width: 100%;
+          width: 100%;
+          max-height: 50vh;
+        }
+        #artist .resume,
+        #collection .resume,
+        #project .resume {
+          float: none;
+          width: 100%;
+          font-size: 0.9rem;
+          max-height: 30vh;
+          text-align: left;
+          margin-bottom: 0;
+          padding: 20px 5px;
+        }
+        .resume p {
+          line-height: 5vh;
+        }
+        .divider {
+          max-width: 90%;
+          height: 0;
+        }
+        #collection .divider {
+          max-width: 90%;
+        }
+        #contact {
+          height: 65vh;
+        }
+        .contact-wrapper {
+          display: block;
+          height: calc(65vh - 100px);
+        }
+        .contact-wrapper .formfields,
+        .contact-wrapper .description {
+          flex: 1;
+          width: 100%;
+        }
+        .contact-wrapper .description {
+          padding: 10px 0 40px;
+          font-size: 1rem;
+        }
+        .contact-wrapper .email iron-icon {
+          color: white;
+          background: @default-contact-color;
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          padding: 7px;
+          margin: 0 10px;
+        }
+      }
+      @media screen and (max-width: 500px) {
+        .slogan {
+          margin-top: -190px;
+        }
+        #artist hero-fab,
+        #collection hero-fab,
+        #project hero-fab {
+          position: fixed;
+          left: unset;
+          right: 20px;
+          bottom: 20px;
+          z-index: 999999;
+        }
+        #collection .divider {
+          height: 0;
+        }
+        .slogan h1 {
+          font-size: 2rem;
+          line-height: 3rem;
+          font-weight: bold;
+          font-family: 'Roboto';
+        }
+        .slogan div {
+          font-size: 1rem;
+        }
+        .slogan paper-icon-button {
+          font-weight: bold;
+          color: #2d2d2d;
+          padding: 0;
+        }
+        .container > section.home-section h2 {
+          display: none;
+        }
+        .container > section.home-section .divider {
+          position: absolute;
+          bottom: 37px;
+          right: 22px;
+        }
+        #contact {
+          height: 450px;
+        }
+        #contact p {
+          display: none;
+        }
+        #contact .email {
+          text-align: center;
+          line-height: 2.5rem;
+        }
+      }
+      app-header[condenses] {
+        --app-header-background-front-layer: {
+          /* background-image: url(/images/home.png); */
+          background: rgba(0, 0, 0, 0) linear-gradient(to right, #00c9fd 0%, #3c5a99 100%) repeat scroll 0 0 ;
+          background-position: center;
+        };
+      }
+
+      paper-textarea,
+      paper-input {
+        --paper-input-container-color: #ccc;
+      }
+
+    </style>
+  <template>
+</dom-module>

@@ -1,0 +1,159 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../../bower_components/paper-tabs/paper-tabs.html">
+<link rel="import" href="./recolor-tabs.html">
+
+<dom-module id="home-tabs">
+  <template>
+    <style>
+      :host {
+        position: relative;
+        display: block;
+        --selection-color: var(--default-artist-color);
+      }
+      #logo {
+        position: absolute;
+        top: -50px;
+        left: 15px;
+        width: 45px;
+        height: 45px;
+      }
+      #collapsed {
+        position: absolute;
+        background: linear-gradient(to top, rgba(0,0,0,.3), transparent);
+        color: #FFF;
+        top: -10px;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        padding: 10px 0;
+      }
+      #collapsed paper-tabs { color: #FFF; }
+      paper-tabs {
+        background-color: transparent;
+        color: #000;
+        margin: 0 15px;
+        --paper-tabs-selection-bar-color: var(--selection-color);
+      }
+      paper-tabs paper-tab {
+        min-width: 65px;
+        text-align: center;
+        text-transform: uppercase;
+      }
+      paper-tabs a {
+        display: inline-block;
+        padding-top: 25px;
+        color: inherit;
+        text-decoration: none;
+        font-weight: bold;
+      }
+      paper-tabs a:hover {
+        text-decoration: none;
+      }
+      div.bottom {
+        @apply --layout-horizontal;
+      }
+      div.flex {
+        @apply --layout-flex;
+      }
+      @media screen and (max-width: 500px) {
+        :host {
+          display: none;
+        }
+      }
+    </style>
+    <div class="bottom" id="main">
+      <div class="flex"></div>
+      <paper-tabs noink attr-for-selected="id" selected="{{selected}}">
+        <paper-tab id="artist" class="artist" on-tap="tapAnchor">
+          O artista
+        </paper-tab>
+        <paper-tab id="collection" class="collection" on-tap="tapAnchor">
+          Acervo
+        </paper-tab>
+        <paper-tab id="project" class="project" on-tap="tapAnchor">
+          Projeto
+        </paper-tab>
+        <paper-tab id="contact" class="contact" on-tap="tapAnchor">
+          Contato
+        </paper-tab>
+      </paper-tabs>
+    </div>
+    <div class="bottom" id="collapsed">
+      <div class="flex"></div>
+      <paper-tabs noink attr-for-selected="id" selected="{{selected}}">
+        <paper-tab id="artist" class="artist" on-tap="tapAnchor">
+          O artista
+        </paper-tab>
+        <paper-tab id="collection" class="collection" on-tap="tapAnchor">
+          Acervo
+        </paper-tab>
+        <paper-tab id="project" class="project" on-tap="tapAnchor">
+          Projeto
+        </paper-tab>
+        <paper-tab id="contact" class="contact" on-tap="tapAnchor">
+          Contato
+        </paper-tab>
+      </paper-tabs>
+    </div>
+    <a id="logo" href="#"></a>
+  </template>
+  <script>
+    class HomeTabs extends Polymer.Element {
+      static get is() { return 'home-tabs'; }
+      static get properties() {
+        return {
+          selected: {
+            type: String,
+            observer: 'setSelectedColor',
+            notify: true
+          },
+          sectionHeight: {
+            type: Number
+          },
+          headerTitle: {
+            type: String,
+            notify: true
+          },
+          timeout: Object
+        };
+      }
+
+      constructor() {
+        super();
+      }
+
+      connectedCallback() {
+        super.connectedCallback();
+        this.$.logo.addEventListener('click', this.tapAnchor.bind(this));
+        window.addEventListener('scroll', this.setScrollSection.bind(this));
+      }
+
+      disconnectedCallback() {
+        super.disconnetedCallback();
+        this.$.logo.removeEventListener('click', this.tapAnchor.bind(this));
+        window.removeEventListener('scroll', this.setScrollSection);
+      }
+
+      setSelectedColor(selected) {
+        if(!this.shadowRoot.querySelector('paper-tabs')) return;
+        if (!selected) return;
+        const colorVar = `var(--default-${selected}-color)`;
+        this.updateStyles({ '--selection-color': colorVar });
+      }
+
+      tapAnchor(e) {
+        this.dispatchEvent(new CustomEvent('tab-changed', { detail: {tapped: e.target.id } }));
+      }
+
+      setScrollSection(e) {
+        const regions = ['', 'artist', 'collection', 'project', 'contact'];
+        const index = Math.round(window.scrollY/this.sectionHeight);
+        clearTimeout(this.timeout);
+        this.timeout = setTimeout(function () {
+          this.selected = regions[index];
+        }.bind(this), 40);
+      }
+    }
+    customElements.define(HomeTabs.is, HomeTabs);
+  </script>
+</dom-module>

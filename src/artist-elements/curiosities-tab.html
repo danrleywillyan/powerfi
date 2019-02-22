@@ -1,0 +1,136 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+
+<dom-module id="curiosities-tab">
+  <template>
+    <style>
+      :host {
+        display: block;
+        padding: 20px 40px;
+        min-height: 100vh;
+      }
+      p {
+        font-family: 'Comfortaa', cursive !important;
+        opacity: 0.7;
+      }
+      .tab-heading {
+        margin: 0;
+        font-size: 4rem;
+      }
+      .curiosity {
+        display: flex;
+        margin-top: 20px;
+      }
+      .curiosity:not(:last-child) {
+        margin-bottom: 40px;
+      }
+      .curiosity-text {
+        flex: 1;
+        margin-right: 80px;
+      }
+      .curiosity-text h1 {
+        margin-top: 0;
+      }
+      .curiosity-video {
+        flex: 1;
+      }
+      @media screen and (max-width: 960px) {
+        .tab-heading {
+          font-size: 3.5rem;
+        }
+        .curiosity {
+          display: block;
+          margin-top: 20px;
+        }
+      }
+      @media screen and (max-width: 800px) {
+        h1 {
+          font-size: 1.8rem;
+        }
+      }
+      @media screen and (max-width: 660px) {
+        :host {
+          display: block;
+          padding: 20px 20px;
+        }
+        .tab-heading {
+          font-size: 2.3rem;
+        }
+        h1 {
+          font-size: 1.3rem;
+        }
+      }
+      @media screen and (max-width: 500px) {
+        h1 {
+          font-size: 1.3rem;
+        }
+      }
+    </style>
+
+    <div class="content">
+      <h1 class="tab-heading">Curiosidades</h1>
+      <div class="curiosity">
+        <div class="curiosity-text">
+          <h1>Atomizador</h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+            euismod at eros sit amet congue. Ut id dictum neque, vitae aliquam
+            tellus. Aliquam a varius tellus. Mauris lacinia finibus felis sit
+            amet maximus. Vivamus bibendum a lectus eu mollis. Vivamus
+            dignissim fermentum libero at vulputate. Curabitur ac rhoncus purus.
+          </p>
+        </div>
+        <div class="curiosity-video">
+          <video width="100%" height="auto" controls>
+            <source src="../../images/mov_bbb.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <div class="curiosity">
+        <div class="curiosity-text">
+          <h1>Pincéis</h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+            euismod at eros sit amet congue. Ut id dictum neque, vitae aliquam
+            tellus. Aliquam a varius tellus. Mauris lacinia finibus felis sit
+            amet maximus. Vivamus bibendum a lectus eu mollis. Vivamus
+            dignissim fermentum libero at vulputate. Curabitur ac rhoncus purus.
+          </p>
+        </div>
+        <div class="curiosity-video">
+          <video width="100%" height="auto" controls>
+            <source src="../../images/mov_bbb.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <div class="curiosity">
+        <div class="curiosity-text">
+          <h1>Tintas</h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+            euismod at eros sit amet congue. Ut id dictum neque, vitae aliquam
+            tellus. Aliquam a varius tellus. Mauris lacinia finibus felis sit
+            amet maximus. Vivamus bibendum a lectus eu mollis. Vivamus
+            dignissim fermentum libero at vulputate. Curabitur ac rhoncus purus.
+          </p>
+        </div>
+        <div class="curiosity-video">
+          <video width="100%" height="auto" controls>
+            <source src="../../images/mov_bbb.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+
+  </template>
+
+  <script>
+    class CuriositiesTab extends Polymer.Element {
+      static get is() { return 'curiosities-tab'; }
+      static get properties() {
+        return {};
+      }
+    }
+
+    window.customElements.define(CuriositiesTab.is, CuriositiesTab);
+  </script>
+</dom-module>

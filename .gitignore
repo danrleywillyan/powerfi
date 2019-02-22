@@ -1,0 +1,6 @@
+build/
+node_modules/
+.vagrant*
+ubuntu*
+Vagrantfile
+bower_components*

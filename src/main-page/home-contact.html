@@ -1,0 +1,83 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../../bower_components/paper-input/paper-input.html">
+<link rel="import" href="../../bower_components/paper-card/paper-card.html">
+<link rel="import" href="../../bower_components/paper-input/paper-textarea.html">
+<link rel="import" href="../../bower_components/paper-button/paper-button.html">
+
+<dom-module id="home-contact">
+  <template>
+    <style>
+      :host {
+        display: block;
+        height: 200px;
+      }
+      paper-card {
+        width: 100%;
+        padding: 40px;
+        height: 440px;
+      }
+      paper-textarea,
+      paper-input {
+        --paper-input-container-color: #ccc;
+        --paper-input-container-focus-color: var(--default-contact-color);
+      }
+      .contact-title {
+        color: var(--default-contact-color);
+        font-size: 25px;
+        font-weight: 400;
+        margin: 0;
+      }
+      .submit {
+        color: white;
+        background: var(--default-contact-color);
+      }
+      @media screen and (max-width: 450px) {
+        paper-card {
+          margin-top: -20px;
+          padding: 20px;
+          height: 400px;
+        }
+      }
+    </style>
+    <paper-card elevation="5">
+      <h3 class="contact-title">Mande um email</h3>
+      <div id="form" on-iron-form-response="renderResponse">
+        <form method="post" enctype="application/json" action="/">
+          <input type="hidden" name="action" value="home">
+          <input type="hidden" name="enquiryType" value="message">
+          <paper-input id="name" label="nome" name="name"
+            type="text" required auto-validate></paper-input>
+          <paper-input id="email" label="email" name="email"
+            type="email" required auto-validate></paper-input>
+          <paper-textarea id="message" rows="5" max-rows="5" label="mensagem"
+            required auto-validate name="message"></paper-textarea>
+          <div class="form-actions">
+            <paper-button class="submit" raised on-tap="_submit">
+              Enviar
+            </paper-button>
+          </div>
+        </form>
+      </div>
+    </paper-card>
+  </template>
+  <script>
+    class HomeContact extends Polymer.Element {
+      static get is() { return 'home-contact'; }
+      static get properties() {
+        return {};
+      }
+      constructor() {
+        super();
+      }
+      connectedCallback() {
+        super.connectedCallback();
+      }
+      _submit() {
+        if (!this.$.name.value || !this.$.email.value
+          || !this.$.message.value) return;
+        this.$.form.submit();
+      }
+    }
+    customElements.define(HomeContact.is, HomeContact);
+  </script>
+</dom-module>

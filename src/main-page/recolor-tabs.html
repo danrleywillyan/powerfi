@@ -1,0 +1,30 @@
+<link rel="import" href="../../bower_components/app-layout/app-scroll-effects/app-scroll-effects.html">
+
+<script>
+  Polymer.AppLayout.registerEffect('recolor-tabs', {
+    setUp: function(config) {
+      // the effect's config is passed to the setUp.
+      const tabs = Polymer.dom(this).querySelector('home-tabs');
+      if (!tabs.$) return;
+      const collapseTabs = tabs.$.collapsed;
+      const mainTabs = tabs.$.main;
+      console.log(collapseTabs, mainTabs);
+      collapseTabs.style.willChange = 'opacity';
+      mainTabs.style.willChange = 'opacity';
+      this._fxTabs = { collapse: collapseTabs, main: mainTabs };
+    },
+
+    run: function(progress) {
+      // the progress of the effect
+      const collapse = this._fxTabs.collapse;
+      const main = this._fxTabs.main;
+      collapse.style.opacity = 1 - progress;
+      main.style.opacity = progress;
+    },
+
+    tearDown: function() {
+      // clean up and reset of states
+      delete this._fxTabs;
+    }
+  });
+</script>

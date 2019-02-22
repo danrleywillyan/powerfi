@@ -1,0 +1,271 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../../bower_components/iron-image/iron-image.html">
+<link rel="import" href="../../bower_components/paper-tabs/paper-tabs.html">
+<link rel="import" href="../../bower_components/paper-tabs/paper-tab.html">
+<link rel="import" href="../../bower_components/app-layout/app-header-layout/app-header-layout.html">
+<link rel="import" href="../../bower_components/app-layout/app-header/app-header.html">
+<link rel="import" href="../../bower_components/app-layout/app-toolbar/app-toolbar.html">
+<link rel="import" href="../../bower_components/app-layout/app-scroll-effects/app-scroll-effects.html">
+<link rel="import" href="../../bower_components/collectar-elements/collectar-card-show/collectar-card-show.html">
+
+<link rel="import" href="../shared-styles.html">
+<link rel="import" href="../app-elements/app-icons.html">
+<link rel="import" href="../collection-elements/visual-tab.html">
+<link rel="import" href="../collection-elements/communication-tab.html">
+<link rel="import" href="../collection-elements/others-tab.html">
+
+
+<dom-module id="collection-page">
+  <template>
+    <style include="shared-styles">
+      :host {
+        display: block;
+      }
+      collectar-card-show {
+        position: fixed;
+      }
+      .content{
+        padding: 35px;
+        max-width: 1500px;
+        margin: 0 auto;
+      }
+      app-header {
+        border-bottom: 2px solid var(--default-collection-color);
+        background-color: var(--primary-background-color);
+      }
+      .page-header {
+        display: flex;
+        margin-bottom: 20px;
+        position: relative;
+      }
+      .header-image {
+        width: calc(40% - 40px);
+        padding: 10px 0;
+        margin-right: 40px;
+      }
+      .header-image iron-image {
+        width: 100%;
+        min-height: 500px;
+      }
+      .header-title .large {
+        display: inline;
+      }
+      .header-title .small {
+        display: none;
+      }
+      .header-text {
+        flex: 1;
+        padding: 10px 0;
+      }
+      .header-text p {
+        opacity: 0.8;
+        line-height: 1.75;
+      }
+      .header-text h1 {
+        margin: 0;
+        font-size: 5rem;
+        line-height: 1;
+        color: black;
+      }
+      .header-text h2 {
+        margin: 0 0 30px 0;
+        font-size: 1.875rem;
+        line-height: 1;
+        font-weight: 200;
+      }
+      .tabs {
+        text-align: center;
+      }
+      .tabs paper-tabs {
+        margin: 0 auto;
+        max-width: 570px;
+        --paper-tabs-selection-bar-color: var(--default-collection-color);
+      }
+      .tabs paper-tabs paper-tab {
+        min-width: 125px;
+      }
+      .tabs-content {
+        border-top: 2px solid var(--light-collection-color);
+        margin-top: -2px;
+      }
+      @media screen and (max-width: 1100px) {
+        .header-text h1 {
+          font-size: 4rem;
+        }
+        .header-text h2 {
+          font-size: 1.75rem;
+        }
+      }
+      @media screen and (max-width: 960px) {
+        .header-text h1 {
+          font-size: 3.5rem;
+        }
+        .header-text h2 {
+          font-size: 1.5rem;
+        }
+        .header-image {
+          margin-right: 20px;
+        }
+        .tabs paper-tabs {
+          width: 80%;
+          margin: 0 auto;
+        }
+      }
+      @media screen and (max-width: 800px) {
+        .page-header {
+          flex-direction: column;
+        }
+        .header-image {
+          width: 100%;
+          margin-right: 0;
+          margin-top: 80px;
+          padding: 20px 0 0 0;
+        }
+        .header-image iron-image {
+          min-height: 350px;
+        }
+        .header-title {
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+        .tabs paper-tabs {
+          width: 100%;
+          margin: 0;
+        }
+      }
+      @media screen and (max-width: 660px) {
+        .pages-link {
+          font-size: 0.75rem;
+          padding: 0;
+        }
+      }
+      @media screen and (max-width: 500px) {
+        .actions {
+          display: none;
+        }
+        .header-text h1 {
+          font-size: 2.5rem;
+        }
+        .header-text h2 {
+          font-size: 1.1rem;
+        }
+        .tabs-content,
+        .tabs {
+          margin: 0 -25px;
+        }
+      }
+      @media screen and (max-width: 400px) {
+        .content {
+          padding: 35px 25px;
+        }
+        .header-text h1 {
+          font-size: 2.3rem;
+        }
+        .header-title .large {
+          display: none;
+        }
+        .header-title .small {
+          display: inline;
+        }
+        .header-text p {
+          font-size: 0.875rem;
+        }
+      }
+    </style>
+
+    <app-header-layout>
+      <app-header slot="header" fixed>
+        <app-toolbar>
+          <div class="back">
+            <a href="#"></a>
+            <paper-icon-button icon="milton:arrow-back" on-tap="redirectToHome"></paper-icon-button>
+          </div>
+          <div class="title">Acervo</div>
+          <div class="actions">
+            <div class="pages-link">
+              <a href="/artist">O Artista</a>
+            </div>
+            <div class="pages-link">
+              <a href="/">Projeto</a>
+            </div>
+            <div class="pages-link">
+              <a href="/">Contato</a>
+            </div>
+          </div>
+        </app-toolbar>
+      </app-header>
+      <div class="content">
+        <div class="page-header">
+          <div class="header-image">
+            <iron-image src="../../images/collection.jpg" sizing="cover" position="top center"></iron-image>
+          </div>
+          <div class="header-text">
+            <div class="header-title">
+              <h1>Acervo MR</h1>
+              <h2><span class="large">Conheça o</span> <span class="small">O</span> acervo que conta várias histórias.</h2>
+            </div>
+          <p>Milton Ribeiro desenvolveu durante sua vida, trabalhos artísticos bastante variados e ricos, dentre esculturas, desenhos, pinturas
+            e estampas. O Acervo digital Milton Ribeiro reúne várias dessas obras, são 1482 peças de artes visuais, sendo 941 desenhos, 
+            318 pinturas, 205 estampas, 13 esculturas e 5 relevos. Além de reunir materiais que contam as muitas histórias do artista com
+            aproximadamente 352 peças de comunicação, sendo 108 folhetos, 89 fotografias, 51 convites, 38 cartas, 32 cartazes e 32 recortes
+            de jornal, além de outros objetos diversos em quantidades menores, somando 182 peças. Entre as peças de artes visuais, existem
+            sete termos - paisagem, figura humana, natureza morta, abstrato, religioso, retrato, nu - presentes nos desenhos, pinturas e estampas,
+            predominando a figura humana nos desenhos, paisagem nas pinturas e abstrato nas estampas.
+          </p>
+          </div>
+        </div>
+        <div class="tabs">
+          <paper-tabs attr-for-selected="name" selected="{{selected}}"
+            id="tabs" noink fallback-selection="visual" scrollable>
+            <paper-tab name="visual">Artes Visuais</paper-tab>
+            <paper-tab name="communication">Comunicação</paper-tab>
+            <paper-tab name="others">Outros</paper-tab>
+          </paper-tabs>
+        </div>
+        <div class="tabs-content">
+          <iron-pages selected="[[selected]]" attr-for-selected="name">
+            <visual-tab name="visual" project-id="{{projectId}}" on-show-item="showItem"></visual-tab>
+            <communication-tab name="communication" project-id="{{projectId}}" on-show-item="showItem"></communication-tab>
+            <others-tab name="others" project-id="{{projectId}}" on-show-item="showItem"></others-tab>
+          </iron-pages>
+        </div>
+      </div>
+    </app-header-layout>
+    <collectar-card-show id="show"></collectar-card-show>
+  </template>
+
+  <script>
+    class CollectionPage extends Polymer.Element {
+      static get is() { return 'collection-page'; }
+      static get properties() {
+        return {
+          selected: {
+            type: String,
+            observer: 'selectedChanged'
+          },
+          projectId: {
+            type: String,
+            value: '59801055c86b1e6a8bf6c36f'
+          }
+        };
+      }
+
+      selectedChanged(selected) {
+        const tab = this.shadowRoot.querySelector(`${selected}-tab`);
+        if(!tab) return;
+        tab.$.list.layout();
+      }
+
+      redirectToHome(e) {
+        this.set('route.path', '/');
+      }
+
+      showItem(e) {
+        this.$.show.cardItem = e.detail.cardItem;
+      }
+    }
+
+    window.customElements.define(CollectionPage.is, CollectionPage);
+  </script>
+</dom-module>

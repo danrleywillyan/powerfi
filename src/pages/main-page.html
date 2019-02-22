@@ -1,0 +1,193 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../../bower_components/iron-image/iron-image.html">
+<link rel="import" href="../../bower_components/paper-button/paper-button.html">
+<link rel="import" href="../../bower_components/app-layout/app-header-layout/app-header-layout.html">
+<link rel="import" href="../../bower_components/app-layout/app-header/app-header.html">
+<link rel="import" href="../../bower_components/app-layout/app-toolbar/app-toolbar.html">
+<link rel="import" href="../../bower_components/app-layout/app-scroll-effects/app-scroll-effects.html">
+
+<link rel="import" href="../main-page/home-contact.html">
+<link rel="import" href="../main-page/home-tabs.html">
+<link rel="import" href="../app-elements/hero-fab.html">
+<link rel="import" href="../app-elements/app-icons.html">
+<link rel="import" href="../shared-styles.html">
+<link rel="import" href="../main-page/main-theme.html">
+
+<dom-module id="main-page">
+  <template>
+    <style include="shared-styles"></style>
+    <style include="main-theme"></style>
+    <style>
+    :host {
+      display: block;
+    }
+    app-header {
+      background-color: #fff;
+    }
+    h2 paper-button {
+      padding: 0;
+      text-transform: none;
+      min-width: unset;
+      margin: 0;
+    }
+    .title {
+      display: inline-block;
+      width: calc(100% - 120px);
+      text-align: center;
+      font-size: 1.5rem;
+      line-height: 2.3rem;
+    }
+    .resume p {
+      font-family: 'Comfortaa', cursive;
+    }
+    @media screen and (min-width: 501px) {
+      .title { display: none; }
+    }
+    @media screen and (max-width: 500px) {
+      #artist {
+        border-top: 4px solid var(--default-artist-color);
+      }
+      #collection {
+        border-top: 4px solid var(--default-collection-color);
+      }
+      #project {
+        border-top: 4px solid var(--default-project-color);
+      }
+      #contact{
+        border-top: 4px solid var(--default-contact-color);
+      }
+    }
+    </style>
+
+    <app-header-layout>
+      <app-header slot="header" fixed condenses effects="resize-snapped-title blend-background parallax-background recolor-tabs">
+        <app-toolbar>
+          <div condensed-title><span class="logo">Power-Fi</span><span class="title">{{headerTitle}}</span></div>
+        </app-toolbar>
+        <app-toolbar class="tall">
+          <div class="vertical-content">
+            <div class="slogan" main-title>
+              <div class="left">
+                <h1>Share Internet & Power Up <br> Your Business</h1>
+                <div>By using Power-Fi you get closer to your customer and get better results</div>
+                <div class="button">
+                  <paper-button on-tap="scrollToTab" role="button" tabindex="0" aria-disabled="false">Get 15% discount now!</paper-button>
+                </div>
+              </div>
+              <div class="right">
+                <img src="../../images/app-mockup-europe.png"/>
+              </div>
+            </div>
+            <div class="button">
+              <paper-icon-button id="more" on-tap="scrollToTab" icon="milton:expand-more" role="button" tabindex="0" aria-disabled="false"></paper-icon-button>
+            </div>
+          </div>
+          <home-tabs bottom-item section-height="{{viewHeight}}" selected="{{selectedTab}}"
+          on-tab-changed="scrollToTab"></home-tabs>
+        </app-toolbar>
+      </app-header>
+      <div class="container">
+        <section class="home-section" id="artist">
+          <h2><paper-button noink on-tap="tapToFab">Valor</paper-button></h2>
+          <div>
+            <iron-image class="image main-img" src="/images/milton.png" sizing="cover"></iron-image>
+            <div class="resume">
+              <p>Milton Ribeiro (Rio de Janeiro, 19 de outubro de 1922 - Brasília, 21 de novembro de 2013) foi um pintor, gravurista e professor universitário brasileiro. Frequentou a Escola Nacional de Belas Artes (ENBA), participou do Grupo dos Dissidentes e do Grupo Guignard. Fez especialização em gravura no Museu de Arte Moderna do Rio de Janeiro (MAM/RJ), estudou no College Technique Estienne e no ateliê de André Lhote, em Paris.</p>
+            </div>
+          </div>
+          <div class="divider">
+            <hero-fab icon="milton:arrow-forward" href="/artist" id="artistFab"></hero-fab>
+          </div>
+        </section>
+        <section class="home-section" id="collection">
+          <h2><paper-button noink on-tap="tapToFab">Acervo</paper-button></h2>
+          <div>
+            <iron-image class="image main-img" src="/images/pinturas.png" sizing="contain"></iron-image>
+            <div class="resume">
+              <p>O acervo do projeto Milton Ribeiro conta com mais de mil peças: são pinturas, desenhos, esculturas e gravuras de autoria do artista, além de diversos documentos e fotografias de sua trajetória artística.</p>
+            </div>
+          </div>
+          <div class="divider">
+            <hero-fab icon="milton:add" href="/collection" id="collectionFab"></hero-fab>
+          </div>
+        </section>
+        <section class="home-section" id="project">
+          <h2><paper-button noink on-tap="tapToFab">Projeto</paper-button></h2>
+          <div>
+            <iron-image class="image main-img" src="/images/projeto.png" sizing="cover"></iron-image>
+            <div class="resume">
+              <p>O projeto Milton Ribeiro surgiu quando o filho do artista, Fernando Ribeiro, decidiu dar visibilidade ao trabalho de seu pai, iniciando o processo de documentação museológica e sistematização do acervo (que inclui, além das obras, documentos, cartas, recortes de jornal, entre outros) utilizado para remontar a trajetória em uma plataforma web. Acesse para saber mais.</p>
+            </div>
+          </div>
+          <div class="divider">
+            <hero-fab icon="milton:arrow-forward" href="/project" id="projectFab"></hero-fab>
+          </div>
+        </section>
+        <section class="home-section" id="contact">
+          <h2>Contato</h2>
+          <div class="contact-wrapper">
+            <div class="description">
+              <p>Tem alguma sugestão ou crítica? Entre em contato e vamos conversar!</p>
+              <div class="email">
+                <iron-icon icon="milton:mail"></iron-icon><span>contato@miltonribeiro.org</span>
+              </div>
+            </div>
+            <home-contact class="formfields"></home-contact>
+          </div>
+        </section>
+      </div>
+      <div class="container">
+        <div id="footer">
+          <p>© 2017 - {{year}} Projeto Milton Ribeiro. Desenvolvido por <a href="http://pencillabs.com.br" target="_blank"><strong>Pencil</strong>labs</a>.</p>
+        </div>
+      </div>
+    </app-header-layout>
+  </template>
+
+  <script>
+  class MainPage extends Polymer.Element {
+    static get is() { return 'main-page'; }
+    static get properties() {
+      return {
+        viewHeight: Number,
+        selectedTab: {
+          type: String,
+          observer: 'setHeaderTitle'
+        }
+      };
+    }
+    connectedCallback() {
+      super.connectedCallback();
+      this.viewHeight = this.$.artist.clientHeight;
+      this.year = new Date().getFullYear();
+    }
+    setHeaderTitle(selectedTab) {
+      const tab = this.$[selectedTab];
+      this.headerTitle = tab? tab.querySelector('h2').innerText : '';
+      Array.from(this.shadowRoot.querySelectorAll('hero-fab')).forEach((fab) => {
+        fab.fadeOut();
+      });
+      if(selectedTab && selectedTab !== 'contact') this.$[`${selectedTab}Fab`].fadeIn();
+    }
+    tapToFab(e) {
+      const name = `${e.target.parentNode.parentNode.id}Fab`;
+      console.log(name);
+      const fab = this.$[name];
+      if(fab) fab.animateRedirect();
+    }
+    scrollToTab(e) {
+      console.log(e);
+      if(!e.detail.tapped) e.detail.tapped="contact";
+      const tab = this.$[e.detail.tapped];
+      if(!tab) return;
+      window.scroll({
+        behavior: 'smooth',
+        left: 0,
+        top: tab.offsetTop
+      });
+    }
+  }
+
+  window.customElements.define(MainPage.is, MainPage);
+  </script>
+</dom-module>

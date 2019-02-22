@@ -1,0 +1,254 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+
+<dom-module id="biography-tab">
+  <template>
+    <style>
+      :host {
+        display: block;
+        padding: 20px 40px;
+        min-height: 100vh;
+      }
+      p {
+        font-family: 'Comfortaa', cursive !important;
+        opacity: 0.7;
+      }
+      .tab-heading {
+        margin: 0;
+        font-size: 4rem;
+      }
+      .formation-block {
+        display: flex;
+        margin: 10px 0 30px;
+      }
+      .formation-block:last-of-type {
+        margin-bottom: 0;
+      }
+      .text-inline-left {
+        flex: 2;
+        margin-right: 40px;
+      }
+      .text-inline-right{
+        flex: 1;
+        margin-left: 40px;
+      }
+      p {
+        margin: 0 0 10px;
+        font-size: 0.975rem;
+        line-height: 1.85;
+      }
+      .text-image {
+        flex: 1;
+      }
+      .text-image iron-image {
+        width: 100%;
+        height: 100%;
+        min-height: 350px;
+      }
+      h1:not(.tab-heading) {
+        margin-top: 1.2rem;
+      }
+      @media screen and (max-width: 960px) {
+        .tab-heading {
+          font-size: 3.5rem;
+        }
+      }
+      @media screen and (max-width: 800px) {
+        .text-image iron-image {
+          width: 100%;
+        }
+        .formation-block.reverse {
+          flex-direction: column-reverse;
+        }
+        .formation-block {
+          flex-direction: column;
+        }
+        h1 {
+          font-size: 1.8rem;
+        }
+        .text-image {
+          max-width: unset;
+          margin-bottom: 10px;
+        }
+        .text-inline-right,
+        .text-inline-left {
+          margin: 0;
+        }
+      }
+      @media screen and (max-width: 660px) {
+        :host {
+          display: block;
+          padding: 20px 20px;
+        }
+        .tab-heading {
+          font-size: 2.3rem;
+        }
+        h1 {
+          font-size: 1.3rem;
+        }
+      }
+      @media screen and (max-width: 500px) {
+        h1 {
+          font-size: 1.3rem;
+        }
+      }
+    </style>
+
+    <div class="content">
+      <h1 class="tab-heading">Biografia</h1>
+      <div class="formation">
+        <h1>Formação e participação em grupo de artistas</h1>
+        <div class="formation-block reverse">
+          <div class="text-inline-left">
+            <p>Milton Martins Ribeiro nasceu no Rio de Janeiro em 1922, ano marcado
+              pela Semana de Arte Moderna, acontecimento de extrema relevância para
+              a história da arte brasileira, que influenciou o artista vinte depois,
+              quando participou do Grupo dos Dissidentes. Formado por estudantes da
+              Escola Nacional de Belas Artes da Universidade Federal do Rio de Janeiro
+              (ENBA/UFRJ), o grupo era composto por artistas como Alfredo Ceschiatti,
+              Francisco Bologna e Maurício Roberto, que tiveram suas obras vetadas da
+              mostra anual. Outros artistas se posicionaram contra o tradicionalismo
+              da academia e realizaram uma exposição do grupo na Associação Brasileira
+              de Imprensa (ABI), que contou com o apoio de Alberto da Veiga Guignard,
+              Manuel Bandeira e outros intelectuais da época. Foram enviados
+              telegramas a Mário de Andrade, convidando o artista para exposições
+              do grupo, sendo em uma delas, convidado para fazer uma conferência
+              sobre Cândido Portinari. (Vide convite enviado por telegrama a Mário
+              de Andrade, assinado por estudantes da ENBA/RJ, entre eles Alfredo
+              Ceschiatti, colega de grupo Milton Ribeiro e Beatriz Monteiro, em 1942.)
+            </p>
+          </div>
+          <div class="text-image">
+            <iron-image src="../../images/bio_2.jpg" sizing="cover" position="left"></iron-image>
+          </div>
+        </div>
+        <div class="formation-block">
+          <div class="text-image">
+            <iron-image src="../../images/bio_1.jpg" sizing="cover"></iron-image>
+          </div>
+          <div class="text-inline-right">
+            <p>Após o dissolvimento do grupo, ainda no início da década de 40,
+              Milton Ribeiro integrou o Grupo Guignard, fundado pelo próprio
+              artista e outros, como Iberê Camargo e Geza Heller. A única
+              exposição feita pelo Grupo Guignard foi inaugurada no Diretório
+              Acadêmico da ENBA/UFRJ em 25 de outubro de 1943, com mais de 150
+              desenhos, aquarelas e guaches de caráter moderno, obtendo grande
+              repercussão na imprensa. Apenas três dias depois foi desmontada à
+              força por estudantes conservadores, o que chegou a danificar algumas
+              das obras expostas, mas foi reinaugurada na ABI, onde o público teve
+              acesso a exposição. O Grupo Guignard, também ficou conhecido como a
+              Nova Flor do Abacate, apelidado assim por Manuel Bandeira em artigo
+              publicado na ocasião da exposição do grupo, inspirado pela localização
+              do ateliê coletivo, situado no prédio da antiga gafieira Flor do Abacate,
+              no bairro do Flamengo. O grupo durou um ano, até Guignard ser convidado
+              por Juscelino Kubistchek para dirigir o curso livre de desenho e pintura
+              na Escola de Belas Artes, em Belo Horizonte, que com seu falecimento,
+              tornou-se a atual Escola Guignard.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="prizes">
+        <h1>Prêmios e menções honrosas</h1>
+        <p>
+          Paralelamente a isso, aos poucos a ENBA cedia as influências modernistas
+          na linguagem estética do cenário artístico, desde a criação da Divisão
+          Moderna no Salão Nacional de Belas Artes em 1940, e ao longo dessa década
+          com as seguidas premiações de artistas dissidentes. Entre eles,
+          citando alguns exemplos: Ceschiatti recebeu medalhas de bronze e
+          prata em dois anos consecutivos; Milton Ribeiro recebeu menção
+          honrosa em 1943, foi premiado com medalhas de bronze em 1944 e 1945,
+          ano de sua graduação na ENBA e especialização no MAM/RJ, respectivamente,
+          além da menção honrosa no Salão Nacional de Arte Moderna em 1948;
+          e José Moraes recebeu o Prêmio de Viagem ao exterior, em 1949.
+        </p>
+      </div>
+      <div class="specializations">
+        <h1>Especialização e estudos no exterior</h1>
+        <p>
+          Já em 1950, Milton Ribeiro teve bolsa concedida pelo governo francês
+          para estudar artes gráficas no College Technique Estienne,
+          frequentando também em Paris, o ateliê de André Lhote, artista,
+          professor e teórico de arte, que nessa década realizou palestras
+          em diversos países, incluindo o Brasil. Lhote teve influência cubista,
+          recebeu o Grand Prix Nacional Peinture em 1955, e foi nomeado
+          Presidente da Associação Internacional de Pintores, Escultores e
+          Gravadores pela UNESCO. No Museu de Arte Moderna do Rio de Janeiro
+          (MAM/RJ) cursou gravura em metal com Friedlaender e Edith Behring,
+          artista que organizou o Ateliê de Gravura do MAM/RJ, e mais tarde
+          foi seu assistente entre 1960 e 1961.
+        </p>
+      </div>
+      <div class="career">
+        <h1>Carreira acadêmica e artística</h1>
+        <p>
+          Tornou-se professor de teoria e história das artes gráficas e
+          comunicação visual gráfica na ENBA/UFRJ, do curso de jornalismo
+          na Pontíficia Universidade Católica do Rio de Janeiro (PUC/RJ) e de
+          teoria da técnica e dos materiais no curso de comunicação visual da
+          Escola Superior de Desenho Industrial do Rio de Janeiro. Ao final
+          da década de 60, a convite de Fernando Barreto, professor e artista
+          plástico, Milton Ribeiro mudou-se para Brasília com a família para
+          consolidar o então Instituto Central de Artes da Universidade de
+          Brasília (ICA/UnB), onde ministrou o curso de técnica e planejamento
+          de artes gráficas. Ainda em 1967, fez uma exposição individual na
+          galeria do Hotel Nacional, e um ano depois, no contexto da ditadura
+          militar, quando a universidade é invadida em 1968, Milton Ribeiro
+          participa do movimento de demissão voluntária como protesto contra
+          o desligamento de colegas acusados de subversão.
+        </p>
+        <p>
+          Nesse momento,
+          contando com o apoio de sua parceira, Milton Ribeiro intensificou
+          sua produção retratando o cotidiano da nova capital brasileira e
+          a registrando historicamente. Um exemplo dessa fase é a série de
+          15 telas que compõem uma vista panorâmica do Plano Piloto, com
+          destaque para a “Península Norte”, pintada entre 1976 e 1977 e
+          exposta no Festival Internacional da Pintura na França, em 1979,
+          um ano antes da conclusão da série. Somente em 1985, com a
+          redemocratização do país, Milton Ribeiro retornou ao campus
+          ministrando aulas de planejamento gráfico na Faculdade de Comunicação
+          da UnB, e nesse mesmo ano, o artista participou da inauguração do
+          Museu de Arte de Brasília (MAB), com sala especial na exposição
+          coletiva. No ano de 1987 publicou o clássico livro "Planejamento
+          Visual Gráfico", sendo referência utilizada atualmente na bibliografia
+          da área.
+        </p>
+        <p>
+          Outra fase marcante na trajetória artística do pintor é a
+          série “Pequeno Arquiteto”, que durou 25 anos, sendo concluída
+          á no início da década de 90, e uma série de imagens referentes a
+          cultos afros, inspirada pelo universo materno, produzida até o final
+          da década. Nos anos 2000, as técnicas cubistas aprendidas com Lhote
+          aparecem em sua produção, através de seres representados a partir do
+          desenho rápido e simplificado de suas faces, além da repartição do
+          fundo das pinturas.
+        </p>
+      </div>
+      <div class="honors">
+        <h1>Homenagens e doação de obras</h1>
+        <p>
+          Em 2012, Milton Ribeiro recebeu o título de Professor Emérito da UnB,
+          como parte das comemorações dos 50 anos da instituição e de seus
+          90 anos, sendo realizada também uma exposição em sua homenagem,
+          além do lançamento da décima edição do livro Planejamento Visual
+          Gráfico. Na ocasião, foi doada para a universidade a Coleção Beatriz,
+          250 obras cuidadosamente selecionadas por sua companheira, ao longo
+          de uma vida juntos.
+        </p>
+      </div>
+
+    </div>
+
+  </template>
+
+  <script>
+    class BiographyTab extends Polymer.Element {
+      static get is() { return 'biography-tab'; }
+      static get properties() {
+        return {};
+      }
+    }
+
+    window.customElements.define(BiographyTab.is, BiographyTab);
+  </script>
+</dom-module>
