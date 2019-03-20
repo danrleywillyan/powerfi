@@ -5,6 +5,7 @@
 <link rel="import" href="../../bower_components/app-layout/app-header/app-header.html">
 <link rel="import" href="../../bower_components/app-layout/app-toolbar/app-toolbar.html">
 <link rel="import" href="../../bower_components/app-layout/app-scroll-effects/app-scroll-effects.html">
+<link rel="import" href="../../bower_components/l2t-paper-slider/l2t-paper-slider.html">
 
 <link rel="import" href="../main-page/home-contact.html">
 <link rel="import" href="../main-page/home-tabs.html">
@@ -18,6 +19,142 @@
     <style include="shared-styles"></style>
     <style include="main-theme"></style>
     <style>
+    @import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
+    @import url(https://fonts.googleapis.com/css?family=Raleway:400,500,800);
+    @import url(https://fonts.googleapis.com/css?family=Montserrat:800);
+    .snip1214 {
+      font-family: 'Raleway', Arial, sans-serif;
+      color: #000000;
+      text-align: center;
+      font-size: 16px;
+      width: 100%;
+      max-width: 1000px;
+      margin: 40px 10px;
+    }
+    .snip1214 .plan {
+      margin: 0;
+      width: 25%;
+      position: relative;
+      float: left;
+      background-color: #ffffff;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+    }
+    .snip1214 * {
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+    .snip1214 header {
+      position: relative;
+    }
+    .snip1214 .plan-title {
+      position: relative;
+      top: 0;
+      font-weight: 800;
+      padding: 5px 15px;
+      margin: 0 auto;
+      -webkit-transform: translateY(-50%);
+      transform: translateY(-50%);
+      margin: 0;
+      display: inline-block;
+      background-color: #222f3d;
+      color: #ffffff;
+      text-transform: uppercase;
+    }
+    .snip1214 .plan-cost {
+      padding: 0px 10px 20px;
+    }
+    .snip1214 .plan-price {
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-weight: 800;
+      font-size: 2.4em;
+      color: #34495e;
+    }
+    .snip1214 .plan-type {
+      opacity: 0.6;
+    }
+    .snip1214 .plan-features {
+      padding: 0;
+      margin: 0;
+      text-align: center;
+      list-style: outside none none;
+      font-size: 0.8em;
+    }
+    .snip1214 .plan-features li {
+      border-top: 1px solid #d2d7e2;
+      padding: 10px 5%;
+    }
+    .snip1214 .plan-features li:nth-child(even) {
+      background: rgba(0, 0, 0, 0.08);
+    }
+    .snip1214 .plan-features i {
+      margin-right: 8px;
+      opacity: 0.4;
+    }
+    .snip1214 .plan-select {
+      border-top: 1px solid #d2d7e2;
+      padding: 10px 10px 0;
+    }
+    .snip1214 .plan-select a {
+      background-color: #222f3d;
+      color: #ffffff;
+      text-decoration: none;
+      padding: 0.5em 1em;
+      -webkit-transform: translateY(50%);
+      transform: translateY(50%);
+      font-weight: 800;
+      text-transform: uppercase;
+      display: inline-block;
+    }
+    .snip1214 .plan-select a:hover {
+      background-color: #46627f;
+    }
+    .snip1214 .featured {
+      margin-top: -10px;
+      background-color: #34495e;
+      color: #ffffff;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+      z-index: 1;
+    }
+    .snip1214 .featured .plan-title,
+    .snip1214 .featured .plan-price {
+      color: #ffffff;
+    }
+    .snip1214 .featured .plan-cost {
+      padding: 10px 10px 20px;
+    }
+    .snip1214 .featured .plan-features li {
+      border-top: 1px solid rgba(255, 255, 255, 0.4);
+    }
+    .snip1214 .featured .plan-select {
+      padding: 20px 10px 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.4);
+    }
+    @media only screen and (max-width: 767px) {
+      .snip1214 .plan {
+        width: 50%;
+      }
+      .snip1214 .plan-title,
+      .snip1214 .plan-select a {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+      }
+      .snip1214 .plan-cost,
+      .snip1214 .featured .plan-cost {
+        padding: 20px 10px 20px;
+      }
+      .snip1214 .plan-select,
+      .snip1214 .featured .plan-select {
+        padding: 10px 10px 10px;
+      }
+      .snip1214 .featured {
+        margin-top: 0;
+      }
+    }
+    @media only screen and (max-width: 440px) {
+      .snip1214 .plan {
+        width: 100%;
+      }
+    }
     :host {
       display: block;
     }
@@ -72,22 +209,127 @@
     .button > paper-icon-button {
       position:relative;
       bottom: 0;
-      /* left: calc(50% - 40px); */
+    }
+    .item-slide-left {
+      float: left;
+      width: 50%;
+    }
+    .item-slide-right {
+      float: right;
+      width: 50%;
+    }
+    .item-slide-left > p {
+      color: black;
+      white-space: normal;
+      padding: 30px;
+    }
+    .item-slide-right > p{
+      color: black;
+      white-space: normal;
+      padding: 30px;
+    }
+    .item-slide-left > iron-image {
+      padding: 10px 30px;
+    }
+    .item-slide-right > iron-image {
+      padding: 10px 30px;
+    }
+    .item-slide-first {
+      float: left;
+      width: 20%;
+    }
+    .item-slide-last {
+      float: right;
+      width: 20%;
+    }
+    .item-slide-center > iron-image {
+      padding: 10px 30px;
+    }
+    .showcase-item {
+      height: 50vh;
+    }
+    .showcase-item-center {
+      /* height: 60vh; */
+    }
+    l2t-paper-slider{
+      outline: none;
+    }
+    .paper-slide-showcase {
+      display: inline-flex !important;
+      overflow: hidden;
+    }
+    .paper-slide-showcase > .item-slide-first {
+      /* display: inline; */
+    }
+    .paper-slide-showcase > .item-slide-center {
+      width: 50%;
+    }
+    .paper-slide-showcase > .item-slide-last {
+      /* display: inline; */
+    }
+    .center-price {
+
     }
     @media screen and (min-width: 501px) {
       .title { display: none; }
+      .mid-layer-white {
+        position: absolute;
+        background-color: white;
+        opacity: 0.8;
+        height: 100vh;
+        width: 100vw;
+        top: 0;
+        left: 0;
+      }
+      #product {
+        background: url("../../images/bg1.jpg");
+        background-repeat: no-repeat;
+        height: calc(100vh - 90px);
+      }
+      #product .l2t-product {
+        --paper-slide-dot: rgba(100, 100, 100, .5);
+        --paper-slide-dot-selected: #0B5DA5;
+        --paper-slide-height: calc(100vh - 234px);
+      }
+      #showcases {
+        background: url("../../images/bg2.jpg");
+        background-size: 100vw auto;
+        height: calc(100vh - 90px);
+      }
+      /* this is not work very well */
+      #showcases > .l2t-showcases {
+        --paper-slide-dot: rgba(100, 100, 100, .5);
+        --paper-slide-dot-selected: #0B5DA5;
+        --paper-slide-height: 30vh;
+      }
+      #showcases > .mid-layer {
+        position: absolute;
+        background-color: #7CB620;
+        opacity: 0.2;
+        height: 100vh;
+        width: 100vw;
+        top: 0;
+        left: 0;
+      }
+      #showcases > .mid-layer-white {
+        opacity: 0.1;
+      }
     }
     @media screen and (max-width: 500px) {
-      #artist {
+      #product {
+        background: url("../../images/bg1.jpg");
         border-top: 4px solid var(--default-artist-color);
       }
-      #collection {
+      #benefits {
         border-top: 4px solid var(--default-collection-color);
       }
-      #project {
+      #features {
         border-top: 4px solid var(--default-project-color);
       }
-      #contact{
+      #showcases {
+        border-top: 4px solid var(--default-contact-color);
+      }
+      #contact {
         border-top: 4px solid var(--default-contact-color);
       }
     }
@@ -115,13 +357,15 @@
                 <div class="button">
                   <paper-button id="more" on-tap="scrollToTab" role="button" tabindex="0" aria-disabled="false">Get 5% discount now!</paper-button>
                 </div>
+                <!-- <br> -->
+                <p>more information about our solution</p>
+                <div class="button">
+                  <paper-icon-button id="more" on-tap="scrollToTab" icon="milton:expand-more" role="button" tabindex="0" aria-disabled="false"></paper-icon-button>
+                </div>
               </div>
               <div class="right">
                 <img src="../../images/app-mockup-europe.png"/>
               </div>
-            </div>
-            <div class="button">
-              <paper-icon-button id="more" on-tap="scrollToTab" icon="milton:expand-more" role="button" tabindex="0" aria-disabled="false"></paper-icon-button>
             </div>
           </div>
           <home-tabs bottom-item section-height="{{viewHeight}}" selected="{{selectedTab}}"
@@ -129,49 +373,248 @@
         </app-toolbar>
       </app-header>
       <div class="container">
-        <section class="home-section" id="artist">
-          <h2><paper-button noink on-tap="tapToFab">Valor</paper-button></h2>
+        <section class="home-section" id="product">
+          <div class="mid-layer-white"></div>
+          <h2><paper-button noink on-tap="tapToFab">Power-Fi</paper-button></h2>
           <div>
-            <iron-image class="image main-img" src="/images/milton.png" sizing="cover"></iron-image>
-            <div class="resume">
-              <p>Milton Ribeiro (Rio de Janeiro, 19 de outubro de 1922 - Brasília, 21 de novembro de 2013) foi um pintor, gravurista e professor universitário brasileiro. Frequentou a Escola Nacional de Belas Artes (ENBA), participou do Grupo dos Dissidentes e do Grupo Guignard. Fez especialização em gravura no Museu de Arte Moderna do Rio de Janeiro (MAM/RJ), estudou no College Technique Estienne e no ateliê de André Lhote, em Paris.</p>
-            </div>
+            <l2t-paper-slider class="l2t-product" auto-progress slide-duration="15" total-slides="4">
+      				<paper-slide>
+                <div class="item-slide-left">
+                  <iron-image class="" src="../../images/wifi-icon2.jpg"></iron-image>
+                  <h2>Offer Free Wifi</h2>
+                  <p>Right away, consumers connect to your network from social media, email or SMS. The process is intuitive and simple: Internet in exchange of contact details.</p>
+                </div>
+                <div class="item-slide-right">
+                  <iron-image class="" src="../../images/app-feature-3.png"></iron-image>
+                  <h2>Custom Made</h2>
+                  <p>Unleash your imagination, create and display your artwork in image or video format, whenever you want, as often as you need.</p>
+                </div>
+      				</paper-slide>
+      				<paper-slide>
+                <div class="item-slide-left">
+                  <iron-image class="" src="../../images/engage.jpg"></iron-image>
+                  <h2>Promote Engagement</h2>
+                  <p>Likes, shares and reviews are some of the ways your customers will have to connect with your business.</p>
+                </div>
+                <div class="item-slide-right">
+                  <iron-image class="" src="../../images/app-feature-1.png"></iron-image>
+                  <h2>Easy to Use</h2>
+                  <p>Power-Fi is simple and intuitive for both the user and your business. With a few clicks you and your consumer will be closer than ever.</p>
+                </div>
+      				</paper-slide>
+      				<paper-slide>
+                <div class="item-slide-left">
+                  <iron-image class="" src="../../images/alvo.jpg"></iron-image>
+                  <h2>Showcase Your Business</h2>
+                  <p>Create and advertise campaigns of your products and services using our user-friendly interface. Track their performance via your new platform, Facebook ™ Pixel or Google ™ Analytics.</p>
+                </div>
+                <div class="item-slide-right">
+                  <iron-image class="" src="../../images/app-feature-2.png"></iron-image>
+                  <h2>Crisp Design</h2>
+                  <p>Impress by displaying your brand in rich detail and colorful features while presenting your promotions at the most coveted spot of Online Marketing: Mobile.</p>
+                </div>
+      				</paper-slide>
+      				<paper-slide>
+                <div class="item-slide-left">
+                  <iron-image class="" src="../../images/results.jpg"></iron-image>
+                  <h2>Results and Insights</h2>
+                  <p>Age range, emails, gender, length of visit, preferred social networks and loads of more information can be accessed in real time to guide your business strategies.</p>
+                </div>
+                <div class="item-slide-right">
+                  <iron-image class="" src="../../images/app-feature-4.png"></iron-image>
+                  <h2>Real Results</h2>
+                  <p>Check out real-time performance of your campaigns, with numbers and critical insights to help you grow your business.</p>
+                </div>
+      				</paper-slide>
+      			</l2t-paper-slider>
           </div>
           <div class="divider">
             <hero-fab icon="milton:arrow-forward" href="/artist" id="artistFab"></hero-fab>
           </div>
         </section>
-        <section class="home-section" id="collection">
-          <h2><paper-button noink on-tap="tapToFab">Acervo</paper-button></h2>
+        <section class="home-section" id="benefits">
+          <h2><paper-button noink on-tap="tapToFab">Benefits</paper-button></h2>
           <div>
-            <iron-image class="image main-img" src="/images/pinturas.png" sizing="contain"></iron-image>
+            <!-- <iron-image class="image main-img" src="/images/pinturas.png" sizing="contain"></iron-image>
             <div class="resume">
               <p>O acervo do projeto Milton Ribeiro conta com mais de mil peças: são pinturas, desenhos, esculturas e gravuras de autoria do artista, além de diversos documentos e fotografias de sua trajetória artística.</p>
-            </div>
+            </div> -->
           </div>
           <div class="divider">
             <hero-fab icon="milton:add" href="/collection" id="collectionFab"></hero-fab>
           </div>
         </section>
-        <section class="home-section" id="project">
-          <h2><paper-button noink on-tap="tapToFab">Projeto</paper-button></h2>
+        <section class="home-section" id="features">
+          <h2><paper-button noink on-tap="tapToFab">Features</paper-button></h2>
           <div>
-            <iron-image class="image main-img" src="/images/projeto.png" sizing="cover"></iron-image>
+            <!-- <iron-image class="image main-img" src="/images/projeto.png" sizing="cover"></iron-image>
             <div class="resume">
               <p>O projeto Milton Ribeiro surgiu quando o filho do artista, Fernando Ribeiro, decidiu dar visibilidade ao trabalho de seu pai, iniciando o processo de documentação museológica e sistematização do acervo (que inclui, além das obras, documentos, cartas, recortes de jornal, entre outros) utilizado para remontar a trajetória em uma plataforma web. Acesse para saber mais.</p>
+            </div> -->
+          </div>
+          <div class="divider">
+            <hero-fab icon="milton:arrow-forward" href="/project" id="projectFab"></hero-fab>
+          </div>
+        </section>
+        <section class="home-section" id="showcases">
+          <div class="mid-layer-white"></div>
+          <div class="mid-layer"></div>
+          <h2><paper-button noink on-tap="tapToFab">Showcases</paper-button></h2>
+          <div>
+            <l2t-paper-slider class="l2t-showcases" auto-progress slide-duration="60" total-slides="4">
+      				<paper-slide class="paper-slide-showcase">
+                <div class="item-slide-first">
+                  <iron-image sizing="contain" class="showcase-item" src="../../images/sc1.png"></iron-image>
+                </div>
+                <div class="item-slide-center">
+                  <iron-image sizing="contain" class="showcase-item-center" src="../../images/pc-screen.png"></iron-image>
+                </div>
+                <div class="item-slide-last">
+                  <iron-image sizing="contain" class="showcase-item" src="../../images/sc2.png"></iron-image>
+                </div>
+      				</paper-slide>
+      				<paper-slide class="paper-slide-showcase">
+                <div class="item-slide-first">
+                  <iron-image sizing="contain" class="showcase-item" src="../../images/sc3.png"></iron-image>
+                </div>
+                <div class="item-slide-center">
+                  <iron-image sizing="contain" class="showcase-item-center" src="../../images/pc-screen.png"></iron-image>
+                </div>
+                <div class="item-slide-last">
+                  <iron-image sizing="contain" class="showcase-item" src="../../images/sc4.png"></iron-image>
+                </div>
+      				</paper-slide>
+      				<paper-slide class="paper-slide-showcase">
+                <div class="item-slide-first">
+                  <iron-image sizing="contain" class="showcase-item" src="../../images/sc5.png"></iron-image>
+                </div>
+                <div class="item-slide-center">
+                  <iron-image sizing="contain" class="showcase-item-center" src="../../images/pc-screen.png"></iron-image>
+                </div>
+                <div class="item-slide-last">
+                  <iron-image sizing="contain" class="showcase-item" src="../../images/sc6.png"></iron-image>
+                </div>
+      				</paper-slide>
+      				<paper-slide class="paper-slide-showcase">
+                <div class="item-slide-first">
+                  <iron-image sizing="contain" class="showcase-item" src="../../images/sc7.png"></iron-image>
+                </div>
+                <div class="item-slide-center">
+                  <iron-image sizing="contain" class="showcase-item-center" src="../../images/pc-screen.png"></iron-image>
+                </div>
+                <div class="item-slide-last">
+                  <iron-image sizing="contain" class="showcase-item" src="../../images/sc8.png"></iron-image>
+                </div>
+      				</paper-slide>
+              <paper-slide class="paper-slide-showcase">
+                <div class="item-slide-first">
+                  <iron-image sizing="contain" class="showcase-item" src="../../images/sc9.png"></iron-image>
+                </div>
+                <div class="item-slide-center">
+                  <iron-image sizing="contain" class="showcase-item-center" src="../../images/pc-screen.png"></iron-image>
+                </div>
+                <div class="item-slide-last">
+                  <iron-image sizing="contain" class="showcase-item" src="../../images/sc10.png"></iron-image>
+                </div>
+      				</paper-slide>
+              <paper-slide class="paper-slide-showcase">
+                <div class="item-slide-first">
+                  <iron-image sizing="contain" class="showcase-item" src="../../images/sc11.png"></iron-image>
+                </div>
+                <div class="item-slide-center">
+                  <iron-image sizing="contain" class="showcase-item-center" src="../../images/pc-screen.png"></iron-image>
+                </div>
+                <div class="item-slide-last">
+                  <iron-image sizing="contain" class="showcase-item" src="../../images/sc12.png"></iron-image>
+                </div>
+      				</paper-slide>
+      			</l2t-paper-slider>
+          </div>
+          <div class="divider">
+            <hero-fab icon="milton:arrow-forward" href="/project" id="projectFab"></hero-fab>
+          </div>
+        </section>
+        <section class="home-section" id="pricing">
+          <h2><paper-button noink on-tap="tapToFab">Pricing</paper-button></h2>
+          <div class="center-price">
+            <div class="snip1214">
+              <div class="plan">
+                <h3 class="plan-title">
+                  Starter
+                </h3>
+                <div class="plan-cost"><span class="plan-price">$19</span><span class="plan-type">/ Monthly</span></div>
+                <ul class="plan-features">
+                  <li><i class="ion-checkmark"> </i>5GB Linux Web Space</li>
+                  <li><i class="ion-checkmark"> </i>5 MySQL Databases</li>
+                  <li><i class="ion-checkmark"> </i>Unlimited Email</li>
+                  <li><i class="ion-checkmark"> </i>250Gb Monthly Transfer</li>
+                  <li><i class="ion-checkmark"> </i>24/7 Tech Support</li>
+                  <li><i class="ion-checkmark"> </i>Daily Backups</li>
+                </ul>
+                <div class="plan-select"><a href="">Select Plan</a></div>
+              </div>
+              <div class="plan">
+                <h3 class="plan-title">
+                  Basic
+                </h3>
+                <div class="plan-cost"><span class="plan-price">$29</span><span class="plan-type">/ Monthly</span></div>
+                <ul class="plan-features">
+                  <li><i class="ion-checkmark"> </i>10GB Linux Web Space</li>
+                  <li><i class="ion-checkmark"> </i>10 MySQL Databases</li>
+                  <li><i class="ion-checkmark"> </i>Unlimited Email</li>
+                  <li><i class="ion-checkmark"> </i>500Gb Monthly Transfer</li>
+                  <li><i class="ion-checkmark"> </i>24/7 Tech Support</li>
+                  <li><i class="ion-checkmark"> </i>Daily Backups</li>
+                </ul>
+                <div class="plan-select"><a href="">Select Plan</a></div>
+              </div>
+              <div class="plan featured">
+                <h3 class="plan-title">
+                  Professional
+                </h3>
+                <div class="plan-cost"><span class="plan-price">$49</span><span class="plan-type">/ Monthly</span></div>
+                <ul class="plan-features">
+                  <li><i class="ion-checkmark"> </i>25GB Linux Web Space</li>
+                  <li><i class="ion-checkmark"> </i>25 MySQL Databases</li>
+                  <li><i class="ion-checkmark"> </i>Unlimited Email</li>
+                  <li><i class="ion-checkmark"> </i>2000Gb Monthly Transfer</li>
+                  <li><i class="ion-checkmark"> </i>24/7 Tech Support</li>
+                  <li><i class="ion-checkmark"> </i>Daily Backups</li>
+                </ul>
+                <div class="plan-select"><a href="">Select Plan</a></div>
+              </div>
+              <div class="plan">
+                <h3 class="plan-title">
+                  Ultra
+                </h3>
+                <div class="plan-cost"><span class="plan-price">$99</span><span class="plan-type">/ Monthly</span></div>
+                <ul class="plan-features">
+                  <li><i class="ion-checkmark"> </i>100GB Linux Web Space</li>
+                  <li><i class="ion-checkmark"> </i>Unlimited MySQL Databases</li>
+                  <li><i class="ion-checkmark"> </i>Unlimited Email</li>
+                  <li><i class="ion-checkmark"> </i>10000Gb Monthly Transfer</li>
+                  <li><i class="ion-checkmark"> </i>24/7 Tech Support</li>
+                  <li><i class="ion-checkmark"> </i>Daily Backups</li>
+                </ul>
+                <div class="plan-select"><a href="">Select Plan</a></div>
+              </div>
             </div>
+            <!-- <iron-image class="image main-img" src="/images/projeto.png" sizing="cover"></iron-image>
+            <div class="resume">
+              <p>O projeto Milton Ribeiro surgiu quando o filho do artista, Fernando Ribeiro, decidiu dar visibilidade ao trabalho de seu pai, iniciando o processo de documentação museológica e sistematização do acervo (que inclui, além das obras, documentos, cartas, recortes de jornal, entre outros) utilizado para remontar a trajetória em uma plataforma web. Acesse para saber mais.</p>
+            </div> -->
           </div>
           <div class="divider">
             <hero-fab icon="milton:arrow-forward" href="/project" id="projectFab"></hero-fab>
           </div>
         </section>
         <section class="home-section" id="contact">
-          <h2>Contato</h2>
+          <h2>Contact</h2>
           <div class="contact-wrapper">
             <div class="description">
-              <p>Tem alguma sugestão ou crítica? Entre em contato e vamos conversar!</p>
+              <p>Come and increase your business presence on internet, contact us!</p>
               <div class="email">
-                <iron-icon icon="milton:mail"></iron-icon><span>contato@miltonribeiro.org</span>
+                <iron-icon icon="milton:mail"></iron-icon><span>contato@powerfi.com</span>
               </div>
             </div>
             <home-contact class="formfields"></home-contact>
@@ -180,7 +623,7 @@
       </div>
       <div class="container">
         <div id="footer">
-          <p>© 2017 - {{year}} Projeto Milton Ribeiro. Desenvolvido por <a href="http://pencillabs.com.br" target="_blank"><strong>Pencil</strong>labs</a>.</p>
+          <p>Power-Fi World 2019 {{year}}© - All Rights Reserved. Developed by <a href="http://taurus-software.com.br" target="_blank"><strong>Taurus</strong>Software</a>.</p>
         </div>
       </div>
     </app-header-layout>

@@ -64,19 +64,19 @@
     <div class="bottom" id="main">
       <div class="flex"></div>
       <paper-tabs noink attr-for-selected="id" selected="{{selected}}">
-        <paper-tab id="artist" class="artist" on-tap="tapAnchor">
+        <paper-tab id="product" class="product" on-tap="tapAnchor">
           Power-Fi
         </paper-tab>
-        <paper-tab id="collection" class="collection" on-tap="tapAnchor">
+        <paper-tab id="benefits" class="benefits" on-tap="tapAnchor">
           Benefits
         </paper-tab>
-        <paper-tab id="project" class="project" on-tap="tapAnchor">
+        <paper-tab id="features" class="features" on-tap="tapAnchor">
           Features
         </paper-tab>
-        <paper-tab id="project" class="project" on-tap="tapAnchor">
+        <paper-tab id="showcases" class="showcases" on-tap="tapAnchor">
           Showcases
         </paper-tab>
-        <paper-tab id="project" class="project" on-tap="tapAnchor">
+        <paper-tab id="pricing" class="pricing" on-tap="tapAnchor">
           Pricing
         </paper-tab>
         <paper-tab id="contact" class="contact" on-tap="tapAnchor">
@@ -87,19 +87,19 @@
     <div class="bottom" id="collapsed">
       <div class="flex"></div>
       <paper-tabs noink attr-for-selected="id" selected="{{selected}}">
-        <paper-tab id="artist" class="artist" on-tap="tapAnchor">
+        <paper-tab id="product" class="product" on-tap="tapAnchor">
           Power-Fi
         </paper-tab>
-        <paper-tab id="collection" class="collection" on-tap="tapAnchor">
+        <paper-tab id="benefits" class="benefits" on-tap="tapAnchor">
           Benefits
         </paper-tab>
-        <paper-tab id="project" class="project" on-tap="tapAnchor">
+        <paper-tab id="features" class="features" on-tap="tapAnchor">
           Features
         </paper-tab>
-        <paper-tab id="project" class="project" on-tap="tapAnchor">
+        <paper-tab id="showcases" class="showcases" on-tap="tapAnchor">
           Showcases
         </paper-tab>
-        <paper-tab id="project" class="project" on-tap="tapAnchor">
+        <paper-tab id="pricing" class="pricing" on-tap="tapAnchor">
           Pricing
         </paper-tab>
         <paper-tab id="contact" class="contact" on-tap="tapAnchor">
@@ -158,7 +158,7 @@
       }
 
       setScrollSection(e) {
-        const regions = ['', 'artist', 'collection', 'project', 'contact'];
+        const regions = ['', 'product', 'benefits', 'features', 'showcases', 'pricing', 'contact'];
         const index = Math.round(window.scrollY/this.sectionHeight);
         clearTimeout(this.timeout);
         this.timeout = setTimeout(function () {
