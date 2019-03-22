@@ -281,6 +281,42 @@
       margin-right: auto;
       width: 100%;
     }
+    .features paper-card {
+      width: 30%;
+      height: 200px;
+      margin: 0 0 2% 2%;
+      padding: 0 2% 2% 0;
+      display: inline-flex;
+    }
+    .features p {
+      color: black;
+      font-weight: 500;
+      font-size: 1.2em;
+      height: 8vh;
+      font-style: italic;
+      padding-left: 50px;
+    }
+    .features h2 {
+      font-size: 2em;
+    }
+    .features-card-head {
+      display: block;
+      margin: auto 3% auto 1%;
+    }
+    .features-icons {
+      --iron-icon-height: 64px;
+      --iron-icon-width: 64px;
+      color: green;
+      /* display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 100%; */
+    }
+    .feature-card-content {
+      text-align: justify;
+      float: right;
+      margin-left: 0%;
+    }
     .card-content {
       text-align: justify;
     }
@@ -534,11 +570,106 @@
         </section>
         <section class="home-section" id="features">
           <h2><paper-button noink on-tap="tapToFab">Features</paper-button></h2>
-          <div>
-            <!-- <iron-image class="image main-img" src="/images/projeto.png" sizing="cover"></iron-image>
-            <div class="resume">
-              <p>O projeto Milton Ribeiro surgiu quando o filho do artista, Fernando Ribeiro, decidiu dar visibilidade ao trabalho de seu pai, iniciando o processo de documentação museológica e sistematização do acervo (que inclui, além das obras, documentos, cartas, recortes de jornal, entre outros) utilizado para remontar a trajetória em uma plataforma web. Acesse para saber mais.</p>
-            </div> -->
+          <div class="features">
+            <p>What you get buying Power-Fi</p>
+            <paper-card image="">
+              <span class="features-card-head">
+                <iron-icon class="features-icons" icon="notification:network-check"></iron-icon>
+              </span>
+              <span class="feature-card-content">
+                <paper-icon-item>
+                  <paper-item-body>
+                    <h2>High Definition</h2>
+                  </paper-item-body>
+                </paper-icon-item>
+                <div class="">
+                  Make the most of the richness of detail in images or videos
+                  used in your mobile campaigns. We make your business look good.
+                </div>
+              </span>
+            </paper-card>
+            <paper-card image="">
+              <span class="features-card-head">
+                <iron-icon class="features-icons" icon="search"></iron-icon>
+              </span>
+              <span class="feature-card-content">
+                <paper-icon-item>
+                    <paper-item-body>
+                      <h2>Fits All</h2>
+                    </paper-item-body>
+                </paper-icon-item>
+                <div class="">
+                  No one gets left out. Power-Fi is versatile and works on all
+                  major phones, tablets and laptops.
+                </div>
+              </span>
+            </paper-card>
+            <paper-card image="">
+              <span class="features-card-head">
+                <iron-icon class="features-icons" icon="trending-up"></iron-icon>
+              </span>
+              <span class="feature-card-content">
+                <paper-icon-item>
+                    <paper-item-body>
+                      <h2>Total Control</h2>
+                    </paper-item-body>
+                </paper-icon-item>
+                <div class="">
+                  Data consumption, length of stay, number of visits,
+                  restricted sites, and loads more can be analyzed and
+                  controlled in real time using our platform.
+                </div>
+              </span>
+            </paper-card>
+            <paper-card image="">
+              <span class="features-card-head">
+                <iron-icon class="features-icons" icon="trending-up"></iron-icon>
+              </span>
+              <span class="feature-card-content">
+                <paper-icon-item>
+                    <paper-item-body>
+                      <h2>Automation</h2>
+                    </paper-item-body>
+                </paper-icon-item>
+                <div class="">
+                  Supercharge your CRM with our Wi-Fi tool to increase
+                  and maintain contact with your market, in a practical and fast way.
+                </div>
+              </span>
+            </paper-card>
+            <paper-card image="">
+              <span class="features-card-head">
+                <iron-icon class="features-icons" icon="trending-up"></iron-icon>
+              </span>
+              <span class="feature-card-content">
+                <paper-icon-item>
+                    <paper-item-body>
+                      <h2>Data Analytics</h2>
+                    </paper-item-body>
+                </paper-icon-item>
+                <div class="">
+                  Get the best view of who your consumers are and how they
+                  interact with your brand in order to offer a personalized
+                  and efficient experience.
+                </div>
+              </span>
+            </paper-card>
+            <paper-card image="">
+              <span class="features-card-head">
+                <iron-icon class="features-icons" icon="trending-up"></iron-icon>
+              </span>
+              <span class="feature-card-content">
+                <paper-icon-item>
+                    <paper-item-body>
+                      <h2>Multi Languages</h2>
+                    </paper-item-body>
+                </paper-icon-item>
+                <div class="">
+                  Power-Fi supports more than 20 languages which ensures
+                  an even greater reach for your business across the globe.
+                </div>
+              </span>
+            </paper-card>
           </div>
           <div class="divider">
             <hero-fab icon="milton:arrow-forward" href="/project" id="projectFab"></hero-fab>
