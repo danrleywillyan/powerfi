@@ -23,142 +23,6 @@
     <style include="shared-styles"></style>
     <style include="main-theme"></style>
     <style>
-    @import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
-    @import url(https://fonts.googleapis.com/css?family=Raleway:400,500,800);
-    @import url(https://fonts.googleapis.com/css?family=Montserrat:800);
-    .snip1214 {
-      font-family: 'Raleway', Arial, sans-serif;
-      color: #000000;
-      text-align: center;
-      font-size: 16px;
-      width: 100%;
-      max-width: 1000px;
-      margin: 40px 10px;
-    }
-    .snip1214 .plan {
-      margin: 0;
-      width: 25%;
-      position: relative;
-      float: left;
-      background-color: #ffffff;
-      border: 1px solid rgba(0, 0, 0, 0.1);
-    }
-    .snip1214 * {
-      -webkit-box-sizing: border-box;
-      box-sizing: border-box;
-    }
-    .snip1214 header {
-      position: relative;
-    }
-    .snip1214 .plan-title {
-      position: relative;
-      top: 0;
-      font-weight: 800;
-      padding: 5px 15px;
-      margin: 0 auto;
-      -webkit-transform: translateY(-50%);
-      transform: translateY(-50%);
-      margin: 0;
-      display: inline-block;
-      background-color: #222f3d;
-      color: #ffffff;
-      text-transform: uppercase;
-    }
-    .snip1214 .plan-cost {
-      padding: 0px 10px 20px;
-    }
-    .snip1214 .plan-price {
-      font-family: 'Montserrat', Arial, sans-serif;
-      font-weight: 800;
-      font-size: 2.4em;
-      color: #34495e;
-    }
-    .snip1214 .plan-type {
-      opacity: 0.6;
-    }
-    .snip1214 .plan-features {
-      padding: 0;
-      margin: 0;
-      text-align: center;
-      list-style: outside none none;
-      font-size: 0.8em;
-    }
-    .snip1214 .plan-features li {
-      border-top: 1px solid #d2d7e2;
-      padding: 10px 5%;
-    }
-    .snip1214 .plan-features li:nth-child(even) {
-      background: rgba(0, 0, 0, 0.08);
-    }
-    .snip1214 .plan-features i {
-      margin-right: 8px;
-      opacity: 0.4;
-    }
-    .snip1214 .plan-select {
-      border-top: 1px solid #d2d7e2;
-      padding: 10px 10px 0;
-    }
-    .snip1214 .plan-select a {
-      background-color: #222f3d;
-      color: #ffffff;
-      text-decoration: none;
-      padding: 0.5em 1em;
-      -webkit-transform: translateY(50%);
-      transform: translateY(50%);
-      font-weight: 800;
-      text-transform: uppercase;
-      display: inline-block;
-    }
-    .snip1214 .plan-select a:hover {
-      background-color: #46627f;
-    }
-    .snip1214 .featured {
-      margin-top: -10px;
-      background-color: #34495e;
-      color: #ffffff;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
-      z-index: 1;
-    }
-    .snip1214 .featured .plan-title,
-    .snip1214 .featured .plan-price {
-      color: #ffffff;
-    }
-    .snip1214 .featured .plan-cost {
-      padding: 10px 10px 20px;
-    }
-    .snip1214 .featured .plan-features li {
-      border-top: 1px solid rgba(255, 255, 255, 0.4);
-    }
-    .snip1214 .featured .plan-select {
-      padding: 20px 10px 0;
-      border-top: 1px solid rgba(255, 255, 255, 0.4);
-    }
-    @media only screen and (max-width: 767px) {
-      .snip1214 .plan {
-        width: 50%;
-      }
-      .snip1214 .plan-title,
-      .snip1214 .plan-select a {
-        -webkit-transform: translateY(0);
-        transform: translateY(0);
-      }
-      .snip1214 .plan-cost,
-      .snip1214 .featured .plan-cost {
-        padding: 20px 10px 20px;
-      }
-      .snip1214 .plan-select,
-      .snip1214 .featured .plan-select {
-        padding: 10px 10px 10px;
-      }
-      .snip1214 .featured {
-        margin-top: 0;
-      }
-    }
-    @media only screen and (max-width: 440px) {
-      .snip1214 .plan {
-        width: 100%;
-      }
-    }
     :host {
       display: block;
     }
@@ -258,7 +122,7 @@
     .benefits paper-card {
       width: 23%;
       margin: 0 0 4% 1.7%;
-      padding: 0 0 5% 0;
+      /* padding: 0 0 5% 0; */
     }
     .benefits p {
       color: black;
@@ -339,6 +203,24 @@
     .center-price {
 
     }
+
+    .dark-text {
+      color: black;
+    }
+    .extra-information{
+      display: inline-flex;
+      padding: 10px;
+    }
+    .information-card {
+      height: 50vh;
+      width: 25%;
+      padding: 25px;
+    }
+    .information-icon {
+      width: 100%;
+      height: 70px;
+    }
+
     @media screen and (min-width: 501px) {
       .title { display: none; }
       .mid-layer-white {
@@ -360,9 +242,17 @@
         --paper-slide-dot-selected: #0B5DA5;
         --paper-slide-height: calc(100vh - 234px);
       }
+      #features {
+        /* border-top: 4px solid var(--default-project-color); */
+        height: calc(100vh - 90px);
+        background-color: green;
+      }
+      #benefits {
+        height: calc(100vh - 90px);
+      }
       #showcases {
         background: url("../../images/bg2.jpg");
-        background-size: 100vw auto;
+        background-size: 100vw 100vh;
         height: calc(100vh - 90px);
       }
       /* this is not work very well */
@@ -384,6 +274,8 @@
         opacity: 0.1;
       }
     }
+
+    /* Responsiveness */
     @media screen and (max-width: 500px) {
       #product {
         background: url("../../images/bg1.jpg");
@@ -421,13 +313,12 @@
                 <img src="../../images/logo_nova.png"/>
               </div>
               <div class="left">
-                <h1>SHARE INTERNET AND POWER UP YOUR BUSINESS</h1>
-                <p>By using Power-Fi you get closer to your customer and get better results</p>
+                <h1>SHARE Wi-Fi AND POWER UP YOUR BUSINESS</h1>
+                <p>By using Power-Fi you get closer to your customer and increase your business</p>
                 <div class="button">
-                  <paper-button id="more" on-tap="scrollToTab" role="button" tabindex="0" aria-disabled="false">Get 5% discount now!</paper-button>
+                  <paper-button id="more" on-tap="scrollToTab" role="button" tabindex="0" aria-disabled="false">Check our plans now!</paper-button>
                 </div>
-                <!-- <br> -->
-                <p>more information about our solution</p>
+                <p>more information</p>
                 <div class="button">
                   <paper-icon-button id="more" on-tap="scrollToTab" icon="milton:expand-more" role="button" tabindex="0" aria-disabled="false"></paper-icon-button>
                 </div>
@@ -441,6 +332,34 @@
           on-tab-changed="scrollToTab"></home-tabs>
         </app-toolbar>
       </app-header>
+      <div class="extra-information">
+        <paper-card class="information-card">
+          <iron-image sizing="contain" class="information-icon" src="../../images/checkbox.png"></iron-image>
+          <h2>Easy to use</h2>
+          <p class="dark-text">Power-Fi is simple and intuitive for both the user and your business.
+            With a few clicks you and your customer will be closer than ever.</p>
+        </paper-card>
+        <paper-card class="information-card">
+          <iron-image sizing="contain" class="information-icon" src="../../images/design.png"></iron-image>
+          <h2>Crisp design</h2>
+          <p class="dark-text">Impress by displaying your brand in rich detail and
+            colorful features while presenting your promotions at the most coveted
+            spot of online marketing: mobile.</p>
+        </paper-card>
+        <paper-card class="information-card">
+          <iron-image sizing="contain" class="information-icon" src="../../images/ads.png"></iron-image>
+          <h2>Precise advertising</h2>
+          <p class="dark-text">Build up your customer loyalty with Power-Fi by
+            sending your customers personal advertisements based on their needs
+            and wishes. Clients will feel more connected to your business. </p>
+        </paper-card>
+        <paper-card class="information-card">
+          <iron-image sizing="contain" class="information-icon" src="../../images/bars-graphic.png"></iron-image>
+          <h2>Real results</h2>
+          <p class="dark-text">Get real-time performance of your campaigns, with
+            numbers and critical insights to help you grow your business.</p>
+        </paper-card>
+      </div>
       <div class="container">
         <section class="home-section" id="product">
           <div class="mid-layer-white"></div>
@@ -559,17 +478,13 @@
                 more clients.
               </div>
             </paper-card>
-            <!-- <iron-image class="image main-img" src="/images/pinturas.png" sizing="contain"></iron-image>
-            <div class="resume">
-              <p>O acervo do projeto Milton Ribeiro conta com mais de mil peças: são pinturas, desenhos, esculturas e gravuras de autoria do artista, além de diversos documentos e fotografias de sua trajetória artística.</p>
-            </div> -->
           </div>
           <div class="divider">
             <hero-fab icon="milton:add" href="/collection" id="collectionFab"></hero-fab>
           </div>
         </section>
         <section class="home-section" id="features">
-          <h2><paper-button noink on-tap="tapToFab">Features</paper-button></h2>
+          <h2><paper-button noink on-tap="tapToFab">Get that power edge</paper-button></h2>
           <div class="features">
             <p>What you get buying Power-Fi</p>
             <paper-card image="">
@@ -883,6 +798,7 @@
       console.log(e);
       if(!e.detail.tapped) e.detail.tapped="contact";
       const tab = this.$[e.detail.tapped];
+      console.log(tab.offsetTop)
       if(!tab) return;
       window.scroll({
         behavior: 'smooth',
