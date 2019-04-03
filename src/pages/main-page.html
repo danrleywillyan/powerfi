@@ -31,11 +31,14 @@ pricing table style
 ==================================================
 */
     .background {
-      padding: 0 25px 25px;
+      /* padding: 0 25px 25px; */
       position: relative;
       width: 100%;
       height: 100%;
-      margin-top: 5%;
+    }
+    .background > h2 {
+      color: #fff;
+      font-size: 2.5rem;
     }
     .background::after {
       content: '';
@@ -53,11 +56,11 @@ pricing table style
     }
     .background .header-pricing {
       z-index: 2;
-      position: absolute;
+      position: relative;
       padding: 0;
       text-transform: none;
       min-width: unset;
-      margin: 0;
+      margin: 0 0 20px 0;
     }
     .background .divider {
       position: relative;
@@ -74,14 +77,13 @@ pricing table style
     }
     .pricing-container {
       margin: 0 auto;
-      padding: 50px 0 0;
       max-width: 960px;
       width: 100%;
     }
     .panel {
       background-color: #fff;
       border-radius: 10px;
-      padding: 15px 0px;
+      padding: 0px 0px;
       position: relative;
       width: 95%;
       z-index: 10;
@@ -112,14 +114,13 @@ pricing table style
         border-bottom: none;
         border-right: 1px solid #e1f1ff;
         flex-basis: 100%;
-        padding: 25px 50px;
+        padding: 0px 50px;
       }
       .pricing-plan:last-child {
         border-right: none;
       }
     }
     .pricing-img {
-      margin-bottom: 25px;
       max-width: 100%;
     }
     .pricing-header {
@@ -128,10 +129,18 @@ pricing table style
       letter-spacing: 1px;
     }
     .pricing-features {
-      color: #016FF9;
       font-weight: 600;
       letter-spacing: 1px;
-      margin: 50px 0 25px;
+      margin: 0px 0 0px;
+    }
+    .orange {
+      color: #f5af19;
+    }
+    .blue {
+        color: #0b5da5;
+    }
+    .green {
+      color: #7cb620;
     }
     .pricing-features-item {
       border-top: 1px solid #e1f1ff;
@@ -143,7 +152,6 @@ pricing table style
       border-bottom: 1px solid #e1f1ff;
     }
     .pricing-price {
-      color: #016FF9;
       display: block;
       font-size: 32px;
       font-weight: 700;
@@ -865,51 +873,50 @@ end home section
           </div>
         </section>
         <section class="background" id="pricing">
-          <h2 class="header-pricing"><paper-button noink on-tap="tapToFab">Pricing</paper-button></h2>
+          <h2 class="header-pricing"><paper-button noink on-tap="tapToFab">
+            Have it your way
+            <!-- We have the right plan for your Business -->
+          </paper-button></h2>
           <!-- <div class="background"> -->
             <div class="pricing-container">
               <div class="panel pricing-table">
                 <div class="pricing-plan">
                   <img src="../../../images/pricing-icons/paper-plane.png" alt="" class="pricing-img">
                   <h2 class="pricing-header">Premiere</h2>
-                  <ul class="pricing-features">
+                  <ul class="pricing-features blue">
                     <li class="pricing-features-item">Custom domains</li>
                     <li class="pricing-features-item">Sleeps after 30 mins of inactivity</li>
                   </ul>
-                  <span class="pricing-price">50$</span>
-                  <a href="#/" class="pricing-button">Buy Now</a>
+                  <span class="pricing-price blue">50$</span>
+                  <a href="#/" class="pricing-button blue">Buy Now</a>
                 </div>
 
                 <div class="pricing-plan">
                   <img src="../../../images/pricing-icons/plane.png" alt="" class="pricing-img">
                   <h2 class="pricing-header">Business</h2>
-                  <ul class="pricing-features">
+                  <ul class="pricing-features green">
                     <li class="pricing-features-item">Never sleeps</li>
                     <li class="pricing-features-item">Multiple workers for more powerful apps</li>
                   </ul>
-                  <span class="pricing-price">$150</span>
-                  <a href="#/" class="pricing-button is-featured">Buy Now</a>
+                  <span class="pricing-price green">$150</span>
+                  <a href="#/" class="pricing-button is-featured green">Buy Now</a>
                 </div>
 
                 <div class="pricing-plan">
                   <!-- #f5af19 -->
                   <img src="../../../images/pricing-icons/space-ship.png" alt="" class="pricing-img">
                   <h2 class="pricing-header">Enterprise</h2>
-                  <ul class="pricing-features">
+                  <ul class="pricing-features orange">
                     <li class="pricing-features-item">Dedicated</li>
                     <li class="pricing-features-item">Simple horizontal scalability</li>
                   </ul>
-                  <span class="pricing-price">$400</span>
-                  <a href="#/" class="pricing-button">Buy Now</a>
+                  <span class="pricing-price orange">$400</span>
+                  <a href="#/" class="pricing-button orange">Buy Now</a>
                 </div>
 
               </div>
             </div>
           <!-- </div> -->
-
-          <div class="divider">
-            <hero-fab icon="milton:arrow-forward" href="/project" id="projectFab"></hero-fab>
-          </div>
         </section>
         <section class="home-section" id="contact">
           <h2>Contact</h2>
