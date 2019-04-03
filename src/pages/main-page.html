@@ -334,6 +334,12 @@ end home section
       margin-right: auto;
       width: 100%;
     }
+    .white {
+      color: white;
+    }
+    .features > .white{
+      color: white;
+    }
     .features paper-card {
       width: 30%;
       height: 200px;
@@ -439,7 +445,8 @@ end home section
       #features {
         /* border-top: 4px solid var(--default-project-color); */
         height: calc(100vh - 90px);
-        background-color: green;
+        background: url("../../images/bg3.jpg");
+        background-size: 100vw 100vh;
       }
       #benefits {
         height: calc(100vh - 90px);
@@ -688,9 +695,9 @@ end home section
           </div>
         </section>
         <section class="home-section" id="features">
-          <h2><paper-button noink on-tap="tapToFab">Get that power edge</paper-button></h2>
+          <h2 class="white"><paper-button noink on-tap="tapToFab">Get that power edge</paper-button></h2>
           <div class="features">
-            <p>What you get buying Power-Fi</p>
+            <p class="white">What you get buying Power-Fi</p>
             <paper-card image="">
               <span class="features-card-head">
                 <iron-icon class="features-icons" icon="notification:network-check"></iron-icon>
