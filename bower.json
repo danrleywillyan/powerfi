@@ -28,7 +28,8 @@
     "collectar-elements": "pencil-labs/collectar-elements#fjm",
     "iron-icons": "^2.1.1",
     "l2t-paper-slider": "^2.0.4",
-    "google-youtube":"GoogleWebComponents/google-youtube#^2.0.0"
+    "google-youtube": "GoogleWebComponents/google-youtube#^2.0.0",
+    "google-map": "^2.0.5"
   },
   "resolutions": {
     "polymer": "^2.0.0",

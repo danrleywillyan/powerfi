@@ -11,6 +11,7 @@
 <link rel="import" href="../../bower_components/app-layout/app-scroll-effects/app-scroll-effects.html">
 <link rel="import" href="../../bower_components/l2t-paper-slider/l2t-paper-slider.html">
 <link rel="import" href="../../bower_components/google-youtube/google-youtube.html">
+<link rel="import" href="../../bower_components/google-map/google-map.html">
 
 <link rel="import" href="../main-page/home-contact.html">
 <link rel="import" href="../main-page/home-tabs.html">
@@ -212,48 +213,83 @@ end home section
    ==========================================
     */
 
-    /*
-    ==========================================
-    contact section
-    ==========================================
-     */
+/*
+==========================================
+contact section
+==========================================
+ */
     .contact-left {
       width: 100%;
       height: 440px;
+      border-radius: 30px;
     }
     .brazil-above {
       position: relative;
       display: inline-flex;
       height: 50%;
-      background-color: green;
+      width: 100%;
+      background-color: #0b5da5;
+      /* background-color: #7cb620; green of powerfi*/
+      border-radius: 30px 0 0 0;
     }
     .netherland-below {
       position: relative;
       display: inline-flex;
       height: 50%;
-      background-color: blue;
+      width: 100%;
+      background-color: #0b5da5;
+      border-radius: 0 0 0 30px;
     }
     .phone {
       float: left;
       width: 30%;
-      margin: 10px;
-      background-color: red;
+      text-align: center;
+      background: rgba(0, 0, 0, 0) linear-gradient(to right, #009790 0%, #0b5da5 100%) repeat scroll 0 0 ;
     }
-    .phone > p {
+    .border-top {
+      border-radius: 30px 0 0 0;
+    }
+    .border-bottom {
+      border-radius: 0 0 0 30px;
+    }
+    .contact-information {
       line-height: 4vh;
+      font-weight: bold;
+      color: white;
+      text-align: center;
     }
     .map {
       float: right;
       width: 70%;
-      margin: 10px;
-      background-color: yellow;
+      margin: 0;
+    }
+    .flag {
+      height: 40%;
+      width: 60%;
+      text-align: center;
+      margin: 20px 0 0 0;
+    }
+    google-map {
+      width: 100%;
+    }
+    .custom {
+
+    }
+    .custom:hover {
+      filter: saturate(3);
+    }
+    paper-button.green[active] {
+      filter: grayscale(50%);
+    }
+    paper-button.disabled {
+      filter: grayscale(100%);
     }
 
-    /*
-    ==========================================
-   end contact section
-    ==========================================
-     */
+/*
+==========================================
+end contact section
+==========================================
+ */
 
     :host {
       display: block;
@@ -495,8 +531,8 @@ end home section
         height: calc(100vh - 90px);
       }
       #showcases {
-        background: url("../../images/bg2.jpg");
-        background-size: 100vw 100vh;
+        /* background: url("../../images/bg2.jpg");
+        background-size: 100vw 100vh; */
         height: calc(100vh - 90px);
       }
       /* this is not work very well */
@@ -507,7 +543,7 @@ end home section
       }
       #showcases > .mid-layer {
         position: absolute;
-        background-color: #7CB620;
+        /* background-color: #7CB620; */
         opacity: 0.2;
         height: 100vh;
         width: 100vw;
@@ -974,19 +1010,39 @@ end home section
             <div class="description">
               <paper-card class="contact-left" elevation="5">
                 <div class="brazil-above">
-                  <div class="phone">
-                    <p style="color: black;">Brasil!</br>+55 (61) 99543-2233</p>
+                  <div class="phone border-top">
+                    <iron-image sizing="cover" class="flag" width="100" height="67" src="../../images/flags/br.png"></iron-image>
+                    <p class="contact-information">
+                      +55 (61) 99543-2233
+                    </p>
+                    <a href="#" class="custom" target="_blank">
+                      <iron-image class="" sizing="cover" width="30" height="30" src="../../images/whatsapp-icon.png"></iron-image>
+                    </a>
                   </div>
                   <div class="map">
-                    <p style="color: black;">Come and increase your business presence on internet, contact us!</p>
+                    <google-map latitude="37.77493" longitude="-122.41942">
+                      <google-map-poly closed fill-color="blue" fill-opacity=".5">
+                        <google-map-point latitude="36.77493" longitude="-121.41942"></google-map-point>
+                      </google-map-poly>
+                    </google-map>
                   </div>
                 </div>
                 <div class="netherland-below">
-                  <div class="phone">
-                    <p style="color: black;">Netherland!</br>+31 (3) 33343-2233</p>
+                  <div class="phone border-bottom">
+                    <iron-image sizing="cover" class="flag" width="100" height="67" src="../../images/flags/nl.png"></iron-image>
+                    <p class="contact-information">
+                      +31 (3) 33343-2233
+                    </p>
+                    <a href="#" class="custom" target="_blank">
+                      <iron-image class="" sizing="cover" width="30" height="30" src="../../images/whatsapp-icon.png"></iron-image>
+                    </a>
                   </div>
                   <div class="map">
-                    <p style="color: black;">Come and increase your business presence on internet, contact us!</p>
+                    <google-map latitude="37.77493" longitude="-122.41942">
+                      <google-map-poly closed fill-color="blue" fill-opacity=".5">
+                        <google-map-point latitude="36.77493" longitude="-121.41942"></google-map-point>
+                      </google-map-poly>
+                    </google-map>
                   </div>
                 </div>
               </paper-card>
