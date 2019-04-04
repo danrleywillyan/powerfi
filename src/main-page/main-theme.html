@@ -56,7 +56,8 @@
       }
       .home-section {
         position: relative;
-        height: calc(100vh - 134px);
+        height: 100vh;
+        /* height: calc(100vh - 134px); */
       }
       .home-section h2 {
         font-size: 2.5rem;
@@ -124,6 +125,40 @@
         right: unset;
         background: inherit;
       }
+
+      #contact {
+        position: relative;
+        height: calc(100vh - 134px);
+      }
+
+      /*
+===============================
+Power Fi section style
+===================================
+       */
+       #powerfi .divider {
+         background: var(--default-collection-color);
+       }
+       #powerfi .divider hero-fab {
+       }
+       #powerfi {
+         display: inline-flex;
+       }
+
+       #powerfi .divider {
+         left:10%;
+       }
+       #powerfi hero-fab {
+         position: absolute;
+         right: unset;
+         background: inherit;
+       }
+
+/*
+=====================================
+end Power Fi section style
+=====================================
+ */
 
       @media only screen and (min-width: 400px) {
         .masonry {

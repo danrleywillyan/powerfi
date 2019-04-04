@@ -185,6 +185,7 @@ end pricing table style
 ==================================================
 */
 
+
 /*
   ==========================================================
   home section
@@ -198,6 +199,58 @@ end pricing table style
 end home section
  ==========================================
   */
+
+  /*
+    ==========================================================
+    powerfi business section
+    ==========================================================
+   */
+
+   .powerfi-business {
+     width: 50%;
+   }
+
+   .powerfi-left {
+
+   }
+
+   .extra-information{
+     display: block;
+     width: 25%;
+   }
+   .extra-information h2 {
+     margin: 5px 20px 5px 10px !important;
+   }
+   .information-card {
+     height: 40vh;
+     padding: 25px;
+     margin-bottom: 10px;
+     margin-top: 15px;
+   }
+   .information-icon {
+     width: 100%;
+     height: 70px;
+   }
+   .video-presentation {
+     display: block;
+     width: 90%;
+     height: auto;
+     margin-top: 25%;
+     margin-left: auto;
+     margin-right: auto;
+   }
+   .dark-text {
+     color: black;
+     line-height: 3vh !important;
+     text-align: justify;
+   }
+
+
+   /*
+   ==========================================
+  end powerfi business section
+   ==========================================
+    */
 
 /*
   ==========================================================
@@ -479,29 +532,7 @@ end contact section
     .center-price {
 
     }
-    .dark-text {
-      color: black;
-    }
-    .extra-information{
-      display: inline-flex;
-      padding: 10px;
-    }
-    .information-card {
-      height: 50vh;
-      width: 25%;
-      padding: 25px;
-    }
-    .information-icon {
-      width: 100%;
-      height: 70px;
-    }
-    .video-presentation {
-      display: block;
-      width: 50%;
-      height: auto;
-      margin-left: auto;
-      margin-right: auto;
-    }
+
     @media screen and (min-width: 501px) {
       .title { display: none; }
       .mid-layer-white {
@@ -614,48 +645,52 @@ end contact section
           on-tab-changed="scrollToTab"></home-tabs>
         </app-toolbar>
       </app-header>
-      <div class="extra-information">
-        <paper-card class="information-card">
-          <iron-image sizing="contain" class="information-icon" src="../../images/checkbox.png"></iron-image>
-          <h2>Easy to use</h2>
-          <p class="dark-text">Power-Fi is simple and intuitive for both the user and your business.
-            With a few clicks you and your customer will be closer than ever.</p>
-        </paper-card>
-        <paper-card class="information-card">
-          <iron-image sizing="contain" class="information-icon" src="../../images/design.png"></iron-image>
-          <h2>Crisp design</h2>
-          <p class="dark-text">Impress by displaying your brand in rich detail and
-            colorful features while presenting your promotions at the most coveted
-            spot of online marketing: mobile.</p>
-        </paper-card>
-        <paper-card class="information-card">
-          <iron-image sizing="contain" class="information-icon" src="../../images/ads.png"></iron-image>
-          <h2>Precise advertising</h2>
-          <p class="dark-text">Build up your customer loyalty with Power-Fi by
-            sending your customers personal advertisements based on their needs
-            and wishes. Clients will feel more connected to your business. </p>
-        </paper-card>
-        <paper-card class="information-card">
-          <iron-image sizing="contain" class="information-icon" src="../../images/bars-graphic.png"></iron-image>
-          <h2>Real results</h2>
-          <p class="dark-text">Get real-time performance of your campaigns, with
-            numbers and critical insights to help you grow your business.</p>
-        </paper-card>
-      </div>
-      <div>
-        <google-youtube
-          class="video-presentation"
-          video-id="2twJhfS1plA"
-          fluid=1
-          rel="0"
-          start="0"
-          autoplay="0">
-        </google-youtube>
-      </div>
       <div class="container">
+        <section class="home-section" id="powerfi">
+          <div class="extra-information">
+            <paper-card class="information-card">
+              <iron-image sizing="contain" class="information-icon" src="../../images/checkbox.png"></iron-image>
+              <h2>Easy to use</h2>
+              <p class="dark-text">Power-Fi is simple and intuitive for both the user and your business.
+                With a few clicks you and your customer will be closer than ever.</p>
+            </paper-card>
+            <paper-card class="information-card">
+              <iron-image sizing="contain" class="information-icon" src="../../images/design.png"></iron-image>
+              <h2>Crisp design</h2>
+              <p class="dark-text">Impress by displaying your brand in rich detail and
+                colorful features while presenting your promotions at the most coveted
+                spot of online marketing: mobile.</p>
+            </paper-card>
+          </div>
+          <div class="powerfi-business">
+            <google-youtube
+              class="video-presentation"
+              video-id="2twJhfS1plA"
+              fluid=1
+              rel="0"
+              start="0"
+              autoplay="0">
+            </google-youtube>
+          </div>
+          <div class="extra-information">
+            <paper-card class="information-card">
+              <iron-image sizing="contain" class="information-icon" src="../../images/ads.png"></iron-image>
+              <h2>Precise ads</h2>
+              <p class="dark-text">Build up your customer loyalty with Power-Fi by
+                sending personal advertisements based on their needs
+                and wishes. Clients will feel more connected to your business. </p>
+            </paper-card>
+            <paper-card class="information-card">
+              <iron-image sizing="contain" class="information-icon" src="../../images/bars-graphic.png"></iron-image>
+              <h2>Real results</h2>
+              <p class="dark-text">Get real-time performance of your campaigns, with
+                numbers and critical insights to help you grow your business.</p>
+            </paper-card>
+          </div>
+        </section>
         <section class="home-section" id="product">
           <div class="mid-layer-white"></div>
-          <h2><paper-button noink on-tap="tapToFab">Power-Fi</paper-button></h2>
+          <h2><paper-button noink on-tap="tapToFab">How it Works</paper-button></h2>
           <div>
             <l2t-paper-slider class="l2t-product" auto-progress slide-duration="15" total-slides="4">
       				<paper-slide>
