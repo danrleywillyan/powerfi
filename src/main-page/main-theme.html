@@ -176,6 +176,12 @@ end Power Fi section style
         }
       }
 
+
+/*
+==================================
+Contact style
+==================================
+*/
       #contact {
         height: 360px;
         min-height: 0;
@@ -202,6 +208,53 @@ end Power Fi section style
         flex: 1;
         width: 100%;
       }
+/* media screen to contact section */
+      @media screen and (max-width: 660px) {
+        #contact {
+          height: 65vh;
+        }
+        .contact-wrapper {
+          display: block;
+          height: calc(65vh - 100px);
+        }
+        .contact-wrapper .formfields,
+        .contact-wrapper .description {
+          flex: 1;
+          width: 100%;
+        }
+        .contact-wrapper .description {
+          padding: 10px 0 40px;
+          font-size: 1rem;
+        }
+        .contact-wrapper .email iron-icon {
+          color: white;
+          background: @default-contact-color;
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          padding: 7px;
+          margin: 0 10px;
+        }
+      }
+
+      @media screen and (max-width: 500px) {
+        #contact {
+          height: 450px;
+        }
+        #contact p {
+          display: none;
+        }
+        #contact .email {
+          text-align: center;
+          line-height: 2.5rem;
+        }
+      }
+/*
+==================================
+end Contact style
+==================================
+*/
+
       @media screen and (min-width: 1101px) {
         .home-section .resume p {
           line-height: 8vh;
@@ -283,31 +336,6 @@ end Power Fi section style
         #benefits .divider {
           max-width: 90%;
         }
-        #contact {
-          height: 65vh;
-        }
-        .contact-wrapper {
-          display: block;
-          height: calc(65vh - 100px);
-        }
-        .contact-wrapper .formfields,
-        .contact-wrapper .description {
-          flex: 1;
-          width: 100%;
-        }
-        .contact-wrapper .description {
-          padding: 10px 0 40px;
-          font-size: 1rem;
-        }
-        .contact-wrapper .email iron-icon {
-          color: white;
-          background: @default-contact-color;
-          width: 40px;
-          height: 40px;
-          border-radius: 50%;
-          padding: 7px;
-          margin: 0 10px;
-        }
       }
       @media screen and (max-width: 500px) {
         .slogan {
@@ -347,16 +375,6 @@ end Power Fi section style
           bottom: 37px;
           right: 22px;
         }
-        #contact {
-          height: 450px;
-        }
-        #contact p {
-          display: none;
-        }
-        #contact .email {
-          text-align: center;
-          line-height: 2.5rem;
-        }
       }
       app-header[condenses] {
         --app-header-background-front-layer: {
@@ -370,7 +388,7 @@ end Power Fi section style
       paper-input {
         --paper-input-container-color: #ccc;
       }
-      
+
     </style>
   <template>
 </dom-module>
