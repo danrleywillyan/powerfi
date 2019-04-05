@@ -76,11 +76,11 @@
         <paper-tab id="features" class="features" on-tap="tapAnchor">
           Features
         </paper-tab>
-        <paper-tab id="showcases" class="showcases" on-tap="tapAnchor">
-          Showcases
+        <paper-tab id="demo" class="demo" on-tap="tapAnchor">
+          Demo
         </paper-tab>
-        <paper-tab id="pricing" class="pricing" on-tap="tapAnchor">
-          Pricing
+        <paper-tab id="plans" class="plans" on-tap="tapAnchor">
+          plans
         </paper-tab>
         <paper-tab id="contact" class="contact" on-tap="tapAnchor">
           Contact
@@ -102,11 +102,11 @@
         <paper-tab id="features" class="features" on-tap="tapAnchor">
           Features
         </paper-tab>
-        <paper-tab id="showcases" class="showcases" on-tap="tapAnchor">
-          Showcases
+        <paper-tab id="demo" class="demo" on-tap="tapAnchor">
+          Demo
         </paper-tab>
-        <paper-tab id="pricing" class="pricing" on-tap="tapAnchor">
-          Pricing
+        <paper-tab id="plans" class="plans" on-tap="tapAnchor">
+          plans
         </paper-tab>
         <paper-tab id="contact" class="contact" on-tap="tapAnchor">
           Contact
@@ -164,7 +164,7 @@
       }
 
       setScrollSection(e) {
-        const regions = ['', 'powerfi', 'product', 'benefits', 'features', 'showcases', 'pricing', 'contact'];
+        const regions = ['', 'powerfi', 'product', 'benefits', 'features', 'demo', 'plans', 'contact'];
         const index = Math.round(window.scrollY/this.sectionHeight);
         clearTimeout(this.timeout);
         this.timeout = setTimeout(function () {

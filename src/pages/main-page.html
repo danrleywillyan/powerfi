@@ -27,166 +27,6 @@
     <style>
 
 /*
-==================================================
-pricing table style
-==================================================
-*/
-    .background {
-      /* padding: 0 25px 25px; */
-      position: relative;
-      width: 100%;
-      height: 100%;
-    }
-    .background > h2 {
-      color: #fff;
-      font-size: 2.5rem;
-    }
-    .background::after {
-      content: '';
-      background: #60a9ff;
-      background: -moz-linear-gradient(top, #60a9ff 0%, #4394f4 100%);
-      background: -webkit-linear-gradient(top, #60a9ff 0%,#4394f4 100%);
-      background: linear-gradient(to bottom, #60a9ff 0%,#4394f4 100%);
-      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#60a9ff', endColorstr='#4394f4',GradientType=0 );
-      height: 350px;
-      left: 0;
-      position: absolute;
-      top: 0;
-      width: 100%;
-      z-index: 1;
-    }
-    .background .header-pricing {
-      z-index: 2;
-      position: relative;
-      padding: 0;
-      text-transform: none;
-      min-width: unset;
-      margin: 0 0 20px 0;
-    }
-    .background .divider {
-      position: relative;
-      height: 5px;
-      max-width: 90%;
-      margin-top: -5px;
-      clear: both;
-      color: white;
-    }
-    @media (min-width: 900px) {
-      .background {
-        padding: 0 0 25px;
-      }
-    }
-    .pricing-container {
-      margin: 0 auto;
-      max-width: 960px;
-      width: 100%;
-    }
-    .panel {
-      background-color: #fff;
-      border-radius: 10px;
-      padding: 0px 0px;
-      position: relative;
-      width: 95%;
-      z-index: 10;
-    }
-    .pricing-table {
-      box-shadow: 0px 10px 13px -6px rgba(0, 0, 0, 0.08), 0px 20px 31px 3px rgba(0, 0, 0, 0.09), 0px 8px 20px 7px rgba(0, 0, 0, 0.02);
-      display: flex;
-      flex-direction: column;
-    }
-    @media (min-width: 900px) {
-      .pricing-table {
-        flex-direction: row;
-      }
-    }
-    .pricing-table * {
-      text-align: center;
-      text-transform: uppercase;
-    }
-    .pricing-plan {
-      border-bottom: 1px solid #e1f1ff;
-      padding: 25px;
-    }
-    .pricing-plan:last-child {
-      border-bottom: none;
-    }
-    @media (min-width: 900px) {
-      .pricing-plan {
-        border-bottom: none;
-        border-right: 1px solid #e1f1ff;
-        flex-basis: 100%;
-        padding: 0px 50px;
-      }
-      .pricing-plan:last-child {
-        border-right: none;
-      }
-    }
-    .pricing-img {
-      max-width: 100%;
-    }
-    .pricing-header {
-      color: #888;
-      font-weight: 600;
-      letter-spacing: 1px;
-    }
-    .pricing-features {
-      font-weight: 600;
-      letter-spacing: 1px;
-      margin: 0px 0 0px;
-    }
-    .orange {
-      color: #f5af19;
-    }
-    .blue {
-        color: #0b5da5;
-    }
-    .green {
-      color: #7cb620;
-    }
-    .pricing-features-item {
-      border-top: 1px solid #e1f1ff;
-      font-size: 12px;
-      line-height: 1.5;
-      padding: 15px 0;
-    }
-    .pricing-features-item:last-child {
-      border-bottom: 1px solid #e1f1ff;
-    }
-    .pricing-price {
-      display: block;
-      font-size: 32px;
-      font-weight: 700;
-    }
-    .pricing-button {
-      border: 1px solid #9dd1ff;
-      border-radius: 10px;
-      color: #348EFE;
-      display: inline-block;
-      margin: 25px 0;
-      padding: 15px 35px;
-      text-decoration: none;
-      transition: all 150ms ease-in-out;
-    }
-    .pricing-button:hover,
-    .pricing-button:focus {
-      background-color: #e1f1ff;
-    }
-    .pricing-button.is-featured {
-      background-color: #48aaff;
-      color: #fff;
-    }
-    .pricing-button.is-featured:hover,
-    .pricing-button.is-featured:active {
-      background-color: #269aff;
-    }
-/*
-==================================================
-end pricing table style
-==================================================
-*/
-
-
-/*
   ==========================================================
   home section
   ==========================================================
@@ -200,11 +40,11 @@ end home section
  ==========================================
   */
 
-  /*
-    ==========================================================
-    powerfi business section
-    ==========================================================
-   */
+/*
+  ==========================================================
+  powerfi business section
+  ==========================================================
+ */
 
    .powerfi-business {
      width: 50%;
@@ -214,11 +54,11 @@ end home section
 
    }
 
-   .extra-information{
+   .powerfi-information{
      display: block;
      width: 25%;
    }
-   .extra-information h2 {
+   .powerfi-information h2 {
      margin: 5px 20px 5px 10px !important;
    }
    .information-card {
@@ -246,31 +86,280 @@ end home section
    }
 
 
-   /*
-   ==========================================
-  end powerfi business section
-   ==========================================
-    */
+ /*
+ ==========================================
+end powerfi business section
+ ==========================================
+  */
+
+  /*
+==================================
+How it works section
+==================================
+  */
+  @media screen and (max-width: 500px) {
+    #product {
+      border-top: 4px solid var(--default-artist-color);
+    }
+  }
+  #product {
+    background-repeat: no-repeat;
+    height: calc(100vh - 90px);
+  }
+  #product .l2t-product {
+    --paper-slide-dot: rgba(100, 100, 100, .5);
+    --paper-slide-dot-selected: #0B5DA5;
+    --paper-slide-height: calc(100vh - 234px);
+  }
+  .how-it-works {
+    margin: 0 5%;
+    display: inline-flex;
+  }
+  .how-it-works-center {
+    margin: 2% 0;
+    width: 35%;
+    display: block;
+  }
+  .pc-screen-below {
+    height: 80%;
+  }
+  .mobile-screen-above {
+    display: inline-flex;
+    width: 100%;
+    height: 65%;
+  }
+  .mobile-screen-above iron-image {
+    height: 100%;
+    width: 50%;
+  }
+  .how-it-works-left {
+    width: 32.5%;
+    display: block;
+  }
+  .how-it-works-right {
+    width: 32.5%;
+    display: block;
+  }
+  .how-it-works-left iron-image {
+    padding: 10px 30px;
+    float: left;
+  }
+  .how-it-works-right iron-image {
+    padding: 10px 30px;
+    float: right;
+  }
+  .how-it-works-card {
+    width: 100%;
+    height: 50%;
+    display: inline-flex;
+  }
+  .how-it-works-card iron-image {
+    height: 70%;
+    width: 20%;
+    margin-top: 15%;
+  }
+  .how-it-works-card p {
+    color: black;
+    white-space: normal;
+    padding: 0 30px;
+    line-height: 3vh !important;
+    margin: 0;
+  }
+  .how-it-works-card h2 {
+    font-weight: lighter;
+    font-size: x-large;
+  }
+  .how-it-works-right-content {
+    float: left;
+  }
+  .how-it-works-left-content {
+    float: right;
+  }
+
+  /*
+==================================
+end How it works section
+==================================
+  */
 
 /*
-  ==========================================================
-  features section
-  ==========================================================
- */
+==========================================================
+features section
+==========================================================
+*/
 
 
 
-   /*
-   ==========================================
-  end features section
-   ==========================================
-    */
+/*
+==========================================
+end features section
+==========================================
+*/
+
+/*
+==================================================
+plans table style
+==================================================
+*/
+    .background {
+      /* padding: 0 25px 25px; */
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+    .background > h2 {
+      color: #fff;
+      font-size: 2.5rem;
+    }
+    .background::after {
+      content: '';
+      background: #60a9ff;
+      background: -moz-linear-gradient(top, #60a9ff 0%, #4394f4 100%);
+      background: -webkit-linear-gradient(top, #60a9ff 0%,#4394f4 100%);
+      background: linear-gradient(to bottom, #60a9ff 0%,#4394f4 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#60a9ff', endColorstr='#4394f4',GradientType=0 );
+      height: 350px;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      z-index: 1;
+    }
+    .background .header-plans {
+      z-index: 2;
+      position: relative;
+      padding: 0;
+      text-transform: none;
+      min-width: unset;
+      margin: 0 0 20px 0;
+    }
+    /* .background .divider {
+      position: relative;
+      height: 5px;
+      max-width: 90%;
+      margin-top: -5px;
+      clear: both;
+      color: white;
+    } */
+    @media (min-width: 900px) {
+      .background {
+        padding: 0 0 25px;
+      }
+    }
+    .plans-container {
+      margin: 0 auto;
+      max-width: 960px;
+      width: 100%;
+    }
+    .panel {
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 0px 0px;
+      position: relative;
+      width: 95%;
+      z-index: 10;
+    }
+    .plans-table {
+      box-shadow: 0px 10px 13px -6px rgba(0, 0, 0, 0.08), 0px 20px 31px 3px rgba(0, 0, 0, 0.09), 0px 8px 20px 7px rgba(0, 0, 0, 0.02);
+      display: flex;
+      flex-direction: column;
+    }
+    @media (min-width: 900px) {
+      .plans-table {
+        flex-direction: row;
+      }
+    }
+    .plans-table * {
+      text-align: center;
+      text-transform: uppercase;
+    }
+    .plans {
+      border-bottom: 1px solid #e1f1ff;
+      padding: 25px;
+    }
+    .plans:last-child {
+      border-bottom: none;
+    }
+    @media (min-width: 900px) {
+      .plans {
+        border-bottom: none;
+        border-right: 1px solid #e1f1ff;
+        flex-basis: 100%;
+        padding: 0px 50px;
+      }
+      .plans:last-child {
+        border-right: none;
+      }
+    }
+    .plans-img {
+      max-width: 100%;
+    }
+    .plans-header {
+      color: #888;
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+    .plans-features {
+      font-weight: 600;
+      letter-spacing: 1px;
+      margin: 0px 0 0px;
+    }
+    .orange {
+      color: #f5af19;
+    }
+    .blue {
+        color: #0b5da5;
+    }
+    .green {
+      color: #7cb620;
+    }
+    .plans-features-item {
+      border-top: 1px solid #e1f1ff;
+      font-size: 12px;
+      line-height: 1.5;
+      padding: 15px 0;
+    }
+    .plans-features-item:last-child {
+      border-bottom: 1px solid #e1f1ff;
+    }
+    .plans-price {
+      display: block;
+      font-size: 32px;
+      font-weight: 700;
+    }
+    .plans-button {
+      border: 1px solid #9dd1ff;
+      border-radius: 10px;
+      color: #348EFE;
+      display: inline-block;
+      margin: 25px 0;
+      padding: 15px 35px;
+      text-decoration: none;
+      transition: all 150ms ease-in-out;
+    }
+    .plans-button:hover,
+    .plans-button:focus {
+      background-color: #e1f1ff;
+    }
+    .plans-button.is-featured {
+      background-color: #48aaff;
+      color: #fff;
+    }
+    .plans-button.is-featured:hover,
+    .plans-button.is-featured:active {
+      background-color: #269aff;
+    }
+/*
+==================================================
+end plans table style
+==================================================
+*/
 
 /*
 ==========================================
 contact section
 ==========================================
- */
+*/
     .contact-left {
       width: 100%;
       height: 440px;
@@ -342,7 +431,7 @@ contact section
 ==========================================
 end contact section
 ==========================================
- */
+*/
 
     :host {
       display: block;
@@ -399,47 +488,7 @@ end contact section
       position:relative;
       bottom: 0;
     }
-    .item-slide-left {
-      float: left;
-      width: 50%;
-    }
-    .item-slide-right {
-      float: right;
-      width: 50%;
-    }
-    .item-slide-left > p {
-      color: black;
-      white-space: normal;
-      padding: 30px;
-    }
-    .item-slide-right > p{
-      color: black;
-      white-space: normal;
-      padding: 30px;
-    }
-    .item-slide-left > iron-image {
-      padding: 10px 30px;
-    }
-    .item-slide-right > iron-image {
-      padding: 10px 30px;
-    }
-    .item-slide-first {
-      float: left;
-      width: 20%;
-    }
-    .item-slide-last {
-      float: right;
-      width: 20%;
-    }
-    .item-slide-center > iron-image {
-      padding: 10px 30px;
-    }
-    .showcase-item {
-      height: 50vh;
-    }
-    .showcase-item-center {
-      /* height: 60vh; */
-    }
+
     .benefits paper-card {
       width: 23%;
       margin: 0 0 4% 1.7%;
@@ -516,22 +565,6 @@ end contact section
     l2t-paper-slider{
       outline: none;
     }
-    .paper-slide-showcase {
-      display: inline-flex !important;
-      overflow: hidden;
-    }
-    .paper-slide-showcase > .item-slide-first {
-      /* display: inline; */
-    }
-    .paper-slide-showcase > .item-slide-center {
-      width: 50%;
-    }
-    .paper-slide-showcase > .item-slide-last {
-      /* display: inline; */
-    }
-    .center-price {
-
-    }
 
     @media screen and (min-width: 501px) {
       .title { display: none; }
@@ -544,16 +577,7 @@ end contact section
         top: 0;
         left: 0;
       }
-      #product {
-        background: url("../../images/bg1.jpg");
-        background-repeat: no-repeat;
-        height: calc(100vh - 90px);
-      }
-      #product .l2t-product {
-        --paper-slide-dot: rgba(100, 100, 100, .5);
-        --paper-slide-dot-selected: #0B5DA5;
-        --paper-slide-height: calc(100vh - 234px);
-      }
+
       #features {
         /* border-top: 4px solid var(--default-project-color); */
         height: calc(100vh - 90px);
@@ -563,18 +587,13 @@ end contact section
       #benefits {
         height: calc(100vh - 90px);
       }
-      #showcases {
+      #demo {
         /* background: url("../../images/bg2.jpg");
         background-size: 100vw 100vh; */
         height: calc(100vh - 90px);
       }
       /* this is not work very well */
-      #showcases > .l2t-showcases {
-        --paper-slide-dot: rgba(100, 100, 100, .5);
-        --paper-slide-dot-selected: #0B5DA5;
-        --paper-slide-height: 30vh;
-      }
-      #showcases > .mid-layer {
+      #demo > .mid-layer {
         position: absolute;
         /* background-color: #7CB620; */
         opacity: 0.2;
@@ -583,24 +602,20 @@ end contact section
         top: 0;
         left: 0;
       }
-      #showcases > .mid-layer-white {
+      #demo > .mid-layer-white {
         opacity: 0.1;
       }
     }
 
     /* Responsiveness */
     @media screen and (max-width: 500px) {
-      #product {
-        background: url("../../images/bg1.jpg");
-        border-top: 4px solid var(--default-artist-color);
-      }
       #benefits {
         border-top: 4px solid var(--default-collection-color);
       }
       #features {
         border-top: 4px solid var(--default-project-color);
       }
-      #showcases {
+      #demo {
         border-top: 4px solid var(--default-contact-color);
       }
       #contact {
@@ -647,15 +662,17 @@ end contact section
       </app-header>
       <div class="container">
         <section class="home-section" id="powerfi">
-          <div class="extra-information">
+          <div class="powerfi-information">
             <paper-card class="information-card">
-              <iron-image sizing="contain" class="information-icon" src="../../images/checkbox.png"></iron-image>
+              <iron-image sizing="contain" class="information-icon" src="../../images/powerfi-icons/checkbox.png">
+              </iron-image>
               <h2>Easy to use</h2>
               <p class="dark-text">Power-Fi is simple and intuitive for both the user and your business.
                 With a few clicks you and your customer will be closer than ever.</p>
             </paper-card>
             <paper-card class="information-card">
-              <iron-image sizing="contain" class="information-icon" src="../../images/design.png"></iron-image>
+              <iron-image sizing="contain" class="information-icon" src="../../images/powerfi-icons/design.png">
+              </iron-image>
               <h2>Crisp design</h2>
               <p class="dark-text">Impress by displaying your brand in rich detail and
                 colorful features while presenting your promotions at the most coveted
@@ -672,16 +689,18 @@ end contact section
               autoplay="0">
             </google-youtube>
           </div>
-          <div class="extra-information">
+          <div class="powerfi-information">
             <paper-card class="information-card">
-              <iron-image sizing="contain" class="information-icon" src="../../images/ads.png"></iron-image>
+              <iron-image sizing="contain" class="information-icon" src="../../images/powerfi-icons/ads.png">
+              </iron-image>
               <h2>Precise ads</h2>
               <p class="dark-text">Build up your customer loyalty with Power-Fi by
                 sending personal advertisements based on their needs
                 and wishes. Clients will feel more connected to your business. </p>
             </paper-card>
             <paper-card class="information-card">
-              <iron-image sizing="contain" class="information-icon" src="../../images/bars-graphic.png"></iron-image>
+              <iron-image sizing="contain" class="information-icon" src="../../images/powerfi-icons/bars-graphic.png">
+              </iron-image>
               <h2>Real results</h2>
               <p class="dark-text">Get real-time performance of your campaigns, with
                 numbers and critical insights to help you grow your business.</p>
@@ -689,62 +708,75 @@ end contact section
           </div>
         </section>
         <section class="home-section" id="product">
-          <div class="mid-layer-white"></div>
+          <!-- <div class="mid-layer-white"></div> -->
           <h2><paper-button noink on-tap="tapToFab">How it Works</paper-button></h2>
-          <div>
-            <l2t-paper-slider class="l2t-product" auto-progress slide-duration="15" total-slides="4">
-      				<paper-slide>
-                <div class="item-slide-left">
-                  <iron-image class="" src="../../images/wifi-icon2.jpg"></iron-image>
+          <div class="how-it-works">
+            <div class="how-it-works-left">
+              <div class="how-it-works-card">
+                <iron-image class="" src="../../images/wifi-icon2.jpg"></iron-image>
+                <div class="how-it-works-left-content">
                   <h2>Offer Free Wifi</h2>
-                  <p>Right away, consumers connect to your network from social media, email or SMS. The process is intuitive and simple: Internet in exchange of contact details.</p>
+                  <p>
+                    Right away, consumers connect to your network from social media, email or SMS.
+                    The process is intuitive and simple: Internet in exchange of contact details.
+                  </p>
                 </div>
-                <div class="item-slide-right">
-                  <iron-image class="" src="../../images/app-feature-3.png"></iron-image>
+              </div>
+              <!-- <div class="how-it-works-card">
+                <iron-image class="" src="../../images/app-feature-3.png"></iron-image>
+                <div class="how-it-works-left-content">
                   <h2>Custom Made</h2>
-                  <p>Unleash your imagination, create and display your artwork in image or video format, whenever you want, as often as you need.</p>
+                  <p>
+                    Unleash your imagination, create and display your artwork in
+                    image or video format, whenever you want, as often as you need.
+                  </p>
                 </div>
-      				</paper-slide>
-      				<paper-slide>
-                <div class="item-slide-left">
-                  <iron-image class="" src="../../images/engage.jpg"></iron-image>
-                  <h2>Promote Engagement</h2>
-                  <p>Likes, shares and reviews are some of the ways your customers will have to connect with your business.</p>
-                </div>
-                <div class="item-slide-right">
-                  <iron-image class="" src="../../images/app-feature-1.png"></iron-image>
-                  <h2>Easy to Use</h2>
-                  <p>Power-Fi is simple and intuitive for both the user and your business. With a few clicks you and your consumer will be closer than ever.</p>
-                </div>
-      				</paper-slide>
-      				<paper-slide>
-                <div class="item-slide-left">
-                  <iron-image class="" src="../../images/alvo.jpg"></iron-image>
+              </div> -->
+              <div class="how-it-works-card">
+                <iron-image class="" src="../../images/alvo.jpg"></iron-image>
+                <div class="how-it-works-left-content">
                   <h2>Showcase Your Business</h2>
-                  <p>Create and advertise campaigns of your products and services using our user-friendly interface. Track their performance via your new platform, Facebook ™ Pixel or Google ™ Analytics.</p>
+                  <p>
+                    Create and advertise campaigns of your products and services
+                    using our user-friendly interface. Track their performance
+                    via your new platform, Facebook ™ Pixel or Google ™ Analytics.
+                  </p>
                 </div>
-                <div class="item-slide-right">
-                  <iron-image class="" src="../../images/app-feature-2.png"></iron-image>
-                  <h2>Crisp Design</h2>
-                  <p>Impress by displaying your brand in rich detail and colorful features while presenting your promotions at the most coveted spot of Online Marketing: Mobile.</p>
+              </div>
+            </div>
+            <div class="how-it-works-center">
+              <div class="mobile-screen-above">
+                <iron-image sizing="contain" class="" src="../../images/app-mockup-europe.png"></iron-image>
+                <iron-image sizing="contain" class="" src="../../images/app-mockup-europe.png"></iron-image>
+              </div>
+              <div class="pc-screen-below">
+                <iron-image sizing="contain" class="" src="../../images/pc-screen.png"></iron-image>
+              </div>
+            </div>
+            </iron-image>
+            <div class="how-it-works-right">
+              <div class="how-it-works-card">
+                <iron-image class="" src="../../images/engage.jpg"></iron-image>
+                <div class="how-it-works-right-content">
+                  <h2>Promote Engagement</h2>
+                  <p>
+                    Likes, shares and reviews are some of the ways your customers
+                    will have to connect with your business.
+                  </p>
                 </div>
-      				</paper-slide>
-      				<paper-slide>
-                <div class="item-slide-left">
-                  <iron-image class="" src="../../images/results.jpg"></iron-image>
+              </div>
+              <div class="how-it-works-card">
+                <iron-image class="" src="../../images/results.jpg"></iron-image>
+                <div class="how-it-works-right-content">
                   <h2>Results and Insights</h2>
-                  <p>Age range, emails, gender, length of visit, preferred social networks and loads of more information can be accessed in real time to guide your business strategies.</p>
+                  <p>
+                    Age range, emails, gender, length of visit, preferred social
+                    networks and loads of more information can be accessed in real
+                    time to guide your business strategies.
+                  </p>
                 </div>
-                <div class="item-slide-right">
-                  <iron-image class="" src="../../images/app-feature-4.png"></iron-image>
-                  <h2>Real Results</h2>
-                  <p>Check out real-time performance of your campaigns, with numbers and critical insights to help you grow your business.</p>
-                </div>
-      				</paper-slide>
-      			</l2t-paper-slider>
-          </div>
-          <div class="divider">
-            <hero-fab icon="milton:arrow-forward" href="/artist" id="artistFab"></hero-fab>
+              </div>
+            </div>
           </div>
         </section>
         <section class="home-section" id="benefits">
@@ -787,7 +819,7 @@ end contact section
                 </paper-item-body>
               </paper-icon-item>
               <div class="card-content">
-                Using the collected data you can do a marketing plan focusing
+                Using the collected data you can do a marketing plans focusing
                 on your customers profile, that will give you a highest cost-benefit.
               </div>
             </paper-card>
@@ -805,9 +837,6 @@ end contact section
                 more clients.
               </div>
             </paper-card>
-          </div>
-          <div class="divider">
-            <hero-fab icon="milton:add" href="/collection" id="collectionFab"></hero-fab>
           </div>
         </section>
         <section class="home-section" id="features">
@@ -913,128 +942,65 @@ end contact section
               </span>
             </paper-card>
           </div>
-          <div class="divider">
+          <!-- <div class="divider">
             <hero-fab icon="milton:arrow-forward" href="/project" id="projectFab"></hero-fab>
-          </div>
+          </div> -->
         </section>
-        <section class="home-section" id="showcases">
+        <section class="home-section" id="demo">
           <div class="mid-layer-white"></div>
           <div class="mid-layer"></div>
-          <h2><paper-button noink on-tap="tapToFab">Showcases</paper-button></h2>
-          <div>
-            <l2t-paper-slider class="l2t-showcases" auto-progress slide-duration="60" total-slides="4">
-      				<paper-slide class="paper-slide-showcase">
-                <div class="item-slide-first">
-                  <iron-image sizing="contain" class="showcase-item" src="../../images/sc1.png"></iron-image>
-                </div>
-                <div class="item-slide-center">
-                  <iron-image sizing="contain" class="showcase-item-center" src="../../images/pc-screen.png"></iron-image>
-                </div>
-                <div class="item-slide-last">
-                  <iron-image sizing="contain" class="showcase-item" src="../../images/sc2.png"></iron-image>
-                </div>
-      				</paper-slide>
-      				<paper-slide class="paper-slide-showcase">
-                <div class="item-slide-first">
-                  <iron-image sizing="contain" class="showcase-item" src="../../images/sc3.png"></iron-image>
-                </div>
-                <div class="item-slide-center">
-                  <iron-image sizing="contain" class="showcase-item-center" src="../../images/pc-screen.png"></iron-image>
-                </div>
-                <div class="item-slide-last">
-                  <iron-image sizing="contain" class="showcase-item" src="../../images/sc4.png"></iron-image>
-                </div>
-      				</paper-slide>
-      				<paper-slide class="paper-slide-showcase">
-                <div class="item-slide-first">
-                  <iron-image sizing="contain" class="showcase-item" src="../../images/sc5.png"></iron-image>
-                </div>
-                <div class="item-slide-center">
-                  <iron-image sizing="contain" class="showcase-item-center" src="../../images/pc-screen.png"></iron-image>
-                </div>
-                <div class="item-slide-last">
-                  <iron-image sizing="contain" class="showcase-item" src="../../images/sc6.png"></iron-image>
-                </div>
-      				</paper-slide>
-      				<paper-slide class="paper-slide-showcase">
-                <div class="item-slide-first">
-                  <iron-image sizing="contain" class="showcase-item" src="../../images/sc7.png"></iron-image>
-                </div>
-                <div class="item-slide-center">
-                  <iron-image sizing="contain" class="showcase-item-center" src="../../images/pc-screen.png"></iron-image>
-                </div>
-                <div class="item-slide-last">
-                  <iron-image sizing="contain" class="showcase-item" src="../../images/sc8.png"></iron-image>
-                </div>
-      				</paper-slide>
-              <paper-slide class="paper-slide-showcase">
-                <div class="item-slide-first">
-                  <iron-image sizing="contain" class="showcase-item" src="../../images/sc9.png"></iron-image>
-                </div>
-                <div class="item-slide-center">
-                  <iron-image sizing="contain" class="showcase-item-center" src="../../images/pc-screen.png"></iron-image>
-                </div>
-                <div class="item-slide-last">
-                  <iron-image sizing="contain" class="showcase-item" src="../../images/sc10.png"></iron-image>
-                </div>
-      				</paper-slide>
-              <paper-slide class="paper-slide-showcase">
-                <div class="item-slide-first">
-                  <iron-image sizing="contain" class="showcase-item" src="../../images/sc11.png"></iron-image>
-                </div>
-                <div class="item-slide-center">
-                  <iron-image sizing="contain" class="showcase-item-center" src="../../images/pc-screen.png"></iron-image>
-                </div>
-                <div class="item-slide-last">
-                  <iron-image sizing="contain" class="showcase-item" src="../../images/sc12.png"></iron-image>
-                </div>
-      				</paper-slide>
-      			</l2t-paper-slider>
-          </div>
-          <div class="divider">
-            <hero-fab icon="milton:arrow-forward" href="/project" id="projectFab"></hero-fab>
+          <h2><paper-button noink on-tap="tapToFab">Demo</paper-button></h2>
+          <div class="powerfi-business">
+            <google-youtube
+              class="video-presentation"
+              video-id="2twJhfS1plA"
+              fluid=1
+              rel="0"
+              start="0"
+              autoplay="0">
+            </google-youtube>
           </div>
         </section>
-        <section class="background" id="pricing">
-          <h2 class="header-pricing"><paper-button noink on-tap="tapToFab">
+        <section class="background" id="plans">
+          <h2 class="header-plans"><paper-button noink on-tap="tapToFab">
             Have it your way
-            <!-- We have the right plan for your Business -->
+            <!-- We have the right plans for your Business -->
           </paper-button></h2>
           <!-- <div class="background"> -->
-            <div class="pricing-container">
-              <div class="panel pricing-table">
-                <div class="pricing-plan">
-                  <img src="../../../images/pricing-icons/paper-plane.png" alt="" class="pricing-img">
-                  <h2 class="pricing-header">Premiere</h2>
-                  <ul class="pricing-features blue">
-                    <li class="pricing-features-item">Custom domains</li>
-                    <li class="pricing-features-item">Sleeps after 30 mins of inactivity</li>
+            <div class="plans-container">
+              <div class="panel plans-table">
+                <div class="plans">
+                  <img src="../../../images/plans-icons/paper-plane.png" alt="" class="plans-img">
+                  <h2 class="plans-header">Premiere</h2>
+                  <ul class="plans-features blue">
+                    <li class="plans-features-item">Custom domains</li>
+                    <li class="plans-features-item">Sleeps after 30 mins of inactivity</li>
                   </ul>
-                  <span class="pricing-price blue">50$</span>
-                  <a href="#/" class="pricing-button blue">Buy Now</a>
+                  <span class="plans-price blue">50$</span>
+                  <a href="#/" class="plans-button blue">Buy Now</a>
                 </div>
 
-                <div class="pricing-plan">
-                  <img src="../../../images/pricing-icons/plane.png" alt="" class="pricing-img">
-                  <h2 class="pricing-header">Business</h2>
-                  <ul class="pricing-features green">
-                    <li class="pricing-features-item">Never sleeps</li>
-                    <li class="pricing-features-item">Multiple workers for more powerful apps</li>
+                <div class="plans">
+                  <img src="../../../images/plans-icons/plane.png" alt="" class="plans-img">
+                  <h2 class="plans-header">Business</h2>
+                  <ul class="plans-features green">
+                    <li class="plans-features-item">Never sleeps</li>
+                    <li class="plans-features-item">Multiple workers for more powerful apps</li>
                   </ul>
-                  <span class="pricing-price green">$150</span>
-                  <a href="#/" class="pricing-button is-featured green">Buy Now</a>
+                  <span class="plans-price green">$150</span>
+                  <a href="#/" class="plans-button is-featured green">Buy Now</a>
                 </div>
 
-                <div class="pricing-plan">
+                <div class="plans">
                   <!-- #f5af19 -->
-                  <img src="../../../images/pricing-icons/space-ship.png" alt="" class="pricing-img">
-                  <h2 class="pricing-header">Enterprise</h2>
-                  <ul class="pricing-features orange">
-                    <li class="pricing-features-item">Dedicated</li>
-                    <li class="pricing-features-item">Simple horizontal scalability</li>
+                  <img src="../../../images/plans-icons/space-ship.png" alt="" class="plans-img">
+                  <h2 class="plans-header">Enterprise</h2>
+                  <ul class="plans-features orange">
+                    <li class="plans-features-item">Dedicated</li>
+                    <li class="plans-features-item">Simple horizontal scalability</li>
                   </ul>
-                  <span class="pricing-price orange">$400</span>
-                  <a href="#/" class="pricing-button orange">Buy Now</a>
+                  <span class="plans-price orange">$400</span>
+                  <a href="#/" class="plans-button orange">Buy Now</a>
                 </div>
 
               </div>
