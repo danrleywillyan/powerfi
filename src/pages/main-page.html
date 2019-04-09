@@ -19,6 +19,8 @@
 <link rel="import" href="../app-elements/app-icons.html">
 <link rel="import" href="../shared-styles.html">
 <link rel="import" href="../main-page/main-theme.html">
+<!-- font added to use on about us section -->
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Playfair+Display" crossorigin="anonymous">
 
 <dom-module id="main-page">
   <template>
@@ -357,6 +359,130 @@ end plans table style
 
 /*
 ==========================================
+about-us section
+==========================================
+*/
+    .about-us-wrapper {
+      display: inline-flex;
+      margin: 0 3% 0 10%;
+    }
+    .left-about-us {
+      width: 50%;
+      height: 100%;
+      text-align: justify;
+      font-family: 'Playfair Display', serif !important;
+    }
+    .right-about-us {
+      height: 100%;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .center-about-us {
+      width: 20%;
+      height: 100%;
+      margin-left: 5%;
+      font-family: 'Playfair Display', serif !important;
+    }
+    .short-about-us {
+      font-weight: bold;
+      color: black;
+      line-height: 3vh !important;
+      margin-left: 5%;
+      font-family: 'Playfair Display', serif !important;
+    }
+    .long-about-us {
+      color: black;
+      line-height: 3vh !important;
+      margin-left: 5%;
+      font-family: 'Playfair Display', serif !important;
+    }
+    .team-member {
+      width: 100%;
+      height: 50%;
+      position: relative;
+      overflow: hidden;
+      border-style: solid;
+      border-color: #0b5da5;
+    }
+    .team-member img {
+      width: 85%;
+      -moz-transition: all, 0.5s;
+      -o-transition: all, 0.5s;
+      -webkit-transition: all, 0.5s;
+      transition: all, 0.5s;
+    }
+    .team-member .member-information {
+      position: absolute;
+      background: rgba(31, 118, 189, 0.8);
+      /* background-color: #0b5da5; */
+      border-color: black;
+      color: white;
+      text-align: center;
+      margin-top: -15%;
+      height: 20%;
+      z-index: 2;
+      opacity: 0.90;
+      width: 100%;
+    }
+    .team-member .on-hover {
+      position: absolute;
+      top: 0;
+      padding: 0 2%;
+      bottom: 125px;
+      height: 82%;
+      width: 96%;
+      color: #fff;
+      text-align: justify;
+      background: rgba(31, 118, 189, 0.9);
+      border-bottom: 1px solid #fff;
+      visibility: hidden;
+      opacity: 0;
+      -moz-transition: all, 0.5s;
+      -o-transition: all, 0.5s;
+      -webkit-transition: all, 0.5s;
+      transition: all, 0.5s;
+      font-family: 'Playfair Display', serif !important;
+    }
+    .team-member:hover .on-hover {
+      visibility: visible;
+      opacity: 1;
+      -moz-transition: all, 1s;
+      -o-transition: all, 1s;
+      -webkit-transition: all, 1s;
+      transition: all, 1s;
+      border-bottom: 3px;
+      border-color: white;
+      border-bottom-style: solid;
+      font-family: 'Playfair Display', serif !important;
+    }
+    .team-member:hover .on-hover p {
+      line-height: 5vh !important;
+      font-family: 'Playfair Display', serif !important;
+    }
+    .team-member:hover img {
+      -moz-transform: perspective(1.1) scale3d(1.1, 1.1, 1.1);
+      -webkit-transform: perspective(1.1) scale3d(1.1, 1.1, 1.1);
+      transform: perspective(1.1) scale3d(1.1, 1.1, 1.1);
+    }
+    .member-information p {
+      text-transform: uppercase;
+      margin: 0 0 0 0;
+      line-height: 3vh !important;
+      font-family: 'Playfair Display', serif !important;
+    }
+    .empty {
+      content: "              ";
+      height: 10px;
+    }
+/*
+==========================================
+end about-us section
+==========================================
+*/
+
+/*
+==========================================
 contact section
 ==========================================
 */
@@ -577,7 +703,11 @@ end contact section
         top: 0;
         left: 0;
       }
-
+      #about-us {
+        /* border-top: 4px solid var(--default-project-color); */
+        height: calc(100vh - 90px);
+        background-size: 100vw 100vh;
+      }
       #features {
         /* border-top: 4px solid var(--default-project-color); */
         height: calc(100vh - 90px);
@@ -1006,7 +1136,68 @@ end contact section
               </div>
             </div>
           <!-- </div> -->
-        </section>
+        </section> <!-- end plans section -->
+        <section class="home-section" id="about-us">
+          <h2>About Us</h2>
+          <div class="about-us-wrapper">
+            <div class="left-about-us">
+              <h4>The Short</h4>
+              <p class="short-about-us">
+                We are a company that deliver a excellent sharing wifi service.
+                We are able to share wifi the best way you can think, all of our
+                work are delivering satisfaction for all customers and customer's clients.
+              </p>
+              <h4>The Long</h4>
+              <p class="long-about-us">
+                We are a company that deliver a excellent sharing wifi service.
+                We are able to share wifi the best way you can think, all of our
+                work are delivering satisfaction for all customers and customer's clients.
+              </p>
+              <p class="long-about-us">
+                We are a company that deliver a excellent sharing wifi service.
+                We are able to share wifi the best way you can think, all of our
+                work are delivering satisfaction for all customers and customer's clients.
+              </p>
+            </div>
+            <div class="center-about-us">
+              <h4>Select Clients</h4>
+              <ul>
+                <li>GDF</li>
+                <li>Trip Advisor</li>
+                <li>Hotel Europa</li>
+                <li>Mona House</li>
+                <li>Eat Well</li>
+              </ul>
+            </div>
+            <div class="right-about-us">
+              <div class="team-member">
+                <img src="../../images/team/cabrito.jpeg" alt="">
+                <div class="member-information">
+                  <b>Guilherme Miranda</b>
+                  <p>Diretor de Operações</p>
+                </div>
+                <div class="on-hover">
+                  <p>Trabalha na sede holandesa da IBM. Formado em Engenharia Eletrônica pela Universidade de Brasília, 8ª
+                  melhor universidade da america latina.</p>
+                </div>
+              </div>
+              <div class="empty">
+
+              </div>
+              <div class="team-member">
+                <img src="../../images/team/cabrito.jpeg" alt="">
+                <div class="member-information">
+                  <b>Guilherme Miranda</b>
+                  <p>Diretor de Operações</p>
+                </div>
+                <div class="on-hover">
+                  <p>Trabalha na sede holandesa da IBM. Formado em Engenharia Eletrônica pela Universidade de Brasília, 8ª
+                  melhor universidade da america latina.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section><!-- end about-us section -->
         <section class="home-section" id="contact">
           <h2>Contact</h2>
           <div class="contact-wrapper">
@@ -1055,8 +1246,8 @@ end contact section
               </div> -->
             </div>
             <home-contact class="formfields"></home-contact>
-          </div>
-        </section>
+          </div> <!-- end contact wrapper -->
+        </section><!-- end contact section -->
       </div>
       <div class="container">
         <div id="footer">
