@@ -1,8 +1,11 @@
 <link rel="import" href="../../bower_components/polymer/polymer-element.html">
 <link rel="import" href="../../bower_components/iron-image/iron-image.html">
 <link rel="import" href="../../bower_components/iron-icon/iron-icon.html">
+<link rel="import" href="../../bower_components/iron-icons/hardware-icons.html">
 <link rel="import" href="../../bower_components/iron-icons/iron-icons.html">
 <link rel="import" href="../../bower_components/iron-icons/notification-icons.html">
+<link rel="import" href="../../bower_components/iron-icons/communication-icons.html">
+<link rel="import" href="../../bower_components/iron-icons/image-icons.html">
 <link rel="import" href="../../bower_components/iron-icons/social-icons.html">
 <link rel="import" href="../../bower_components/paper-button/paper-button.html">
 <link rel="import" href="../../bower_components/app-layout/app-header-layout/app-header-layout.html">
@@ -190,7 +193,50 @@ features section
 ==========================================================
 */
 
-
+  .features > .white{
+    color: white;
+  }
+  .features paper-card {
+    width: 30%;
+    height: 200px;
+    margin: 0 0 2% 2%;
+    padding: 0 2% 2% 0;
+    display: inline-flex;
+    background-color: #00000077;
+    color: white;
+  }
+  .features p {
+    color: black;
+    font-weight: 500;
+    font-size: 1.2em;
+    height: 8vh;
+    font-style: italic;
+    padding-left: 50px;
+  }
+  .features h2 {
+    font-size: 2em;
+  }
+  .features-card-head {
+    display: block;
+    margin: auto 3% auto 1%;
+  }
+  .features-icons {
+    --iron-icon-height: 64px;
+    --iron-icon-width: 64px;
+    color: white;
+    /* display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%; */
+  }
+  .feature-card-content {
+    text-align: justify;
+    float: right;
+    margin-left: 0%;
+  }
+  .card-content {
+    text-align: justify;
+  }
 
 /*
 ==========================================
@@ -367,16 +413,18 @@ about-us section
       margin: 0 3% 0 10%;
     }
     .left-about-us {
-      width: 50%;
+      /* width: 70%; */
       height: 100%;
       text-align: justify;
       font-family: 'Playfair Display', serif !important;
+      padding-right: 8%;
     }
     .right-about-us {
       height: 100%;
       display: block;
       margin-left: auto;
       margin-right: auto;
+      font-family: 'Playfair Display', serif !important;
     }
     .center-about-us {
       width: 20%;
@@ -402,28 +450,58 @@ about-us section
       height: 50%;
       position: relative;
       overflow: hidden;
-      border-style: solid;
-      border-color: #0b5da5;
+      display: inline-flex;
+      /* border-style: solid; */
+      /* border-color: #0b5da5; */
+      border-radius: 0 0 15px 15px;
     }
     .team-member img {
-      width: 85%;
+      width: 45%;
       -moz-transition: all, 0.5s;
       -o-transition: all, 0.5s;
       -webkit-transition: all, 0.5s;
       transition: all, 0.5s;
     }
     .team-member .member-information {
-      position: absolute;
-      background: rgba(31, 118, 189, 0.8);
+      /* background: rgba(31, 118, 189, 0.8); */
       /* background-color: #0b5da5; */
       border-color: black;
-      color: white;
-      text-align: center;
-      margin-top: -15%;
+      /* text-align: center; */
       height: 20%;
-      z-index: 2;
-      opacity: 0.90;
       width: 100%;
+      padding-right: 5%;
+    }
+    .team-member .member-information a {
+      position: absolute;
+      bottom: 0;
+      /* margin-top: 2%; */
+      font-family: 'Playfair Display', serif !important;
+      color: orange;
+    }
+    .member-information p {
+      margin: 0 0 0 0;
+      line-height: 1.4 !important;
+      font-family: 'Playfair Display', serif !important;
+      color: black;
+      text-align: justify;
+      font-size: small;
+      padding-right: 25%;
+    }
+    .right-about-us h4 {
+      text-align: justify;
+      font-family: 'Playfair Display', serif !important;
+    }
+    .team-member h3 {
+      line-height: 0.6;
+      margin-bottom: 4%;
+      margin-top: 2%;
+      font-family: 'Playfair Display', serif !important;
+    }
+    .team-member h5 {
+        line-height: 0.5;
+        margin-bottom: 4%;
+        margin-top: 2%;
+        font-family: 'Playfair Display', serif !important;
     }
     .team-member .on-hover {
       position: absolute;
@@ -435,7 +513,7 @@ about-us section
       color: #fff;
       text-align: justify;
       background: rgba(31, 118, 189, 0.9);
-      border-bottom: 1px solid #fff;
+      /* border-bottom: 1px solid #fff; */
       visibility: hidden;
       opacity: 0;
       -moz-transition: all, 0.5s;
@@ -443,6 +521,7 @@ about-us section
       -webkit-transition: all, 0.5s;
       transition: all, 0.5s;
       font-family: 'Playfair Display', serif !important;
+      border-radius: 15px 15px 0 0;
     }
     .team-member:hover .on-hover {
       visibility: visible;
@@ -455,8 +534,16 @@ about-us section
       border-color: white;
       border-bottom-style: solid;
       font-family: 'Playfair Display', serif !important;
+      border-radius: 15px 15px 0 0;
+    }
+    .team-member .title p {
+      font-family: 'Playfair Display', serif !important;
     }
     .team-member:hover .on-hover p {
+      line-height: 5vh !important;
+      font-family: 'Playfair Display', serif !important;
+    }
+    .team-member .on-hover p {
       line-height: 5vh !important;
       font-family: 'Playfair Display', serif !important;
     }
@@ -464,12 +551,7 @@ about-us section
       -moz-transform: perspective(1.1) scale3d(1.1, 1.1, 1.1);
       -webkit-transform: perspective(1.1) scale3d(1.1, 1.1, 1.1);
       transform: perspective(1.1) scale3d(1.1, 1.1, 1.1);
-    }
-    .member-information p {
-      text-transform: uppercase;
-      margin: 0 0 0 0;
-      line-height: 3vh !important;
-      font-family: 'Playfair Display', serif !important;
+      margin: 0 auto;
     }
     .empty {
       content: "              ";
@@ -644,50 +726,7 @@ end contact section
     .white {
       color: white;
     }
-    .features > .white{
-      color: white;
-    }
-    .features paper-card {
-      width: 30%;
-      height: 200px;
-      margin: 0 0 2% 2%;
-      padding: 0 2% 2% 0;
-      display: inline-flex;
-      background-color: #00000077;
-      color: white;
-    }
-    .features p {
-      color: black;
-      font-weight: 500;
-      font-size: 1.2em;
-      height: 8vh;
-      font-style: italic;
-      padding-left: 50px;
-    }
-    .features h2 {
-      font-size: 2em;
-    }
-    .features-card-head {
-      display: block;
-      margin: auto 3% auto 1%;
-    }
-    .features-icons {
-      --iron-icon-height: 64px;
-      --iron-icon-width: 64px;
-      color: green;
-      /* display: block;
-      margin-left: auto;
-      margin-right: auto;
-      width: 100%; */
-    }
-    .feature-card-content {
-      text-align: justify;
-      float: right;
-      margin-left: 0%;
-    }
-    .card-content {
-      text-align: justify;
-    }
+
     l2t-paper-slider{
       outline: none;
     }
@@ -821,13 +860,14 @@ end contact section
           </div>
           <div class="powerfi-information">
             <paper-card class="information-card">
-              <iron-image sizing="contain" class="information-icon" src="../../images/powerfi-icons/ads.png">
+              <iron-image sizing="contain" class="information-icon" src="../../images/powerfi-icons/ads-logo.png">
               </iron-image>
               <h2>Precise ads</h2>
               <p class="dark-text">Build up your customer loyalty with Power-Fi by
                 sending personal advertisements based on their needs
                 and wishes. Clients will feel more connected to your business. </p>
             </paper-card>
+
             <paper-card class="information-card">
               <iron-image sizing="contain" class="information-icon" src="../../images/powerfi-icons/bars-graphic.png">
               </iron-image>
@@ -975,7 +1015,7 @@ end contact section
             <p class="white">What you get buying Power-Fi</p>
             <paper-card image="">
               <span class="features-card-head">
-                <iron-icon class="features-icons" icon="notification:network-check"></iron-icon>
+                <iron-icon class="features-icons" icon="hardware:desktop-windows"></iron-icon>
               </span>
               <span class="feature-card-content">
                 <paper-icon-item>
@@ -991,7 +1031,7 @@ end contact section
             </paper-card>
             <paper-card image="">
               <span class="features-card-head">
-                <iron-icon class="features-icons" icon="search"></iron-icon>
+                <iron-icon class="features-icons" icon="communication:stay-current-portrait"></iron-icon>
               </span>
               <span class="feature-card-content">
                 <paper-icon-item>
@@ -1007,7 +1047,7 @@ end contact section
             </paper-card>
             <paper-card image="">
               <span class="features-card-head">
-                <iron-icon class="features-icons" icon="trending-up"></iron-icon>
+                <iron-icon class="features-icons" icon="image:remove-red-eye"></iron-icon>
               </span>
               <span class="feature-card-content">
                 <paper-icon-item>
@@ -1024,7 +1064,7 @@ end contact section
             </paper-card>
             <paper-card image="">
               <span class="features-card-head">
-                <iron-icon class="features-icons" icon="trending-up"></iron-icon>
+                <iron-icon class="features-icons" icon="icons:settings"></iron-icon>
               </span>
               <span class="feature-card-content">
                 <paper-icon-item>
@@ -1040,7 +1080,7 @@ end contact section
             </paper-card>
             <paper-card image="">
               <span class="features-card-head">
-                <iron-icon class="features-icons" icon="trending-up"></iron-icon>
+                <iron-icon class="features-icons" icon="icons:search"></iron-icon>
               </span>
               <span class="feature-card-content">
                 <paper-icon-item>
@@ -1057,7 +1097,7 @@ end contact section
             </paper-card>
             <paper-card image="">
               <span class="features-card-head">
-                <iron-icon class="features-icons" icon="trending-up"></iron-icon>
+                <iron-icon class="features-icons" icon="icons:language"></iron-icon>
               </span>
               <span class="feature-card-content">
                 <paper-icon-item>
@@ -1102,12 +1142,12 @@ end contact section
                 <div class="plans">
                   <img src="../../../images/plans-icons/paper-plane.png" alt="" class="plans-img">
                   <h2 class="plans-header">Premiere</h2>
-                  <ul class="plans-features blue">
+                  <ul class="plans-features orange">
                     <li class="plans-features-item">Custom domains</li>
                     <li class="plans-features-item">Sleeps after 30 mins of inactivity</li>
                   </ul>
-                  <span class="plans-price blue">50$</span>
-                  <a href="#/" class="plans-button blue">Buy Now</a>
+                  <span class="plans-price orange">50$</span>
+                  <a href="#/" class="plans-button orange">Buy Now</a>
                 </div>
 
                 <div class="plans">
@@ -1125,12 +1165,12 @@ end contact section
                   <!-- #f5af19 -->
                   <img src="../../../images/plans-icons/space-ship.png" alt="" class="plans-img">
                   <h2 class="plans-header">Enterprise</h2>
-                  <ul class="plans-features orange">
+                  <ul class="plans-features blue">
                     <li class="plans-features-item">Dedicated</li>
                     <li class="plans-features-item">Simple horizontal scalability</li>
                   </ul>
-                  <span class="plans-price orange">$400</span>
-                  <a href="#/" class="plans-button orange">Buy Now</a>
+                  <span class="plans-price blue">$400</span>
+                  <a href="#/" class="plans-button blue">Buy Now</a>
                 </div>
 
               </div>
@@ -1159,24 +1199,13 @@ end contact section
                 work are delivering satisfaction for all customers and customer's clients.
               </p>
             </div>
-            <div class="center-about-us">
-              <h4>Select Clients</h4>
-              <ul>
-                <li>GDF</li>
-                <li>Trip Advisor</li>
-                <li>Hotel Europa</li>
-                <li>Mona House</li>
-                <li>Eat Well</li>
-              </ul>
-            </div>
             <div class="right-about-us">
+              <h4>Our Team</h4>
               <div class="team-member">
                 <img src="../../images/team/cabrito.jpeg" alt="">
                 <div class="member-information">
-                  <b>Guilherme Miranda</b>
-                  <p>Diretor de Operações</p>
-                </div>
-                <div class="on-hover">
+                  <h3>Guilherme Miranda</h3>
+                  <h5>Diretor de Operações</h5>
                   <p>Trabalha na sede holandesa da IBM. Formado em Engenharia Eletrônica pela Universidade de Brasília, 8ª
                   melhor universidade da america latina.</p>
                 </div>
@@ -1187,14 +1216,13 @@ end contact section
               <div class="team-member">
                 <img src="../../images/team/cabrito.jpeg" alt="">
                 <div class="member-information">
-                  <b>Guilherme Miranda</b>
-                  <p>Diretor de Operações</p>
-                </div>
-                <div class="on-hover">
+                  <h3>Guilherme Miranda</h3>
+                  <h5>Diretor de Operações</h5>
                   <p>Trabalha na sede holandesa da IBM. Formado em Engenharia Eletrônica pela Universidade de Brasília, 8ª
                   melhor universidade da america latina.</p>
                 </div>
               </div>
+
             </div>
           </div>
         </section><!-- end about-us section -->
