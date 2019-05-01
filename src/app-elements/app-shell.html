@@ -92,10 +92,13 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       <app-drawer id="drawer" slot="drawer">
         <app-toolbar>Menu</app-toolbar>
         <iron-selector selected="[[page]]" attr-for-selected="name" class="drawer-list" role="navigation">
-          <a name="artist" href="[[rootPath]]artist">O Artista</a>
-          <a name="collection" href="[[rootPath]]collection">Acervo</a>
-          <a name="project" href="[[rootPath]]project">Projeto</a>
-          <a name="contact" href="[[rootPath]]contact">Contato</a>
+          <a name="powerfi" href="[[rootPath]]powerfi">Power-Fi</a>
+          <a name="benefits" href="[[rootPath]]benefits">Benefits</a>
+          <a name="product" href="[[rootPath]]product">How it Works</a>
+          <a name="features" href="[[rootPath]]features">Features</a>
+          <a name="plans" href="[[rootPath]]plans">Plans</a>
+          <a name="about-us" href="[[rootPath]]about-us">About Us</a>
+          <a name="contact" href="[[rootPath]]contact">Contact</a>
         </iron-selector>
       </app-drawer>
 
@@ -108,8 +111,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           on-selected-item-changed="_selectedPageChanged"
           role="main">
         <main-page name="main" route={{route}}></main-page>
-        <artist-page name="artist" route={{route}}></artist-page>
-        <collection-page name="collection" route={{route}}></collection-page>
+        <!-- <artist-page name="artist" route={{route}}></artist-page>
+        <collection-page name="collection" route={{route}}></collection-page> -->
       </iron-pages>
       <paper-icon-button icon="milton:menu" drawer-toggle></paper-icon-button>
     </app-drawer-layout>

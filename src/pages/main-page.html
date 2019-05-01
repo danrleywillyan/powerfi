@@ -572,27 +572,31 @@ contact section
       width: 100%;
       height: 440px;
       border-radius: 30px;
-    }
-    .brazil-above {
-      position: relative;
       display: inline-flex;
-      height: 50%;
+    }
+    .phones-left {
+      display: block;
+      width: 30%;
+      height: 100%;
+    }
+    .brazil {
+      /* position: relative;
+      display: inline-flex; */
       width: 100%;
       background-color: #0b5da5;
       /* background-color: #7cb620; green of powerfi*/
       border-radius: 30px 0 0 0;
     }
-    .netherland-below {
-      position: relative;
-      display: inline-flex;
-      height: 50%;
+    .netherlands {
+      /* position: relative;
+      display: inline-flex; */
       width: 100%;
       background-color: #0b5da5;
       border-radius: 0 0 0 30px;
     }
     .phone {
-      float: left;
-      width: 30%;
+      width: 100%;
+      height: 50%;
       text-align: center;
       background: rgba(0, 0, 0, 0) linear-gradient(to right, #009790 0%, #0b5da5 100%) repeat scroll 0 0 ;
     }
@@ -608,9 +612,10 @@ contact section
       color: white;
       text-align: center;
     }
-    .map {
+    .map-right {
       float: right;
       width: 70%;
+      height: 100%;
       margin: 0;
     }
     .flag {
@@ -813,11 +818,11 @@ end contact section
                 <h1>SHARE Wi-Fi AND POWER UP YOUR BUSINESS</h1>
                 <p>By using Power-Fi you get closer to your customer and increase your business</p>
                 <div class="button">
-                  <paper-button id="more" on-tap="scrollToTab" role="button" tabindex="0" aria-disabled="false">Check our plans now!</paper-button>
+                  <paper-button id="more" on-tap="scrollToPlans" role="button" tabindex="0" aria-disabled="false">Check our plans now!</paper-button>
                 </div>
                 <p>more information</p>
                 <div class="button">
-                  <paper-icon-button id="more" on-tap="scrollToTab" icon="milton:expand-more" role="button" tabindex="0" aria-disabled="false"></paper-icon-button>
+                  <paper-icon-button id="more" on-tap="scrollToPowerfi" icon="milton:expand-more" role="button" tabindex="0" aria-disabled="false"></paper-icon-button>
                 </div>
               </div>
               <div class="right">
@@ -874,6 +879,66 @@ end contact section
               <h2>Real results</h2>
               <p class="dark-text">Get real-time performance of your campaigns, with
                 numbers and critical insights to help you grow your business.</p>
+            </paper-card>
+          </div>
+        </section>
+        <section class="home-section" id="benefits">
+          <h2><paper-button noink on-tap="tapToFab">How you win more</paper-button></h2>
+          <div class="benefits">
+            <p>How your business can win sharing internet</p>
+            <paper-card image="">
+              <paper-icon-item>
+                <iron-icon class="benefits-icons" icon="notification:network-check"></iron-icon>
+                <br />
+                <paper-item-body>
+                  <h2>Optimized WiFi</h2>
+                </paper-item-body>
+              </paper-icon-item>
+              <div class="card-content">
+                9/10 customers said there are a list of advantages using WiFi
+                instead of 3G/4G, the main advantage is a faster internet connection.
+              </div>
+            </paper-card>
+            <paper-card image="">
+              <paper-icon-item>
+                <iron-icon class="benefits-icons" icon="search"></iron-icon>
+                <br />
+                <paper-item-body>
+                  <h2>Collect / Analyze</h2>
+                </paper-item-body>
+              </paper-icon-item>
+              <div class="card-content">
+                Get precious data from your customers; <br>
+                Who are connecting on your network? Name, Age, Gender, e-mail,
+                phone, social midias, birthday.
+              </div>
+            </paper-card>
+            <paper-card image="">
+              <paper-icon-item>
+                <iron-icon class="benefits-icons" icon="trending-up"></iron-icon>
+                <br />
+                <paper-item-body>
+                  <h2>Guided Marketing</h2>
+                </paper-item-body>
+              </paper-icon-item>
+              <div class="card-content">
+                Using the collected data you can do a marketing plans focusing
+                on your customers profile, that will give you a highest cost-benefit.
+              </div>
+            </paper-card>
+            <paper-card image="">
+              <paper-icon-item>
+                <iron-icon class="benefits-icons" icon="social:people"></iron-icon>
+                <br />
+                <paper-item-body>
+                  <h2>More Clients</h2>
+                </paper-item-body>
+              </paper-icon-item>
+              <div class="card-content">
+                According with a research, 44% of all ages reported that a free
+                WiFi connection influence where they buy; offering WiFi will get you
+                more clients.
+              </div>
             </paper-card>
           </div>
         </section>
@@ -947,66 +1012,6 @@ end contact section
                 </div>
               </div>
             </div>
-          </div>
-        </section>
-        <section class="home-section" id="benefits">
-          <h2><paper-button noink on-tap="tapToFab">How you win more</paper-button></h2>
-          <div class="benefits">
-            <p>How your business can win sharing internet</p>
-            <paper-card image="">
-              <paper-icon-item>
-                <iron-icon class="benefits-icons" icon="notification:network-check"></iron-icon>
-                <br />
-                <paper-item-body>
-                  <h2>Optimized WiFi</h2>
-                </paper-item-body>
-              </paper-icon-item>
-              <div class="card-content">
-                9/10 customers said there are a list of advantages using WiFi
-                instead of 3G/4G, the main advantage is a faster internet connection.
-              </div>
-            </paper-card>
-            <paper-card image="">
-              <paper-icon-item>
-                <iron-icon class="benefits-icons" icon="search"></iron-icon>
-                <br />
-                <paper-item-body>
-                  <h2>Collect / Analyze</h2>
-                </paper-item-body>
-              </paper-icon-item>
-              <div class="card-content">
-                Get precious data from your customers; <br>
-                Who are connecting on your network? Name, Age, Gender, e-mail,
-                phone, social midias, birthday.
-              </div>
-            </paper-card>
-            <paper-card image="">
-              <paper-icon-item>
-                <iron-icon class="benefits-icons" icon="trending-up"></iron-icon>
-                <br />
-                <paper-item-body>
-                  <h2>Guided Marketing</h2>
-                </paper-item-body>
-              </paper-icon-item>
-              <div class="card-content">
-                Using the collected data you can do a marketing plans focusing
-                on your customers profile, that will give you a highest cost-benefit.
-              </div>
-            </paper-card>
-            <paper-card image="">
-              <paper-icon-item>
-                <iron-icon class="benefits-icons" icon="social:people"></iron-icon>
-                <br />
-                <paper-item-body>
-                  <h2>More Clients</h2>
-                </paper-item-body>
-              </paper-icon-item>
-              <div class="card-content">
-                According with a research, 44% of all ages reported that a free
-                WiFi connection influence where they buy; offering WiFi will get you
-                more clients.
-              </div>
-            </paper-card>
           </div>
         </section>
         <section class="home-section" id="features">
@@ -1116,7 +1121,7 @@ end contact section
             <hero-fab icon="milton:arrow-forward" href="/project" id="projectFab"></hero-fab>
           </div> -->
         </section>
-        <section class="home-section" id="demo">
+        <!-- <section class="home-section" id="demo">
           <div class="mid-layer-white"></div>
           <div class="mid-layer"></div>
           <h2><paper-button noink on-tap="tapToFab">Demo</paper-button></h2>
@@ -1130,7 +1135,7 @@ end contact section
               autoplay="0">
             </google-youtube>
           </div>
-        </section>
+        </section> -->
         <section class="background" id="plans">
           <h2 class="header-plans"><paper-button noink on-tap="tapToFab">
             Have it your way
@@ -1231,8 +1236,8 @@ end contact section
           <div class="contact-wrapper">
             <div class="description">
               <paper-card class="contact-left" elevation="5">
-                <div class="brazil-above">
-                  <div class="phone border-top">
+                <div class="phones-left">
+                  <div class="brasil phone border-top">
                     <iron-image sizing="cover" class="flag" width="100" height="67" src="../../images/flags/br.png"></iron-image>
                     <p class="contact-information">
                       +55 (61) 99543-2233
@@ -1241,16 +1246,7 @@ end contact section
                       <iron-image class="" sizing="cover" width="30" height="30" src="../../images/whatsapp-icon.png"></iron-image>
                     </a>
                   </div>
-                  <div class="map">
-                    <google-map latitude="37.77493" longitude="-122.41942">
-                      <google-map-poly closed fill-color="blue" fill-opacity=".5">
-                        <google-map-point latitude="36.77493" longitude="-121.41942"></google-map-point>
-                      </google-map-poly>
-                    </google-map>
-                  </div>
-                </div>
-                <div class="netherland-below">
-                  <div class="phone border-bottom">
+                  <div class="netherlands phone border-bottom">
                     <iron-image sizing="cover" class="flag" width="100" height="67" src="../../images/flags/nl.png"></iron-image>
                     <p class="contact-information">
                       +31 (3) 33343-2233
@@ -1259,14 +1255,17 @@ end contact section
                       <iron-image class="" sizing="cover" width="30" height="30" src="../../images/whatsapp-icon.png"></iron-image>
                     </a>
                   </div>
-                  <div class="map">
-                    <google-map latitude="37.77493" longitude="-122.41942">
-                      <google-map-poly closed fill-color="blue" fill-opacity=".5">
-                        <google-map-point latitude="36.77493" longitude="-121.41942"></google-map-point>
-                      </google-map-poly>
-                    </google-map>
-                  </div>
                 </div>
+
+                <div class="map-right">
+                  <google-map fit-to-markers api-key="AIzaSyA47dKOqjns42sb91euf-LkmUqHIVEOLyg" longitude="-24" latitude="27" zoom="2.5">
+                    <google-map-marker latitude="52.322794" longitude="5.112451"
+                      title="Powerfi Brazil!"></google-map-marker>
+                      <google-map-marker latitude="-15.773679" longitude="-47.891879"
+                        title="Powerfi Netherlands"></google-map-marker>
+                  </google-map>
+                </div>
+
               </paper-card>
               <!-- <p>Come and increase your business presence on internet, contact us!</p>
               <div class="email">
@@ -1299,7 +1298,7 @@ end contact section
     }
     connectedCallback() {
       super.connectedCallback();
-      this.viewHeight = this.$.artist.clientHeight;
+      this.viewHeight = this.$.powerfi.clientHeight;
       this.year = new Date().getFullYear();
     }
     setHeaderTitle(selectedTab) {
@@ -1311,14 +1310,39 @@ end contact section
       if(selectedTab && selectedTab !== 'contact') this.$[`${selectedTab}Fab`].fadeIn();
     }
     tapToFab(e) {
+      console.log(">>>>>>>>>> TAP", e);
       const name = `${e.target.parentNode.parentNode.id}Fab`;
       console.log(name);
       const fab = this.$[name];
       if(fab) fab.animateRedirect();
     }
     scrollToTab(e) {
-      console.log(e);
+      console.log(">>>>>>> scroll", e);
       if(!e.detail.tapped) e.detail.tapped="contact";
+      const tab = this.$[e.detail.tapped];
+      console.log(tab.offsetTop)
+      if(!tab) return;
+      window.scroll({
+        behavior: 'smooth',
+        left: 0,
+        top: tab.offsetTop
+      });
+    }
+    scrollToPlans(e) {
+      console.log(">>>>>>> scroll", e);
+      if(!e.detail.tapped) e.detail.tapped="plans";
+      const tab = this.$[e.detail.tapped];
+      console.log(tab.offsetTop)
+      if(!tab) return;
+      window.scroll({
+        behavior: 'smooth',
+        left: 0,
+        top: tab.offsetTop
+      });
+    }
+    scrollToPowerfi(e) {
+      console.log(">>>>>>> scroll", e);
+      if(!e.detail.tapped) e.detail.tapped="powerfi";
       const tab = this.$[e.detail.tapped];
       console.log(tab.offsetTop)
       if(!tab) return;

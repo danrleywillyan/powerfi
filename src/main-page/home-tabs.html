@@ -64,28 +64,25 @@
     <div class="bottom" id="main">
       <div class="flex"></div>
       <paper-tabs noink attr-for-selected="id" selected="{{selected}}">
-        <paper-tab id="powerfi" class="powerfi" on-tap="tapAnchor">
+        <paper-tab id="powerfi" class="home-section" on-tap="tapAnchor">
           Power-Fi
         </paper-tab>
-        <paper-tab id="product" class="product" on-tap="tapAnchor">
-          How it Works
-        </paper-tab>
-        <paper-tab id="benefits" class="benefits" on-tap="tapAnchor">
+        <paper-tab id="benefits" class="home-section" on-tap="tapAnchor">
           Benefits
         </paper-tab>
-        <paper-tab id="features" class="features" on-tap="tapAnchor">
+        <paper-tab id="product" class="home-section" on-tap="tapAnchor">
+          How it Works
+        </paper-tab>
+        <paper-tab id="features" class="home-section" on-tap="tapAnchor">
           Features
         </paper-tab>
-        <paper-tab id="demo" class="demo" on-tap="tapAnchor">
-          Demo
-        </paper-tab>
-        <paper-tab id="plans" class="plans" on-tap="tapAnchor">
+        <paper-tab id="plans" class="background" on-tap="tapAnchor">
           plans
         </paper-tab>
-        <paper-tab id="about-us" class="about-us" on-tap="tapAnchor">
+        <paper-tab id="about-us" class="home-section" on-tap="tapAnchor">
           About Us
         </paper-tab>
-        <paper-tab id="contact" class="contact" on-tap="tapAnchor">
+        <paper-tab id="contact" class="home-section" on-tap="tapAnchor">
           Contact
         </paper-tab>
       </paper-tabs>
@@ -93,28 +90,25 @@
     <div class="bottom" id="collapsed">
       <div class="flex"></div>
       <paper-tabs noink attr-for-selected="id" selected="{{selected}}">
-        <paper-tab id="powerfi" class="powerfi" on-tap="tapAnchor">
+        <paper-tab id="powerfi" class="home-section" on-tap="tapAnchor">
           Power-Fi
         </paper-tab>
-        <paper-tab id="product" class="product" on-tap="tapAnchor">
-          How it Works
-        </paper-tab>
-        <paper-tab id="benefits" class="benefits" on-tap="tapAnchor">
+        <paper-tab id="benefits" class="home-section" on-tap="tapAnchor">
           Benefits
         </paper-tab>
-        <paper-tab id="features" class="features" on-tap="tapAnchor">
+        <paper-tab id="product" class="home-section" on-tap="tapAnchor">
+          How it Works
+        </paper-tab>
+        <paper-tab id="features" class="home-section" on-tap="tapAnchor">
           Features
         </paper-tab>
-        <paper-tab id="demo" class="demo" on-tap="tapAnchor">
-          Demo
-        </paper-tab>
-        <paper-tab id="plans" class="plans" on-tap="tapAnchor">
+        <paper-tab id="plans" class="background" on-tap="tapAnchor">
           plans
         </paper-tab>
-        <paper-tab id="about-us" class="about-us" on-tap="tapAnchor">
+        <paper-tab id="about-us" class="home-section" on-tap="tapAnchor">
           About Us
         </paper-tab>
-        <paper-tab id="contact" class="contact" on-tap="tapAnchor">
+        <paper-tab id="contact" class="home-section" on-tap="tapAnchor">
           Contact
         </paper-tab>
       </paper-tabs>
@@ -162,6 +156,7 @@
         if(!this.shadowRoot.querySelector('paper-tabs')) return;
         if (!selected) return;
         const colorVar = `var(--default-${selected}-color)`;
+        console.log("colorVar = " + colorVar);
         this.updateStyles({ '--selection-color': colorVar });
       }
 
@@ -170,10 +165,11 @@
       }
 
       setScrollSection(e) {
-        const regions = ['', 'powerfi', 'product', 'benefits', 'features', 'demo', 'plans', 'about-us', 'contact'];
-        const index = Math.round(window.scrollY/this.sectionHeight);
+        const regions = ['', 'powerfi', 'benefits', 'product', 'features', 'plans', 'about-us', 'contact'];
+        const index = Math.round((window.scrollY/this.sectionHeight)+0.4);
         clearTimeout(this.timeout);
         this.timeout = setTimeout(function () {
+          console.log("regions[index] = " + regions[index]);
           this.selected = regions[index];
         }.bind(this), 40);
       }
