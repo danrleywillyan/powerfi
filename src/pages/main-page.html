@@ -31,224 +31,230 @@
     <style include="main-theme"></style>
     <style>
 
-/*
-  ==========================================================
-  home section
-  ==========================================================
- */
+    /*
+    ==========================================================
+    home section
+    ==========================================================
+    */
 
 
 
- /*
- ==========================================
-end home section
- ==========================================
-  */
+    /*
+    ==========================================
+    end home section
+    ==========================================
+    */
 
-/*
-  ==========================================================
-  powerfi business section
-  ==========================================================
- */
+    /*
+    ==========================================================
+    powerfi business section
+    ==========================================================
+    */
 
-   .powerfi-business {
-     width: 50%;
-   }
-
-   .powerfi-left {
-
-   }
-
-   .powerfi-information{
-     display: block;
-     width: 25%;
-   }
-   .powerfi-information h2 {
-     margin: 5px 20px 5px 10px !important;
-   }
-   .information-card {
-     height: 40vh;
-     padding: 25px;
-     margin-bottom: 10px;
-     margin-top: 15px;
-   }
-   .information-icon {
-     width: 100%;
-     height: 70px;
-   }
-   .video-presentation {
-     display: block;
-     width: 90%;
-     height: auto;
-     margin-top: 25%;
-     margin-left: auto;
-     margin-right: auto;
-   }
-   .dark-text {
-     color: black;
-     line-height: 3vh !important;
-     text-align: justify;
-   }
-
-
- /*
- ==========================================
-end powerfi business section
- ==========================================
-  */
-
-  /*
-==================================
-How it works section
-==================================
-  */
-  @media screen and (max-width: 500px) {
-    #product {
-      border-top: 4px solid var(--default-artist-color);
+    .powerfi-business {
+      width: 50%;
+      margin: -8% auto;
     }
-  }
-  #product {
-    background-repeat: no-repeat;
-    height: calc(100vh - 90px);
-  }
-  #product .l2t-product {
-    --paper-slide-dot: rgba(100, 100, 100, .5);
-    --paper-slide-dot-selected: #0B5DA5;
-    --paper-slide-height: calc(100vh - 234px);
-  }
-  .how-it-works {
-    margin: 0 5%;
-    display: inline-flex;
-  }
-  .how-it-works-center {
-    margin: 2% 0;
-    width: 35%;
-    display: block;
-  }
-  .pc-screen-below {
-    height: 80%;
-  }
-  .mobile-screen-above {
-    display: inline-flex;
-    width: 100%;
-    height: 65%;
-  }
-  .mobile-screen-above iron-image {
-    height: 100%;
-    width: 50%;
-  }
-  .how-it-works-left {
-    width: 32.5%;
-    display: block;
-  }
-  .how-it-works-right {
-    width: 32.5%;
-    display: block;
-  }
-  .how-it-works-left iron-image {
-    padding: 10px 30px;
-    float: left;
-  }
-  .how-it-works-right iron-image {
-    padding: 10px 30px;
-    float: right;
-  }
-  .how-it-works-card {
-    width: 100%;
-    height: 50%;
-    display: inline-flex;
-  }
-  .how-it-works-card iron-image {
-    height: 70%;
-    width: 20%;
-    margin-top: 15%;
-  }
-  .how-it-works-card p {
-    color: black;
-    white-space: normal;
-    padding: 0 30px;
-    line-height: 3vh !important;
-    margin: 0;
-  }
-  .how-it-works-card h2 {
-    font-weight: lighter;
-    font-size: x-large;
-  }
-  .how-it-works-right-content {
-    float: left;
-  }
-  .how-it-works-left-content {
-    float: right;
-  }
 
-  /*
-==================================
-end How it works section
-==================================
-  */
+    .powerfi-left {
 
-/*
-==========================================================
-features section
-==========================================================
-*/
+    }
 
-  .features > .white{
-    color: white;
-  }
-  .features paper-card {
-    width: 30%;
-    height: 200px;
-    margin: 0 0 2% 2%;
-    padding: 0 2% 2% 0;
-    display: inline-flex;
-    background-color: #00000077;
-    color: white;
-  }
-  .features p {
-    color: black;
-    font-weight: 500;
-    font-size: 1.2em;
-    height: 8vh;
-    font-style: italic;
-    padding-left: 50px;
-  }
-  .features h2 {
-    font-size: 2em;
-  }
-  .features-card-head {
-    display: block;
-    margin: auto 3% auto 1%;
-  }
-  .features-icons {
-    --iron-icon-height: 64px;
-    --iron-icon-width: 64px;
-    color: white;
-    /* display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%; */
-  }
-  .feature-card-content {
-    text-align: justify;
-    float: right;
-    margin-left: 0%;
-  }
-  .card-content {
-    text-align: justify;
-  }
+    .powerfi-information{
+      display: inline-flex;
+      width: 100%;
+    }
+    .powerfi-information h2 {
+      margin: 5px auto 5px 30% !important;
+      font-size: 1.4em !important;
+    }
+    .information-card {
+      width: 25%;
+      height: 35vh;
+      padding: 25px;
+    }
+    .information-card:hover {
+      border-bottom: 5px solid var(--default-powerfi-color);
+    }
+    .information-icon {
+      width: 100%;
+      height: 70px;
+    }
+    .video-presentation {
+      display: block;
+      width: 90%;
+      height: auto;
+      margin-top: 25%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .dark-text {
+      color: black;
+      line-height: 2.4vh !important;
+      text-align: justify;
+      font-size: smaller;
+    }
 
-/*
-==========================================
-end features section
-==========================================
-*/
 
-/*
-==================================================
-plans table style
-==================================================
-*/
+    /*
+    ==========================================
+    end powerfi business section
+    ==========================================
+    */
+
+    /*
+    ==================================
+    How it works section
+    ==================================
+    */
+    @media screen and (max-width: 500px) {
+      #product {
+        border-top: 4px solid var(--default-artist-color);
+      }
+    }
+    #product {
+      background-repeat: no-repeat;
+      height: calc(100vh - 90px);
+    }
+    #product .l2t-product {
+      --paper-slide-dot: rgba(100, 100, 100, .5);
+      --paper-slide-dot-selected: #0B5DA5;
+      --paper-slide-height: calc(100vh - 234px);
+    }
+    .how-it-works {
+      margin: 0 5%;
+      display: inline-flex;
+    }
+    .how-it-works-center {
+      margin: 2% 0;
+      width: 35%;
+      display: block;
+    }
+    .pc-screen-below {
+      height: 80%;
+    }
+    .mobile-screen-above {
+      display: inline-flex;
+      width: 100%;
+      height: 65%;
+    }
+    .mobile-screen-above iron-image {
+      height: 100%;
+      width: 50%;
+    }
+    .how-it-works-left {
+      width: 32.5%;
+      display: block;
+    }
+    .how-it-works-right {
+      width: 32.5%;
+      display: block;
+    }
+    .how-it-works-left iron-image {
+      padding: 10px 30px;
+      float: left;
+    }
+    .how-it-works-right iron-image {
+      padding: 10px 30px;
+      float: right;
+    }
+    .how-it-works-card {
+      width: 100%;
+      height: 50%;
+      display: inline-flex;
+    }
+    .how-it-works-card iron-image {
+      height: 70%;
+      width: 20%;
+      margin-top: 15%;
+    }
+    .how-it-works-card p {
+      color: black;
+      white-space: normal;
+      padding: 0 30px;
+      line-height: 3vh !important;
+      margin: 0;
+    }
+    .how-it-works-card h2 {
+      font-weight: lighter;
+      font-size: x-large;
+    }
+    .how-it-works-right-content {
+      float: left;
+    }
+    .how-it-works-left-content {
+      float: right;
+    }
+
+    /*
+    ==================================
+    end How it works section
+    ==================================
+    */
+
+    /*
+    ==========================================================
+    features section
+    ==========================================================
+    */
+
+    .white{
+      color: white !important;
+    }
+    .features paper-card {
+      width: 30%;
+      height: 200px;
+      margin: 0 0 2% 2%;
+      padding: 0 2% 2% 0;
+      display: inline-flex;
+      background-color: #00000077;
+      color: white;
+    }
+    .features p {
+      color: black;
+      font-weight: 500;
+      font-size: 1.2em;
+      height: 8vh;
+      font-style: italic;
+      padding-left: 50px;
+    }
+    .features h2 {
+      font-size: 2em;
+      color: white !important;
+    }
+    .features-card-head {
+      display: block;
+      margin: auto 3% auto 1%;
+    }
+    .features-icons {
+      --iron-icon-height: 64px;
+      --iron-icon-width: 64px;
+      color: white;
+      /* display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 100%; */
+    }
+    .feature-card-content {
+      text-align: justify;
+      float: right;
+      margin-left: 0%;
+    }
+    .card-content {
+      text-align: justify;
+    }
+
+    /*
+    ==========================================
+    end features section
+    ==========================================
+    */
+
+    /*
+    ==================================================
+    plans table style
+    ==================================================
+    */
     .background {
       /* padding: 0 25px 25px; */
       position: relative;
@@ -261,10 +267,10 @@ plans table style
     }
     .background::after {
       content: '';
-      background: #60a9ff;
-      background: -moz-linear-gradient(top, #60a9ff 0%, #4394f4 100%);
-      background: -webkit-linear-gradient(top, #60a9ff 0%,#4394f4 100%);
-      background: linear-gradient(to bottom, #60a9ff 0%,#4394f4 100%);
+      background: var(--default-benefits-color);
+      background: -moz-linear-gradient(top, var(--default-benefits-color) 0%, var(--default-benefits-color) 100%);
+      background: -webkit-linear-gradient(top, var(--default-benefits-color) 0%, var(--default-benefits-color) 100%);
+      background: linear-gradient(to bottom, var(--default-benefits-color) 0%, var(--default-benefits-color) 100%);
       filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#60a9ff', endColorstr='#4394f4',GradientType=0 );
       height: 350px;
       left: 0;
@@ -277,17 +283,18 @@ plans table style
       z-index: 2;
       position: relative;
       padding: 0;
+      color: white;
       text-transform: none;
       min-width: unset;
       margin: 0 0 20px 0;
     }
     /* .background .divider {
-      position: relative;
-      height: 5px;
-      max-width: 90%;
-      margin-top: -5px;
-      clear: both;
-      color: white;
+    position: relative;
+    height: 5px;
+    max-width: 90%;
+    margin-top: -5px;
+    clear: both;
+    color: white;
     } */
     @media (min-width: 900px) {
       .background {
@@ -353,13 +360,13 @@ plans table style
       margin: 0px 0 0px;
     }
     .orange {
-      color: #f5af19;
+      color: var(--default-product-color);
     }
     .blue {
-        color: #0b5da5;
+      color: var(--default-powerfi-color);
     }
     .green {
-      color: #7cb620;
+      color: var(--default-benefits-color);
     }
     .plans-features-item {
       border-top: 1px solid #e1f1ff;
@@ -376,38 +383,60 @@ plans table style
       font-weight: 700;
     }
     .plans-button {
-      border: 1px solid #9dd1ff;
       border-radius: 10px;
-      color: #348EFE;
+      color: var(--default-benefits-color);
       display: inline-block;
       margin: 25px 0;
       padding: 15px 35px;
       text-decoration: none;
       transition: all 150ms ease-in-out;
     }
-    .plans-button:hover,
+    /* .plans-button:hover,
     .plans-button:focus {
-      background-color: #e1f1ff;
-    }
-    .plans-button.is-featured {
-      background-color: #48aaff;
+      background-color: var(--default-benefits-color);
+      filter: opacity(50%);
+    } */
+    .plans-button.is-green {
+      background-color: var(--default-benefits-color);
       color: #fff;
+      filter: opacity(80%);
     }
-    .plans-button.is-featured:hover,
-    .plans-button.is-featured:active {
-      background-color: #269aff;
+    .plans-button.is-green:hover,
+    .plans-button.is-green:active {
+      background-color: var(--default-benefits-color);
+      filter: opacity(100%);
     }
-/*
-==================================================
-end plans table style
-==================================================
-*/
+    .plans-button.is-blue {
+      background-color: var(--default-powerfi-color);
+      color: #fff;
+      filter: opacity(80%);
+    }
+    .plans-button.is-blue:hover,
+    .plans-button.is-blue:active {
+      background-color: var(--default-powerfi-color);
+      filter: opacity(100%);
+    }
+    .plans-button.is-orange {
+      background-color: var(--default-product-color);
+      color: #fff;
+      filter: opacity(80%);
+    }
+    .plans-button.is-orange:hover,
+    .plans-button.is-orange:active {
+      background-color: var(--default-product-color);
+      filter: opacity(100%);
+    }
+    /*
+    ==================================================
+    end plans table style
+    ==================================================
+    */
 
-/*
-==========================================
-about-us section
-==========================================
-*/
+    /*
+    ==========================================
+    about-us section
+    ==========================================
+    */
     .about-us-wrapper {
       display: inline-flex;
       margin: 0 3% 0 10%;
@@ -498,10 +527,10 @@ about-us section
       font-family: 'Playfair Display', serif !important;
     }
     .team-member h5 {
-        line-height: 0.5;
-        margin-bottom: 4%;
-        margin-top: 2%;
-        font-family: 'Playfair Display', serif !important;
+      line-height: 0.5;
+      margin-bottom: 4%;
+      margin-top: 2%;
+      font-family: 'Playfair Display', serif !important;
     }
     .team-member .on-hover {
       position: absolute;
@@ -557,17 +586,17 @@ about-us section
       content: "              ";
       height: 10px;
     }
-/*
-==========================================
-end about-us section
-==========================================
-*/
+    /*
+    ==========================================
+    end about-us section
+    ==========================================
+    */
 
-/*
-==========================================
-contact section
-==========================================
-*/
+    /*
+    ==========================================
+    contact section
+    ==========================================
+    */
     .contact-left {
       width: 100%;
       height: 440px;
@@ -640,11 +669,11 @@ contact section
       filter: grayscale(100%);
     }
 
-/*
-==========================================
-end contact section
-==========================================
-*/
+    /*
+    ==========================================
+    end contact section
+    ==========================================
+    */
 
     :host {
       display: block;
@@ -836,132 +865,132 @@ end contact section
       </app-header>
       <div class="container">
         <section class="home-section" id="powerfi">
-          <div class="powerfi-information">
-            <paper-card class="information-card">
-              <iron-image sizing="contain" class="information-icon" src="../../images/powerfi-icons/checkbox.png">
-              </iron-image>
-              <h2>Easy to use</h2>
-              <p class="dark-text">Power-Fi is simple and intuitive for both the user and your business.
-                With a few clicks you and your customer will be closer than ever.</p>
-            </paper-card>
-            <paper-card class="information-card">
-              <iron-image sizing="contain" class="information-icon" src="../../images/powerfi-icons/design.png">
-              </iron-image>
-              <h2>Crisp design</h2>
-              <p class="dark-text">Impress by displaying your brand in rich detail and
-                colorful features while presenting your promotions at the most coveted
-                spot of online marketing: mobile.</p>
-            </paper-card>
-          </div>
-          <div class="powerfi-business">
-            <google-youtube
-              class="video-presentation"
-              video-id="2twJhfS1plA"
-              fluid=1
-              rel="0"
-              start="0"
-              autoplay="0">
-            </google-youtube>
-          </div>
-          <div class="powerfi-information">
-            <paper-card class="information-card">
-              <iron-image sizing="contain" class="information-icon" src="../../images/powerfi-icons/ads-logo.png">
-              </iron-image>
-              <h2>Precise ads</h2>
-              <p class="dark-text">Build up your customer loyalty with Power-Fi by
-                sending personal advertisements based on their needs
-                and wishes. Clients will feel more connected to your business. </p>
-            </paper-card>
-
-            <paper-card class="information-card">
-              <iron-image sizing="contain" class="information-icon" src="../../images/powerfi-icons/bars-graphic.png">
-              </iron-image>
-              <h2>Real results</h2>
-              <p class="dark-text">Get real-time performance of your campaigns, with
-                numbers and critical insights to help you grow your business.</p>
-            </paper-card>
-          </div>
-        </section>
-        <section class="home-section" id="benefits">
-          <h2><paper-button noink on-tap="tapToFab">How you win more</paper-button></h2>
-          <div class="benefits">
-            <p>How your business can win sharing internet</p>
-            <paper-card image="">
-              <paper-icon-item>
-                <iron-icon class="benefits-icons" icon="notification:network-check"></iron-icon>
-                <br />
-                <paper-item-body>
-                  <h2>Optimized WiFi</h2>
-                </paper-item-body>
-              </paper-icon-item>
-              <div class="card-content">
-                9/10 customers said there are a list of advantages using WiFi
-                instead of 3G/4G, the main advantage is a faster internet connection.
-              </div>
-            </paper-card>
-            <paper-card image="">
-              <paper-icon-item>
-                <iron-icon class="benefits-icons" icon="search"></iron-icon>
-                <br />
-                <paper-item-body>
-                  <h2>Collect / Analyze</h2>
-                </paper-item-body>
-              </paper-icon-item>
-              <div class="card-content">
-                Get precious data from your customers; <br>
-                Who are connecting on your network? Name, Age, Gender, e-mail,
-                phone, social midias, birthday.
-              </div>
-            </paper-card>
-            <paper-card image="">
-              <paper-icon-item>
-                <iron-icon class="benefits-icons" icon="trending-up"></iron-icon>
-                <br />
-                <paper-item-body>
-                  <h2>Guided Marketing</h2>
-                </paper-item-body>
-              </paper-icon-item>
-              <div class="card-content">
-                Using the collected data you can do a marketing plans focusing
-                on your customers profile, that will give you a highest cost-benefit.
-              </div>
-            </paper-card>
-            <paper-card image="">
-              <paper-icon-item>
-                <iron-icon class="benefits-icons" icon="social:people"></iron-icon>
-                <br />
-                <paper-item-body>
-                  <h2>More Clients</h2>
-                </paper-item-body>
-              </paper-icon-item>
-              <div class="card-content">
-                According with a research, 44% of all ages reported that a free
-                WiFi connection influence where they buy; offering WiFi will get you
-                more clients.
-              </div>
-            </paper-card>
-          </div>
-        </section>
-        <section class="home-section" id="product">
-          <!-- <div class="mid-layer-white"></div> -->
-          <h2><paper-button noink on-tap="tapToFab">How it Works</paper-button></h2>
-          <div class="how-it-works">
-            <div class="how-it-works-left">
-              <div class="how-it-works-card">
-                <iron-image class="" src="../../images/wifi-icon2.jpg"></iron-image>
-                <div class="how-it-works-left-content">
-                  <h2>Offer Free Wifi</h2>
-                  <p>
-                    Right away, consumers connect to your network from social media, email or SMS.
-                    The process is intuitive and simple: Internet in exchange of contact details.
-                  </p>
+          <h2><paper-button noink on-tap="tapToFab">Power-Fi</paper-button></h2>
+          <div class="vertical-content">
+            <div class="powerfi-information">
+              <paper-card elevation="0" class="information-card">
+                <iron-image sizing="contain" class="information-icon" src="../../images/powerfi-icons/checkbox.png">
+                </iron-image>
+                <h2>Easy to use</h2>
+                <p class="dark-text">Power-Fi is simple and intuitive for both the user and your business.
+                  With a few clicks you and your customer will be closer than ever.</p>
+                </paper-card>
+                <paper-card elevation="0" class="information-card">
+                  <iron-image sizing="contain" class="information-icon" src="../../images/powerfi-icons/design.png">
+                  </iron-image>
+                  <h2>Crisp design</h2>
+                  <p class="dark-text">Impress by displaying your brand in rich detail and
+                    colorful features while presenting your promotions at the most coveted
+                    spot of online marketing: mobile.</p>
+                  </paper-card>
+                  <paper-card elevation="0" class="information-card">
+                    <iron-image sizing="contain" class="information-icon" src="../../images/powerfi-icons/ads-logo.png">
+                    </iron-image>
+                    <h2>Precise ads</h2>
+                    <p class="dark-text">Build up your customer loyalty with Power-Fi by
+                      sending personal advertisements based on their needs
+                      and wishes. Clients will feel more connected to your business. </p>
+                    </paper-card>
+                    <paper-card elevation="0" class="information-card">
+                      <iron-image sizing="contain" class="information-icon" src="../../images/powerfi-icons/bars-graphic.png">
+                      </iron-image>
+                      <h2>Real results</h2>
+                      <p class="dark-text">Get real-time performance of your campaigns, with
+                        numbers and critical insights to help you grow your business.</p>
+                      </paper-card>
+                    </div>
+                    <div class="powerfi-business">
+                      <google-youtube
+                      class="video-presentation"
+                      video-id="2twJhfS1plA"
+                      fluid=1
+                      rel="0"
+                      start="0"
+                      autoplay="0">
+                    </google-youtube>
+                  </div>
                 </div>
-              </div>
-              <!-- <div class="how-it-works-card">
-                <iron-image class="" src="../../images/app-feature-3.png"></iron-image>
-                <div class="how-it-works-left-content">
-                  <h2>Custom Made</h2>
-                  <p>
+              </section>
+              <section class="home-section" id="benefits">
+                <h2><paper-button noink on-tap="tapToFab">Power up your business</paper-button></h2>
+                <div class="benefits">
+                  <p>How you win more by sharing free Wi-Fi</p>
+                  <paper-card image="">
+                    <paper-icon-item>
+                      <iron-icon class="benefits-icons" icon="notification:network-check"></iron-icon>
+                      <br />
+                      <paper-item-body>
+                        <h2>Optimized WiFi</h2>
+                      </paper-item-body>
+                    </paper-icon-item>
+                    <div class="card-content">
+                      9/10 customers said there are a list of advantages using WiFi
+                      instead of 3G/4G, the main advantage is a faster internet connection.
+                    </div>
+                  </paper-card>
+                  <paper-card image="">
+                    <paper-icon-item>
+                      <iron-icon class="benefits-icons" icon="search"></iron-icon>
+                      <br />
+                      <paper-item-body>
+                        <h2>Collect / Analyze</h2>
+                      </paper-item-body>
+                    </paper-icon-item>
+                    <div class="card-content">
+                      Get precious data from your customers; <br>
+                      Who are connecting on your network? Name, Age, Gender, e-mail,
+                      phone, social midias, birthday.
+                    </div>
+                  </paper-card>
+                  <paper-card image="">
+                    <paper-icon-item>
+                      <iron-icon class="benefits-icons" icon="trending-up"></iron-icon>
+                      <br />
+                      <paper-item-body>
+                        <h2>Guided Marketing</h2>
+                      </paper-item-body>
+                    </paper-icon-item>
+                    <div class="card-content">
+                      Using the collected data you can do a marketing plans focusing
+                      on your customers profile, that will give you a highest cost-benefit.
+                    </div>
+                  </paper-card>
+                  <paper-card image="">
+                    <paper-icon-item>
+                      <iron-icon class="benefits-icons" icon="social:people"></iron-icon>
+                      <br />
+                      <paper-item-body>
+                        <h2>More Clients</h2>
+                      </paper-item-body>
+                    </paper-icon-item>
+                    <div class="card-content">
+                      According with a research, 44% of all ages reported that a free
+                      WiFi connection influence where they buy; offering WiFi will get you
+                      more clients.
+                    </div>
+                  </paper-card>
+                </div>
+              </section>
+              <section class="home-section" id="product">
+                <!-- <div class="mid-layer-white"></div> -->
+                <h2><paper-button noink on-tap="tapToFab">How Power-Fi works</paper-button></h2>
+                <div class="how-it-works">
+                  <div class="how-it-works-left">
+                    <div class="how-it-works-card">
+                      <iron-image class="" src="../../images/wifi-icon2.jpg"></iron-image>
+                      <div class="how-it-works-left-content">
+                        <h2>Offer Free Wifi</h2>
+                        <p>
+                          Right away, consumers connect to your network from social media, email or SMS.
+                          The process is intuitive and simple: Internet in exchange of contact details.
+                        </p>
+                      </div>
+                    </div>
+                    <!-- <div class="how-it-works-card">
+                    <iron-image class="" src="../../images/app-feature-3.png"></iron-image>
+                    <div class="how-it-works-left-content">
+                    <h2>Custom Made</h2>
+                    <p>
                     Unleash your imagination, create and display your artwork in
                     image or video format, whenever you want, as often as you need.
                   </p>
@@ -988,372 +1017,372 @@ end contact section
                 <iron-image sizing="contain" class="" src="../../images/pc-screen.png"></iron-image>
               </div>
             </div>
-            </iron-image>
-            <div class="how-it-works-right">
-              <div class="how-it-works-card">
-                <iron-image class="" src="../../images/engage.jpg"></iron-image>
-                <div class="how-it-works-right-content">
-                  <h2>Promote Engagement</h2>
-                  <p>
-                    Likes, shares and reviews are some of the ways your customers
-                    will have to connect with your business.
-                  </p>
-                </div>
+          </iron-image>
+          <div class="how-it-works-right">
+            <div class="how-it-works-card">
+              <iron-image class="" src="../../images/engage.jpg"></iron-image>
+              <div class="how-it-works-right-content">
+                <h2>Promote Engagement</h2>
+                <p>
+                  Likes, shares and reviews are some of the ways your customers
+                  will have to connect with your business.
+                </p>
               </div>
-              <div class="how-it-works-card">
-                <iron-image class="" src="../../images/results.jpg"></iron-image>
-                <div class="how-it-works-right-content">
-                  <h2>Results and Insights</h2>
-                  <p>
-                    Age range, emails, gender, length of visit, preferred social
-                    networks and loads of more information can be accessed in real
-                    time to guide your business strategies.
-                  </p>
-                </div>
+            </div>
+            <div class="how-it-works-card">
+              <iron-image class="" src="../../images/results.jpg"></iron-image>
+              <div class="how-it-works-right-content">
+                <h2>Results and Insights</h2>
+                <p>
+                  Age range, emails, gender, length of visit, preferred social
+                  networks and loads of more information can be accessed in real
+                  time to guide your business strategies.
+                </p>
               </div>
             </div>
           </div>
-        </section>
-        <section class="home-section" id="features">
-          <h2 class="white"><paper-button noink on-tap="tapToFab">Get that power edge</paper-button></h2>
-          <div class="features">
-            <p class="white">What you get buying Power-Fi</p>
-            <paper-card image="">
-              <span class="features-card-head">
-                <iron-icon class="features-icons" icon="hardware:desktop-windows"></iron-icon>
-              </span>
-              <span class="feature-card-content">
-                <paper-icon-item>
-                  <paper-item-body>
-                    <h2>High Definition</h2>
-                  </paper-item-body>
-                </paper-icon-item>
-                <div class="">
-                  Make the most of the richness of detail in images or videos
-                  used in your mobile campaigns. We make your business look good.
-                </div>
-              </span>
-            </paper-card>
-            <paper-card image="">
-              <span class="features-card-head">
-                <iron-icon class="features-icons" icon="communication:stay-current-portrait"></iron-icon>
-              </span>
-              <span class="feature-card-content">
-                <paper-icon-item>
-                    <paper-item-body>
-                      <h2>Fits All</h2>
-                    </paper-item-body>
-                </paper-icon-item>
-                <div class="">
-                  No one gets left out. Power-Fi is versatile and works on all
-                  major phones, tablets and laptops.
-                </div>
-              </span>
-            </paper-card>
-            <paper-card image="">
-              <span class="features-card-head">
-                <iron-icon class="features-icons" icon="image:remove-red-eye"></iron-icon>
-              </span>
-              <span class="feature-card-content">
-                <paper-icon-item>
-                    <paper-item-body>
-                      <h2>Total Control</h2>
-                    </paper-item-body>
-                </paper-icon-item>
-                <div class="">
-                  Data consumption, length of stay, number of visits,
-                  restricted sites, and loads more can be analyzed and
-                  controlled in real time using our platform.
-                </div>
-              </span>
-            </paper-card>
-            <paper-card image="">
-              <span class="features-card-head">
-                <iron-icon class="features-icons" icon="icons:settings"></iron-icon>
-              </span>
-              <span class="feature-card-content">
-                <paper-icon-item>
-                    <paper-item-body>
-                      <h2>Automation</h2>
-                    </paper-item-body>
-                </paper-icon-item>
-                <div class="">
-                  Supercharge your CRM with our Wi-Fi tool to increase
-                  and maintain contact with your market, in a practical and fast way.
-                </div>
-              </span>
-            </paper-card>
-            <paper-card image="">
-              <span class="features-card-head">
-                <iron-icon class="features-icons" icon="icons:search"></iron-icon>
-              </span>
-              <span class="feature-card-content">
-                <paper-icon-item>
-                    <paper-item-body>
-                      <h2>Data Analytics</h2>
-                    </paper-item-body>
-                </paper-icon-item>
-                <div class="">
-                  Get the best view of who your consumers are and how they
-                  interact with your brand in order to offer a personalized
-                  and efficient experience.
-                </div>
-              </span>
-            </paper-card>
-            <paper-card image="">
-              <span class="features-card-head">
-                <iron-icon class="features-icons" icon="icons:language"></iron-icon>
-              </span>
-              <span class="feature-card-content">
-                <paper-icon-item>
-                    <paper-item-body>
-                      <h2>Multi Languages</h2>
-                    </paper-item-body>
-                </paper-icon-item>
-                <div class="">
-                  Power-Fi supports more than 20 languages which ensures
-                  an even greater reach for your business across the globe.
-                </div>
-              </span>
-            </paper-card>
-          </div>
-          <!-- <div class="divider">
-            <hero-fab icon="milton:arrow-forward" href="/project" id="projectFab"></hero-fab>
-          </div> -->
-        </section>
-        <!-- <section class="home-section" id="demo">
-          <div class="mid-layer-white"></div>
-          <div class="mid-layer"></div>
-          <h2><paper-button noink on-tap="tapToFab">Demo</paper-button></h2>
-          <div class="powerfi-business">
-            <google-youtube
-              class="video-presentation"
-              video-id="2twJhfS1plA"
-              fluid=1
-              rel="0"
-              start="0"
-              autoplay="0">
-            </google-youtube>
-          </div>
-        </section> -->
-        <section class="background" id="plans">
-          <h2 class="header-plans"><paper-button noink on-tap="tapToFab">
-            Have it your way
-            <!-- We have the right plans for your Business -->
-          </paper-button></h2>
-          <!-- <div class="background"> -->
-            <div class="plans-container">
-              <div class="panel plans-table">
-                <div class="plans">
-                  <img src="../../../images/plans-icons/paper-plane.png" alt="" class="plans-img">
-                  <h2 class="plans-header">Premiere</h2>
-                  <ul class="plans-features orange">
-                    <li class="plans-features-item">Custom domains</li>
-                    <li class="plans-features-item">Sleeps after 30 mins of inactivity</li>
-                  </ul>
-                  <span class="plans-price orange">50$</span>
-                  <a href="#/" class="plans-button orange">Buy Now</a>
-                </div>
-
-                <div class="plans">
-                  <img src="../../../images/plans-icons/plane.png" alt="" class="plans-img">
-                  <h2 class="plans-header">Business</h2>
-                  <ul class="plans-features green">
-                    <li class="plans-features-item">Never sleeps</li>
-                    <li class="plans-features-item">Multiple workers for more powerful apps</li>
-                  </ul>
-                  <span class="plans-price green">$150</span>
-                  <a href="#/" class="plans-button is-featured green">Buy Now</a>
-                </div>
-
-                <div class="plans">
-                  <!-- #f5af19 -->
-                  <img src="../../../images/plans-icons/space-ship.png" alt="" class="plans-img">
-                  <h2 class="plans-header">Enterprise</h2>
-                  <ul class="plans-features blue">
-                    <li class="plans-features-item">Dedicated</li>
-                    <li class="plans-features-item">Simple horizontal scalability</li>
-                  </ul>
-                  <span class="plans-price blue">$400</span>
-                  <a href="#/" class="plans-button blue">Buy Now</a>
-                </div>
-
+        </div>
+      </section>
+      <section class="home-section" id="features">
+        <h2 class="white"><paper-button noink on-tap="tapToFab">Get that power edge</paper-button></h2>
+        <div class="features">
+          <p class="white">What you get buying Power-Fi</p>
+          <paper-card image="">
+            <span class="features-card-head">
+              <iron-icon class="features-icons" icon="hardware:desktop-windows"></iron-icon>
+            </span>
+            <span class="feature-card-content">
+              <paper-icon-item>
+                <paper-item-body>
+                  <h2>High Definition</h2>
+                </paper-item-body>
+              </paper-icon-item>
+              <div class="">
+                Make the most of the richness of detail in images or videos
+                used in your mobile campaigns. We make your business look good.
               </div>
-            </div>
-          <!-- </div> -->
-        </section> <!-- end plans section -->
-        <section class="home-section" id="about-us">
-          <h2>About Us</h2>
-          <div class="about-us-wrapper">
-            <div class="left-about-us">
-              <h4>The Short</h4>
-              <p class="short-about-us">
-                We are a company that deliver a excellent sharing wifi service.
-                We are able to share wifi the best way you can think, all of our
-                work are delivering satisfaction for all customers and customer's clients.
-              </p>
-              <h4>The Long</h4>
-              <p class="long-about-us">
-                We are a company that deliver a excellent sharing wifi service.
-                We are able to share wifi the best way you can think, all of our
-                work are delivering satisfaction for all customers and customer's clients.
-              </p>
-              <p class="long-about-us">
-                We are a company that deliver a excellent sharing wifi service.
-                We are able to share wifi the best way you can think, all of our
-                work are delivering satisfaction for all customers and customer's clients.
-              </p>
-            </div>
-            <div class="right-about-us">
-              <h4>Our Team</h4>
-              <div class="team-member">
-                <img src="../../images/team/cabrito.jpeg" alt="">
-                <div class="member-information">
-                  <h3>Guilherme Miranda</h3>
-                  <h5>Diretor de Operações</h5>
-                  <p>Trabalha na sede holandesa da IBM. Formado em Engenharia Eletrônica pela Universidade de Brasília, 8ª
-                  melhor universidade da america latina.</p>
-                </div>
+            </span>
+          </paper-card>
+          <paper-card image="">
+            <span class="features-card-head">
+              <iron-icon class="features-icons" icon="communication:stay-current-portrait"></iron-icon>
+            </span>
+            <span class="feature-card-content">
+              <paper-icon-item>
+                <paper-item-body>
+                  <h2>Fits All</h2>
+                </paper-item-body>
+              </paper-icon-item>
+              <div class="">
+                No one gets left out. Power-Fi is versatile and works on all
+                major phones, tablets and laptops.
               </div>
-              <div class="empty">
-
+            </span>
+          </paper-card>
+          <paper-card image="">
+            <span class="features-card-head">
+              <iron-icon class="features-icons" icon="image:remove-red-eye"></iron-icon>
+            </span>
+            <span class="feature-card-content">
+              <paper-icon-item>
+                <paper-item-body>
+                  <h2>Total Control</h2>
+                </paper-item-body>
+              </paper-icon-item>
+              <div class="">
+                Data consumption, length of stay, number of visits,
+                restricted sites, and loads more can be analyzed and
+                controlled in real time using our platform.
               </div>
-              <div class="team-member">
-                <img src="../../images/team/cabrito.jpeg" alt="">
-                <div class="member-information">
-                  <h3>Guilherme Miranda</h3>
-                  <h5>Diretor de Operações</h5>
-                  <p>Trabalha na sede holandesa da IBM. Formado em Engenharia Eletrônica pela Universidade de Brasília, 8ª
-                  melhor universidade da america latina.</p>
-                </div>
+            </span>
+          </paper-card>
+          <paper-card image="">
+            <span class="features-card-head">
+              <iron-icon class="features-icons" icon="icons:settings"></iron-icon>
+            </span>
+            <span class="feature-card-content">
+              <paper-icon-item>
+                <paper-item-body>
+                  <h2>Automation</h2>
+                </paper-item-body>
+              </paper-icon-item>
+              <div class="">
+                Supercharge your CRM with our Wi-Fi tool to increase
+                and maintain contact with your market, in a practical and fast way.
               </div>
-
-            </div>
-          </div>
-        </section><!-- end about-us section -->
-        <section class="home-section" id="contact">
-          <h2>Contact</h2>
-          <div class="contact-wrapper">
-            <div class="description">
-              <paper-card class="contact-left" elevation="5">
-                <div class="phones-left">
-                  <div class="brasil phone border-top">
-                    <iron-image sizing="cover" class="flag" width="100" height="67" src="../../images/flags/br.png"></iron-image>
-                    <p class="contact-information">
-                      +55 (61) 99543-2233
-                    </p>
-                    <a href="#" class="custom" target="_blank">
-                      <iron-image class="" sizing="cover" width="30" height="30" src="../../images/whatsapp-icon.png"></iron-image>
-                    </a>
-                  </div>
-                  <div class="netherlands phone border-bottom">
-                    <iron-image sizing="cover" class="flag" width="100" height="67" src="../../images/flags/nl.png"></iron-image>
-                    <p class="contact-information">
-                      +31 (3) 33343-2233
-                    </p>
-                    <a href="#" class="custom" target="_blank">
-                      <iron-image class="" sizing="cover" width="30" height="30" src="../../images/whatsapp-icon.png"></iron-image>
-                    </a>
-                  </div>
-                </div>
-
-                <div class="map-right">
-                  <google-map fit-to-markers api-key="AIzaSyA47dKOqjns42sb91euf-LkmUqHIVEOLyg" longitude="-24" latitude="27" zoom="2.5">
-                    <google-map-marker latitude="52.322794" longitude="5.112451"
-                      title="Powerfi Brazil!"></google-map-marker>
-                      <google-map-marker latitude="-15.773679" longitude="-47.891879"
-                        title="Powerfi Netherlands"></google-map-marker>
-                  </google-map>
-                </div>
-
-              </paper-card>
-              <!-- <p>Come and increase your business presence on internet, contact us!</p>
-              <div class="email">
-                <iron-icon icon="milton:mail"></iron-icon><span>contato@powerfi.com</span>
-              </div> -->
-            </div>
-            <home-contact class="formfields"></home-contact>
-          </div> <!-- end contact wrapper -->
-        </section><!-- end contact section -->
+            </span>
+          </paper-card>
+          <paper-card image="">
+            <span class="features-card-head">
+              <iron-icon class="features-icons" icon="icons:search"></iron-icon>
+            </span>
+            <span class="feature-card-content">
+              <paper-icon-item>
+                <paper-item-body>
+                  <h2>Data Analytics</h2>
+                </paper-item-body>
+              </paper-icon-item>
+              <div class="">
+                Get the best view of who your consumers are and how they
+                interact with your brand in order to offer a personalized
+                and efficient experience.
+              </div>
+            </span>
+          </paper-card>
+          <paper-card image="">
+            <span class="features-card-head">
+              <iron-icon class="features-icons" icon="icons:language"></iron-icon>
+            </span>
+            <span class="feature-card-content">
+              <paper-icon-item>
+                <paper-item-body>
+                  <h2>Multi Languages</h2>
+                </paper-item-body>
+              </paper-icon-item>
+              <div class="">
+                Power-Fi supports more than 20 languages which ensures
+                an even greater reach for your business across the globe.
+              </div>
+            </span>
+          </paper-card>
+        </div>
+        <!-- <div class="divider">
+        <hero-fab icon="milton:arrow-forward" href="/project" id="projectFab"></hero-fab>
+      </div> -->
+    </section>
+    <!-- <section class="home-section" id="demo">
+    <div class="mid-layer-white"></div>
+    <div class="mid-layer"></div>
+    <h2><paper-button noink on-tap="tapToFab">Demo</paper-button></h2>
+    <div class="powerfi-business">
+    <google-youtube
+    class="video-presentation"
+    video-id="2twJhfS1plA"
+    fluid=1
+    rel="0"
+    start="0"
+    autoplay="0">
+  </google-youtube>
+</div>
+</section> -->
+<section class="background" id="plans">
+  <h2 class="header-plans"><paper-button noink on-tap="tapToFab">
+    Have it your way
+    <!-- We have the right plans for your Business -->
+  </paper-button></h2>
+  <!-- <div class="background"> -->
+  <div class="plans-container">
+    <div class="panel plans-table">
+      <div class="plans">
+        <img src="../../../images/plans-icons/paper-plane.png" alt="" class="plans-img">
+        <h2 class="plans-header">Premiere</h2>
+        <ul class="plans-features orange">
+          <li class="plans-features-item">Custom domains</li>
+          <li class="plans-features-item">Sleeps after 30 mins of inactivity</li>
+        </ul>
+        <span class="plans-price orange">50$</span>
+        <a href="#/" class="plans-button is-orange orange">Subscribe</a>
       </div>
-      <div class="container">
-        <div id="footer">
-          <p>Power-Fi World 2019 {{year}}© - All Rights Reserved. Developed by <a href="http://taurus-software.com.br" target="_blank"><strong>Taurus</strong>Software</a>.</p>
+
+      <div class="plans">
+        <img src="../../../images/plans-icons/plane.png" alt="" class="plans-img">
+        <h2 class="plans-header">Business</h2>
+        <ul class="plans-features green">
+          <li class="plans-features-item">Never sleeps</li>
+          <li class="plans-features-item">Workers for more powerful apps</li>
+        </ul>
+        <span class="plans-price green">$150</span>
+        <a href="#/" class="plans-button is-green green">Subscribe</a>
+      </div>
+
+      <div class="plans">
+        <!-- #f5af19 -->
+        <img src="../../../images/plans-icons/space-ship.png" alt="" class="plans-img">
+        <h2 class="plans-header">Enterprise</h2>
+        <ul class="plans-features blue">
+          <li class="plans-features-item">Dedicated</li>
+          <li class="plans-features-item">Simple horizontal scalability</li>
+        </ul>
+        <span class="plans-price blue">$400</span>
+        <a href="#/" class="plans-button is-blue blue">Subscribe</a>
+      </div>
+
+    </div>
+  </div>
+  <!-- </div> -->
+</section> <!-- end plans section -->
+<section class="home-section" id="about-us">
+  <h2>About Us</h2>
+  <div class="about-us-wrapper">
+    <div class="left-about-us">
+      <h4>The Short</h4>
+      <p class="short-about-us">
+        We are a company that deliver a excellent sharing wifi service.
+        We are able to share wifi the best way you can think, all of our
+        work are delivering satisfaction for all customers and customer's clients.
+      </p>
+      <h4>The Long</h4>
+      <p class="long-about-us">
+        We are a company that deliver a excellent sharing wifi service.
+        We are able to share wifi the best way you can think, all of our
+        work are delivering satisfaction for all customers and customer's clients.
+      </p>
+      <p class="long-about-us">
+        We are a company that deliver a excellent sharing wifi service.
+        We are able to share wifi the best way you can think, all of our
+        work are delivering satisfaction for all customers and customer's clients.
+      </p>
+    </div>
+    <div class="right-about-us">
+      <h4>Our Team</h4>
+      <div class="team-member">
+        <img src="../../images/team/cabrito.jpeg" alt="">
+        <div class="member-information">
+          <h3>Guilherme Miranda</h3>
+          <h5>Diretor de Operações</h5>
+          <p>Trabalha na sede holandesa da IBM. Formado em Engenharia Eletrônica pela Universidade de Brasília, 8ª
+            melhor universidade da america latina.</p>
+          </div>
+        </div>
+        <div class="empty">
+
+        </div>
+        <div class="team-member">
+          <img src="../../images/team/cabrito.jpeg" alt="">
+          <div class="member-information">
+            <h3>Guilherme Miranda</h3>
+            <h5>Diretor de Operações</h5>
+            <p>Trabalha na sede holandesa da IBM. Formado em Engenharia Eletrônica pela Universidade de Brasília, 8ª
+              melhor universidade da america latina.</p>
+            </div>
+          </div>
+
         </div>
       </div>
-    </app-header-layout>
-  </template>
+    </section><!-- end about-us section -->
+    <section class="home-section" id="contact">
+      <h2>Contact</h2>
+      <div class="contact-wrapper">
+        <div class="description">
+          <paper-card class="contact-left" elevation="5">
+            <div class="phones-left">
+              <div class="brasil phone border-top">
+                <iron-image sizing="cover" class="flag" width="100" height="67" src="../../images/flags/br.png"></iron-image>
+                <p class="contact-information">
+                  +55 (61) 99543-2233
+                </p>
+                <a href="#" class="custom" target="_blank">
+                  <iron-image class="" sizing="cover" width="30" height="30" src="../../images/whatsapp-icon.png"></iron-image>
+                </a>
+              </div>
+              <div class="netherlands phone border-bottom">
+                <iron-image sizing="cover" class="flag" width="100" height="67" src="../../images/flags/nl.png"></iron-image>
+                <p class="contact-information">
+                  +31 (3) 33343-2233
+                </p>
+                <a href="#" class="custom" target="_blank">
+                  <iron-image class="" sizing="cover" width="30" height="30" src="../../images/whatsapp-icon.png"></iron-image>
+                </a>
+              </div>
+            </div>
 
-  <script>
-  class MainPage extends Polymer.Element {
-    static get is() { return 'main-page'; }
-    static get properties() {
-      return {
-        viewHeight: Number,
-        selectedTab: {
-          type: String,
-          observer: 'setHeaderTitle'
-        }
-      };
-    }
-    connectedCallback() {
-      super.connectedCallback();
-      this.viewHeight = this.$.powerfi.clientHeight;
-      this.year = new Date().getFullYear();
-    }
-    setHeaderTitle(selectedTab) {
-      const tab = this.$[selectedTab];
-      this.headerTitle = tab? tab.querySelector('h2').innerText : '';
-      Array.from(this.shadowRoot.querySelectorAll('hero-fab')).forEach((fab) => {
-        fab.fadeOut();
-      });
-      if(selectedTab && selectedTab !== 'contact') this.$[`${selectedTab}Fab`].fadeIn();
-    }
-    tapToFab(e) {
-      console.log(">>>>>>>>>> TAP", e);
-      const name = `${e.target.parentNode.parentNode.id}Fab`;
-      console.log(name);
-      const fab = this.$[name];
-      if(fab) fab.animateRedirect();
-    }
-    scrollToTab(e) {
-      console.log(">>>>>>> scroll", e);
-      if(!e.detail.tapped) e.detail.tapped="contact";
-      const tab = this.$[e.detail.tapped];
-      console.log(tab.offsetTop)
-      if(!tab) return;
-      window.scroll({
-        behavior: 'smooth',
-        left: 0,
-        top: tab.offsetTop
-      });
-    }
-    scrollToPlans(e) {
-      console.log(">>>>>>> scroll", e);
-      if(!e.detail.tapped) e.detail.tapped="plans";
-      const tab = this.$[e.detail.tapped];
-      console.log(tab.offsetTop)
-      if(!tab) return;
-      window.scroll({
-        behavior: 'smooth',
-        left: 0,
-        top: tab.offsetTop
-      });
-    }
-    scrollToPowerfi(e) {
-      console.log(">>>>>>> scroll", e);
-      if(!e.detail.tapped) e.detail.tapped="powerfi";
-      const tab = this.$[e.detail.tapped];
-      console.log(tab.offsetTop)
-      if(!tab) return;
-      window.scroll({
-        behavior: 'smooth',
-        left: 0,
-        top: tab.offsetTop
-      });
-    }
+            <div class="map-right">
+              <google-map fit-to-markers api-key="AIzaSyA47dKOqjns42sb91euf-LkmUqHIVEOLyg" longitude="-24" latitude="27" zoom="2.5">
+                <google-map-marker latitude="52.322794" longitude="5.112451"
+                title="Powerfi Brazil!"></google-map-marker>
+                <google-map-marker latitude="-15.773679" longitude="-47.891879"
+                title="Powerfi Netherlands"></google-map-marker>
+              </google-map>
+            </div>
+
+          </paper-card>
+          <!-- <p>Come and increase your business presence on internet, contact us!</p>
+          <div class="email">
+          <iron-icon icon="milton:mail"></iron-icon><span>contato@powerfi.com</span>
+        </div> -->
+      </div>
+      <home-contact class="formfields"></home-contact>
+    </div> <!-- end contact wrapper -->
+  </section><!-- end contact section -->
+</div>
+<div class="container">
+  <div id="footer">
+    <p>Power-Fi World {{year}}© - All Rights Reserved. Developed by <a href="http://taurus-software.com.br" target="_blank"><strong>Taurus</strong>Software</a>.</p>
+  </div>
+</div>
+</app-header-layout>
+</template>
+
+<script>
+class MainPage extends Polymer.Element {
+  static get is() { return 'main-page'; }
+  static get properties() {
+    return {
+      viewHeight: Number,
+      selectedTab: {
+        type: String,
+        observer: 'setHeaderTitle'
+      }
+    };
   }
+  connectedCallback() {
+    super.connectedCallback();
+    this.viewHeight = this.$.powerfi.clientHeight;
+    this.year = new Date().getFullYear();
+  }
+  setHeaderTitle(selectedTab) {
+    const tab = this.$[selectedTab];
+    this.headerTitle = tab? tab.querySelector('h2').innerText : '';
+    Array.from(this.shadowRoot.querySelectorAll('hero-fab')).forEach((fab) => {
+      fab.fadeOut();
+    });
+    if(selectedTab && selectedTab !== 'contact') this.$[`${selectedTab}Fab`].fadeIn();
+  }
+  tapToFab(e) {
+    console.log(">>>>>>>>>> TAP", e);
+    const name = `${e.target.parentNode.parentNode.id}Fab`;
+    console.log(name);
+    const fab = this.$[name];
+    if(fab) fab.animateRedirect();
+  }
+  scrollToTab(e) {
+    console.log(">>>>>>> scroll", e);
+    if(!e.detail.tapped) e.detail.tapped="contact";
+    const tab = this.$[e.detail.tapped];
+    console.log(tab.offsetTop)
+    if(!tab) return;
+    window.scroll({
+      behavior: 'smooth',
+      left: 0,
+      top: tab.offsetTop
+    });
+  }
+  scrollToPlans(e) {
+    console.log(">>>>>>> scroll", e);
+    if(!e.detail.tapped) e.detail.tapped="plans";
+    const tab = this.$[e.detail.tapped];
+    console.log(tab.offsetTop)
+    if(!tab) return;
+    window.scroll({
+      behavior: 'smooth',
+      left: 0,
+      top: tab.offsetTop
+    });
+  }
+  scrollToPowerfi(e) {
+    console.log(">>>>>>> scroll", e);
+    if(!e.detail.tapped) e.detail.tapped="powerfi";
+    const tab = this.$[e.detail.tapped];
+    console.log(tab.offsetTop)
+    if(!tab) return;
+    window.scroll({
+      behavior: 'smooth',
+      left: 0,
+      top: tab.offsetTop
+    });
+  }
+}
 
-  window.customElements.define(MainPage.is, MainPage);
-  </script>
+window.customElements.define(MainPage.is, MainPage);
+</script>
 </dom-module>
