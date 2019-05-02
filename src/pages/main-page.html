@@ -36,7 +36,88 @@
     home section
     ==========================================================
     */
+    app-toolbar.tall { height: calc(100vh - 64px); }
+    .slogan {
+      display: inline-flex;
+      pointer-events: auto;
+      text-align: center;
+      width: 100%;
+    }
+    .slogan .left {
+      float: left;
+      padding-top: 10vh;
+      margin-left: 50px;
+      width: 70%;
+    }
+    .slogan .right {
+      float: right;
+      width: 35%;
+    }
+    .slogan h1 {
+      font-size: 3rem;
+      font-weight: bold;
+      font-family: 'Roboto';
+      line-height: 45px;
+    }
+    .slogan div {
+      font-size: 1.4rem;
+    }
+    .slogan  paper-icon-button {
+      font-weight: bold;
+      color: #2d2d2d;
+      padding: 0;
+    }
+    .slogan  paper-button {
+      margin-top: 20px;
+      background: var(--default-contact-color);
+      border-radius: 5px;
+      color: white;
+      font-weight: bold;
+      padding: 10px;
+    }
+    .slogan img {
+      height: 75vh;
+      right: 0;
+    }
 
+    .title {
+      display: inline-block;
+      width: calc(100% - 120px);
+      text-align: center;
+      font-size: 1.5rem;
+      line-height: 2.3rem;
+    }
+    .resume p {
+      font-family: 'Comfortaa', cursive;
+    }
+    .right img {
+      padding-left: 100px;
+      padding-right: 100px;
+      margin-top: 30px;
+    }
+    .small-logo > img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: auto;
+      width:100px;
+      margin-left: 25px;
+    }
+    .logo_tab > img {
+      margin-top: 15px;
+      margin-left: 8px;
+      height: auto;
+      width:100px;
+    }
+    .button paper-button {
+      border-radius: 30px;
+      padding: 10px 20px;
+      background-color: #F5AF19;
+    }
+    .button > paper-icon-button {
+      position:relative;
+      bottom: 0;
+    }
 
 
     /*
@@ -70,7 +151,7 @@
     }
     .information-card {
       width: 25%;
-      height: 35vh;
+      height: 40vh;
       padding: 25px;
     }
     .information-card:hover {
@@ -693,43 +774,6 @@
     p{
       color: white;
     }
-    .title {
-      display: inline-block;
-      width: calc(100% - 120px);
-      text-align: center;
-      font-size: 1.5rem;
-      line-height: 2.3rem;
-    }
-    .resume p {
-      font-family: 'Comfortaa', cursive;
-    }
-    .right img {
-      padding-left: 100px;
-      padding-right: 100px;
-    }
-    .small-logo > img {
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: auto;
-      width:100px;
-      margin-left: 25px;
-    }
-    .logo_tab > img {
-      margin-top: 15px;
-      margin-left: 8px;
-      height: auto;
-      width:100px;
-    }
-    .button paper-button {
-      border-radius: 30px;
-      padding: 10px 20px;
-      background-color: #F5AF19;
-    }
-    .button > paper-icon-button {
-      position:relative;
-      bottom: 0;
-    }
 
     .benefits paper-card {
       width: 23%;
@@ -847,7 +891,9 @@
                 <h1>SHARE Wi-Fi AND POWER UP YOUR BUSINESS</h1>
                 <p>By using Power-Fi you get closer to your customer and increase your business</p>
                 <div class="button">
-                  <paper-button id="more" on-tap="scrollToPlans" role="button" tabindex="0" aria-disabled="false">Check our plans now!</paper-button>
+                  <paper-button id="more" on-tap="scrollToPlans" role="button" tabindex="0" aria-disabled="false">
+                    Check our plans now!
+                  </paper-button>
                 </div>
                 <p>more information</p>
                 <div class="button">
