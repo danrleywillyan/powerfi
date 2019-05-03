@@ -571,6 +571,10 @@
       -o-transition: all, 0.5s;
       -webkit-transition: all, 0.5s;
       transition: all, 0.5s;
+      filter: grayscale(100%);
+    }
+    .team-member:hover img {
+      filter: grayscale(0%);
     }
     .team-member .member-information {
       /* background: rgba(31, 118, 189, 0.8); */
@@ -580,6 +584,9 @@
       height: 20%;
       width: 100%;
       padding-right: 5%;
+    }
+    .member-center {
+        margin: 0 0 0 20px;
     }
     .team-member .member-information a {
       position: absolute;
@@ -595,7 +602,7 @@
       color: black;
       text-align: justify;
       font-size: small;
-      padding-right: 25%;
+      /* padding-right: 25%; */
     }
     .right-about-us h4 {
       text-align: justify;
@@ -1261,18 +1268,19 @@
   <h2>About Us</h2>
   <div class="about-us-wrapper">
     <div class="left-about-us">
-      <h4>The Short</h4>
+      <h4>How it started</h4>
       <p class="short-about-us">
         We are a company that deliver a excellent sharing wifi service.
         We are able to share wifi the best way you can think, all of our
         work are delivering satisfaction for all customers and customer's clients.
       </p>
-      <h4>The Long</h4>
+      <h4>Mission</h4>
       <p class="long-about-us">
         We are a company that deliver a excellent sharing wifi service.
         We are able to share wifi the best way you can think, all of our
         work are delivering satisfaction for all customers and customer's clients.
       </p>
+      <h4>Vision</h4>
       <p class="long-about-us">
         We are a company that deliver a excellent sharing wifi service.
         We are able to share wifi the best way you can think, all of our
@@ -1289,6 +1297,18 @@
           <p>Trabalha na sede holandesa da IBM. Formado em Engenharia Eletrônica pela Universidade de Brasília, 8ª
             melhor universidade da america latina.</p>
           </div>
+        </div>
+        <div class="empty">
+
+        </div>
+        <div class="team-member">
+          <div class="member-information member-center">
+            <h3>Guilherme Miranda</h3>
+            <h5>Diretor de Operações</h5>
+            <p>Trabalha na sede holandesa da IBM. Formado em Engenharia Eletrônica pela Universidade de Brasília, 8ª
+              melhor universidade da america latina.</p>
+          </div>
+          <img src="../../images/team/cabrito.jpeg" alt=""/>
         </div>
         <div class="empty">
 
