@@ -205,6 +205,7 @@
     .how-it-works {
       margin: 0 5%;
       display: inline-flex;
+      height: 70%;
     }
     .how-it-works-center {
       margin: 2% 0;
@@ -212,12 +213,12 @@
       display: block;
     }
     .pc-screen-below {
-      height: 80%;
+      height: 60%;
     }
     .mobile-screen-above {
       display: inline-flex;
       width: 100%;
-      height: 65%;
+      height: 60%;
     }
     .mobile-screen-above iron-image {
       height: 100%;
@@ -255,6 +256,7 @@
       padding: 0 30px;
       line-height: 3vh !important;
       margin: 0;
+      font-size: small;
     }
     .how-it-works-card h2 {
       font-weight: lighter;
@@ -474,8 +476,8 @@
     }
     /* .plans-button:hover,
     .plans-button:focus {
-      background-color: var(--default-benefits-color);
-      filter: opacity(50%);
+    background-color: var(--default-benefits-color);
+    filter: opacity(50%);
     } */
     .plans-button.is-green {
       background-color: var(--default-benefits-color);
@@ -586,7 +588,7 @@
       padding-right: 5%;
     }
     .member-center {
-        margin: 0 0 0 20px;
+      margin: 0 0 0 20px;
     }
     .team-member .member-information a {
       position: absolute;
@@ -1039,416 +1041,388 @@
                         </p>
                       </div>
                     </div>
-                    <!-- <div class="how-it-works-card">
-                    <iron-image class="" src="../../images/app-feature-3.png"></iron-image>
-                    <div class="how-it-works-left-content">
-                    <h2>Custom Made</h2>
-                    <p>
-                    Unleash your imagination, create and display your artwork in
-                    image or video format, whenever you want, as often as you need.
+                    <div class="how-it-works-card">
+                      <iron-image class="" src="../../images/alvo.jpg"></iron-image>
+                      <div class="how-it-works-left-content">
+                        <h2>Showcase Your Business</h2>
+                        <p>
+                          Create and advertise campaigns of your products and services
+                          using our user-friendly interface. Track their performance
+                          via your new platform, Facebook ™ Pixel or Google ™ Analytics.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="how-it-works-center">
+                    <div class="mobile-screen-above">
+                      <iron-image sizing="contain" class="" src="../../images/app-mockup-europe.png"></iron-image>
+                      <iron-image sizing="contain" class="" src="../../images/app-mockup-europe.png"></iron-image>
+                    </div>
+                    <div class="pc-screen-below">
+                      <iron-image sizing="contain" class="" src="../../images/pc-screen.png"></iron-image>
+                    </div>
+                  </div>
+                </iron-image>
+                <div class="how-it-works-right">
+                  <div class="how-it-works-card">
+                    <iron-image class="" src="../../images/engage.jpg"></iron-image>
+                    <div class="how-it-works-right-content">
+                      <h2>Promote Engagement</h2>
+                      <p>
+                        Likes, shares and reviews are some of the ways your customers
+                        will have to connect with your business.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="how-it-works-card">
+                    <iron-image class="" src="../../images/results.jpg"></iron-image>
+                    <div class="how-it-works-right-content">
+                      <h2>Results and Insights</h2>
+                      <p>
+                        Age range, emails, gender, length of visit, preferred social
+                        networks and loads of more information can be accessed in real
+                        time to guide your business strategies.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="home-section" id="features">
+              <h2 class="white"><paper-button noink on-tap="tapToFab">Get that power edge</paper-button></h2>
+              <div class="features">
+                <p class="white">What you get buying Power-Fi</p>
+                <paper-card image="">
+                  <span class="features-card-head">
+                    <iron-icon class="features-icons" icon="hardware:desktop-windows"></iron-icon>
+                  </span>
+                  <span class="feature-card-content">
+                    <paper-icon-item>
+                      <paper-item-body>
+                        <h2>High Definition</h2>
+                      </paper-item-body>
+                    </paper-icon-item>
+                    <div class="">
+                      Make the most of the richness of detail in images or videos
+                      used in your mobile campaigns. We make your business look good.
+                    </div>
+                  </span>
+                </paper-card>
+                <paper-card image="">
+                  <span class="features-card-head">
+                    <iron-icon class="features-icons" icon="communication:stay-current-portrait"></iron-icon>
+                  </span>
+                  <span class="feature-card-content">
+                    <paper-icon-item>
+                      <paper-item-body>
+                        <h2>Fits All</h2>
+                      </paper-item-body>
+                    </paper-icon-item>
+                    <div class="">
+                      No one gets left out. Power-Fi is versatile and works on all
+                      major phones, tablets and laptops.
+                    </div>
+                  </span>
+                </paper-card>
+                <paper-card image="">
+                  <span class="features-card-head">
+                    <iron-icon class="features-icons" icon="image:remove-red-eye"></iron-icon>
+                  </span>
+                  <span class="feature-card-content">
+                    <paper-icon-item>
+                      <paper-item-body>
+                        <h2>Total Control</h2>
+                      </paper-item-body>
+                    </paper-icon-item>
+                    <div class="">
+                      Data consumption, length of stay, number of visits,
+                      restricted sites, and loads more can be analyzed and
+                      controlled in real time using our platform.
+                    </div>
+                  </span>
+                </paper-card>
+                <paper-card image="">
+                  <span class="features-card-head">
+                    <iron-icon class="features-icons" icon="icons:settings"></iron-icon>
+                  </span>
+                  <span class="feature-card-content">
+                    <paper-icon-item>
+                      <paper-item-body>
+                        <h2>Automation</h2>
+                      </paper-item-body>
+                    </paper-icon-item>
+                    <div class="">
+                      Supercharge your CRM with our Wi-Fi tool to increase
+                      and maintain contact with your market, in a practical and fast way.
+                    </div>
+                  </span>
+                </paper-card>
+                <paper-card image="">
+                  <span class="features-card-head">
+                    <iron-icon class="features-icons" icon="icons:search"></iron-icon>
+                  </span>
+                  <span class="feature-card-content">
+                    <paper-icon-item>
+                      <paper-item-body>
+                        <h2>Data Analytics</h2>
+                      </paper-item-body>
+                    </paper-icon-item>
+                    <div class="">
+                      Get the best view of who your consumers are and how they
+                      interact with your brand in order to offer a personalized
+                      and efficient experience.
+                    </div>
+                  </span>
+                </paper-card>
+                <paper-card image="">
+                  <span class="features-card-head">
+                    <iron-icon class="features-icons" icon="icons:language"></iron-icon>
+                  </span>
+                  <span class="feature-card-content">
+                    <paper-icon-item>
+                      <paper-item-body>
+                        <h2>Multi Languages</h2>
+                      </paper-item-body>
+                    </paper-icon-item>
+                    <div class="">
+                      Power-Fi supports more than 20 languages which ensures
+                      an even greater reach for your business across the globe.
+                    </div>
+                  </span>
+                </paper-card>
+              </div>
+            </section>
+            <section class="background" id="plans">
+              <h2 class="header-plans"><paper-button noink on-tap="tapToFab">
+                Have it your way
+                <!-- We have the right plans for your Business -->
+              </paper-button></h2>
+              <!-- <div class="background"> -->
+              <div class="plans-container">
+                <div class="panel plans-table">
+                  <div class="plans">
+                    <img src="../../../images/plans-icons/paper-plane.png" alt="" class="plans-img">
+                    <h2 class="plans-header">Premiere</h2>
+                    <ul class="plans-features orange">
+                      <li class="plans-features-item">Custom domains</li>
+                      <li class="plans-features-item">Sleeps after 30 mins of inactivity</li>
+                    </ul>
+                    <span class="plans-price orange">50$</span>
+                    <a href="#/" class="plans-button is-orange orange">Subscribe</a>
+                  </div>
+
+                  <div class="plans">
+                    <img src="../../../images/plans-icons/plane.png" alt="" class="plans-img">
+                    <h2 class="plans-header">Business</h2>
+                    <ul class="plans-features green">
+                      <li class="plans-features-item">Never sleeps</li>
+                      <li class="plans-features-item">Workers for more powerful apps</li>
+                    </ul>
+                    <span class="plans-price green">$150</span>
+                    <a href="#/" class="plans-button is-green green">Subscribe</a>
+                  </div>
+
+                  <div class="plans">
+                    <!-- #f5af19 -->
+                    <img src="../../../images/plans-icons/space-ship.png" alt="" class="plans-img">
+                    <h2 class="plans-header">Enterprise</h2>
+                    <ul class="plans-features blue">
+                      <li class="plans-features-item">Dedicated</li>
+                      <li class="plans-features-item">Simple horizontal scalability</li>
+                    </ul>
+                    <span class="plans-price blue">$400</span>
+                    <a href="#/" class="plans-button is-blue blue">Subscribe</a>
+                  </div>
+
+                </div>
+              </div>
+              <!-- </div> -->
+            </section> <!-- end plans section -->
+            <section class="home-section" id="about-us">
+              <h2>About Us</h2>
+              <div class="about-us-wrapper">
+                <div class="left-about-us">
+                  <h4>How it started</h4>
+                  <p class="short-about-us">
+                    We are a company that deliver a excellent sharing wifi service.
+                    We are able to share wifi the best way you can think, all of our
+                    work are delivering satisfaction for all customers and customer's clients.
+                  </p>
+                  <h4>Mission</h4>
+                  <p class="long-about-us">
+                    We are a company that deliver a excellent sharing wifi service.
+                    We are able to share wifi the best way you can think, all of our
+                    work are delivering satisfaction for all customers and customer's clients.
+                  </p>
+                  <h4>Vision</h4>
+                  <p class="long-about-us">
+                    We are a company that deliver a excellent sharing wifi service.
+                    We are able to share wifi the best way you can think, all of our
+                    work are delivering satisfaction for all customers and customer's clients.
                   </p>
                 </div>
-              </div> -->
-              <div class="how-it-works-card">
-                <iron-image class="" src="../../images/alvo.jpg"></iron-image>
-                <div class="how-it-works-left-content">
-                  <h2>Showcase Your Business</h2>
-                  <p>
-                    Create and advertise campaigns of your products and services
-                    using our user-friendly interface. Track their performance
-                    via your new platform, Facebook ™ Pixel or Google ™ Analytics.
-                  </p>
+                <div class="right-about-us">
+                  <h4>Our Team</h4>
+                  <div class="team-member">
+                    <img src="../../images/team/cabrito.jpeg" alt="">
+                    <div class="member-information">
+                      <h3>Guilherme Miranda</h3>
+                      <h5>Diretor de Operações</h5>
+                      <p>Trabalha na sede holandesa da IBM. Formado em Engenharia Eletrônica pela Universidade de Brasília, 8ª
+                        melhor universidade da america latina.</p>
+                      </div>
+                    </div>
+                    <div class="empty">
+
+                    </div>
+                    <div class="team-member">
+                      <div class="member-information member-center">
+                        <h3>Guilherme Miranda</h3>
+                        <h5>Diretor de Operações</h5>
+                        <p>Trabalha na sede holandesa da IBM. Formado em Engenharia Eletrônica pela Universidade de Brasília, 8ª
+                          melhor universidade da america latina.</p>
+                        </div>
+                        <img src="../../images/team/cabrito.jpeg" alt=""/>
+                      </div>
+                      <div class="empty">
+
+                      </div>
+                      <div class="team-member">
+                        <img src="../../images/team/cabrito.jpeg" alt="">
+                        <div class="member-information">
+                          <h3>Guilherme Miranda</h3>
+                          <h5>Diretor de Operações</h5>
+                          <p>Trabalha na sede holandesa da IBM. Formado em Engenharia Eletrônica pela Universidade de Brasília, 8ª
+                            melhor universidade da america latina.</p>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+                  </section><!-- end about-us section -->
+                  <section class="home-section" id="contact">
+                    <h2>Contact</h2>
+                    <div class="contact-wrapper">
+                      <div class="description">
+                        <paper-card class="contact-left" elevation="5">
+                          <div class="phones-left">
+                            <div class="brasil phone border-top">
+                              <iron-image sizing="cover" class="flag" width="100" height="67" src="../../images/flags/br.png"></iron-image>
+                              <p class="contact-information">
+                                +55 (61) 99543-2233
+                              </p>
+                              <a href="#" class="custom" target="_blank">
+                                <iron-image class="" sizing="cover" width="30" height="30" src="../../images/whatsapp-icon.png"></iron-image>
+                              </a>
+                            </div>
+                            <div class="netherlands phone border-bottom">
+                              <iron-image sizing="cover" class="flag" width="100" height="67" src="../../images/flags/nl.png"></iron-image>
+                              <p class="contact-information">
+                                +31 (3) 33343-2233
+                              </p>
+                              <a href="#" class="custom" target="_blank">
+                                <iron-image class="" sizing="cover" width="30" height="30" src="../../images/whatsapp-icon.png"></iron-image>
+                              </a>
+                            </div>
+                          </div>
+
+                          <div class="map-right">
+                            <google-map fit-to-markers api-key="AIzaSyA47dKOqjns42sb91euf-LkmUqHIVEOLyg" longitude="-24" latitude="27" zoom="2.5">
+                              <google-map-marker latitude="52.322794" longitude="5.112451"
+                              title="Powerfi Brazil!"></google-map-marker>
+                              <google-map-marker latitude="-15.773679" longitude="-47.891879"
+                              title="Powerfi Netherlands"></google-map-marker>
+                            </google-map>
+                          </div>
+
+                        </paper-card>
+                        <!-- <p>Come and increase your business presence on internet, contact us!</p>
+                        <div class="email">
+                        <iron-icon icon="milton:mail"></iron-icon><span>contato@powerfi.com</span>
+                      </div> -->
+                    </div>
+                    <home-contact class="formfields"></home-contact>
+                  </div> <!-- end contact wrapper -->
+                </section><!-- end contact section -->
+              </div>
+              <div class="container">
+                <div id="footer">
+                  <p>Power-Fi World {{year}}© - All Rights Reserved. Developed by <a href="http://taurus-software.com.br" target="_blank"><strong>Taurus</strong>Software</a>.</p>
                 </div>
               </div>
-            </div>
-            <div class="how-it-works-center">
-              <div class="mobile-screen-above">
-                <iron-image sizing="contain" class="" src="../../images/app-mockup-europe.png"></iron-image>
-                <iron-image sizing="contain" class="" src="../../images/app-mockup-europe.png"></iron-image>
-              </div>
-              <div class="pc-screen-below">
-                <iron-image sizing="contain" class="" src="../../images/pc-screen.png"></iron-image>
-              </div>
-            </div>
-          </iron-image>
-          <div class="how-it-works-right">
-            <div class="how-it-works-card">
-              <iron-image class="" src="../../images/engage.jpg"></iron-image>
-              <div class="how-it-works-right-content">
-                <h2>Promote Engagement</h2>
-                <p>
-                  Likes, shares and reviews are some of the ways your customers
-                  will have to connect with your business.
-                </p>
-              </div>
-            </div>
-            <div class="how-it-works-card">
-              <iron-image class="" src="../../images/results.jpg"></iron-image>
-              <div class="how-it-works-right-content">
-                <h2>Results and Insights</h2>
-                <p>
-                  Age range, emails, gender, length of visit, preferred social
-                  networks and loads of more information can be accessed in real
-                  time to guide your business strategies.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="home-section" id="features">
-        <h2 class="white"><paper-button noink on-tap="tapToFab">Get that power edge</paper-button></h2>
-        <div class="features">
-          <p class="white">What you get buying Power-Fi</p>
-          <paper-card image="">
-            <span class="features-card-head">
-              <iron-icon class="features-icons" icon="hardware:desktop-windows"></iron-icon>
-            </span>
-            <span class="feature-card-content">
-              <paper-icon-item>
-                <paper-item-body>
-                  <h2>High Definition</h2>
-                </paper-item-body>
-              </paper-icon-item>
-              <div class="">
-                Make the most of the richness of detail in images or videos
-                used in your mobile campaigns. We make your business look good.
-              </div>
-            </span>
-          </paper-card>
-          <paper-card image="">
-            <span class="features-card-head">
-              <iron-icon class="features-icons" icon="communication:stay-current-portrait"></iron-icon>
-            </span>
-            <span class="feature-card-content">
-              <paper-icon-item>
-                <paper-item-body>
-                  <h2>Fits All</h2>
-                </paper-item-body>
-              </paper-icon-item>
-              <div class="">
-                No one gets left out. Power-Fi is versatile and works on all
-                major phones, tablets and laptops.
-              </div>
-            </span>
-          </paper-card>
-          <paper-card image="">
-            <span class="features-card-head">
-              <iron-icon class="features-icons" icon="image:remove-red-eye"></iron-icon>
-            </span>
-            <span class="feature-card-content">
-              <paper-icon-item>
-                <paper-item-body>
-                  <h2>Total Control</h2>
-                </paper-item-body>
-              </paper-icon-item>
-              <div class="">
-                Data consumption, length of stay, number of visits,
-                restricted sites, and loads more can be analyzed and
-                controlled in real time using our platform.
-              </div>
-            </span>
-          </paper-card>
-          <paper-card image="">
-            <span class="features-card-head">
-              <iron-icon class="features-icons" icon="icons:settings"></iron-icon>
-            </span>
-            <span class="feature-card-content">
-              <paper-icon-item>
-                <paper-item-body>
-                  <h2>Automation</h2>
-                </paper-item-body>
-              </paper-icon-item>
-              <div class="">
-                Supercharge your CRM with our Wi-Fi tool to increase
-                and maintain contact with your market, in a practical and fast way.
-              </div>
-            </span>
-          </paper-card>
-          <paper-card image="">
-            <span class="features-card-head">
-              <iron-icon class="features-icons" icon="icons:search"></iron-icon>
-            </span>
-            <span class="feature-card-content">
-              <paper-icon-item>
-                <paper-item-body>
-                  <h2>Data Analytics</h2>
-                </paper-item-body>
-              </paper-icon-item>
-              <div class="">
-                Get the best view of who your consumers are and how they
-                interact with your brand in order to offer a personalized
-                and efficient experience.
-              </div>
-            </span>
-          </paper-card>
-          <paper-card image="">
-            <span class="features-card-head">
-              <iron-icon class="features-icons" icon="icons:language"></iron-icon>
-            </span>
-            <span class="feature-card-content">
-              <paper-icon-item>
-                <paper-item-body>
-                  <h2>Multi Languages</h2>
-                </paper-item-body>
-              </paper-icon-item>
-              <div class="">
-                Power-Fi supports more than 20 languages which ensures
-                an even greater reach for your business across the globe.
-              </div>
-            </span>
-          </paper-card>
-        </div>
-        <!-- <div class="divider">
-        <hero-fab icon="milton:arrow-forward" href="/project" id="projectFab"></hero-fab>
-      </div> -->
-    </section>
-    <!-- <section class="home-section" id="demo">
-    <div class="mid-layer-white"></div>
-    <div class="mid-layer"></div>
-    <h2><paper-button noink on-tap="tapToFab">Demo</paper-button></h2>
-    <div class="powerfi-business">
-    <google-youtube
-    class="video-presentation"
-    video-id="2twJhfS1plA"
-    fluid=1
-    rel="0"
-    start="0"
-    autoplay="0">
-  </google-youtube>
-</div>
-</section> -->
-<section class="background" id="plans">
-  <h2 class="header-plans"><paper-button noink on-tap="tapToFab">
-    Have it your way
-    <!-- We have the right plans for your Business -->
-  </paper-button></h2>
-  <!-- <div class="background"> -->
-  <div class="plans-container">
-    <div class="panel plans-table">
-      <div class="plans">
-        <img src="../../../images/plans-icons/paper-plane.png" alt="" class="plans-img">
-        <h2 class="plans-header">Premiere</h2>
-        <ul class="plans-features orange">
-          <li class="plans-features-item">Custom domains</li>
-          <li class="plans-features-item">Sleeps after 30 mins of inactivity</li>
-        </ul>
-        <span class="plans-price orange">50$</span>
-        <a href="#/" class="plans-button is-orange orange">Subscribe</a>
-      </div>
+            </app-header-layout>
+          </template>
 
-      <div class="plans">
-        <img src="../../../images/plans-icons/plane.png" alt="" class="plans-img">
-        <h2 class="plans-header">Business</h2>
-        <ul class="plans-features green">
-          <li class="plans-features-item">Never sleeps</li>
-          <li class="plans-features-item">Workers for more powerful apps</li>
-        </ul>
-        <span class="plans-price green">$150</span>
-        <a href="#/" class="plans-button is-green green">Subscribe</a>
-      </div>
+          <script>
+          class MainPage extends Polymer.Element {
+            static get is() { return 'main-page'; }
+            static get properties() {
+              return {
+                viewHeight: Number,
+                selectedTab: {
+                  type: String,
+                  observer: 'setHeaderTitle'
+                }
+              };
+            }
+            connectedCallback() {
+              super.connectedCallback();
+              this.viewHeight = this.$.powerfi.clientHeight;
+              this.year = new Date().getFullYear();
+            }
+            setHeaderTitle(selectedTab) {
+              const tab = this.$[selectedTab];
+              this.headerTitle = tab? tab.querySelector('h2').innerText : '';
+              Array.from(this.shadowRoot.querySelectorAll('hero-fab')).forEach((fab) => {
+                fab.fadeOut();
+              });
+              if(selectedTab && selectedTab !== 'contact') this.$[`${selectedTab}Fab`].fadeIn();
+            }
+            tapToFab(e) {
+              console.log(">>>>>>>>>> TAP", e);
+              const name = `${e.target.parentNode.parentNode.id}Fab`;
+              console.log(name);
+              const fab = this.$[name];
+              if(fab) fab.animateRedirect();
+            }
+            scrollToTab(e) {
+              console.log(">>>>>>> scroll", e);
+              if(!e.detail.tapped) e.detail.tapped="contact";
+              const tab = this.$[e.detail.tapped];
+              console.log(tab.offsetTop)
+              if(!tab) return;
+              window.scroll({
+                behavior: 'smooth',
+                left: 0,
+                top: tab.offsetTop
+              });
+            }
+            scrollToPlans(e) {
+              console.log(">>>>>>> scroll", e);
+              if(!e.detail.tapped) e.detail.tapped="plans";
+              const tab = this.$[e.detail.tapped];
+              console.log(tab.offsetTop)
+              if(!tab) return;
+              window.scroll({
+                behavior: 'smooth',
+                left: 0,
+                top: tab.offsetTop
+              });
+            }
+            scrollToPowerfi(e) {
+              console.log(">>>>>>> scroll", e);
+              if(!e.detail.tapped) e.detail.tapped="powerfi";
+              const tab = this.$[e.detail.tapped];
+              console.log(tab.offsetTop)
+              if(!tab) return;
+              window.scroll({
+                behavior: 'smooth',
+                left: 0,
+                top: tab.offsetTop
+              });
+            }
+          }
 
-      <div class="plans">
-        <!-- #f5af19 -->
-        <img src="../../../images/plans-icons/space-ship.png" alt="" class="plans-img">
-        <h2 class="plans-header">Enterprise</h2>
-        <ul class="plans-features blue">
-          <li class="plans-features-item">Dedicated</li>
-          <li class="plans-features-item">Simple horizontal scalability</li>
-        </ul>
-        <span class="plans-price blue">$400</span>
-        <a href="#/" class="plans-button is-blue blue">Subscribe</a>
-      </div>
-
-    </div>
-  </div>
-  <!-- </div> -->
-</section> <!-- end plans section -->
-<section class="home-section" id="about-us">
-  <h2>About Us</h2>
-  <div class="about-us-wrapper">
-    <div class="left-about-us">
-      <h4>How it started</h4>
-      <p class="short-about-us">
-        We are a company that deliver a excellent sharing wifi service.
-        We are able to share wifi the best way you can think, all of our
-        work are delivering satisfaction for all customers and customer's clients.
-      </p>
-      <h4>Mission</h4>
-      <p class="long-about-us">
-        We are a company that deliver a excellent sharing wifi service.
-        We are able to share wifi the best way you can think, all of our
-        work are delivering satisfaction for all customers and customer's clients.
-      </p>
-      <h4>Vision</h4>
-      <p class="long-about-us">
-        We are a company that deliver a excellent sharing wifi service.
-        We are able to share wifi the best way you can think, all of our
-        work are delivering satisfaction for all customers and customer's clients.
-      </p>
-    </div>
-    <div class="right-about-us">
-      <h4>Our Team</h4>
-      <div class="team-member">
-        <img src="../../images/team/cabrito.jpeg" alt="">
-        <div class="member-information">
-          <h3>Guilherme Miranda</h3>
-          <h5>Diretor de Operações</h5>
-          <p>Trabalha na sede holandesa da IBM. Formado em Engenharia Eletrônica pela Universidade de Brasília, 8ª
-            melhor universidade da america latina.</p>
-          </div>
-        </div>
-        <div class="empty">
-
-        </div>
-        <div class="team-member">
-          <div class="member-information member-center">
-            <h3>Guilherme Miranda</h3>
-            <h5>Diretor de Operações</h5>
-            <p>Trabalha na sede holandesa da IBM. Formado em Engenharia Eletrônica pela Universidade de Brasília, 8ª
-              melhor universidade da america latina.</p>
-          </div>
-          <img src="../../images/team/cabrito.jpeg" alt=""/>
-        </div>
-        <div class="empty">
-
-        </div>
-        <div class="team-member">
-          <img src="../../images/team/cabrito.jpeg" alt="">
-          <div class="member-information">
-            <h3>Guilherme Miranda</h3>
-            <h5>Diretor de Operações</h5>
-            <p>Trabalha na sede holandesa da IBM. Formado em Engenharia Eletrônica pela Universidade de Brasília, 8ª
-              melhor universidade da america latina.</p>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section><!-- end about-us section -->
-    <section class="home-section" id="contact">
-      <h2>Contact</h2>
-      <div class="contact-wrapper">
-        <div class="description">
-          <paper-card class="contact-left" elevation="5">
-            <div class="phones-left">
-              <div class="brasil phone border-top">
-                <iron-image sizing="cover" class="flag" width="100" height="67" src="../../images/flags/br.png"></iron-image>
-                <p class="contact-information">
-                  +55 (61) 99543-2233
-                </p>
-                <a href="#" class="custom" target="_blank">
-                  <iron-image class="" sizing="cover" width="30" height="30" src="../../images/whatsapp-icon.png"></iron-image>
-                </a>
-              </div>
-              <div class="netherlands phone border-bottom">
-                <iron-image sizing="cover" class="flag" width="100" height="67" src="../../images/flags/nl.png"></iron-image>
-                <p class="contact-information">
-                  +31 (3) 33343-2233
-                </p>
-                <a href="#" class="custom" target="_blank">
-                  <iron-image class="" sizing="cover" width="30" height="30" src="../../images/whatsapp-icon.png"></iron-image>
-                </a>
-              </div>
-            </div>
-
-            <div class="map-right">
-              <google-map fit-to-markers api-key="AIzaSyA47dKOqjns42sb91euf-LkmUqHIVEOLyg" longitude="-24" latitude="27" zoom="2.5">
-                <google-map-marker latitude="52.322794" longitude="5.112451"
-                title="Powerfi Brazil!"></google-map-marker>
-                <google-map-marker latitude="-15.773679" longitude="-47.891879"
-                title="Powerfi Netherlands"></google-map-marker>
-              </google-map>
-            </div>
-
-          </paper-card>
-          <!-- <p>Come and increase your business presence on internet, contact us!</p>
-          <div class="email">
-          <iron-icon icon="milton:mail"></iron-icon><span>contato@powerfi.com</span>
-        </div> -->
-      </div>
-      <home-contact class="formfields"></home-contact>
-    </div> <!-- end contact wrapper -->
-  </section><!-- end contact section -->
-</div>
-<div class="container">
-  <div id="footer">
-    <p>Power-Fi World {{year}}© - All Rights Reserved. Developed by <a href="http://taurus-software.com.br" target="_blank"><strong>Taurus</strong>Software</a>.</p>
-  </div>
-</div>
-</app-header-layout>
-</template>
-
-<script>
-class MainPage extends Polymer.Element {
-  static get is() { return 'main-page'; }
-  static get properties() {
-    return {
-      viewHeight: Number,
-      selectedTab: {
-        type: String,
-        observer: 'setHeaderTitle'
-      }
-    };
-  }
-  connectedCallback() {
-    super.connectedCallback();
-    this.viewHeight = this.$.powerfi.clientHeight;
-    this.year = new Date().getFullYear();
-  }
-  setHeaderTitle(selectedTab) {
-    const tab = this.$[selectedTab];
-    this.headerTitle = tab? tab.querySelector('h2').innerText : '';
-    Array.from(this.shadowRoot.querySelectorAll('hero-fab')).forEach((fab) => {
-      fab.fadeOut();
-    });
-    if(selectedTab && selectedTab !== 'contact') this.$[`${selectedTab}Fab`].fadeIn();
-  }
-  tapToFab(e) {
-    console.log(">>>>>>>>>> TAP", e);
-    const name = `${e.target.parentNode.parentNode.id}Fab`;
-    console.log(name);
-    const fab = this.$[name];
-    if(fab) fab.animateRedirect();
-  }
-  scrollToTab(e) {
-    console.log(">>>>>>> scroll", e);
-    if(!e.detail.tapped) e.detail.tapped="contact";
-    const tab = this.$[e.detail.tapped];
-    console.log(tab.offsetTop)
-    if(!tab) return;
-    window.scroll({
-      behavior: 'smooth',
-      left: 0,
-      top: tab.offsetTop
-    });
-  }
-  scrollToPlans(e) {
-    console.log(">>>>>>> scroll", e);
-    if(!e.detail.tapped) e.detail.tapped="plans";
-    const tab = this.$[e.detail.tapped];
-    console.log(tab.offsetTop)
-    if(!tab) return;
-    window.scroll({
-      behavior: 'smooth',
-      left: 0,
-      top: tab.offsetTop
-    });
-  }
-  scrollToPowerfi(e) {
-    console.log(">>>>>>> scroll", e);
-    if(!e.detail.tapped) e.detail.tapped="powerfi";
-    const tab = this.$[e.detail.tapped];
-    console.log(tab.offsetTop)
-    if(!tab) return;
-    window.scroll({
-      behavior: 'smooth',
-      left: 0,
-      top: tab.offsetTop
-    });
-  }
-}
-
-window.customElements.define(MainPage.is, MainPage);
-</script>
-</dom-module>
+          window.customElements.define(MainPage.is, MainPage);
+        </script>
+      </dom-module>
