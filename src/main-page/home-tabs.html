@@ -166,7 +166,7 @@
 
       setScrollSection(e) {
         const regions = ['', 'powerfi', 'benefits', 'product', 'features', 'plans', 'about-us', 'contact'];
-        const index = Math.round((window.scrollY/this.sectionHeight)+0.4);
+        const index = Math.round((window.scrollY/this.sectionHeight)+0);
         clearTimeout(this.timeout);
         this.timeout = setTimeout(function () {
           console.log("regions[index] = " + regions[index]);

@@ -1,3 +1,4 @@
+
 <link rel="import" href="../../bower_components/polymer/polymer-element.html">
 <link rel="import" href="../../bower_components/iron-image/iron-image.html">
 <link rel="import" href="../../bower_components/iron-icon/iron-icon.html">
@@ -126,57 +127,11 @@
     ==========================================
     */
 
-
     /*
     ==========================================================
-    benefits section
+    powerfi business section
     ==========================================================
     */
-
-
-        .benefits paper-card {
-          width: 22%;
-          margin: 0 0 0 2%;
-          height: 300px;
-          /* padding: 0 0 5% 0; */
-        }
-        .benefits p {
-          color: black;
-          font-weight: 500;
-          font-size: 1.2em;
-          height: 8vh;
-          font-style: italic;
-          padding-left: 50px;
-        }
-        .benefits h2 {
-          font-size: larger;
-          text-align: center;
-        }
-        .benefits-icons {
-          --iron-icon-height: 64px;
-          --iron-icon-width: 64px;
-          color: green;
-          display: block;
-          margin-left: auto;
-          margin-right: auto;
-          width: 100%;
-        }
-        .card-content {
-          font-size: smaller;
-          text-align: justify;
-        }
-        /*
-        ==========================================================
-        end benefits section
-        ==========================================================
-        */
-
-
-        /*
-        ==========================================================
-        powerfi business section
-        ==========================================================
-        */
 
     .powerfi-business {
       width: 50%;
@@ -191,17 +146,60 @@
       display: inline-flex;
       width: 100%;
     }
+
+    /* Icon Push */
+    @-webkit-keyframes hvr-icon-push {
+      50% {
+        -webkit-transform: scale(0.5);
+        transform: scale(0.5);
+      }
+    }
+    @keyframes hvr-icon-push {
+      50% {
+        -webkit-transform: scale(0.5);
+        transform: scale(0.5);
+      }
+    }
+    .powerfi-information paper-card {
+      /* icon push */
+      -webkit-transform: perspective(1px) translateZ(0);
+      transform: perspective(1px) translateZ(0);
+      box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+      -webkit-transition-duration: 0.3s;
+      transition-duration: 0.3s;
+    }
+    .powerfi-information paper-card iron-image {
+      -webkit-transform: translateZ(0);
+      transform: translateZ(0);
+      -webkit-transition-duration: 0.3s;
+      transition-duration: 0.3s;
+      -webkit-transition-property: transform;
+      transition-property: transform;
+      -webkit-transition-timing-function: ease-out;
+      transition-timing-function: ease-out;
+    }
+    .powerfi-information paper-card:hover iron-image,
+    .powerfi-information paper-card:focus iron-image,
+    .powerfi-information paper-card:active iron-image {
+      -webkit-animation-name: hvr-icon-push;
+      animation-name: hvr-icon-push;
+      -webkit-animation-duration: 0.3s;
+      animation-duration: 0.3s;
+      -webkit-animation-timing-function: linear;
+      animation-timing-function: linear;
+      -webkit-animation-iteration-count: 1;
+      animation-iteration-count: 1;
+    }
+    /* End Icon Push */
+
     .powerfi-information h2 {
       margin: 5px auto 5px 30% !important;
-      font-size: large !important;
+      font-size: 1.4em !important;
     }
     .information-card {
       width: 25%;
       height: 280px;
       padding: 25px;
-    }
-    .information-card {
-      font-size: small;
     }
     .information-card:hover {
       border-bottom: 5px solid var(--default-powerfi-color);
@@ -255,7 +253,6 @@
       margin: 0 5%;
       display: inline-flex;
       height: 70%;
-      text-align: justify;
     }
     .how-it-works-center {
       margin: 2% 0;
@@ -294,6 +291,19 @@
       width: 100%;
       height: 50%;
       display: inline-flex;
+      /* bounceIn transition */
+      -webkit-transform: perspective(1px) translateZ(0);
+      transform: perspective(1px) translateZ(0);
+      box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+      -webkit-transition-duration: 0.5s;
+      transition-duration: 0.5s;
+    }
+    .how-it-works-card:hover {
+      /* bounceIn transition */
+      -webkit-transform: scale(1.2);
+      transform: scale(1.2);
+      -webkit-transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+      transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
     }
     .how-it-works-card iron-image {
       height: 70%;
@@ -306,11 +316,11 @@
       padding: 0 30px;
       line-height: 3vh !important;
       margin: 0;
-      font-size: x-small;
+      font-size: small;
     }
     .how-it-works-card h2 {
       font-weight: lighter;
-      font-size: larger;
+      font-size: x-large;
     }
     .how-it-works-right-content {
       float: left;
@@ -342,6 +352,68 @@
       display: inline-flex;
       background-color: #00000077;
       color: white;
+      /* bounceIn transition */
+      -webkit-transform: perspective(1px) translateZ(0);
+      transform: perspective(1px) translateZ(0);
+      box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+      -webkit-transition-duration: 0.5s;
+      transition-duration: 0.5s;
+
+      /* bounce to right color transition */
+      position: relative;
+      -webkit-transition-property: color;
+      transition-property: color;
+    }
+    /* transition color bounceInRight  */
+    .features paper-card:before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: black;
+      -webkit-transform: scaleX(0);
+      transform: scaleX(0);
+      -webkit-transform-origin: 0 50%;
+      transform-origin: 0 50%;
+      -webkit-transition-property: transform;
+      transition-property: transform;
+      -webkit-transition-duration: 0.5s;
+      transition-duration: 0.5s;
+      -webkit-transition-timing-function: ease-out;
+      transition-timing-function: ease-out;
+    }
+    .features paper-card:hover:before, .features paper-card:focus:before, .features paper-card:active:before {
+      -webkit-transform: scaleX(1);
+      transform: scaleX(1);
+      -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+      transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+    }
+    /* end transition color bounceInRight  */
+    .features paper-card:hover {
+      z-index: 2;
+      /* bounceIn transition */
+      -webkit-transform: scale(1.2);
+      transform: scale(1.2);
+      -webkit-transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+      transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+      /* bounce to right color transition */
+      -webkit-transform: perspective(1px) translateZ(0);
+      transform: perspective(1px) translateZ(0);
+      box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+      position: relative;
+      -webkit-transition-property: color;
+      transition-property: color;
+      -webkit-transition-duration: 0.5s;
+      transition-duration: 0.5s;
+
+      /* background transition last */
+      /* background-color: black;
+      -webkit-transition: background-color 2000ms linear;
+      -ms-transition: background-color 2000ms linear;
+      transition: background-color 2000ms linear; */
     }
     .features p {
       color: black;
@@ -353,7 +425,7 @@
       margin-bottom: 0px !important;
     }
     .features h2 {
-      font-size: x-large;
+      font-size: 1.7em;
       color: white !important;
     }
     .features-card-head {
@@ -374,8 +446,11 @@
       float: right;
       margin-left: 0%;
     }
+    .card-content {
+      text-align: justify;
+    }
     .feature-information {
-      font-size: small;
+      font-'size: small;
     }
 
     /*
@@ -386,14 +461,14 @@
 
     /*
     ==================================================
-    plans table style
+    plans style
     ==================================================
     */
     .background {
       /* padding: 0 25px 25px; */
       position: relative;
-      width: 100%;
-      height: 100%;
+      /* width: 100%; */
+      /* height: 100%; */
     }
     .background > h2 {
       color: #fff;
@@ -420,7 +495,7 @@
       color: white;
       text-transform: none;
       min-width: unset;
-      margin: 0 0 20px 0;
+      margin: 0 0 0px 0;
     }
     /* .background .divider {
     position: relative;
@@ -487,6 +562,7 @@
       color: #888;
       font-weight: 600;
       letter-spacing: 1px;
+      font-size: large !important;
     }
     .plans-features {
       font-weight: 600;
@@ -601,28 +677,25 @@
       line-height: 3vh !important;
       margin-left: 5%;
       font-family: 'Playfair Display', serif !important;
-      font-size: small;
     }
     .long-about-us {
       color: black;
       line-height: 3vh !important;
       margin-left: 5%;
       font-family: 'Playfair Display', serif !important;
-      font-size: small;
     }
     .team-member {
       width: 100%;
-      height: 130px;
+      height: 50%;
       position: relative;
       overflow: hidden;
       display: inline-flex;
       /* border-style: solid; */
       /* border-color: #0b5da5; */
-      /* border-radius: 0 0 15px 15px; */
+      border-radius: 0 0 15px 15px;
     }
     .team-member img {
-      width: 100px;
-      height: 120px;
+      width: 45%;
       -moz-transition: all, 0.5s;
       -o-transition: all, 0.5s;
       -webkit-transition: all, 0.5s;
@@ -630,8 +703,6 @@
       filter: grayscale(100%);
     }
     .team-member:hover img {
-      width: 100px;
-      height: 120px;
       filter: grayscale(0%);
     }
     .team-member .member-information {
@@ -641,6 +712,10 @@
       /* text-align: center; */
       height: 20%;
       width: 100%;
+      padding-right: 5%;
+    }
+    .member-center {
+      margin: 0 0 0 20px;
     }
     .team-member .member-information a {
       position: absolute;
@@ -656,11 +731,7 @@
       color: black;
       text-align: justify;
       font-size: small;
-      float: right;
       /* padding-right: 25%; */
-    }
-    .member-head {
-      float: right;
     }
     .right-about-us h4 {
       text-align: justify;
@@ -671,14 +742,12 @@
       margin-bottom: 4%;
       margin-top: 2%;
       font-family: 'Playfair Display', serif !important;
-      font-size: large;
     }
     .team-member h5 {
       line-height: 0.5;
       margin-bottom: 4%;
       margin-top: 2%;
       font-family: 'Playfair Display', serif !important;
-      font-size: small;
     }
     .team-member .on-hover {
       position: absolute;
@@ -784,7 +853,7 @@
       border-radius: 0 0 0 30px;
     }
     .contact-information {
-      line-height: 4vh !important;
+      line-height: 4vh;
       font-weight: bold;
       color: white;
       text-align: center;
@@ -842,6 +911,32 @@
       color: white;
     }
 
+    .benefits paper-card {
+      width: 23%;
+      margin: 0 0 4% 1.7%;
+      /* padding: 0 0 5% 0; */
+    }
+    .benefits p {
+      color: black;
+      font-weight: 500;
+      font-size: 1.2em;
+      height: 8vh;
+      font-style: italic;
+      padding-left: 50px;
+    }
+    .benefits h2 {
+      font-size: 2em;
+      text-align: center;
+    }
+    .benefits-icons {
+      --iron-icon-height: 64px;
+      --iron-icon-width: 64px;
+      color: green;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 100%;
+    }
     .white {
       color: white;
     }
@@ -952,7 +1047,7 @@
       </app-header>
       <div class="container">
         <section class="home-section" id="powerfi">
-          <h2><paper-button noink on-tap="tapToFab">Power-Fi</paper-button></h2>
+          <h2 class="section-title"><paper-button noink on-tap="tapToFab">Power-Fi</paper-button></h2>
           <div class="vertical-content">
             <div class="powerfi-information">
               <paper-card elevation="0" class="information-card">
@@ -999,7 +1094,7 @@
                 </div>
               </section>
               <section class="home-section" id="benefits">
-                <h2><paper-button noink on-tap="tapToFab">Power up your business</paper-button></h2>
+                <h2 class="section-title"><paper-button noink on-tap="tapToFab">Power up your business</paper-button></h2>
                 <div class="benefits">
                   <p>How you win more by sharing free Wi-Fi</p>
                   <paper-card image="">
@@ -1060,7 +1155,7 @@
               </section>
               <section class="home-section" id="product">
                 <!-- <div class="mid-layer-white"></div> -->
-                <h2><paper-button noink on-tap="tapToFab">How Power-Fi works</paper-button></h2>
+                <h2 class="section-title"><paper-button noink on-tap="tapToFab">How Power-Fi works</paper-button></h2>
                 <div class="how-it-works">
                   <div class="how-it-works-left">
                     <div class="how-it-works-card">
@@ -1121,12 +1216,12 @@
               </div>
             </section>
             <section class="home-section" id="features">
-              <h2 class="white"><paper-button noink on-tap="tapToFab">Get that power edge</paper-button></h2>
+              <h2 class="white section-title"><paper-button noink on-tap="tapToFab">Get that power edge</paper-button></h2>
               <div class="features">
                 <p class="white">What you get buying Power-Fi</p>
                 <paper-card image="">
                   <span class="features-card-head">
-                    <iron-icon class="features-icons" icon="hardware:desktop-windows"></iron-icon>
+                    <iron-icon class="features-icons hvr-bounce-in" icon="hardware:desktop-windows"></iron-icon>
                   </span>
                   <span class="feature-card-content">
                     <paper-icon-item>
@@ -1224,8 +1319,8 @@
                 </paper-card>
               </div>
             </section>
-            <section class="background" id="plans">
-              <h2 class="header-plans"><paper-button noink on-tap="tapToFab">
+            <section class="background home-section" id="plans">
+              <h2 class="header-plans section-title"><paper-button noink on-tap="tapToFab">
                 Have it your way
                 <!-- We have the right plans for your Business -->
               </paper-button></h2>
@@ -1271,7 +1366,7 @@
               <!-- </div> -->
             </section> <!-- end plans section -->
             <section class="home-section" id="about-us">
-              <h2>About Us</h2>
+              <h2 class="section-title">About Us</h2>
               <div class="about-us-wrapper">
                 <div class="left-about-us">
                   <h4>How it started</h4>
@@ -1298,10 +1393,8 @@
                   <div class="team-member">
                     <img src="../../images/team/cabrito.jpeg" alt="">
                     <div class="member-information">
-                      <div class="member-head">
-                        <h3>Guilherme Miranda</h3>
-                        <h5>Diretor de Operações</h5>
-                      </div>
+                      <h3>Guilherme Miranda</h3>
+                      <h5>Diretor de Operações</h5>
                       <p>Trabalha na sede holandesa da IBM. Formado em Engenharia Eletrônica pela Universidade de Brasília, 8ª
                         melhor universidade da america latina.</p>
                       </div>
@@ -1324,10 +1417,8 @@
                       <div class="team-member">
                         <img src="../../images/team/cabrito.jpeg" alt="">
                         <div class="member-information">
-                          <div class="member-head">
-                            <h3>Guilherme Miranda</h3>
-                            <h5>Diretor de Operações</h5>
-                          </div>
+                          <h3>Guilherme Miranda</h3>
+                          <h5>Diretor de Operações</h5>
                           <p>Trabalha na sede holandesa da IBM. Formado em Engenharia Eletrônica pela Universidade de Brasília, 8ª
                             melhor universidade da america latina.</p>
                           </div>
@@ -1337,7 +1428,7 @@
                     </div>
                   </section><!-- end about-us section -->
                   <section class="home-section" id="contact">
-                    <h2>Contact</h2>
+                    <h2 class="section-title">Contact</h2>
                     <div class="contact-wrapper">
                       <div class="description">
                         <paper-card class="contact-left" elevation="5">
