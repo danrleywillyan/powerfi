@@ -104,6 +104,9 @@
       width:100px;
       margin-left: 25px;
     }
+    .logo_tab {
+
+    }
     .logo_tab > img {
       margin-top: 15px;
       margin-left: 8px;
@@ -1007,12 +1010,14 @@
     }
     </style>
 
-    <app-header-layout>
+    <app-header-layout  id="home">
       <app-header slot="header" fixed condenses effects="resize-snapped-title blend-background parallax-background recolor-tabs">
         <app-toolbar>
           <div condensed-title>
             <div class="logo_tab">
-              <img src="../../images/logo_nova.png"/>
+              <a href="#home">
+                <img height="50px" src="../../images/logo_nova.png"/>
+              </a>
             </div>
             <span class="title">{{headerTitle}}</span>
           </div>

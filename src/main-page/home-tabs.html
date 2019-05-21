@@ -64,6 +64,9 @@
     <div class="bottom" id="main">
       <div class="flex"></div>
       <paper-tabs noink attr-for-selected="id" selected="{{selected}}">
+        <paper-tab id="home" class="tall" on-tap="tapAnchor">
+          Home
+        </paper-tab>
         <paper-tab id="powerfi" class="home-section" on-tap="tapAnchor">
           Power-Fi
         </paper-tab>
@@ -90,6 +93,9 @@
     <div class="bottom" id="collapsed">
       <div class="flex"></div>
       <paper-tabs noink attr-for-selected="id" selected="{{selected}}">
+        <paper-tab id="home" class="tall" on-tap="tapAnchor">
+          Home
+        </paper-tab>
         <paper-tab id="powerfi" class="home-section" on-tap="tapAnchor">
           Power-Fi
         </paper-tab>
@@ -113,7 +119,7 @@
         </paper-tab>
       </paper-tabs>
     </div>
-    <a id="logo" href="#"></a>
+    <a id="logo" href="#home"></a>
   </template>
   <script>
     class HomeTabs extends Polymer.Element {
@@ -165,7 +171,7 @@
       }
 
       setScrollSection(e) {
-        const regions = ['', 'powerfi', 'benefits', 'product', 'features', 'plans', 'about-us', 'contact'];
+        const regions = ['Home', 'powerfi', 'benefits', 'product', 'features', 'plans', 'about-us', 'contact'];
         const index = Math.round((window.scrollY/this.sectionHeight)+0);
         clearTimeout(this.timeout);
         this.timeout = setTimeout(function () {
