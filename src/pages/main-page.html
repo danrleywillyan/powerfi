@@ -1015,9 +1015,7 @@
         <app-toolbar>
           <div condensed-title>
             <div class="logo_tab">
-              <a href="#home">
-                <img height="50px" src="../../images/logo_nova.png"/>
-              </a>
+              <img src="../../images/logo_nova.png"/>
             </div>
             <span class="title">{{headerTitle}}</span>
           </div>
@@ -1501,6 +1499,11 @@
               super.connectedCallback();
               this.viewHeight = this.$.powerfi.clientHeight;
               this.year = new Date().getFullYear();
+              window.addEventListener('scroll', this.whatSectionIsScrolling.bind(this));
+            }
+            disconnectedCallback() {
+              super.disconnetedCallback();
+              window.removeEventListener('scroll', this.whatSectionIsScrolling);
             }
             setHeaderTitle(selectedTab) {
               const tab = this.$[selectedTab];
@@ -1513,9 +1516,24 @@
             tapToFab(e) {
               console.log(">>>>>>>>>> TAP", e);
               const name = `${e.target.parentNode.parentNode.id}Fab`;
+              console.log(e.target.parentNode.parentNode.id);
               console.log(name);
               const fab = this.$[name];
               if(fab) fab.animateRedirect();
+            }
+            whatSectionIsScrolling(e) {
+              const regions = ['Home', 'powerfi', 'benefits', 'product', 'features', 'plans', 'about-us', 'contact'];
+              var element;
+              console.log(regions.length);
+              for (var i = 0; i < regions.length; i++){
+                console.log(document.getElementById(regions[i]));
+                element = document.getElementById(regions[i]);//get element
+                if(element.scrollTop < element.offsetHeight && element.scrollTop != 0)//if element is in client's View
+                {
+                      console.log("regions[index] = ", regions[i]);
+                      // setSelected(regions[i]);
+                }//end if
+              }//end for
             }
             scrollToTab(e) {
               console.log(">>>>>>> scroll", e);
