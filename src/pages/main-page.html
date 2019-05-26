@@ -347,7 +347,32 @@
     .white{
       color: white !important;
     }
+    .features paper-card .for-blur {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      background-color: #00000077;
+      top:0; left:0; right:0; bottom:0;
+      filter: blur(10px);
+      z-index: 3;
+    }
+    .features paper-card:hover .for-blur {
+      filter: blur(14px);
+      background-color: #00000099;
+      z-index: 1;
+    }
+    .without-blur {
+      position: absolute;
+      display: inline-flex;
+      width: 100%;
+      height: 100%;
+      top:0; left:0; right:0; bottom:0;
+      z-index: 2;
+      padding: 0 2% 5px 0;
+    }
     .features paper-card {
+      z-index: 0;
+      position: relative;
       width: 30%;
       height: 180px;
       margin: 0 0 2% 2%;
@@ -355,71 +380,11 @@
       display: inline-flex;
       background-color: #00000077;
       color: white;
-      /* bounceIn transition */
-      -webkit-transform: perspective(1px) translateZ(0);
-      transform: perspective(1px) translateZ(0);
-      box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-      -webkit-transition-duration: 0.5s;
-      transition-duration: 0.5s;
-
-      /* bounce to right color transition */
-      position: relative;
-      -webkit-transition-property: color;
-      transition-property: color;
     }
-    /* transition color bounceInRight  */
-    .features paper-card:before {
-      content: "";
-      position: absolute;
-      z-index: -1;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: black;
-      -webkit-transform: scaleX(0);
-      transform: scaleX(0);
-      -webkit-transform-origin: 0 50%;
-      transform-origin: 0 50%;
-      -webkit-transition-property: transform;
-      transition-property: transform;
-      -webkit-transition-duration: 0.5s;
-      transition-duration: 0.5s;
-      -webkit-transition-timing-function: ease-out;
-      transition-timing-function: ease-out;
-    }
-    .features paper-card:hover:before, .features paper-card:focus:before, .features paper-card:active:before {
-      -webkit-transform: scaleX(1);
-      transform: scaleX(1);
-      -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
-      transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
-    }
-    /* end transition color bounceInRight  */
-    .features paper-card:hover {
+    .features paper-card:hover .without-blur{
       z-index: 2;
-      /* bounceIn transition */
-      -webkit-transform: scale(1.2);
-      transform: scale(1.2);
-      -webkit-transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
-      transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
-      /* bounce to right color transition */
-      -webkit-transform: perspective(1px) translateZ(0);
-      transform: perspective(1px) translateZ(0);
-      box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-      position: relative;
-      -webkit-transition-property: color;
-      transition-property: color;
-      -webkit-transition-duration: 0.5s;
-      transition-duration: 0.5s;
-
-      /* background transition last */
-      /* background-color: black;
-      -webkit-transition: background-color 2000ms linear;
-      -ms-transition: background-color 2000ms linear;
-      transition: background-color 2000ms linear; */
     }
-    .features p {
-      color: black;
+    .without-blur p {
       font-weight: 500;
       font-size: 1.2em;
       height: 8vh;
@@ -432,17 +397,16 @@
       color: white !important;
     }
     .features-card-head {
-      display: block;
+      padding: 3%;
       margin: auto 3% auto 1%;
+      opacity: 0.5;
+      background-color: black;
+      border-radius: 50%;
     }
     .features-icons {
-      --iron-icon-height: 64px;
-      --iron-icon-width: 64px;
+      --iron-icon-height: 48px;
+      --iron-icon-width: 48px;
       color: white;
-      /* display: block;
-      margin-left: auto;
-      margin-right: auto;
-      width: 100%; */
     }
     .feature-card-content {
       text-align: justify;
@@ -453,7 +417,7 @@
       text-align: justify;
     }
     .feature-information {
-      font-'size: small;
+      padding: 0 5% 5px 0;
     }
 
     /*
@@ -498,7 +462,7 @@
       color: white;
       text-transform: none;
       min-width: unset;
-      margin: 0 0 5px 0;
+      margin: 0 0 9px 0;
     }
     /* .background .divider {
     position: relative;
@@ -967,7 +931,7 @@
       #features {
         /* border-top: 4px solid var(--default-project-color); */
         height: calc(100vh - 90px);
-        background: url("../../images/bg3.jpg");
+        background: linear-gradient(to bottom, white 17%, transparent 30%) repeat scroll 0 0 , url("../../images/bg3.jpg");
         background-size: 100vw 100vh;
       }
       #benefits {
@@ -1221,10 +1185,13 @@
               </div>
             </section>
             <section class="home-section" id="features">
-              <h2 class="white section-title"><paper-button noink on-tap="tapToFab">Get that power edge</paper-button></h2>
+              <h2 class="section-title"><paper-button noink on-tap="tapToFab">Get that power edge</paper-button></h2>
               <div class="features">
                 <p class="white">What you get buying Power-Fi</p>
                 <paper-card image="">
+                  <div class="for-blur">
+                  </div>
+                  <div class="without-blur">
                   <span class="features-card-head">
                     <iron-icon class="features-icons hvr-bounce-in" icon="hardware:desktop-windows"></iron-icon>
                   </span>
@@ -1239,8 +1206,12 @@
                       used in your mobile campaigns. We make your business look good.
                     </div>
                   </span>
+                  </div>
                 </paper-card>
                 <paper-card image="">
+                  <div class="for-blur">
+                  </div>
+                  <div class="without-blur">
                   <span class="features-card-head">
                     <iron-icon class="features-icons" icon="communication:stay-current-portrait"></iron-icon>
                   </span>
@@ -1255,8 +1226,12 @@
                       major phones, tablets and laptops.
                     </div>
                   </span>
+                  </div>
                 </paper-card>
                 <paper-card image="">
+                  <div class="for-blur">
+                  </div>
+                  <div class="without-blur">
                   <span class="features-card-head">
                     <iron-icon class="features-icons" icon="image:remove-red-eye"></iron-icon>
                   </span>
@@ -1272,8 +1247,12 @@
                       controlled in real time using our platform.
                     </div>
                   </span>
+                  </div>
                 </paper-card>
                 <paper-card image="">
+                  <div class="for-blur">
+                  </div>
+                  <div class="without-blur">
                   <span class="features-card-head">
                     <iron-icon class="features-icons" icon="icons:settings"></iron-icon>
                   </span>
@@ -1288,8 +1267,12 @@
                       and maintain contact with your market, in a practical and fast way.
                     </div>
                   </span>
+                  </div>
                 </paper-card>
                 <paper-card image="">
+                  <div class="for-blur">
+                  </div>
+                  <div class="without-blur">
                   <span class="features-card-head">
                     <iron-icon class="features-icons" icon="icons:search"></iron-icon>
                   </span>
@@ -1305,8 +1288,12 @@
                       and efficient experience.
                     </div>
                   </span>
+                  </div>
                 </paper-card>
                 <paper-card image="">
+                  <div class="for-blur">
+                  </div>
+                  <div class="without-blur">
                   <span class="features-card-head">
                     <iron-icon class="features-icons" icon="icons:language"></iron-icon>
                   </span>
@@ -1321,6 +1308,7 @@
                       an even greater reach for your business across the globe.
                     </div>
                   </span>
+                  </div>
                 </paper-card>
               </div>
             </section>
