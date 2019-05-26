@@ -347,21 +347,22 @@
     .white{
       color: white !important;
     }
-    .features paper-card .for-blur {
+
+    .features paper-card .bg-blur {
       width: 100%;
       height: 100%;
       position: absolute;
       background-color: #00000077;
       top:0; left:0; right:0; bottom:0;
       filter: blur(10px);
-      z-index: 3;
+      z-index: 2;
     }
-    .features paper-card:hover .for-blur {
+    .features paper-card:hover .bg-blur {
       filter: blur(14px);
-      background-color: #00000099;
+      background-color: #000000CC;
       z-index: 1;
     }
-    .without-blur {
+    .features-text {
       position: absolute;
       display: inline-flex;
       width: 100%;
@@ -369,6 +370,9 @@
       top:0; left:0; right:0; bottom:0;
       z-index: 2;
       padding: 0 2% 5px 0;
+    }
+    .features paper-card:hover .features-text{
+      z-index: 2;
     }
     .features paper-card {
       z-index: 0;
@@ -378,13 +382,14 @@
       margin: 0 0 2% 2%;
       padding: 0 2% 5px 0;
       display: inline-flex;
-      background-color: #00000077;
+      background-color: #FFFFFF00;
       color: white;
+      overflow: hidden;
+      border-radius: 10px;
+      border-style: groove;
+      border-width: thin;
     }
-    .features paper-card:hover .without-blur{
-      z-index: 2;
-    }
-    .without-blur p {
+    .features-text p {
       font-weight: 500;
       font-size: 1.2em;
       height: 8vh;
@@ -399,8 +404,8 @@
     .features-card-head {
       padding: 3%;
       margin: auto 3% auto 1%;
-      opacity: 0.5;
-      background-color: black;
+      /* opacity: 0.5; */
+      background-color: #00000055;
       border-radius: 50%;
     }
     .features-icons {
@@ -1187,127 +1192,127 @@
             <section class="home-section" id="features">
               <h2 class="section-title"><paper-button noink on-tap="tapToFab">Get that power edge</paper-button></h2>
               <div class="features">
-                <p class="white">What you get buying Power-Fi</p>
-                <paper-card image="">
-                  <div class="for-blur">
+                <p class="dark-text">What you get buying Power-Fi</p>
+                <paper-card class="features-card" image="">
+                  <div class="bg-blur">
                   </div>
-                  <div class="without-blur">
-                  <span class="features-card-head">
-                    <iron-icon class="features-icons hvr-bounce-in" icon="hardware:desktop-windows"></iron-icon>
-                  </span>
-                  <span class="feature-card-content">
-                    <paper-icon-item>
-                      <paper-item-body>
-                        <h2>High Definition</h2>
-                      </paper-item-body>
-                    </paper-icon-item>
-                    <div class="feature-information">
-                      Make the most of the richness of detail in images or videos
-                      used in your mobile campaigns. We make your business look good.
-                    </div>
-                  </span>
-                  </div>
-                </paper-card>
-                <paper-card image="">
-                  <div class="for-blur">
-                  </div>
-                  <div class="without-blur">
-                  <span class="features-card-head">
-                    <iron-icon class="features-icons" icon="communication:stay-current-portrait"></iron-icon>
-                  </span>
-                  <span class="feature-card-content">
-                    <paper-icon-item>
-                      <paper-item-body>
-                        <h2>Fits All</h2>
-                      </paper-item-body>
-                    </paper-icon-item>
-                    <div class="feature-information">
-                      No one gets left out. Power-Fi is versatile and works on all
-                      major phones, tablets and laptops.
-                    </div>
-                  </span>
+                  <div class="features-text">
+                    <span class="features-card-head">
+                      <iron-icon class="features-icons hvr-bounce-in" icon="hardware:desktop-windows"></iron-icon>
+                    </span>
+                    <span class="feature-card-content">
+                      <paper-icon-item>
+                        <paper-item-body>
+                          <h2>High Definition</h2>
+                        </paper-item-body>
+                      </paper-icon-item>
+                      <div class="feature-information">
+                        Make the most of the richness of detail in images or videos
+                        used in your mobile campaigns. We make your business look good.
+                      </div>
+                    </span>
                   </div>
                 </paper-card>
-                <paper-card image="">
-                  <div class="for-blur">
+                <paper-card class="features-card" image="">
+                  <div class="bg-blur">
                   </div>
-                  <div class="without-blur">
-                  <span class="features-card-head">
-                    <iron-icon class="features-icons" icon="image:remove-red-eye"></iron-icon>
-                  </span>
-                  <span class="feature-card-content">
-                    <paper-icon-item>
-                      <paper-item-body>
-                        <h2>Total Control</h2>
-                      </paper-item-body>
-                    </paper-icon-item>
-                    <div class="feature-information">
-                      Data consumption, length of stay, number of visits,
-                      restricted sites, and loads more can be analyzed and
-                      controlled in real time using our platform.
-                    </div>
-                  </span>
-                  </div>
-                </paper-card>
-                <paper-card image="">
-                  <div class="for-blur">
-                  </div>
-                  <div class="without-blur">
-                  <span class="features-card-head">
-                    <iron-icon class="features-icons" icon="icons:settings"></iron-icon>
-                  </span>
-                  <span class="feature-card-content">
-                    <paper-icon-item>
-                      <paper-item-body>
-                        <h2>Automation</h2>
-                      </paper-item-body>
-                    </paper-icon-item>
-                    <div class="feature-information">
-                      Supercharge your CRM with our Wi-Fi tool to increase
-                      and maintain contact with your market, in a practical and fast way.
-                    </div>
-                  </span>
+                  <div class="features-text">
+                    <span class="features-card-head">
+                      <iron-icon class="features-icons" icon="communication:stay-current-portrait"></iron-icon>
+                    </span>
+                    <span class="feature-card-content">
+                      <paper-icon-item>
+                        <paper-item-body>
+                          <h2>Fits All</h2>
+                        </paper-item-body>
+                      </paper-icon-item>
+                      <div class="feature-information">
+                        No one gets left out. Power-Fi is versatile and works on all
+                        major phones, tablets and laptops.
+                      </div>
+                    </span>
                   </div>
                 </paper-card>
-                <paper-card image="">
-                  <div class="for-blur">
+                <paper-card class="features-card" image="">
+                  <div class="bg-blur">
                   </div>
-                  <div class="without-blur">
-                  <span class="features-card-head">
-                    <iron-icon class="features-icons" icon="icons:search"></iron-icon>
-                  </span>
-                  <span class="feature-card-content">
-                    <paper-icon-item>
-                      <paper-item-body>
-                        <h2>Data Analytics</h2>
-                      </paper-item-body>
-                    </paper-icon-item>
-                    <div class="feature-information">
-                      Get the best view of who your consumers are and how they
-                      interact with your brand in order to offer a personalized
-                      and efficient experience.
-                    </div>
-                  </span>
+                  <div class="features-text">
+                    <span class="features-card-head">
+                      <iron-icon class="features-icons" icon="image:remove-red-eye"></iron-icon>
+                    </span>
+                    <span class="feature-card-content">
+                      <paper-icon-item>
+                        <paper-item-body>
+                          <h2>Total Control</h2>
+                        </paper-item-body>
+                      </paper-icon-item>
+                      <div class="feature-information">
+                        Data consumption, length of stay, number of visits,
+                        restricted sites, and loads more can be analyzed and
+                        controlled in real time using our platform.
+                      </div>
+                    </span>
                   </div>
                 </paper-card>
-                <paper-card image="">
-                  <div class="for-blur">
+                <paper-card class="features-card" image="">
+                  <div class="bg-blur">
                   </div>
-                  <div class="without-blur">
-                  <span class="features-card-head">
-                    <iron-icon class="features-icons" icon="icons:language"></iron-icon>
-                  </span>
-                  <span class="feature-card-content">
-                    <paper-icon-item>
-                      <paper-item-body>
-                        <h2>Multi Languages</h2>
-                      </paper-item-body>
-                    </paper-icon-item>
-                    <div class="feature-information">
-                      Power-Fi supports more than 20 languages which ensures
-                      an even greater reach for your business across the globe.
-                    </div>
-                  </span>
+                  <div class="features-text">
+                    <span class="features-card-head">
+                      <iron-icon class="features-icons" icon="icons:settings"></iron-icon>
+                    </span>
+                    <span class="feature-card-content">
+                      <paper-icon-item>
+                        <paper-item-body>
+                          <h2>Automation</h2>
+                        </paper-item-body>
+                      </paper-icon-item>
+                      <div class="feature-information">
+                        Supercharge your CRM with our Wi-Fi tool to increase
+                        and maintain contact with your market, in a practical and fast way.
+                      </div>
+                    </span>
+                  </div>
+                </paper-card>
+                <paper-card class="features-card" image="">
+                  <div class="bg-blur">
+                  </div>
+                  <div class="features-text">
+                    <span class="features-card-head">
+                      <iron-icon class="features-icons" icon="icons:search"></iron-icon>
+                    </span>
+                    <span class="feature-card-content">
+                      <paper-icon-item>
+                        <paper-item-body>
+                          <h2>Data Analytics</h2>
+                        </paper-item-body>
+                      </paper-icon-item>
+                      <div class="feature-information">
+                        Get the best view of who your consumers are and how they
+                        interact with your brand in order to offer a personalized
+                        and efficient experience.
+                      </div>
+                    </span>
+                  </div>
+                </paper-card>
+                <paper-card class="features-card" image="">
+                  <div class="bg-blur">
+                  </div>
+                  <div class="features-text">
+                    <span class="features-card-head">
+                      <iron-icon class="features-icons" icon="icons:language"></iron-icon>
+                    </span>
+                    <span class="feature-card-content">
+                      <paper-icon-item>
+                        <paper-item-body>
+                          <h2>Multi Languages</h2>
+                        </paper-item-body>
+                      </paper-icon-item>
+                      <div class="feature-information">
+                        Power-Fi supports more than 20 languages which ensures
+                        an even greater reach for your business across the globe.
+                      </div>
+                    </span>
                   </div>
                 </paper-card>
               </div>
@@ -1489,6 +1494,15 @@
               super.connectedCallback();
               this.viewHeight = this.$.powerfi.clientHeight;
               this.year = new Date().getFullYear();
+              const ro = new ResizeObserver(entries => {
+                console.log(entries, "<<<");
+                // for (let entry of entries) {
+                //   entry.target.style.borderRadius = Math.max(0, 250 - entry.contentRect.width) + 'px';
+                // }
+              });
+              // Only observe the second box
+              ro.observe(document.querySelector('.features-card'));
+              console.log(ro, "<<<<");
             }
             setHeaderTitle(selectedTab) {
               const tab = this.$[selectedTab];
@@ -1544,5 +1558,5 @@
           }
 
           window.customElements.define(MainPage.is, MainPage);
-        </script>
-      </dom-module>
+          </script>
+        </dom-module>

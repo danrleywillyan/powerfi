@@ -162,7 +162,7 @@
         if(!this.shadowRoot.querySelector('paper-tabs')) return;
         if (!selected) return;
         const colorVar = `var(--default-${selected}-color)`;
-        console.log("colorVar = " + colorVar);
+        // console.log("colorVar = " + colorVar);
         this.updateStyles({ '--selection-color': colorVar });
       }
 
@@ -175,7 +175,7 @@
         const index = Math.round((window.scrollY/this.sectionHeight)+0);
         clearTimeout(this.timeout);
         this.timeout = setTimeout(function () {
-          console.log("regions[index] = " + regions[index]);
+          // console.log("regions[index] = " + regions[index]);
           this.selected = regions[index];
         }.bind(this), 40);
       }
