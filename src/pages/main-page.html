@@ -348,17 +348,24 @@
       color: white !important;
     }
 
+    .features {
+      max-width: 1550px;
+      margin: 0 auto;
+    }
+
     .features paper-card .bg-blur {
       width: 100%;
       height: 100%;
       position: absolute;
-      background-color: #00000077;
+      /* background-color: #00000077; */
+      background-image: url('../../images/bg3.jpg');
+      /* background-position: 50% 0%; */
       top:0; left:0; right:0; bottom:0;
-      filter: blur(10px);
+      filter: blur(3px);
       z-index: 2;
     }
     .features paper-card:hover .bg-blur {
-      filter: blur(14px);
+      filter: blur(5px);
       background-color: #000000CC;
       z-index: 1;
     }
@@ -463,11 +470,6 @@
     .background .header-plans {
       z-index: 2;
       position: relative;
-      padding: 0;
-      color: white;
-      text-transform: none;
-      min-width: unset;
-      margin: 0 0 9px 0;
     }
     /* .background .divider {
     position: relative;
@@ -1022,7 +1024,7 @@
       <div class="container">
         <section class="home-section" id="powerfi">
           <h2 class="section-title"><paper-button noink on-tap="tapToFab">Power-Fi</paper-button></h2>
-          <div class="vertical-content">
+          <div class="vertical-content powerfi-wrapper">
             <div class="powerfi-information">
               <paper-card elevation="0" class="information-card">
                 <iron-image sizing="contain" class="information-icon" src="../../images/powerfi-icons/checkbox.png">
@@ -1470,7 +1472,7 @@
                   </div> <!-- end contact wrapper -->
                 </section><!-- end contact section -->
               </div>
-              <div class="container">
+              <div class="container absolute">
                 <div id="footer">
                   <p>Power-Fi World {{year}}© - All Rights Reserved. Developed by <a href="http://taurus-software.com.br" target="_blank"><strong>Taurus</strong>Software</a>.</p>
                 </div>
@@ -1494,15 +1496,6 @@
               super.connectedCallback();
               this.viewHeight = this.$.powerfi.clientHeight;
               this.year = new Date().getFullYear();
-              const ro = new ResizeObserver(entries => {
-                console.log(entries, "<<<");
-                // for (let entry of entries) {
-                //   entry.target.style.borderRadius = Math.max(0, 250 - entry.contentRect.width) + 'px';
-                // }
-              });
-              // Only observe the second box
-              ro.observe(document.querySelector('.features-card'));
-              console.log(ro, "<<<<");
             }
             setHeaderTitle(selectedTab) {
               const tab = this.$[selectedTab];

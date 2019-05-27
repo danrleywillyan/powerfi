@@ -18,6 +18,7 @@
       }
       .home-section {
         position: relative;
+        max-height: 100vh;
         /* height: 100vh; */
         /* height: calc(100vh - 134px); */
       }
@@ -28,14 +29,14 @@
       }
       .home-section .section-title {
         text-align: center;
-        margin-bottom: 10px;
+        margin-bottom: 30px;
       }
       .home-section .section-title::after {
         background: rgba(0, 0, 0, 0) url("../../images/line-shape.png") no-repeat scroll 0 0;
         content: "";
         height: 11px;
         left: 0;
-        margin: 4% 48%;
+        margin: 65px 48% 2% 48%;
         position: absolute;
         /* right: 0;
         bottom: 0; */
@@ -121,6 +122,11 @@
 Power Fi section style
 ===================================
        */
+      .powerfi-wrapper {
+        margin: 0 auto;
+        height: 100%;
+        max-width: 1550px;
+      }
        #powerfi .divider {
          background: var(--default-collection-color);
        }
@@ -128,6 +134,7 @@ Power Fi section style
        }
        #powerfi {
          /* display: inline-flex; */
+        height: 100vh;
        }
 
        #powerfi .divider {
@@ -168,12 +175,18 @@ Contact style
 ==================================
 */
       #contact {
-        height: 360px;
-        min-height: 0;
+        /* height: 700px; */
+        min-height: 100vh;
+        z-index: 1;
+
       }
       .contact-wrapper {
         display: flex;
         flex-direction: row;
+        max-width: 1550px;
+        margin: 0 auto;
+        z-index: 2;
+        /* height: 100%; */
       }
       .contact-wrapper .description {
         font-size: 1rem;
@@ -193,6 +206,16 @@ Contact style
         flex: 1;
         width: 100%;
       }
+
+/* footer */
+      .absolute {
+        position: absolute;
+        bottom: 0;
+        z-index: 0;
+      }
+
+/* end footer */
+
 /* media screen to contact section */
       @media screen and (max-width: 660px) {
         #contact {
