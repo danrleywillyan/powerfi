@@ -59,6 +59,39 @@
         color: white;
       }
 
+      /* ===============================
+        Main strucuture components style
+      =================================== */
+      .two-columns {
+        width: 100%;
+        /* position: relative; */
+        display: inline-flex;
+        height: calc(100vh - 64px);
+        background-size: 100vw 100vh;
+      }
+      .inside-two-columns {
+        width: 50%;
+        height: auto;
+      }
+      .diagonal-color {
+        background: linear-gradient(103deg, #4195a3 0% 29.8%, #e09c1d 30.2% 100%);
+      }
+      @media screen and (max-width: 500px) {
+        .two-columns {
+          width: 100%;
+          display: block;
+          height: 200%;
+          margin-bottom: 10px;
+        }
+        .inside-two-columns {
+          width: 100%;
+          height: 100vh;
+        }
+      }
+
+       /* ===============================
+        END Main strucuture components style
+      =================================== */
 
       #product .divider {
         background: var(--default-artist-color);
