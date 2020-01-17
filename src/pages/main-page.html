@@ -284,6 +284,13 @@
     @media screen and (max-width: 500px) {
       #product {
         border-top: 4px solid var(--default-artist-color);
+        height: 150vh !important;
+      }
+      .how-it-works .block {
+        flex-direction: column;
+      }
+      .how-it-works-card iron-image {
+        height: 60% !important;
       }
     }
     #product {
@@ -297,13 +304,18 @@
     }
     .how-it-works {
       margin: 0 5%;
-      display: inline-flex;
-      height: 70%;
+      flex-direction: column;
+      height: 100%;
+    }
+    .how-it-works .block{
+      display: flex;
+      justify-content: space-between;
+      height: 50%;
     }
     .how-it-works-center {
-      margin: 2% 0;
+      margin: 0 0;
       width: 35%;
-      display: block;
+      flex-direction: column;
     }
     .pc-screen-below {
       height: 60%;
@@ -319,24 +331,25 @@
     }
     .how-it-works-left {
       width: 32.5%;
-      display: block;
+      flex-direction: column;
     }
     .how-it-works-right {
       width: 32.5%;
-      display: block;
+      flex-direction: column;
     }
-    .how-it-works-left iron-image {
+    .how-it-works iron-image {
       padding: 10px 30px;
       float: left;
     }
-    .how-it-works-right iron-image {
+    /* .how-it-works-right iron-image {
       padding: 10px 30px;
       float: right;
-    }
+    } */
     .how-it-works-card {
       width: 100%;
-      height: 50%;
-      display: inline-flex;
+      height: 70%;
+      flex-direction: column;
+      /* display: inline-flex; */
       /* bounceIn transition */
       -webkit-transform: perspective(1px) translateZ(0);
       transform: perspective(1px) translateZ(0);
@@ -352,14 +365,14 @@
       transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
     }
     .how-it-works-card iron-image {
-      height: 70%;
-      width: 20%;
-      margin-top: 15%;
+      height: 100%;
+      width: 50%;
+      margin-top: 0;
     }
     .how-it-works-card p {
       color: black;
       white-space: normal;
-      padding: 0 30px;
+      padding: 0 0;
       line-height: 3vh !important;
       margin: 0;
       font-size: small;
@@ -368,12 +381,12 @@
       font-weight: lighter;
       font-size: x-large;
     }
-    .how-it-works-right-content {
+    /* .how-it-works-right-content {
       float: left;
     }
     .how-it-works-left-content {
       float: right;
-    }
+    } */
 
     /*
     ==================================
@@ -1214,20 +1227,50 @@ width: -moz-available;
               <section class="home-section" id="product">
                 <!-- <div class="mid-layer-white"></div> -->
                 <h2 class="section-title"><paper-button noink on-tap="tapToFab">How Power-Fi works</paper-button></h2>
-                <div class="how-it-works">
-                  <div class="how-it-works-left">
+                <div class="how-it-works section-height">
+                  <div class="block">
                     <div class="how-it-works-card">
-                      <iron-image class="" src="../../images/wifi-icon2.jpg"></iron-image>
-                      <div class="how-it-works-left-content">
-                        <h2>Offer Free Wifi</h2>
+                      <b>Step 1</b>
+                      <p>Customers enter your business</p>
+                      <iron-image class="" sizing="contain" src="../../images/powerfi-icons/step1.png"></iron-image>
+                    </div>
+                    <div class="how-it-works-card">
+                      <b>Step 2</b>
+                        <p>They connect to the guest Wi-Fi</p>
+                        <iron-image class="" sizing="contain" src="../../images/powerfi-icons/step2.png"></iron-image>
+                    </div>
+                    <div class="how-it-works-card">
+                      <b>Step 3</b>
+                        <p>Colect results and get insights</p>
+                        <iron-image class="" sizing="contain" src="../../images/powerfi-icons/step3.png"></iron-image>
+                    </div>
+                  </div>
+                  <div class="block">
+                    <div class="how-it-works-card">
+                      <b>Step 4</b>
+                        <p>You receive marketing plan and campaigns</p>
+                        <iron-image class="" sizing="contain" src="../../images/powerfi-icons/step4.png"></iron-image>
+                    </div>
+                    <div class="how-it-works-card">
+                      <b>Step 5</b>
+                        <p>Grow your business</p>
+                        <iron-image class="" sizing="contain" src="../../images/powerfi-icons/step5.png"></iron-image>
+                    </div>
+                    <div class="how-it-works-card">
+                      <b>Step 6</b>
+                        <p>Stay ahed of your competitors</p>
+                        <iron-image class="" sizing="contain" src="../../images/powerfi-icons/step6.png"></iron-image>
+                    </div>
+                  </div>
+                  <!-- <div class="how-it-works-left">
+                    <div class="how-it-works-card"> -->
+                        <!-- <h2>Offer Free Wifi</h2>
                         <p>
                           Right away, consumers connect to your network from social media, email or SMS.
                           The process is intuitive and simple: Internet in exchange of contact details.
-                        </p>
-                      </div>
-                    </div>
-                    <div class="how-it-works-card">
-                      <iron-image class="" src="../../images/alvo.jpg"></iron-image>
+                        </p> -->
+                    <!-- </div> -->
+                      <!-- <iron-image class="" src="../../images/alvo.jpg"></iron-image>
                       <div class="how-it-works-left-content">
                         <h2>Showcase Your Business</h2>
                         <p>
@@ -1235,21 +1278,22 @@ width: -moz-available;
                           using our user-friendly interface. Track their performance
                           via your new platform, Facebook ™ Pixel or Google ™ Analytics.
                         </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="how-it-works-center">
-                    <div class="mobile-screen-above">
+                      </div> -->
+                  <!-- </div> -->
+                  <!-- <div class="how-it-works-center">
+                     -->
+                    <!-- <div class="mobile-screen-above">
                       <iron-image sizing="contain" class="" src="../../images/app-mockup-europe.png"></iron-image>
                       <iron-image sizing="contain" class="" src="../../images/app-mockup-europe.png"></iron-image>
                     </div>
                     <div class="pc-screen-below">
                       <iron-image sizing="contain" class="" src="../../images/pc-screen.png"></iron-image>
-                    </div>
-                  </div>
-                </iron-image>
-                <div class="how-it-works-right">
-                  <div class="how-it-works-card">
+                    </div> -->
+                  <!-- </div>
+                </iron-image> -->
+                <!-- <div class="how-it-works-right">
+                   -->
+                  <!-- <div class="how-it-works-card">
                     <iron-image class="" src="../../images/engage.jpg"></iron-image>
                     <div class="how-it-works-right-content">
                       <h2>Promote Engagement</h2>
@@ -1269,8 +1313,8 @@ width: -moz-available;
                         time to guide your business strategies.
                       </p>
                     </div>
-                  </div>
-                </div>
+                  </div> -->
+                <!-- </div> -->
               </div>
             </section>
             <section class="home-section" id="benefits">
