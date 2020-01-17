@@ -67,14 +67,19 @@
         <paper-tab id="home" class="tall" on-tap="tapAnchor">
           Home
         </paper-tab>
-        <paper-tab id="powerfi" class="home-section" on-tap="tapAnchor">
-          Power-Fi
+
+        <paper-tab id="powerfi" class="powerfi" on-tap="tapAnchor">
+          Powerfi
+        </paper-tab>
+
+        <paper-tab id="free-wifi" class="powerfi" on-tap="tapAnchor">
+          Free Wifi
+        </paper-tab>
+        <paper-tab id="product" class="product" on-tap="tapAnchor">
+          How it Works
         </paper-tab>
         <paper-tab id="benefits" class="home-section" on-tap="tapAnchor">
           Benefits
-        </paper-tab>
-        <paper-tab id="product" class="home-section" on-tap="tapAnchor">
-          How it Works
         </paper-tab>
         <paper-tab id="features" class="home-section" on-tap="tapAnchor">
           Features
@@ -96,14 +101,17 @@
         <paper-tab id="home" class="tall" on-tap="tapAnchor">
           Home
         </paper-tab>
-        <paper-tab id="powerfi" class="home-section" on-tap="tapAnchor">
-          Power-Fi
+        <paper-tab id="powerfi" class="powerfi" on-tap="tapAnchor">
+          Powerfi
+        </paper-tab>
+        <paper-tab id="free-wifi" class="powerfi" on-tap="tapAnchor">
+          Free Wifi
+        </paper-tab>
+        <paper-tab id="product" class="product" on-tap="tapAnchor">
+          How it Works
         </paper-tab>
         <paper-tab id="benefits" class="home-section" on-tap="tapAnchor">
           Benefits
-        </paper-tab>
-        <paper-tab id="product" class="home-section" on-tap="tapAnchor">
-          How it Works
         </paper-tab>
         <paper-tab id="features" class="home-section" on-tap="tapAnchor">
           Features
@@ -149,13 +157,13 @@
       connectedCallback() {
         super.connectedCallback();
         this.$.logo.addEventListener('click', this.tapAnchor.bind(this));
-        window.addEventListener('scroll', this.setScrollSection.bind(this));
+        // window.addEventListener('scroll', this.setScrollSection.bind(this));
       }
 
       disconnectedCallback() {
         super.disconnetedCallback();
         this.$.logo.removeEventListener('click', this.tapAnchor.bind(this));
-        window.removeEventListener('scroll', this.setScrollSection);
+        // window.removeEventListener('scroll', this.setScrollSection);
       }
 
       setSelectedColor(selected) {
@@ -170,14 +178,49 @@
         this.dispatchEvent(new CustomEvent('tab-changed', { detail: {tapped: e.target.id } }));
       }
 
-      setScrollSection(e) {
-        const regions = ['Home', 'powerfi', 'benefits', 'product', 'features', 'plans', 'about-us', 'contact'];
-        const index = Math.round((window.scrollY/this.sectionHeight)+0);
+      setSelected(section){
         clearTimeout(this.timeout);
         this.timeout = setTimeout(function () {
-          // console.log("regions[index] = " + regions[index]);
-          this.selected = regions[index];
+
+          console.log(section);
+          this.selected = section;
         }.bind(this), 40);
+      }
+
+      setScrollSection(e) {
+        const regions = ['Home', 'powerfi', 'benefits', 'product', 'features', 'plans', 'about-us', 'contact'];
+
+
+        //example
+        // document.addEventListener("scroll", function() {
+        //
+        // if (window.pageYOffset > 500)
+        // document.getElementById('anything').style.display = "block";
+        // });
+// end example
+        var element;
+        console.log(regions.length);
+        for (var i = 0; i < regions.length; i++) {
+          console.log(this.$$);
+          element = this.$$.getElementById(regions[i]);//get element
+          if(element.scrollTop < element.offsetHeight && element.scrollTop != 0)//if element is in client's View
+          {
+              clearTimeout(this.timeout);
+              this.timeout = setTimeout(function () {
+                console.log("regions[index] = " + regions[i]);
+                this.selected = regions[i];
+              }.bind(this), 40);
+          }//end if
+        }//end for
+
+        // const index = Math.round((window.scrollY/this.sectionHeight)+0);
+        //
+        //
+        // clearTimeout(this.timeout);
+        // this.timeout = setTimeout(function () {
+        //   console.log("regions[index] = " + regions[index]);
+        //   this.selected = regions[index];
+        // }.bind(this), 40);
       }
     }
     customElements.define(HomeTabs.is, HomeTabs);

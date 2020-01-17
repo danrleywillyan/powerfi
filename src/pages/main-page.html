@@ -234,6 +234,48 @@
     ==========================================
     */
 
+
+
+    /*
+    ==================================
+    Free Wifi section
+    ==================================
+    */
+
+    #free-wifi h1 {
+      background-color: white;
+      color: black;
+      margin: 10% 40% 0 0;
+      font-weight: lighter;
+      width: fit-content;
+    }
+
+    #free-wifi p {
+      overflow: visible !important;
+      width: 60%;
+      line-height: 4vh;
+      margin-right: 3%;
+      font-weight: 600;
+      text-align: justify;
+    }
+
+    @media screen and (max-width: 500px) {
+      #free-wifi h1 {
+        font-size: larger;
+      }
+      #free-wifi p {
+        font-weight: 300;
+        line-height: 3vh;
+        width: 70%;
+      }
+    }
+
+    /*
+    ==================================
+    end Free Wifi section
+    ==================================
+    */
+
     /*
     ==================================
     How it works section
@@ -1004,9 +1046,7 @@ width: -moz-available;
         <app-toolbar>
           <div condensed-title>
             <div class="logo_tab">
-              <a href="#home">
-                <img height="50px" src="../../images/logo_nova.png"/>
-              </a>
+              <img src="../../images/logo_nova.png"/>
             </div>
             <span class="title">{{headerTitle}}</span>
           </div>
@@ -1021,7 +1061,10 @@ width: -moz-available;
                 <h1>SHARE Wi-Fi AND POWER UP YOUR BUSINESS</h1>
                 <p>By using Power-Fi you get closer to your customer and increase your business</p>
                 <div class="button">
+
                   <paper-button id="more" on-tap="scrollToPlans" role="button" tabindex="0" aria-disabled="false">
+
+                  <!-- <paper-button id="more" on-tap="scrollToTab" role="button" tabindex="0" aria-disabled="false"> -->
                     Check our plans now!
                   </paper-button>
                 </div>
@@ -1072,8 +1115,9 @@ width: -moz-available;
                       </iron-image>
                       <h2>Real results</h2>
                       <p class="dark-text">Get real-time performance of your campaigns, with
-                        numbers and critical insights to help you grow your business.</p>
-                      </paper-card>
+                        numbers and critical insights to help you grow your business.
+                      </p>
+                    </paper-card>
                     </div>
                     <div class="powerfi-business">
                       <google-youtube
@@ -1085,68 +1129,51 @@ width: -moz-available;
                       autoplay="0">
                     </google-youtube>
                   </div>
-                </div>
-              </section>
-              <section class="home-section" id="benefits">
-                <h2 class="section-title"><paper-button noink on-tap="tapToFab">Power up your business</paper-button></h2>
-                <div class="benefits">
-                  <p>How you win more by sharing free Wi-Fi</p>
-                  <paper-card image="">
-                    <paper-icon-item>
-                      <iron-icon class="benefits-icons" icon="notification:network-check"></iron-icon>
-                      <br />
-                      <paper-item-body>
-                        <h2>Optimized WiFi</h2>
-                      </paper-item-body>
-                    </paper-icon-item>
-                    <div class="card-content">
-                      9/10 customers said there are a list of advantages using WiFi
-                      instead of 3G/4G, the main advantage is a faster internet connection.
-                    </div>
-                  </paper-card>
-                  <paper-card image="">
-                    <paper-icon-item>
-                      <iron-icon class="benefits-icons" icon="search"></iron-icon>
-                      <br />
-                      <paper-item-body>
-                        <h2>Collect / Analyze</h2>
-                      </paper-item-body>
-                    </paper-icon-item>
-                    <div class="card-content">
-                      Get precious data from your customers; <br>
-                      Who are connecting on your network? Name, Age, Gender, e-mail,
-                      phone, social midias, birthday.
-                    </div>
-                  </paper-card>
-                  <paper-card image="">
-                    <paper-icon-item>
-                      <iron-icon class="benefits-icons" icon="trending-up"></iron-icon>
-                      <br />
-                      <paper-item-body>
-                        <h2>Guided Marketing</h2>
-                      </paper-item-body>
-                    </paper-icon-item>
-                    <div class="card-content">
-                      Using the collected data you can do a marketing plans focusing
-                      on your customers profile, that will give you a highest cost-benefit.
-                    </div>
-                  </paper-card>
-                  <paper-card image="">
-                    <paper-icon-item>
-                      <iron-icon class="benefits-icons" icon="social:people"></iron-icon>
-                      <br />
-                      <paper-item-body>
-                        <h2>More Clients</h2>
-                      </paper-item-body>
-                    </paper-icon-item>
-                    <div class="card-content">
-                      According with a research, 44% of all ages reported that a free
-                      WiFi connection influence where they buy; offering WiFi will get you
-                      more clients.
-                    </div>
-                  </paper-card>
-                </div>
-              </section>
+
+          </div>
+        </section>
+        </section>
+        <!-- new section -->
+        <section class="" id="free-wifi">
+          <div class="two-columns">
+            <div class="inside-two-columns diagonal-color right-items">
+              <h1 class="">Free Wi-Fi is important</h1>
+              <p class="">30% of the consumers said that they are
+                more likely to return to a store that offer
+                a seamless Wi-Fi experience.
+              </p>
+              <p>By using retargeting stategies or
+                automated follow up campaigns in the
+                WiFi, a business can inform customers
+                about upcoming promotions, sales or
+                discounts to entice them to visit more
+                frequently.
+              </p>
+              <div class="two-columns" 
+                style="align-items: flex-start; padding-top: 10%; justify-content: flex-end; display: inline-flex !important;"
+              >
+                <p style="width: 40%;">
+                  74% of people
+                  would be happy for
+                  a retailer to sent a
+                  text or email
+                  containing personal
+                  promotions.
+                </p>
+                <iron-image 
+                  style="height: 60%; width: 30%;"
+                  sizing="contain" class=""
+                  src="../../images/charts/74chart.png">
+                </iron-image>
+              </div>
+            </div>
+            <div class="inside-two-columns" style="background-color: red;">
+              <p style="margin:0">afsdfasda</p>
+            </div>
+          </div>
+        </section>
+        <!-- end of new section -->
+              
               <section class="home-section" id="product">
                 <!-- <div class="mid-layer-white"></div> -->
                 <h2 class="section-title"><paper-button noink on-tap="tapToFab">How Power-Fi works</paper-button></h2>
@@ -1207,6 +1234,66 @@ width: -moz-available;
                     </div>
                   </div>
                 </div>
+              </div>
+            </section>
+            <section class="home-section" id="benefits">
+              <h2 class="section-title"><paper-button noink on-tap="tapToFab">Power up your business</paper-button></h2>
+              <div class="benefits">
+                <p>How you win more by sharing free Wi-Fi</p>
+                <paper-card image="">
+                  <paper-icon-item>
+                    <iron-icon class="benefits-icons" icon="notification:network-check"></iron-icon>
+                    <br />
+                    <paper-item-body>
+                      <h2>Optimized WiFi</h2>
+                    </paper-item-body>
+                  </paper-icon-item>
+                  <div class="card-content">
+                    9/10 customers said there are a list of advantages using WiFi
+                    instead of 3G/4G, the main advantage is a faster internet connection.
+                  </div>
+                </paper-card>
+                <paper-card image="">
+                  <paper-icon-item>
+                    <iron-icon class="benefits-icons" icon="search"></iron-icon>
+                    <br />
+                    <paper-item-body>
+                      <h2>Collect / Analyze</h2>
+                    </paper-item-body>
+                  </paper-icon-item>
+                  <div class="card-content">
+                    Get precious data from your customers; <br>
+                    Who are connecting on your network? Name, Age, Gender, e-mail,
+                    phone, social midias, birthday.
+                  </div>
+                </paper-card>
+                <paper-card image="">
+                  <paper-icon-item>
+                    <iron-icon class="benefits-icons" icon="trending-up"></iron-icon>
+                    <br />
+                    <paper-item-body>
+                      <h2>Guided Marketing</h2>
+                    </paper-item-body>
+                  </paper-icon-item>
+                  <div class="card-content">
+                    Using the collected data you can do a marketing plans focusing
+                    on your customers profile, that will give you a highest cost-benefit.
+                  </div>
+                </paper-card>
+                <paper-card image="">
+                  <paper-icon-item>
+                    <iron-icon class="benefits-icons" icon="social:people"></iron-icon>
+                    <br />
+                    <paper-item-body>
+                      <h2>More Clients</h2>
+                    </paper-item-body>
+                  </paper-icon-item>
+                  <div class="card-content">
+                    According with a research, 44% of all ages reported that a free
+                    WiFi connection influence where they buy; offering WiFi will get you
+                    more clients.
+                  </div>
+                </paper-card>
               </div>
             </section>
             <section class="home-section" id="features">
@@ -1514,6 +1601,11 @@ width: -moz-available;
               super.connectedCallback();
               this.viewHeight = this.$.contact.clientHeight;
               this.year = new Date().getFullYear();
+              window.addEventListener('scroll', this.whatSectionIsScrolling.bind(this));
+            }
+            disconnectedCallback() {
+              super.disconnetedCallback();
+              window.removeEventListener('scroll', this.whatSectionIsScrolling);
             }
             setHeaderTitle(selectedTab) {
               const tab = this.$[selectedTab];
@@ -1526,9 +1618,24 @@ width: -moz-available;
             tapToFab(e) {
               console.log(">>>>>>>>>> TAP", e);
               const name = `${e.target.parentNode.parentNode.id}Fab`;
+              console.log(e.target.parentNode.parentNode.id);
               console.log(name);
               const fab = this.$[name];
               if(fab) fab.animateRedirect();
+            }
+            whatSectionIsScrolling(e) {
+              const regions = ['Home', 'powerfi', 'benefits', 'product', 'features', 'plans', 'about-us', 'contact'];
+              var element;
+              console.log(regions.length);
+              for (var i = 0; i < regions.length; i++){
+                console.log(document.getElementById(regions[i]));
+                element = document.getElementById(regions[i]);//get element
+                if(element.scrollTop < element.offsetHeight && element.scrollTop != 0)//if element is in client's View
+                {
+                      console.log("regions[index] = ", regions[i]);
+                      // setSelected(regions[i]);
+                }//end if
+              }//end for
             }
             scrollToTab(e) {
               console.log(">>>>>>> scroll", e);
