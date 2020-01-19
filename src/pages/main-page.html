@@ -146,9 +146,36 @@
     }
 
     .powerfi-information{
-      display: inline-flex;
+      display: flex;
+      flex-direction: row;
       width: 100%;
       max-height: 40%;
+    }
+
+    @media screen and (max-width: 500px) {
+      .powerfi-information{
+        flex-direction: column;
+        height: fit-content !important;
+        max-height: none !important;
+      }
+      .powerfi-business {
+        width: 100% !important;
+      }
+      #powerfi {
+      /* display: inline-flex; */
+        height: 165vh !important;
+      }
+      .information-card {
+        width: 100% !important;
+      }
+      .information-card:hover {
+        border-bottom: none !important;
+      }
+      .video-presentation {
+        width: 100% !important;
+        height: 80% !important;
+        margin-top: 10% !important;
+      }
     }
 
     /* Icon Push */
@@ -284,7 +311,7 @@
     @media screen and (max-width: 500px) {
       #product {
         border-top: 4px solid var(--default-artist-color);
-        height: 150vh !important;
+        height: 155vh !important;
       }
       .how-it-works .block {
         flex-direction: column;
@@ -1046,7 +1073,7 @@ width: -moz-available;
     /* Responsiveness */
     @media screen and (max-width: 500px) {
       #benefits {
-        border-top: 4px solid var(--default-collection-color);
+        /* border-top: 4px solid var(--default-collection-color); */
       }
       #features {
         border-top: 4px solid var(--default-project-color);

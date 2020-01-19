@@ -5,7 +5,8 @@
     <style>
 
       .vertical-content {
-          display: block;
+          display: flex;
+          flex-direction: column;
           width: 100%;
       }
       .button {
@@ -459,12 +460,15 @@ end Contact style
           padding: 0;
         }
         .container > section.home-section h2 {
-          display: none;
+          /* display: none; */
         }
         .container > section.home-section .divider {
           position: absolute;
           bottom: 37px;
           right: 22px;
+        }
+        .home-section .section-title::after {
+          margin: 40px 30% 2% 40%;
         }
       }
       app-header[condenses] {
