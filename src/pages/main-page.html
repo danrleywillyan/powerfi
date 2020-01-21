@@ -229,7 +229,7 @@
     }
     .information-card {
       width: 25%;
-      height: 80%;
+      height: 100%;
       padding: 5px 25px;
     }
     .information-card:hover {
@@ -429,7 +429,7 @@
 
     /*
     ==========================================================
-    features section
+    benefits section
     ==========================================================
     */
 
@@ -437,44 +437,73 @@
       color: white !important;
     }
 
-    .features {
-      max-width: 1550px;
-      margin: 0 auto;
+    #benefits {
+      /* border-top: 4px solid var(--default-project-color); */
+      /* height: fit-content; */
+      /* background: linear-gradient(to bottom, white 17%, transparent 30%) repeat scroll 0 0 , url("../../images/bg3.jpg"); */
+      background-size: 100vw;
     }
 
-    .features paper-card .bg-blur {
+    .benefits {
+      max-width: 1550px;
+      margin: 0 auto;
+      position: relative;
+      pointer-events: none;
+      background: linear-gradient(to bottom, white 17%, transparent 30%) repeat scroll 0 0 , url("../../images/bg2.jpg");
+      background-size: 100vw;
+      z-index: 2;
+    }
+
+    .benefits paper-card .bg-blur {
       width: 100%;
       height: 100%;
       position: absolute;
       /* background-color: #00000077; */
-      background-image: url('../../images/bg3.jpg');
+      /* background-image: url('../../images/bg3.jpg'); */
       /* background-position: 50% 0%; */
+      background-color: #234033CC;
       top:0; left:0; right:0; bottom:0;
       filter: blur(3px);
       z-index: 2;
+      pointer-events: auto;
     }
-    .features paper-card:hover .bg-blur {
+    .benefits paper-card:hover .bg-blur {
       filter: blur(5px);
       background-color: #000000CC;
       z-index: 1;
     }
-    .features-text {
+
+    /* .benefits-change-background {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      background: linear-gradient(to bottom, white 17%, transparent 30%) repeat scroll 0 0 , url("../../images/bg2.jpg");
+      background-size: 100vw;
+      z-index: 2;
+    }
+
+    .benefits:hover .benefits-change-background  {
+      background: linear-gradient(to bottom, white 17%, transparent 30%) repeat scroll 0 0 , url("../../images/bg1.jpg") !important;
+      background-size: 100vw;
+      z-index: 2;
+    } */
+
+    .benefits-text {
       position: absolute;
       display: inline-flex;
       width: 100%;
       height: 100%;
       top:0; left:0; right:0; bottom:0;
       z-index: 2;
-      padding: 0 2% 5px 0;
     }
-    .features paper-card:hover .features-text{
+    .benefits paper-card:hover .benefits-text{
       z-index: 2;
     }
-    .features paper-card {
-      z-index: 0;
+    .benefits paper-card {
+      z-index: 3;
       position: relative;
       width: 30%;
-      height: 180px;
+      height: 200px;
       margin: 0 0 2% 2%;
       padding: 0 2% 5px 0;
       display: inline-flex;
@@ -485,7 +514,7 @@
       border-style: groove;
       border-width: thin;
     }
-    .features-text p {
+    .benefits-text p {
       font-weight: 500;
       font-size: 1.2em;
       height: 8vh;
@@ -493,37 +522,34 @@
       padding-left: 50px;
       margin-bottom: 0px !important;
     }
-    .features h2 {
+    .benefits h2 {
       font-size: 1.7em;
       color: white !important;
     }
-    .features-card-head {
+    /* .benefits-card-head {
       padding: 3%;
       margin: auto 3% auto 1%;
-      /* opacity: 0.5; */
       background-color: #00000055;
       border-radius: 50%;
     }
-    .features-icons {
+    .benefits-icons {
       --iron-icon-height: 48px;
       --iron-icon-width: 48px;
       color: white;
-    }
-    .feature-card-content {
+    } */
+    .benefits-card-content {
       text-align: justify;
-      float: right;
-      margin-left: 0%;
     }
     .card-content {
       text-align: justify;
     }
-    .feature-information {
-      padding: 0 5% 5px 0;
+    .benefits-information {
+      padding: 0 5% 5px 5%;
     }
 
     /*
     ==========================================
-    end features section
+    end benefits section
     ==========================================
     */
 
@@ -991,12 +1017,12 @@ width: -moz-available;
       color: white;
     }
 
-    .benefits paper-card {
+    .features paper-card {
       width: 23%;
       margin: 0 0 4% 1.7%;
       /* padding: 0 0 5% 0; */
     }
-    .benefits p {
+    .features p {
       color: black;
       font-weight: 500;
       font-size: 1.2em;
@@ -1004,11 +1030,11 @@ width: -moz-available;
       font-style: italic;
       padding-left: 50px;
     }
-    .benefits h2 {
+    .features h2 {
       font-size: 2em;
       text-align: center;
     }
-    .benefits-icons {
+    .features-icons {
       --iron-icon-height: 64px;
       --iron-icon-width: 64px;
       color: green;
@@ -1042,12 +1068,6 @@ width: -moz-available;
         background-size: 100vw 100vh;
       }
       #features {
-        /* border-top: 4px solid var(--default-project-color); */
-        height: calc(100vh - 90px);
-        background: linear-gradient(to bottom, white 17%, transparent 30%) repeat scroll 0 0 , url("../../images/bg3.jpg");
-        background-size: 100vw 100vh;
-      }
-      #benefits {
         height: calc(100vh - 134px);
       }
       #demo {
@@ -1072,7 +1092,7 @@ width: -moz-available;
 
     /* Responsiveness */
     @media screen and (max-width: 500px) {
-      #benefits {
+      #features {
         /* border-top: 4px solid var(--default-collection-color); */
       }
       #features {
@@ -1179,7 +1199,7 @@ width: -moz-available;
           </div>
         </section>
         </section>
-        <!-- new section -->
+        <!-- free wifi section -->
         <section class="" id="free-wifi">
           <div class="two-columns section-height">
             <div class="inside-two-columns diagonal-color right-items">
@@ -1255,7 +1275,7 @@ width: -moz-available;
             </div>
           </div>
         </section>
-        <!-- end of new section -->
+        <!-- end of free wifi section -->
               
               <section class="home-section" id="product">
                 <!-- <div class="mid-layer-white"></div> -->
@@ -1430,10 +1450,198 @@ width: -moz-available;
             <section class="home-section" id="benefits">
               <h2 class="section-title"><paper-button noink on-tap="tapToFab">Power up your business</paper-button></h2>
               <div class="benefits">
-                <p>How you win more by sharing free Wi-Fi</p>
+                <!-- <div class="benefits-change-background"></div> -->
+                <!-- <p class="dark-text">How you win more by sharing free Wi-Fi</p> -->
+                <paper-card class="benefits-card" image="">
+                  <div class="bg-blur">
+                  </div>
+                  <div class="benefits-text">
+                    
+                    <span class="benefits-card-content">
+                      <paper-icon-item>
+                        <paper-item-body>
+                          <h2>Data analytics</h2>
+                        </paper-item-body>
+                      </paper-icon-item>
+                      <div class="benefits-information">
+                        Get the best view of who your customers
+                        are and how they interact with your brand in
+                        order to offer a personalized and e cient
+                        experience.
+                      </div>
+                    </span>
+                  </div>
+                </paper-card>
+                <paper-card class="benefits-card" image="">
+                  <div class="bg-blur">
+                  </div>
+                  <div class="benefits-text">
+                    
+                    <span class="benefits-card-content">
+                      <paper-icon-item>
+                        <paper-item-body>
+                          <h2>Customer database</h2>
+                        </paper-item-body>
+                      </paper-icon-item>
+                      <div class="benefits-information">
+                        New and returning visitors will be
+                        automatically added to your email
+                        marketing database directly from your
+                        customer's favorite social media account.
+                      </div>
+                    </span>
+                  </div>
+                </paper-card>
+                <paper-card class="benefits-card" image="">
+                  <div class="bg-blur">
+                  </div>
+                  <div class="benefits-text">
+                    
+                    <span class="benefits-card-content">
+                      <paper-icon-item>
+                        <paper-item-body>
+                          <h2>Engagement</h2>
+                        </paper-item-body>
+                      </paper-icon-item>
+                      <div class="benefits-information">
+                        Get to know your clients more and increase
+                        customer loyalty by sending them personal
+                        advertisements. Your customers will feel
+                        more committed to your business.
+                      </div>
+                    </span>
+                  </div>
+                </paper-card>
+                <paper-card class="benefits-card" image="">
+                  <div class="bg-blur">
+                  </div>
+                  <div class="benefits-text">
+                    
+                    <span class="benefits-card-content">
+                      <paper-icon-item>
+                        <paper-item-body>
+                          <h2>Automation</h2>
+                        </paper-item-body>
+                      </paper-icon-item>
+                      <div class="benefits-information">
+                        Power-Fi can set triggers for certain
+                        actions to send notifications. Such as
+                        welcome messages, reviews when people
+                        connect or disconnect to your Wi-Fi, when
+                        guests were inactive (retention) or when it’s
+                        a guest’s birthday and more!
+                      </div>
+                    </span>
+                  </div>
+                </paper-card>
+                <paper-card class="benefits-card" image="">
+                  <div class="bg-blur">
+                  </div>
+                  <div class="benefits-text">
+                    
+                    <span class="benefits-card-content">
+                      <paper-icon-item>
+                        <paper-item-body>
+                          <h2>Promotions & sponsorships</h2>
+                        </paper-item-body>
+                      </paper-icon-item>
+                      <div class="benefits-information">
+                        Integrate advertisements for your own
+                        business in the Wi-Fi; one or more pre- or
+                        post-login advertisements. You can also let
+                        other companies pay you in exchange for
+                        ad space on your Wi-Fi.
+                      </div>
+                    </span>
+                  </div>
+                </paper-card>
+                <paper-card class="benefits-card" image="">
+                  <div class="bg-blur">
+                  </div>
+                  <div class="benefits-text">
+
+                    <span class="benefits-card-content">
+                      <paper-icon-item>
+                        <paper-item-body>
+                          <h2>Ad retargeting</h2>
+                        </paper-item-body>
+                      </paper-icon-item>
+                      <div class="benefits-information">
+                        Retarget customers after their visit with
+                        email, SMS or WhatsApp and increase
+                        footfall and customer loyalty.
+                      </div>
+                    </span>
+                  </div>
+                </paper-card>
+                <paper-card class="benefits-card" image="">
+                  <div class="bg-blur">
+                  </div>
+                  <div class="benefits-text">
+                    
+                    <span class="benefits-card-content">
+                      <paper-icon-item>
+                        <paper-item-body>
+                          <h2>Wi-Fi control</h2>
+                        </paper-item-body>
+                      </paper-icon-item>
+                      <div class="benefits-information">
+                        Data consumption, length of stay, number
+                        of visits, restricted sites, and loads more
+                        can be analyzed and controlled.
+                      </div>
+                    </span>
+                  </div>
+                </paper-card>
+                <paper-card class="benefits-card" image="">
+                  <div class="bg-blur">
+                  </div>
+                  <div class="benefits-text">
+                    
+                    <span class="benefits-card-content">
+                      <paper-icon-item>
+                        <paper-item-body>
+                          <h2>Environment-friendly</h2>
+                        </paper-item-body>
+                      </paper-icon-item>
+                      <div class="benefits-information">
+                        Why still use print when you can show
+                        your customers dynamic advertisements
+                        and campaigns on their devices?
+                      </div>
+                    </span>
+                  </div>
+                </paper-card>
+                <paper-card class="benefits-card" image="">
+                  <div class="bg-blur">
+                  </div>
+                  <div class="benefits-text">
+
+                    <span class="benefits-card-content">
+                      <paper-icon-item>
+                        <paper-item-body>
+                          <h2>Security</h2>
+                        </paper-item-body>
+                      </paper-icon-item>
+                      <div class="benefits-information">
+                        Security is paramount; with using Power-Fi
+                        you offer an isolated network to your
+                        guests separated from the network that
+                        you might use for payment gateways.
+                      </div>
+                    </span>
+                  </div>
+                </paper-card>
+              </div>
+              
+            </section>
+            <section class="home-section" id="features">
+              <h2 class="section-title"><paper-button noink on-tap="tapToFab">Get that power edge</paper-button></h2>
+              <div class="features">
+                <p>What you get buying Power-Fi</p>
                 <paper-card image="">
                   <paper-icon-item>
-                    <iron-icon class="benefits-icons" icon="notification:network-check"></iron-icon>
+                    <iron-icon class="features-icons" icon="notification:network-check"></iron-icon>
                     <br />
                     <paper-item-body>
                       <h2>Optimized WiFi</h2>
@@ -1446,7 +1654,7 @@ width: -moz-available;
                 </paper-card>
                 <paper-card image="">
                   <paper-icon-item>
-                    <iron-icon class="benefits-icons" icon="search"></iron-icon>
+                    <iron-icon class="features-icons" icon="search"></iron-icon>
                     <br />
                     <paper-item-body>
                       <h2>Collect / Analyze</h2>
@@ -1460,7 +1668,7 @@ width: -moz-available;
                 </paper-card>
                 <paper-card image="">
                   <paper-icon-item>
-                    <iron-icon class="benefits-icons" icon="trending-up"></iron-icon>
+                    <iron-icon class="features-icons" icon="trending-up"></iron-icon>
                     <br />
                     <paper-item-body>
                       <h2>Guided Marketing</h2>
@@ -1473,7 +1681,7 @@ width: -moz-available;
                 </paper-card>
                 <paper-card image="">
                   <paper-icon-item>
-                    <iron-icon class="benefits-icons" icon="social:people"></iron-icon>
+                    <iron-icon class="features-icons" icon="social:people"></iron-icon>
                     <br />
                     <paper-item-body>
                       <h2>More Clients</h2>
@@ -1483,134 +1691,6 @@ width: -moz-available;
                     According with a research, 44% of all ages reported that a free
                     WiFi connection influence where they buy; offering WiFi will get you
                     more clients.
-                  </div>
-                </paper-card>
-              </div>
-            </section>
-            <section class="home-section" id="features">
-              <h2 class="section-title"><paper-button noink on-tap="tapToFab">Get that power edge</paper-button></h2>
-              <div class="features">
-                <p class="dark-text">What you get buying Power-Fi</p>
-                <paper-card class="features-card" image="">
-                  <div class="bg-blur">
-                  </div>
-                  <div class="features-text">
-                    <span class="features-card-head">
-                      <iron-icon class="features-icons hvr-bounce-in" icon="hardware:desktop-windows"></iron-icon>
-                    </span>
-                    <span class="feature-card-content">
-                      <paper-icon-item>
-                        <paper-item-body>
-                          <h2>High Definition</h2>
-                        </paper-item-body>
-                      </paper-icon-item>
-                      <div class="feature-information">
-                        Make the most of the richness of detail in images or videos
-                        used in your mobile campaigns. We make your business look good.
-                      </div>
-                    </span>
-                  </div>
-                </paper-card>
-                <paper-card class="features-card" image="">
-                  <div class="bg-blur">
-                  </div>
-                  <div class="features-text">
-                    <span class="features-card-head">
-                      <iron-icon class="features-icons" icon="communication:stay-current-portrait"></iron-icon>
-                    </span>
-                    <span class="feature-card-content">
-                      <paper-icon-item>
-                        <paper-item-body>
-                          <h2>Fits All</h2>
-                        </paper-item-body>
-                      </paper-icon-item>
-                      <div class="feature-information">
-                        No one gets left out. Power-Fi is versatile and works on all
-                        major phones, tablets and laptops.
-                      </div>
-                    </span>
-                  </div>
-                </paper-card>
-                <paper-card class="features-card" image="">
-                  <div class="bg-blur">
-                  </div>
-                  <div class="features-text">
-                    <span class="features-card-head">
-                      <iron-icon class="features-icons" icon="image:remove-red-eye"></iron-icon>
-                    </span>
-                    <span class="feature-card-content">
-                      <paper-icon-item>
-                        <paper-item-body>
-                          <h2>Total Control</h2>
-                        </paper-item-body>
-                      </paper-icon-item>
-                      <div class="feature-information">
-                        Data consumption, length of stay, number of visits,
-                        restricted sites, and loads more can be analyzed and
-                        controlled in real time using our platform.
-                      </div>
-                    </span>
-                  </div>
-                </paper-card>
-                <paper-card class="features-card" image="">
-                  <div class="bg-blur">
-                  </div>
-                  <div class="features-text">
-                    <span class="features-card-head">
-                      <iron-icon class="features-icons" icon="icons:settings"></iron-icon>
-                    </span>
-                    <span class="feature-card-content">
-                      <paper-icon-item>
-                        <paper-item-body>
-                          <h2>Automation</h2>
-                        </paper-item-body>
-                      </paper-icon-item>
-                      <div class="feature-information">
-                        Supercharge your CRM with our Wi-Fi tool to increase
-                        and maintain contact with your market, in a practical and fast way.
-                      </div>
-                    </span>
-                  </div>
-                </paper-card>
-                <paper-card class="features-card" image="">
-                  <div class="bg-blur">
-                  </div>
-                  <div class="features-text">
-                    <span class="features-card-head">
-                      <iron-icon class="features-icons" icon="icons:search"></iron-icon>
-                    </span>
-                    <span class="feature-card-content">
-                      <paper-icon-item>
-                        <paper-item-body>
-                          <h2>Data Analytics</h2>
-                        </paper-item-body>
-                      </paper-icon-item>
-                      <div class="feature-information">
-                        Get the best view of who your consumers are and how they
-                        interact with your brand in order to offer a personalized
-                        and efficient experience.
-                      </div>
-                    </span>
-                  </div>
-                </paper-card>
-                <paper-card class="features-card" image="">
-                  <div class="bg-blur">
-                  </div>
-                  <div class="features-text">
-                    <span class="features-card-head">
-                      <iron-icon class="features-icons" icon="icons:language"></iron-icon>
-                    </span>
-                    <span class="feature-card-content">
-                      <paper-icon-item>
-                        <paper-item-body>
-                          <h2>Multi Languages</h2>
-                        </paper-item-body>
-                      </paper-icon-item>
-                      <div class="feature-information">
-                        Power-Fi supports more than 20 languages which ensures
-                        an even greater reach for your business across the globe.
-                      </div>
-                    </span>
                   </div>
                 </paper-card>
               </div>

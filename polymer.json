@@ -3,8 +3,6 @@
   "shell": "src/app-elements/app-shell.html",
   "fragments": [
     "src/pages/main-page.html",
-    "src/pages/artist-page.html",
-    "src/pages/collection-page.html",
     "src/pages/not-found-page.html"
   ],
   "sources": [
