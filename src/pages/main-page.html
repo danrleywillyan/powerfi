@@ -101,17 +101,14 @@
       top: 0;
       left: 0;
       height: auto;
-      width:100px;
+      width:175px;
       margin-left: 25px;
-    }
-    .logo_tab {
-
     }
     .logo_tab > img {
       margin-top: 15px;
       margin-left: 8px;
       height: auto;
-      width:100px;
+      width:140px;
     }
     .button paper-button {
       border-radius: 30px;
@@ -1239,10 +1236,10 @@
                 <p>By using Power-Fi you get closer to your customer and increase your business</p>
                 <div class="button">
 
-                  <paper-button id="more" on-tap="scrollToPlans" role="button" tabindex="0" aria-disabled="false">
+                  <paper-button id="more" on-tap="scrollToContact" role="button" tabindex="0" aria-disabled="false">
 
                   <!-- <paper-button id="more" on-tap="scrollToTab" role="button" tabindex="0" aria-disabled="false"> -->
-                    Check our plans now!
+                    Request a Demo!
                   </paper-button>
                 </div>
                 <p>more information</p>
@@ -2177,9 +2174,9 @@
                 top: tab.offsetTop
               });
             }
-            scrollToPlans(e) {
+            scrollToContact(e) {
               console.log(">>>>>>> scroll", e);
-              if(!e.detail.tapped) e.detail.tapped="plans";
+              if(!e.detail.tapped) e.detail.tapped="contact";
               const tab = this.$[e.detail.tapped];
               console.log(tab.offsetTop)
               if(!tab) return;
