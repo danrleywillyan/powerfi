@@ -108,7 +108,7 @@
       margin-top: 15px;
       margin-left: 8px;
       height: auto;
-      width:140px;
+      width:100px;
     }
     .button paper-button {
       border-radius: 30px;
@@ -119,7 +119,6 @@
       position:relative;
       bottom: 0;
     }
-
 
     /*
     ==========================================
@@ -299,6 +298,59 @@
     end Free Wifi section
     ==================================
     */
+
+    
+
+    /*
+    ==================================
+    Get Edge section
+    ==================================
+    */
+
+    #get-edge h1 {
+      background-color: #4195a3;
+      color: black;
+      margin: 10% 40% 0 0;
+      font-weight: lighter;
+      width: fit-content;
+    }
+
+    #get-edge p {
+      overflow: visible !important;
+      width: 60%;
+      line-height: 4vh;
+      margin-right: 3%;
+      font-weight: 600;
+      text-align: justify;
+      color: black;
+    }
+    .orange-edge {
+      font-weight: 1000 !important;
+      line-height: 5vh !important;
+      font-size: large;
+    }
+
+    @media screen and (max-width: 500px) {
+      #get-edge h1 {
+        font-size: larger;
+      }
+      #get-edge p {
+        font-weight: 300;
+        line-height: 3vh;
+        width: 70%;
+      }
+      #hidden-mobile {
+        visibility: hidden !important;
+        display: none !important;
+      }
+    }
+
+    /*
+    ==================================
+    end Get Edge section
+    ==================================
+    */
+    
 
     /*
     ==================================
@@ -678,7 +730,7 @@
 
     /*
     ==================================================
-    plans style
+    plans section
     ==================================================
     */
     .background {
@@ -712,27 +764,34 @@
       z-index: 2;
       position: relative;
     }
-    /* .background .divider {
-    position: relative;
-    height: 5px;
-    max-width: 90%;
-    margin-top: -5px;
-    clear: both;
-    color: white;
-    } */
-    @media (min-width: 900px) {
+    @media screen and (max-width: 500px) {
+      .plans-table {
+        flex-direction: column !important;
+        height: 400vw;
+        box-shadow: none !important;
+      }
       .background {
-        padding: 0 0 0px;
+        height: 380vw !important;
+      }
+      .panel {
+        border-radius: none;
+      }
+      .plans {
+        box-shadow: 0px 10px 13px -6px rgba(0, 0, 0, 0.08), 0px 20px 31px 3px rgba(0, 0, 0, 0.09), 0px 8px 20px 7px rgba(0, 0, 0, 0.02);
+        border-radius: 10px;
+        margin-bottom: 50px;
+        width: 100% !important;
+      }
+      .plans-button {
+        margin: 15px auto !important;
       }
     }
     .plans-container {
-      padding: 20px;
-      margin-top: 0;
       margin-left: auto;
       margin-right: auto;
       /* max-width: 960px; */
       width: 70%;
-      /* height: 60vh; */
+      height: 90%;
 
     }
     .panel {
@@ -740,32 +799,24 @@
       border-radius: 10px;
       padding: 0px 0px;
       position: relative;
-      width: 95%;
       z-index: 10;
       height: 100%;
     }
     .plans-table {
-      height: 67vh;
+      /* height: 67vh; */
       box-shadow: 0px 10px 13px -6px rgba(0, 0, 0, 0.08), 0px 20px 31px 3px rgba(0, 0, 0, 0.09), 0px 8px 20px 7px rgba(0, 0, 0, 0.02);
       display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-    @media (min-width: 900px) {
-      .plans-table {
-        flex-direction: row;
-      }
+      flex-direction: row;
+      /* justify-content: center; */
     }
     .plans-table * {
       text-align: center;
-      text-transform: uppercase;
     }
     .plans {
-      border-bottom: 1px solid #e1f1ff;
-      padding: 0px;
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      width: 33%;
+      /* justify-content: center; */
     }
     .plans:last-child {
       border-bottom: none;
@@ -783,9 +834,10 @@
     }
     .plans-img {
       /* max-width: 100%; */
-      max-width: 73%;
+      max-width: 120px;
       width: -moz-available;
       /* height: 50%; */
+      margin: auto;
     }
     .plans-header {
       color: #888;
@@ -795,11 +847,21 @@
     }
     .plans-features {
       font-weight: 600;
-      letter-spacing: 1px;
+      /* letter-spacing: 1px; */
       margin: 0px 0 0px;
+      height: 70%;
     }
     .orange {
       color: var(--default-product-color);
+    }
+    img.orange {
+      filter: invert(81%) sepia(17%) saturate(4722%) hue-rotate(347deg) brightness(99%) contrast(94%);
+    }
+    img.green {
+      filter: invert(56%) sepia(69%) saturate(488%) hue-rotate(41deg) brightness(99%) contrast(89%);
+    }
+    img.blue {
+      filter: invert(17%) sepia(86%) saturate(2918%) hue-rotate(195deg) brightness(100%) contrast(91%);
     }
     .blue {
       color: var(--default-powerfi-color);
@@ -809,9 +871,8 @@
     }
     .plans-features-item {
       border-top: 1px solid #e1f1ff;
-      /* font-size: 12px; */
       line-height: 1.5;
-      padding: 15px 0;
+      /* padding: 15px 0; */
     }
     .plans-features-item:last-child {
       border-bottom: 1px solid #e1f1ff;
@@ -828,6 +889,7 @@
       margin: 15px 0;
       padding: 15px 35px;
       text-decoration: none;
+      text-transform: none !important;
       transition: all 150ms ease-in-out;
     }
     /* .plans-button:hover,
@@ -867,7 +929,7 @@
     }
     /*
     ==================================================
-    end plans table style
+    end plans section
     ==================================================
     */
 
@@ -1308,7 +1370,7 @@
         </section>
         </section>
         <!-- free wifi section -->
-        <section class="" id="free-wifi">
+        <section class="slide-style" id="free-wifi">
           <div class="two-columns section-height">
             <div class="inside-two-columns diagonal-color right-items">
               <h1 class="">Free Wi-Fi is important</h1>
@@ -1934,36 +1996,58 @@
                 <div class="panel plans-table">
                   <div class="plans">
                     <img src="../../../images/plans-icons/paper-plane.png" alt="" class="plans-img">
-                    <h2 class="plans-header">Premiere</h2>
+                    <h2 class="plans-header">Power-Up</h2>
                     <ul class="plans-features orange">
-                      <li class="plans-features-item">Custom domains</li>
-                      <li class="plans-features-item">Sleeps after 30 mins of inactivity</li>
+                      <li class="plans-features-item">Wi-Fi Hotspot Setup</li>
+                      <li class="plans-features-item">Branded Splash Page</li>
+                      <li class="plans-features-item">Social Media Integration</li>
+                      <li class="plans-features-item">Post-Login redirection</li>
+                      <li class="plans-features-item">Monthly Analytics</li>
+                      <li class="plans-features-item">24/7 Email Support</li>
+                      <li class="plans-features-item">Free Instalation</li>
                     </ul>
-                    <span class="plans-price orange">50$</span>
-                    <a href="#/" class="plans-button is-orange orange">Subscribe</a>
+                    <!-- <span class="plans-price orange">50$</span> -->
+                    <!-- <a href="#/" class="plans-button is-orange orange">Request a Demo</a> -->
+                    <paper-button id="" class="plans-button is-orange orange" on-tap="scrollToContact" role="button" tabindex="0" aria-disabled="false">
+                      Request a Demo!
+                    </paper-button>
                   </div>
 
                   <div class="plans">
                     <img src="../../../images/plans-icons/plane.png" alt="" class="plans-img">
-                    <h2 class="plans-header">Business</h2>
+                    <h2 class="plans-header">Power-Vast</h2>
                     <ul class="plans-features green">
-                      <li class="plans-features-item">Never sleeps</li>
-                      <li class="plans-features-item">Workers for more powerful apps</li>
+                      <li class="plans-features-item">All Power-Up Benefits</li>
+                      <li class="plans-features-item">Campain Development and Integration</li>
+                      <li class="plans-features-item">Message Targeting</li>
+                      <li class="plans-features-item">Online Reputation Growth</li>
+                      <li class="plans-features-item">Digital Consulting</li>
                     </ul>
-                    <span class="plans-price green">$150</span>
-                    <a href="#/" class="plans-button is-green green">Subscribe</a>
+                    <!-- <span class="plans-price green">$150</span> -->
+                    <!-- <a href="#/" class="plans-button is-green green">Request a Demo</a> -->
+                    <paper-button id="" class="plans-button is-green green" on-tap="scrollToContact" role="button" tabindex="0" aria-disabled="false">
+                      Request a Demo!
+                    </paper-button>
                   </div>
 
                   <div class="plans">
                     <!-- #f5af19 -->
                     <img src="../../../images/plans-icons/space-ship.png" alt="" class="plans-img">
-                    <h2 class="plans-header">Enterprise</h2>
+                    <h2 class="plans-header">Power-Beyond</h2>
                     <ul class="plans-features blue">
-                      <li class="plans-features-item">Dedicated</li>
-                      <li class="plans-features-item">Simple horizontal scalability</li>
+                      <li class="plans-features-item">All Power-Vast Benefits</li>
+                      <li class="plans-features-item">Social Retargeting</li>
+                      <li class="plans-features-item">Triggers & Automations</li>
+                      <li class="plans-features-item">Messenger Bots</li>
+                      <li class="plans-features-item">Newsletter Integration</li>
+                      <li class="plans-features-item">Weekly Analytics</li>
+                      <li class="plans-features-item">Strategy Consulting</li>
                     </ul>
-                    <span class="plans-price blue">$400</span>
-                    <a href="#/" class="plans-button is-blue blue">Subscribe</a>
+                    <!-- <span class="plans-price blue">$400</span> -->
+                    <!-- <a href="#/" class="plans-button is-blue blue">Request a Demo</a> -->
+                    <paper-button id="" class="plans-button is-blue blue" on-tap="scrollToContact" role="button" tabindex="0" aria-disabled="false">
+                      Request a Demo!
+                    </paper-button>
                   </div>
 
                 </div>
@@ -2056,7 +2140,42 @@
                       </div>
                     </div>
                   </section>
+                  <!-- get that power edge section -->
+        <section class="slide-style" id="get-edge">
+          <div class="two-columns section-height">
 
+            <div id="hidden-mobile" class="inside-two-columns building-div"
+              style="width: 75% !important"
+            >
+              <div class="two-columns slide-effect" 
+                style="height: 100%; width: 100%;"
+              >
+                <!-- <div class=""
+                  style="height: 100%; width: 100%;
+                  background: linear-gradient(120deg, transparent 0 80.8%, #4195a3 81.7% 100%);" 
+                ></div> -->
+              </div>
+            </div>
+
+            <div class="inside-two-columns get-edge-diagonal-second  right-items">
+              <h1 class="">Get that power edge</h1>
+              <p class="">With buying Power-Fi you will get the most out of your business by simply offering free Wi-Fi. 
+                We can implement more than 1000 apps into your existing Wi-Fi to transform the Wi-Fi into a powerful 
+                marketing tool. You will get to know your clients better, increase footfall and see your business grow.
+                Dont't hesitate and get that power edge!
+              </p>
+              <p class="orange-edge">
+                <span style="background-color: #e09c1d;">
+                  Try Power-Fi 30 days for free!
+                  Be an early adopter and get 25% off
+                  for the first year with our Power-Beyond plan!
+                </span>
+              </p>
+            </div>
+            
+          </div>
+        </section>
+        <!-- end of get that power edge section -->
                   <section class="home-section" id="contact">
                     <h2 class="section-title">Contact</h2>
                     <div class="contact-wrapper">
