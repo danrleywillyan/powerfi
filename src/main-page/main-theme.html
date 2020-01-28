@@ -302,10 +302,15 @@ Contact style
       }
 
 /* footer */
-      .absolute {
+      .footer-absolute {
         position: absolute;
         bottom: 0;
         z-index: 0;
+      }
+      @media screen and (max-width: 500px){
+        .footer-absolute {
+          position: relative !important;
+        }
       }
 
 /* end footer */
@@ -453,7 +458,7 @@ end Contact style
           z-index: 999999;
         }
         #benefits {
-          height: 750vw !important;
+          height: 780vw !important;
         }
         #features .divider {
           height: 0;

@@ -39,19 +39,18 @@
     */
     app-toolbar.tall { height: calc(100vh - 64px); }
     .slogan {
-      display: inline-flex;
+      display: flex;
       pointer-events: auto;
+      flex-direction: row;
       text-align: center;
       width: 100%;
     }
     .slogan .left {
-      float: left;
       padding-top: 10vh;
       margin-left: 50px;
       width: 70%;
     }
     .slogan .right {
-      float: right;
       width: 35%;
     }
     .slogan h1 {
@@ -118,6 +117,29 @@
     .button > paper-icon-button {
       position:relative;
       bottom: 0;
+    }
+
+    @media screen and (max-width: 500px){
+      .slogan {
+        flex-direction: column;
+      }
+      .slogan p {
+        font-size: small !important;
+      }
+      .slogan .right {
+        display: none !important;
+        visibility: hidden;
+      }
+      .small-logo img {
+        width: 125px !important;
+      }
+      .slogan h1 {
+        font-size: 1em !important;
+        padding-top: 25px;
+      }
+      /* .slogan div {
+        font-size: 1rem !important;
+      } */
     }
 
     /*
@@ -771,7 +793,7 @@
         box-shadow: none !important;
       }
       .background {
-        height: 380vw !important;
+        height: 400vw !important;
       }
       .panel {
         border-radius: none;
@@ -1412,7 +1434,7 @@
               >
                 <p style="width: 30%;">
                   79% of mobile
-                  customers arein uenced by the
+                  customers are infuenced by the
                   availability of free
                   Wi-Fi when deciding
                   where to stop.
@@ -2077,7 +2099,7 @@
                     work are delivering satisfaction for all customers and customer's clients.
                   </p>
                 </div>
-                <div class="right-about-pf">
+                <!-- <div class="right-about-pf">
                   <h4>Our Team</h4>
                   <div class="team-member">
                     <img src="../../images/team/cabrito.jpeg" alt="">
@@ -2101,7 +2123,7 @@
 
                       </div>
 
-                      </div>
+                      </div> -->
                     </div>
                   </section><!-- end about-pf section -->
 
@@ -2177,13 +2199,13 @@
         </section>
         <!-- end of get that power edge section -->
                   <section class="home-section" id="contact">
-                    <h2 class="section-title">Contact</h2>
+                    <h2 class="section-title">Contact Us</h2>
                     <div class="contact-wrapper">
                       <div class="description">
                         <paper-card class="contact-left" elevation="5">
                           <div class="phones-left">
                             <div class="brasil phone border-top">
-                              <iron-image sizing="cover" class="flag" width="100" height="67" src="../../images/flags/br.png"></iron-image>
+                              <iron-image sizing="cover" class="flag" width="80" height="60" src="../../images/flags/br.png"></iron-image>
                               <p class="contact-information">
                                 +55 (61) 99543-2233
                               </p>
@@ -2192,7 +2214,7 @@
                               </a>
                             </div>
                             <div class="netherlands phone border-bottom">
-                              <iron-image sizing="cover" class="flag" width="100" height="67" src="../../images/flags/nl.png"></iron-image>
+                              <iron-image sizing="cover" class="flag" width="80" height="60" src="../../images/flags/eu.png"></iron-image>
                               <p class="contact-information">
                                 +31 (3) 33343-2233
                               </p>
@@ -2221,7 +2243,7 @@
                   </div> <!-- end contact wrapper -->
                 </section><!-- end contact section -->
               </div>
-              <div class="container absolute">
+              <div class="container footer-absolute">
                 <div id="footer">
                   <p>Power-Fi World {{year}}© - All Rights Reserved. Developed by <a href="http://taurus-software.com.br" target="_blank"><strong>Taurus</strong>Software</a>.</p>
                 </div>
