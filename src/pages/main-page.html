@@ -960,6 +960,45 @@
     about-pf section
     ==========================================
     */
+
+    #about-pf h1 {
+      background-color: #4195a3;
+      color: black;
+      margin: 10% 40% 0 0;
+      font-weight: lighter;
+      width: fit-content;
+    }
+
+    #about-pf p {
+      overflow: visible !important;
+      width: 60%;
+      line-height: 4vh;
+      margin-right: 3%;
+      font-weight: 600;
+      text-align: justify;
+      color: black;
+    }
+    .orange-edge {
+      font-weight: 1000 !important;
+      line-height: 5vh !important;
+      font-size: large;
+    }
+
+    @media screen and (max-width: 500px) {
+      #about-pf h1 {
+        font-size: larger;
+      }
+      #about-pf p {
+        font-weight: 300;
+        line-height: 3vh;
+        width: 70%;
+      }
+      #hidden-mobile {
+        visibility: hidden !important;
+        display: none !important;
+      }
+    }
+
     .about-pf-wrapper {
       display: inline-flex;
       margin: 0 3% 0 10%;
@@ -1029,7 +1068,7 @@
         margin: 0 auto 15px auto  !important;
       }
       #our-team {
-        height: 230vw !important;
+        height: 270vw !important;
       }
       .team-member .member-information {
         align-items: center !important;
@@ -2077,8 +2116,41 @@
               <!-- </div> -->
             </section> <!-- end plans section -->
             <section class="home-section" id="about-pf">
-              <h2 class="section-title">About Power Fi</h2>
-              <div class="about-pf-wrapper">
+                <div class="two-columns section-height">
+      
+                  <div id="hidden-mobile" class="inside-two-columns iphone-div"
+                    style="width: 75% !important"
+                  >
+                    <div class="two-columns slide-effect" 
+                      style="height: 100%; width: 100%;"
+                    >
+                    </div>
+                  </div>
+      
+                  <div class="inside-two-columns right-items">
+                    <h1 class="">About Power-Fi</h1>
+                    <p class="">
+                      Power-Fi was born to innovate the online communication of public and private entities, allowing
+                      great penetration and insights into the diverse niches of Internet users, offering Wi-Fi
+                      free in exchange for viewing ads.
+                      <!-- Power-Fi nasceu para inovar a comunicação online de entidades públicas e privadas, permitindo
+                      uma grande penetração e insights nos diversos nichos de usuários de Internet, oferecendo Wi-Fi 
+                      gratuito em troca de visualização de anúncios. -->
+                      <br>
+                      We believe that intelligence is the best tool for the growth and prosperity of
+                      organizations in an increasingly connected world.
+                      <!-- Acreditamos que inteligência é a melhor ferramenta para o crescimento e prosperidade de 
+                      organizações, num mundo cada vez mais conectado. -->
+                    </p>
+                    <!-- <p class="orange-edge">
+                      <span style="background-color: #e09c1d;">
+                        Try Power-Fi 30 days for free!
+                        Be an early adopter and get 25% off
+                        for the first year with our Power-Beyond plan!
+                      </span>
+                    </p> -->
+                  </div>
+              <!-- <div class="about-pf-wrapper">
                 <div class="left-about-pf">
                   <h4>How it started</h4>
                   <p class="short-about-pf">
@@ -2098,7 +2170,7 @@
                     We are able to share wifi the best way you can think, all of our
                     work are delivering satisfaction for all customers and customer's clients.
                   </p>
-                </div>
+                </div> -->
                 <!-- <div class="right-about-pf">
                   <h4>Our Team</h4>
                   <div class="team-member">
@@ -2133,10 +2205,12 @@
                       <div class="team-member">
                         <img src="../../images/team/cabrito.jpeg" alt=""/>
                         <div class="member-information">
-                          <h3>Guilherme Miranda</h3>
-                          <h5>Diretor de Operações</h5>
-                          <p>Trabalha na sede holandesa da IBM. Formado em Engenharia Eletrônica pela Universidade de Brasília, 8ª
-                            melhor universidade da america latina.
+                          <h3>Gabriel</h3>
+                          <h5>CEO & Founder</h5>
+                          <p>
+                            Formado em Gestão Ambiental e com MBA em Gestão de Projetos em andamento. 
+                            Fundou a Empresa Júnior de Gestão Ambiental e a consultoria ambiental TreeTop. 
+                            Foi trainee e analista sênior de novos negócios na multinacional Estre Ambiental.
                           </p>
                           <a href="https://www.linkedin.com/in/guilherme-miranda-picasty-93035a127/" target="_blank" class="linkedin">
                             <h4>Linkedin</h4>
@@ -2148,10 +2222,13 @@
                       <div class="team-member">
                         <img src="../../images/team/cabrito.jpeg" alt="">
                         <div class="member-information">
-                          <h3>Guilherme Miranda</h3>
-                          <h5>Diretor de Operações</h5>
-                          <p>Trabalha na sede holandesa da IBM. Formado em Engenharia Eletrônica pela Universidade de Brasília, 8ª
-                            melhor universidade da america latina.
+                          <h3>Guilherme Picasty</h3>
+                          <h5>Co-Founder</h5>
+                          <p>
+                            Graduado em Engenharia Eletrônica pela UnB e Mestre em Sensor System na 
+                            Hanze University Groningen. Trabalhou na área de microeletrônica, 
+                            sistemas embarcados, machine learning e RPA em startups e grande empresas. 
+                            Atualmente trabalha na IBM e é Co-fundador do Power-Fi.
                           </p>
                           <a href="https://www.linkedin.com/in/guilherme-miranda-picasty-93035a127/" target="_blank" class="linkedin">
                             <h4>Linkedin</h4>
@@ -2207,18 +2284,18 @@
                             <div class="brasil phone border-top">
                               <iron-image sizing="cover" class="flag" width="80" height="60" src="../../images/flags/br.png"></iron-image>
                               <p class="contact-information">
-                                +55 (61) 99543-2233
+                                +55 (61) 9150-7451
                               </p>
-                              <a href="#" class="custom" target="_blank">
+                              <a href="https://api.whatsapp.com/send?phone=556191507451&text=Ol%C3%A1%20Gabriel%2C%20estou%20entrando%20em%20contato%20depois%20de%20ver%20o%20site%20do%20Power-Fi." class="custom" target="_blank">
                                 <iron-image class="" sizing="cover" width="30" height="30" src="../../images/whatsapp-icon.png"></iron-image>
                               </a>
                             </div>
                             <div class="netherlands phone border-bottom">
                               <iron-image sizing="cover" class="flag" width="80" height="60" src="../../images/flags/eu.png"></iron-image>
                               <p class="contact-information">
-                                +31 (3) 33343-2233
+                                +31 (6) 4105-0427
                               </p>
-                              <a href="#" class="custom" target="_blank">
+                              <a href="https://api.whatsapp.com/send?phone=31641050427&text=Hello%20Guilherme%2C%20I%20just%20saw%20the%20powerfi%20website." class="custom" target="_blank">
                                 <iron-image class="" sizing="cover" width="30" height="30" src="../../images/whatsapp-icon.png"></iron-image>
                               </a>
                             </div>
