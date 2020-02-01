@@ -74,7 +74,16 @@
       _submit() {
         if (!this.$.name.value || !this.$.email.value
           || !this.$.message.value) return;
-        this.$.form.submit();
+        // this.$.form.
+        //   submit();
+          var xhr = new XMLHttpRequest();
+          xhr.open("POST", "https://us-central1-powerfi-eu.cloudfunctions.net/sendMail?name="+
+          this.$.name.value
+          +"&senderMail="+this.$.email.value+" ", true);
+          xhr.setRequestHeader('Content-Type', 'application/json');
+          xhr.send(JSON.stringify({
+              message: this.$.message.value
+          }));
       }
     }
     customElements.define(HomeContact.is, HomeContact);
