@@ -32,6 +32,72 @@
     <style include="main-theme"></style>
     <style>
 
+
+
+    /* 
+      =====================================================
+      screens
+      =====================================================
+    */
+    @media screen and (min-width: 400px) and (max-width: 550px) {
+      .background {
+        height: 350vw !important;
+      }
+      #powerfi {
+        height: 135vh !important;
+      }
+      #benefits {
+        height: 700vw !important;
+      }
+      #features {
+        height: 460vw !important;
+      }
+      .background {
+        height: 360vw !important;
+      }
+      #about-pf {
+        height: 70vw !important;
+      }
+      #get-edge {
+        height: 130vw !important;
+      }
+      #our-team {
+        height: 250vw !important;
+      }
+    }
+    @media screen and (max-width: 400px) {
+      #powerfi {
+        height: 280vw !important;
+      }
+      #product {
+        height: 355vw !important;
+      }
+      #features {
+        height: 550vw !important;
+      }
+      .background {
+        height: 400vw !important;
+      }
+      #about-pf {
+        height: 90vw !important;
+      }
+      #our-team {
+        height: 270vw !important;
+      }
+      #benefits {
+        height: 780vw !important;
+      }
+      #get-edge {
+        height: 170vw !important;
+      }
+    }
+
+    /* 
+      =====================================================
+      end screens
+      =====================================================
+    */
+
     /*
     ==========================================================
     home section
@@ -104,7 +170,7 @@
       margin-left: 25px;
     }
     .logo_tab > img {
-      margin-top: 15px;
+      margin-top: 35px;
       margin-left: 8px;
       height: auto;
       width:100px;
@@ -178,10 +244,6 @@
       }
       .powerfi-business {
         width: 100% !important;
-      }
-      #powerfi {
-      /* display: inline-flex; */
-        height: 165vh !important;
       }
       .information-card {
         width: 100% !important;
@@ -352,6 +414,10 @@
       font-size: large;
     }
 
+    .right-items-edge {
+      align-items: flex-end;
+    }
+
     @media screen and (max-width: 500px) {
       #get-edge h1 {
         font-size: larger;
@@ -364,6 +430,9 @@
       #hidden-mobile {
         visibility: hidden !important;
         display: none !important;
+      }
+      .right-items-edge {
+        align-items: center ;
       }
     }
 
@@ -382,7 +451,6 @@
     @media screen and (max-width: 500px) {
       #product {
         border-top: 4px solid var(--default-artist-color);
-        height: 355vw !important;
       }
       .how-it-works .block {
         flex-direction: column;
@@ -708,10 +776,7 @@
     }
 
     @media screen and (max-width: 500px) {
-      #features {
-        /* border-top: 4px solid var(--default-collection-color); */
-        height: 550vw !important;
-      }
+      
       #features {
         border-top: 4px solid var(--default-project-color);
       }
@@ -792,9 +857,6 @@
         flex-direction: column !important;
         height: 400vw;
         box-shadow: none !important;
-      }
-      .background {
-        height: 400vw !important;
       }
       .panel {
         border-radius: none;
@@ -994,6 +1056,7 @@
         line-height: 3vh;
         width: 70%;
       }
+      
       #hidden-mobile {
         visibility: hidden !important;
         display: none !important;
@@ -1068,9 +1131,7 @@
         width: 60% !important;
         margin: 0 auto 15px auto  !important;
       }
-      #our-team {
-        height: 270vw !important;
-      }
+      
       .team-member .member-information {
         align-items: center !important;
       }
@@ -1299,11 +1360,6 @@
         width: 100vw;
         top: 0;
         left: 0;
-      }
-      #about-pf {
-        /* border-top: 4px solid var(--default-project-color); */
-        height: calc(100vh - 134px);
-        background-size: 100vw 100vh;
       }
       #features {
         /* height: calc(100vh - 134px); */
@@ -2116,7 +2172,7 @@
               </div>
               <!-- </div> -->
             </section> <!-- end plans section -->
-            <section class="home-section" id="about-pf">
+            <section class="" id="about-pf">
                 <div class="two-columns section-height">
       
                   <div id="hidden-mobile" class="inside-two-columns iphone-div"
@@ -2128,7 +2184,7 @@
                     </div>
                   </div>
       
-                  <div class="inside-two-columns right-items">
+                  <div class="inside-two-columns right-items-edge">
                     <h1 class="">About Power-Fi</h1>
                     <p class="">
                       Power-Fi was born to innovate the online communication of public and private entities, allowing
@@ -2257,7 +2313,7 @@
               </div>
             </div>
 
-            <div class="inside-two-columns get-edge-diagonal-second  right-items">
+            <div class="inside-two-columns get-edge-diagonal-second  right-items-edge">
               <h1 class="">Get that power edge</h1>
               <p class="">With buying Power-Fi you will get the most out of your business by simply offering free Wi-Fi. 
                 We can implement more than 1000 apps into your existing Wi-Fi to transform the Wi-Fi into a powerful 
