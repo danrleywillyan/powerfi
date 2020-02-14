@@ -9,6 +9,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 -->
 
 <link rel="import" href="../../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../../bower_components/paper-tabs/paper-tabs.html">
 <link rel="import" href="../../bower_components/app-layout/app-drawer/app-drawer.html">
 <link rel="import" href="../../bower_components/app-layout/app-drawer-layout/app-drawer-layout.html">
 <link rel="import" href="../../bower_components/app-layout/app-header/app-header.html">
@@ -92,15 +93,22 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       <app-drawer id="drawer" slot="drawer">
         <app-toolbar>Menu</app-toolbar>
         <iron-selector selected="[[page]]" attr-for-selected="name" class="drawer-list" role="navigation">
-          <a name="powerfi" href="[[rootPath]]powerfi">Power-Fi</a>
-          <a name="freewifi" href="[[rootPath]]freewifi">Free Wifi</a>
-          <a name="product" href="[[rootPath]]#product">How it Works</a>
+          <a name="powerfi" href="#powerfi">Power-Fi</a>
+          <!-- <a onclick="()" href="javascript:void(0);">Contact Us</a> -->
+          <a name="freewifi" href="[[rootPath]]#freewifi">Free Wifi</a>
+          <a name="product" href="#product">How it Works</a>
           <a name="benefits" href="[[rootPath]]benefits">Benefits</a>
           <a name="features" href="[[rootPath]]features">Features</a>
           <a name="plans" href="[[rootPath]]plans">Plans</a>
           <a name="about-us" href="[[rootPath]]about-us">About PF</a>
           <a name="our-team" href="[[rootPath]]about-us">Our Team</a>
           <a name="contact" href="[[rootPath]]contact">Contact</a>
+          <!-- <paper-tab id="features" on-tap="tabAnchor">
+            Features
+          </paper-tab>
+          <paper-tab id="plans" on-tap="tapAnchor">
+            plans
+          </paper-tab> -->
         </iron-selector>
       </app-drawer>
 
@@ -116,7 +124,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         <!-- <artist-page name="artist" route={{route}}></artist-page>
         <collection-page name="collection" route={{route}}></collection-page> -->
       </iron-pages>
-      <paper-icon-button icon="milton:menu" drawer-toggle></paper-icon-button>
+
+      <!-- icone de menu responsivo -->
+      <!-- <paper-icon-button icon="milton:menu" drawer-toggle></paper-icon-button> -->
     </app-drawer-layout>
 
   </template>
@@ -163,6 +173,25 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           this.$.drawer.close();
         }
       }
+
+      // tapAnchor(e) {
+      //   this.dispatchEvent(new CustomEvent('tab-changed', { detail: {tapped: e.target.id } }));
+      //   console.log("app-shell log");
+        
+      // }
+      // scrollToFeatures(e) {
+      //   console.log(">>>>>>> scroll", e);
+      //   // if(!e.detail.tapped) 
+      //   e.detail.tapped="features";
+      //   const tab = this.$[e.detail.tapped];
+      //   console.log(tab.offsetTop)
+      //   if(!tab) return;
+      //   window.scroll({
+      //     behavior: 'smooth',
+      //     left: 0,
+      //     top: tab.offsetTop
+      //   });
+      // }
 
       _pageChanged(page) {
         // Load page import on demand. Show 404 page if fails

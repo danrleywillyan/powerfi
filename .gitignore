@@ -4,3 +4,4 @@ node_modules/
 ubuntu*
 Vagrantfile
 bower_components*
+.firebase*
