@@ -50,7 +50,7 @@
         height: 140vh !important;
       }
       #benefits {
-        height: 680vw !important;
+        height: 630vw !important;
       }
       #features {
         height: 460vw !important;
@@ -74,6 +74,10 @@
       #features > .section-title::after {
         margin: 55px 40% 2% 40% !important;
       }
+      .benefits paper-card {
+        width: 100% !important;
+        height: 65vw !important;
+      }
     }
     @media screen and (max-width: 400px) {
       #powerfi {
@@ -95,7 +99,7 @@
         height: 270vw !important;
       }
       #benefits {
-        height: 680vw !important;
+        height: 760vw !important;
       }
       #get-edge {
         height: 170vw !important;
@@ -106,6 +110,10 @@
       }
       #features > .section-title::after {
         margin: 90px 40% 2% 40% !important;
+      }
+      .benefits paper-card {
+        width: 100% !important;
+        height: 80vw !important;
       }
     }
 
@@ -367,21 +375,26 @@
     */
 
     #free-wifi h1 {
-      background-color: white;
-      color: black;
-      margin: 10% 40% 0 0;
-      font-weight: lighter;
+      /* background-color: white; */
+      color: #303030;
+      margin: 10% 15% 0 0;
+      font-weight: bold;
+      font-size: 2.0rem;
       width: fit-content;
     }
 
     #free-wifi p {
       overflow: visible !important;
+      color: #505050;
       width: 60%;
       line-height: 4vh;
       margin-right: 3%;
       font-weight: 600;
       text-align: justify;
     }
+    /* #free-wifi .paragraph-grey {
+      color: lightgray;
+    } */
 
     @media screen and (max-width: 500px) {
       #free-wifi h1 {
@@ -409,26 +422,47 @@
     */
 
     #get-edge h1 {
-      background-color: #4195a3;
-      color: black;
+      /* background-color: #4195a3; */
+      color: #42505a;
       margin: 10% 40% 0 0;
-      font-weight: lighter;
       width: fit-content;
+      font-weight: bold;
+      font-size: 2.1rem;
     }
 
     #get-edge p {
       overflow: visible !important;
       width: 60%;
       line-height: 4vh;
-      margin-right: 3%;
-      font-weight: 600;
+      margin-right: 35%;
+      /* font-weight: 600; */
       text-align: justify;
       color: black;
     }
     .orange-edge {
+      position: relative;
+      /* animation-timing-function: ease-in; */
       font-weight: 1000 !important;
       line-height: 5vh !important;
       font-size: large;
+      animation: slide 5s infinite linear;
+    }
+    @keyframes slide {
+      0% {
+        top: 00px;
+      }
+      25% {
+        top: 10px;
+      }
+      50% {
+        top: 20px;
+      }
+      75% {
+        top: 10px;
+      }
+      100% {
+        top: 0px;
+      }
     }
 
     .right-items-edge {
@@ -596,10 +630,6 @@
         width: 90% !important;
         background: none !important;
       }
-      .benefits paper-card {
-        width: 100% !important;
-        height: 70vw !important;
-      }
     }
 
     .white{
@@ -714,6 +744,7 @@
     }
     .benefits-information {
       padding: 0 5% 5px 5%;
+      font-family: 'Comfortaa', cursive !important;
     }
 
     /*
@@ -911,7 +942,7 @@
       /* justify-content: center; */
     }
     .plans-table * {
-      text-align: center;
+      text-align: start !important;
     }
     .plans {
       display: flex;
@@ -945,6 +976,8 @@
       font-weight: 600;
       letter-spacing: 1px;
       font-size: large !important;
+      margin-bottom: 10px !important;
+      text-align: center !important;
     }
     .plans-features {
       font-weight: 600;
@@ -986,6 +1019,7 @@
     .plans-button {
       border-radius: 10px;
       color: var(--default-benefits-color);
+      text-align: center !important;
       display: inline-block;
       margin: 15px 0;
       padding: 15px 35px;
@@ -1041,10 +1075,11 @@
     */
 
     #about-pf h1 {
-      background-color: #4195a3;
-      color: black;
+      /* background-color: #4195a3; */
+      color: #42505a;
       margin: 10% 40% 0 0;
-      font-weight: lighter;
+      font-weight: bold;
+      font-size: 2.5rem;
       width: fit-content;
     }
 
@@ -1052,10 +1087,11 @@
       overflow: visible !important;
       width: 60%;
       line-height: 4vh;
-      margin-right: 3%;
-      font-weight: 600;
+      margin-right: 35%;
+      /* font-weight: 600; */
       text-align: justify;
       color: black;
+      
     }
     .orange-edge {
       font-weight: 1000 !important;
@@ -1200,7 +1236,7 @@
     .member-information p {
       margin: 0 0 0 0;
       line-height: 1.4 !important;
-      font-family: 'Playfair Display', serif !important;
+      /* font-family: 'Playfair Display', serif !important; */
       color: black;
       text-align: justify;
       font-size: small;
@@ -1211,16 +1247,16 @@
       line-height: 0.6;
       margin-bottom: 4%;
       margin-top: 2%;
-      font-family: 'Playfair Display', serif !important;
+      /* font-family: 'Playfair Display', serif !important; */
     }
     .team-member h5 {
       line-height: 0.5;
       margin-bottom: 4%;
       margin-top: 2%;
-      font-family: 'Playfair Display', serif !important;
+      /* font-family: 'Playfair Display', serif !important; */
     }
     .team-member .title p {
-      font-family: 'Playfair Display', serif !important;
+      /* font-family: 'Playfair Display', serif !important; */
     }
     .team-member:hover > img {
       -moz-transform: perspective(1.1) scale3d(1.1, 1.1, 1.1);
@@ -1233,7 +1269,7 @@
       flex-direction: row;
       /* margin: 0 auto; */
       text-decoration: none;
-      font-family: 'Playfair Display', serif !important;
+      /* font-family: 'Playfair Display', serif !important; */
       color: black;
     }
     .linkedin:hover {
@@ -1550,7 +1586,7 @@
               <div class="two-columns" 
                 style="height: 50%; padding-top: 10%; align-items: flex-start; justify-content: center; display: inline-flex !important;"
               >
-                <p style="width: 30%;">
+                <p style="width: 30%; color: lightgray;">
                   79% of mobile
                   customers are infuenced by the
                   availability of free
@@ -1572,7 +1608,7 @@
                   sizing="contain" class=""
                   src="../../images/charts/80chart.png">
                 </iron-image>
-                <p style="width: 30%;">
+                <p style="width: 30%; color: lightgray;">
                   80% of
                   people prefer
                   connecting to
@@ -1776,7 +1812,7 @@
                       <div class="benefits-information">
                         Get the best view of who your customers
                         are and how they interact with your brand in
-                        order to offer a personalized and e cient
+                        order to offer a personalized and efficient
                         experience.
                       </div>
                     </span>
