@@ -43,11 +43,14 @@
       .background {
         height: 350vw !important;
       }
+      #product {
+        height: 355vw !important;
+      }
       #powerfi {
-        height: 135vh !important;
+        height: 140vh !important;
       }
       #benefits {
-        height: 700vw !important;
+        height: 680vw !important;
       }
       #features {
         height: 460vw !important;
@@ -64,6 +67,13 @@
       #our-team {
         height: 250vw !important;
       }
+      .container > section.home-section .section-title {
+        font-size: 1.6rem;
+        margin: 10px 20px 50px 20px !important;
+      }
+      #features > .section-title::after {
+        margin: 55px 40% 2% 40% !important;
+      }
     }
     @media screen and (max-width: 400px) {
       #powerfi {
@@ -73,7 +83,7 @@
         height: 355vw !important;
       }
       #features {
-        height: 550vw !important;
+        height: 530vw !important;
       }
       .background {
         height: 400vw !important;
@@ -85,10 +95,17 @@
         height: 270vw !important;
       }
       #benefits {
-        height: 780vw !important;
+        height: 680vw !important;
       }
       #get-edge {
         height: 170vw !important;
+      }
+      .container > section.home-section .section-title {
+        font-size: 1.6rem;
+        margin: 10px 20px 50px 20px !important;
+      }
+      #features > .section-title::after {
+        margin: 90px 40% 2% 40% !important;
       }
     }
 
@@ -581,7 +598,7 @@
       }
       .benefits paper-card {
         width: 100% !important;
-        height: 300px !important;
+        height: 70vw !important;
       }
     }
 
@@ -801,7 +818,6 @@
       #features > .section-title::after {
         height: 11px;
         left: 0;
-        margin: 75px 40% 2% 40% !important;
         position: absolute;
         /* right: 0;
         bottom: 0; */
@@ -1315,6 +1331,12 @@
     }
     paper-button.disabled {
       filter: grayscale(100%);
+    }
+
+    @media screen and (min-width: 500px) {
+      .custom {
+        pointer-events: none;
+      }
     }
 
     /*
