@@ -1,7 +1,7 @@
 {
-  "name": "MIlton Ribeiro",
-  "short_name": "Milton Ribeiro",
-  "description": "Plataforma web do artista Milton Ribeiro",
+  "name": "Power-Fi",
+  "short_name": "Power-Fi",
+  "description": "Power up your business",
   "icons": [
     {
       "src": "images/manifest/icon-192x192.png",
