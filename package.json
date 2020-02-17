@@ -14,6 +14,7 @@
   },
   "dependencies": {
     "bower": "^1.8.8",
-    "polymer-cli": "^1.9.9"
+    "polymer-cli": "^1.9.9",
+    "require": "^2.4.20"
   }
 }
