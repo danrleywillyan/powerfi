@@ -657,12 +657,16 @@ end Contact style
       margin-top: 30px;
     }
     .small-logo > img {
+      height: auto;
+      width: 175px;
+      margin-left: 25px;
+    }
+    .small-logo {
       position: absolute;
       top: 0;
       left: 0;
       height: auto;
-      width:175px;
-      margin-left: 25px;
+      display: flex;
     }
     div.logo_tab > img {
       margin-top: 35px;
@@ -672,12 +676,20 @@ end Contact style
     }
 
     .locale_bar {
-      /* display: flex; */
-      
+      display: flex;
+      margin-left: 25px;
     }
 
     .locale_bar div paper-button img {
-      height: 25px;
+      height: 45px;
+      width: 15vw !important;
+    }
+    .locale_bar div paper-button {
+      height: 45px;
+      width: 15vw;
+      margin: auto 0 !important;
+      padding: 0 !important;
+      min-width: 10vw !important;
     }
 
     .button paper-button#more {
