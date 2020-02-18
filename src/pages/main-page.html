@@ -133,7 +133,9 @@
           <div class="two-columns section-height">
             <div class="inside-two-columns diagonal-color right-items">
               <h1 class="">[[ locales.free_wifi.title.value ]]</h1>
-              <p class="">[[ locales.free_wifi.top_left_text.value ]]
+              <p class="">[[ locales.free_wifi.top_left_text.value1 ]]
+                <br>
+                [[ locales.free_wifi.top_left_text.value2 ]]
               </p>
               <div style="width: 65%; height: 47px; border-bottom: 4px solid #4195a3; position: relative; margin-right: 5px;"></div>
               <div class="two-columns" 
@@ -633,24 +635,26 @@
               <div class="inside-two-columns right-items-edge">
                 <h1 class="">[[ locales.about_pf.title.value ]]</h1>
                 <p class="">
-                  [[ locales.about_pf.text.value ]]
+                  [[ locales.about_pf.text.value1 ]]
+                  <br>
+                  [[ locales.about_pf.text.value2 ]]
                 </p>
               </div>
               </div>
         </section>
         <!-- end about-pf section -->
         <section class="home-section" id="our-team">
-          <h2 class="section-title">Our Team</h2>
+          <h2 class="section-title">[[ locales.our_team.title.value ]]</h2>
           <div class="our-team-wrapper">
             <div class="team-member">
               <img src="../../images/team/cabrito.jpeg" alt=""/>
               <div class="member-information">
                 <h3>Gabriel Montenegro</h3>
-                <h5>CEO & Founder</h5>
-                <p>
-                  Formado em Gestão Ambiental e com MBA em Gestão de Projetos em andamento. 
-                  Fundou a Empresa Júnior de Gestão Ambiental e a consultoria ambiental TreeTop. 
-                  Foi trainee e analista sênior de novos negócios na multinacional Estre Ambiental.
+                <h5>
+                  [[ locales.our_team.bx1Text1.value ]]
+                </h5>
+                <p style="overflow: visible;">
+                  [[ locales.our_team.bx1Description.value ]]
                 </p>
                 <a href="https://www.linkedin.com/in/guilherme-miranda-picasty-93035a127/" target="_blank" class="linkedin">
                   <h4>Linkedin</h4>
@@ -663,12 +667,11 @@
               <img src="../../images/team/cabrito.jpeg" alt="">
               <div class="member-information">
                 <h3>Guilherme Picasty</h3>
-                <h5>Co-Founder</h5>
-                <p>
-                  Graduado em Engenharia Eletrônica pela UnB e Mestre em Sensor System na 
-                  Hanze University Groningen. Trabalhou na área de microeletrônica, 
-                  sistemas embarcados, machine learning e RPA em startups e grande empresas. 
-                  Atualmente trabalha na IBM e é Co-fundador do Power-Fi.
+                <h5>
+                  [[ locales.our_team.bx2Text1.value ]]
+                </h5>
+                <p style="overflow: visible;">
+                  [[ locales.our_team.bx2Description.value ]]
                 </p>
                 <a href="https://www.linkedin.com/in/guilherme-miranda-picasty-93035a127/" target="_blank" class="linkedin">
                   <h4>Linkedin</h4>
@@ -697,17 +700,15 @@
             </div>
 
             <div class="inside-two-columns get-edge-diagonal-second  right-items-edge">
-              <h1 class="">Get that power edge</h1>
-              <p class="">With buying Power-Fi you will get the most out of your business by simply offering free Wi-Fi. 
-                We can implement more than 1000 apps into your existing Wi-Fi to transform the Wi-Fi into a powerful 
-                marketing tool. You will get to know your clients better, increase footfall and see your business grow.
-                Dont't hesitate and get that power edge!
+              <h1 class="">[[ locales.get_edge.title.value ]]</h1>
+              <p class="">
+                [[ locales.get_edge.text1.value1 ]]
+                <br>
+                [[ locales.get_edge.text1.value2 ]]
               </p>
               <p class="orange-edge">
                 <span style="background-color: #e09c1d;">
-                  Try Power-Fi 30 days for free!
-                  Be an early adopter and get 25% off
-                  for the first year with our Power-Beyond plan!
+                  [[ locales.get_edge.text2.value ]]
                 </span>
               </p>
             </div>
@@ -723,21 +724,21 @@
                 <div class="phones-left">
                   <div class="brasil phone border-top">
                     <iron-image sizing="cover" class="flag" width="80" height="60" src="../../images/flags/br.png"></iron-image>
-                    <p class="contact-information">
+                    <!-- <p class="contact-information">
                       +55 (61) 9150-7451
                     </p>
                     <a href="https://api.whatsapp.com/send?phone=556191507451&text=Ol%C3%A1%20Gabriel%2C%20estou%20entrando%20em%20contato%20depois%20de%20ver%20o%20site%20do%20Power-Fi." class="custom" target="_blank">
                       <iron-image class="" sizing="cover" width="30" height="30" src="../../images/whatsapp-icon.png"></iron-image>
-                    </a>
+                    </a> -->
                   </div>
                   <div class="netherlands phone border-bottom">
                     <iron-image sizing="cover" class="flag" width="80" height="60" src="../../images/flags/eu.png"></iron-image>
-                    <p class="contact-information">
+                    <!-- <p class="contact-information">
                       +31 (6) 4105-0427
                     </p>
                     <a href="https://api.whatsapp.com/send?phone=31641050427&text=Hello%20Guilherme%2C%20I%20just%20saw%20the%20powerfi%20website." class="custom" target="_blank">
                       <iron-image class="" sizing="cover" width="30" height="30" src="../../images/whatsapp-icon.png"></iron-image>
-                    </a>
+                    </a> -->
                   </div>
                 </div>
 
@@ -882,7 +883,8 @@
                   value: "Wi-Fi grátis é importante",
               },
               top_left_text: {
-                  value: "30% dos consumidores disseram que têm mais probabilidade de retornar a uma loja que oferece uma experiência Wi-Fi perfeita. Ao usar estratégias de redirecionamento ou campanhas de acompanhamento automatizadas no Wi-Fi, uma empresa pode informar os clientes sobre promoções, vendas ou descontos futuros, para incentivá-los a visitar com mais frequência.",
+                  value1: "30% dos consumidores disseram que têm mais probabilidade de retornar a uma loja que oferece uma experiência Wi-Fi perfeita.",
+                  value2: "Ao usar estratégias de redirecionamento ou campanhas de acompanhamento automatizadas no Wi-Fi, uma empresa pode informar os clientes sobre promoções, vendas ou descontos futuros, para incentivá-los a visitar com mais frequência."
               },
               top_right_text: {
                   value: "79% dos clientes móveis são influenciados pela disponibilidade de Wi-Fi gratuito ao decidir por onde parar.",
@@ -1161,7 +1163,8 @@
                   value: "Sobre Power-Fi",
               },
               text: {
-                  value: "A Power-Fi nasceu para inovar a comunicação on-line de entidades públicas e privadas, permitindo grande penetração e insights nos diversos nichos de usuários da Internet, oferecendo Wi-Fi gratuito em troca da visualização de anúncios. Acreditamos que a inteligência é a melhor ferramenta para o crescimento e a prosperidade das organizações em um mundo cada vez mais conectado.",
+                  value1: "A Power-Fi nasceu para inovar a comunicação on-line de entidades públicas e privadas, permitindo grande penetração e insights nos diversos nichos de usuários da Internet, oferecendo Wi-Fi gratuito em troca da visualização de anúncios.",
+                  value2: "Acreditamos que a inteligência é a melhor ferramenta para o crescimento e a prosperidade das organizações em um mundo cada vez mais conectado.",
               }
           },
 
@@ -1169,20 +1172,27 @@
               title: {
                   value: "Nosso Time",
               },
-              text1: {
+              bx1Text1: {
                   value: "CEO & Fundador",
               },
-              text2: {
+              bx1Description: {
+                  value: "Formado em Gestão Ambiental e com MBA em Gestão de Projetos em andamento. Fundou a Empresa Júnior de Gestão Ambiental e a consultoria ambiental TreeTop. Foi trainee e analista sênior de novos negócios na multinacional Estre Ambiental.",
+              },
+              bx2Text1: {
                   value: "Cofundador",
+              },
+              bx2Description: {
+                  value: "Graduado em Engenharia Eletrônica pela UnB e Mestre em Sensor System na Hanze University Groningen. Trabalhou na área de microeletrônica, sistemas embarcados, machine learning e RPA em startups e grande empresas. Atualmente trabalha na IBM e é Co-fundador do Power-Fi.",
               }
           },
 
           get_edge: {
               title: {
-                  value: "Obtenha essa vantagem",
+                  value: "Tenha essa vantagem", //Conquiste Vantagem , obtenha vantagem, Passe na frente
               },
               text1: {
-                  value: "Ao comprar o Power-Fi, você aproveitará ao máximo seus negócios oferecendo simplesmente Wi-Fi gratuito. Podemos implementar mais de 1000 aplicativos no seu Wi-Fi existente para transformar o Wi-Fi em uma poderosa ferramenta de marketing. Você conhecerá melhor seus clientes, aumentará a visibilidade e verá seus negócios crescerem. Não hesite e obtenha essa vantagem!",
+                  value1: "Ao comprar o Power-Fi, você aproveitará ao máximo seus negócios oferecendo simplesmente Wi-Fi gratuito. Podemos implementar mais de 1000 aplicativos no seu Wi-Fi existente para transformar o Wi-Fi em uma poderosa ferramenta de marketing.",
+                  value2: "Você conhecerá melhor seus clientes, aumentará a visibilidade e verá seus negócios crescerem. Não hesite e obtenha essa vantagem!"
               },
               text2: {
                   value: "Experimente o Power-Fi por 30 dias gratuitamente! Seja um dos primeiros a adotar e ganhe 25% de desconto no primeiro ano com o nosso plano Power-Beyond!",
@@ -1299,7 +1309,8 @@
                   value: "Free Wi-Fi is important"
               },
               top_left_text: {
-                  value: "30% of the consumers said that they are more likely to return to a store that offer a seamless Wi-Fi experience. By using retargeting stategies or automated follow up campaigns in the WiFi, a business can inform customers about upcoming promotions, sales or discounts to entice them to visit more frequently."
+                  value1: "30% of the consumers said that they are more likely to return to a store that offer a seamless Wi-Fi experience.",
+                  value2: "By using retargeting stategies or automated follow up campaigns in the WiFi, a business can inform customers about upcoming promotions, sales or discounts to entice them to visit more frequently."
               },
               top_right_text: {
                   value: "79% of mobile customers are infuenced by the availability of free Wi-Fi when deciding where to stop."
@@ -1578,19 +1589,26 @@
                   value: "About Power-Fi"
               },
               text: {
-                  value: "Power-Fi was born to innovate the online communication of public and private entities, allowing great penetration and insights into the diverse niches of Internet users, offering Wi-Fi free in exchange for viewing ads. We believe that intelligence is the best tool for the growth and prosperity of organizations in an increasingly connected world. "
+                  value1: "Power-Fi was born to innovate the online communication of public and private entities, allowing great penetration and insights into the diverse niches of Internet users, offering Wi-Fi free in exchange for viewing ads.",
+                  value2: "We believe that intelligence is the best tool for the growth and prosperity of organizations in an increasingly connected world. "
               }
           },
 
           our_team: {
               title: {
-                  value: "Our Team"
+                  value: "Our Team",
               },
-              text1: {
-                  value: "CEO & Founder"
+              bx1Text1: {
+                  value: "CEO & Founder",
               },
-              text2: {
-                  value: "Co-Founder"
+              bx1Description: {
+                  value: "Graduated in Environmental Management and with an MBA in Project Management in progress. He founded the Junior Environmental Management Company and the TreeTop environmental consultancy. He was a trainee and senior new business analyst at the multinational Estre Ambiental.",
+              },
+              bx2Text1: {
+                  value: "Co-Founder",
+              },
+              bx2Description: {
+                  value: "Graduated in Electronic Engineering by UnB and Master in Sensor System at Hanze University Groningen. He worked in the area of microelectronics, embedded systems, machine learning and RPA in startups and large companies. He currently works at IBM and is a co-founder of Power-Fi.",
               }
           },
 
@@ -1599,7 +1617,8 @@
                   value: "Get that power edge"
               },
               text1: {
-                  value: "With buying Power-Fi you will get the most out of your business by simply offering free Wi-Fi. We can implement more than 1000 apps into your existing Wi-Fi to transform the Wi-Fi into a powerful marketing tool. You will get to know your clients better, increase footfall and see your business grow. Dont't hesitate and get that power edge!"
+                  value1: "With buying Power-Fi you will get the most out of your business by simply offering free Wi-Fi. We can implement more than 1000 apps into your existing Wi-Fi to transform the Wi-Fi into a powerful marketing tool.",
+                  value2: "You will get to know your clients better, increase footfall and see your business grow. Dont't hesitate and get that power edge!"
               },
               text2: {
                   value: "Try Power-Fi 30 days for free! Be an early adopter and get 25% off for the first year with our Power-Beyond plan!"
