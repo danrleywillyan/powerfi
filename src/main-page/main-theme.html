@@ -163,7 +163,7 @@
           height: 100vh;
         }
         .section-height {
-          height: auto;
+          height: 100%;
         }
       }
 
@@ -1014,7 +1014,11 @@ end Contact style
       } */
       .how-it-works .block {
         flex-direction: column;
-        /* height: 50% !important; */
+        height: 50% !important;
+      }
+      .how-it-works .benefits-block {
+        flex-direction: column;
+        height: 30% !important;
       }
       .how-it-works-card iron-image {
         height: 60% !important;
@@ -1036,12 +1040,17 @@ end Contact style
     .how-it-works {
       margin: 0 5%;
       flex-direction: column;
-      height: 100%;
+      /* height: 100%; */
     }
     .how-it-works .block{
       display: flex;
       justify-content: space-between;
-      height: 50%;
+      height: 40%;
+    }
+    .how-it-works .benefits-block{
+      display: flex;
+      justify-content: space-between;
+      height: 40%;
     }
     .how-it-works-center {
       margin: 0 0;
@@ -1150,7 +1159,8 @@ end Contact style
       /* border-top: 4px solid var(--default-project-color); */
       /* height: fit-content; */
       /* background: linear-gradient(to bottom, white 17%, transparent 30%) repeat scroll 0 0 , url("../../images/bg3.jpg"); */
-      background-size: 100vw;
+      /* background-size: 100vw; */
+      height: 130vh;
     }
 
     .benefits {
