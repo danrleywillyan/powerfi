@@ -534,7 +534,7 @@ end Contact style
         height: 130vw !important;
       }
       #our-team {
-        height: 250vw !important;
+        height: 300vw !important;
       }
       .container > section.home-section .section-title {
         font-size: 1.6rem;
@@ -566,7 +566,7 @@ end Contact style
         height: 90vw !important;
       }
       #our-team {
-        height: 295vw !important;
+        height: 350vw !important;
       }
       #benefits {
         height: 760vw !important;
@@ -681,14 +681,14 @@ end Contact style
 
     .locale_bar div paper-button img {
       height: 45px;
-      width: 100px !important;
+      width: 80px !important;
     }
     .locale_bar div paper-button {
       height: 45px;
-      width: 100px;
+      width: 80px;
       margin: auto 0 !important;
       padding: 0 !important;
-      min-width: 10vw !important;
+      min-width: 3vw !important;
     }
     @media screen and (max-width: 500px){
       .translation-flag {
@@ -702,9 +702,9 @@ end Contact style
       }
     }
     .translation-flag {
-        width: 100px;
-        margin: auto 0 0 2vw;
-      }
+      width: 80px;
+      margin: auto 0 0 0;
+    }
 
     .button paper-button#more {
       border-radius: 30px;
@@ -1710,7 +1710,9 @@ end Contact style
 
     @media screen and (max-width: 500px) {
       .our-team-wrapper {
-        width: 100%;
+        width: 70%;
+        flex-direction: column !important;
+        margin: 0 !important;
       }
       .team-member {
         flex-direction: column !important;
@@ -1723,6 +1725,7 @@ end Contact style
       
       .team-member .member-information {
         align-items: center !important;
+        padding: 0 !important;
       }
       .member-information p {
         font-size: medium !important;
@@ -1732,7 +1735,7 @@ end Contact style
     .our-team-wrapper {
       width: 80%;
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
       margin: 0 auto;
     }
 
@@ -1740,18 +1743,19 @@ end Contact style
       width: 100%;
       height: 30%;
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
       border-radius: 0 0 15px 15px;
-      margin-bottom: 50px;
+      margin: 50px;
     }
     .team-member > img {
-      width: 20%;
+      width: 40%;
       -moz-transition: all, 0.5s;
       -o-transition: all, 0.5s;
       -webkit-transition: all, 0.5s;
       transition: all, 0.5s;
       filter: grayscale(100%);
       border-radius: 50%;
+      margin: auto auto 5% auto;
     }
     .team-member:hover > img {
       filter: grayscale(0%);
@@ -1799,7 +1803,7 @@ end Contact style
       -moz-transform: perspective(1.1) scale3d(1.1, 1.1, 1.1);
       -webkit-transform: perspective(1.1) scale3d(1.1, 1.1, 1.1);
       transform: perspective(1.1) scale3d(1.1, 1.1, 1.1);
-      margin: 0 auto;
+      margin: margin: auto auto 5% auto;;
     }
     .linkedin {
       display: flex;
