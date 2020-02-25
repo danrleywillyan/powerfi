@@ -120,6 +120,65 @@
         /* border: 1px solid #f1f1f1; */
         perspective: 1000px; /* Remove this if you don't want the 3D effect */
       }
+      @keyframes show-flip {
+        0% {
+          transform: rotateY(0deg);
+          transform-style: preserve-3d;
+          /* transition: transform 0.8s; */
+          /* transform-style: preserve-3d; */
+          /* perspective: 1000px; */
+        }
+        25% {
+          transform: rotateY(90deg);
+          transform-style: preserve-3d;
+          /* backface-visibility: hidden; */
+          /* transform: rotateY(180deg);
+          transform-style: preserve-3d; */
+        }
+        50% {
+          transform: rotateY(180deg);
+          transform-style: preserve-3d;
+        }
+        75% {
+          transform: rotateY(90deg);
+          transform-style: preserve-3d;
+        }
+        100% {
+          transform: rotateY(0deg);
+          transform-style: preserve-3d;
+        }
+      }
+      @keyframes reverse-flip {
+        0% {
+          transform: rotateY(180deg);
+          transform-style: preserve-3d;
+          /* transition: transform 0.8s; */
+          /* transform-style: preserve-3d; */
+          /* perspective: 1000px; */
+        }
+        25% {
+          transform: rotateY(90deg);
+          transform-style: preserve-3d;
+          /* backface-visibility: hidden; */
+          /* transform: rotateY(180deg);
+          transform-style: preserve-3d; */
+        }
+        50% {
+          transform: rotateY(0deg);
+          transform-style: preserve-3d;
+        }
+        75% {
+          transform: rotateY(90deg);
+          transform-style: preserve-3d;
+        }
+        100% {
+          transform: rotateY(180deg);
+          transform-style: preserve-3d;
+        }
+      }
+
+      
+
       /* This container is needed to position the front and back side */
       .flip-card-inner {
         position: relative;
@@ -383,8 +442,6 @@ end Contact style
       }
 
       @media screen and (max-width: 960px) {
-        /* #features, */
-        /* #benefits  */
         .home-section {
           height: 100vh;
         }
@@ -1074,27 +1131,10 @@ end Contact style
       justify-content: space-between;
       height: 40%;
     }
-    .how-it-works .benefits-block{
-      display: flex;
-      justify-content: space-between;
-      height: 40%;
-    }
     .how-it-works-center {
       margin: 0 0;
       width: 35%;
       flex-direction: column;
-    }
-    .pc-screen-below {
-      height: 60%;
-    }
-    .mobile-screen-above {
-      display: inline-flex;
-      width: 100%;
-      height: 60%;
-    }
-    .mobile-screen-above iron-image {
-      height: 100%;
-      width: 50%;
     }
     .how-it-works-left {
       width: 32.5%;
@@ -1170,7 +1210,157 @@ end Contact style
     ==========================================================
     */
 
+    .show-flip-hover {
+      -webkit-animation-name: reverse-flip;
+      animation-name: reverse-flip;
+      -webkit-animation-duration: 5s;
+      animation-duration: 5s;
+      -webkit-animation-timing-function: linear;
+      animation-timing-function: linear;
+      -webkit-animation-iteration-count: infinite;
+      animation-iteration-count: infinite;
+      animation-delay: 2s;
+      -webkit-animation-delay: 2s;
+    }
+    .show-flip-hover-reverse {
+      -webkit-animation-name: show-flip;
+      animation-name: show-flip;
+      -webkit-animation-duration: 5s;
+      animation-duration: 5s;
+      -webkit-animation-timing-function: linear;
+      animation-timing-function: linear;
+      -webkit-animation-iteration-count: infinite;
+      animation-iteration-count: infinite;
+      animation-delay: 2s;
+      -webkit-animation-delay: 2s;
+      /* -webkit-animation-direction: reverse;
+      animation-direction: reverse; */
+    }
+    .flip-card:hover .show-flip-hover , .flip-card:hover .show-flip-hover-reverse{
+      -webkit-animation-duration: 0s;
+      animation-duration: 0s;
+      -webkit-animation-iteration-count: infinite;
+      animation-iteration-count: infinite;
+      /* -webkit-animation-play-state:paused;
+      -moz-animation-play-state:paused;
+      -o-animation-play-state:paused;
+      animation-play-state:paused; */
+    }
+
     @media screen and (max-width: 500px) {
+      /* #product {
+        border-top: 4px solid var(--default-artist-color);
+      } */
+      .benefits .block {
+        flex-direction: column;
+        height: 50% !important;
+      }
+      .benefits .benefits-block {
+        flex-direction: column;
+        height: 30% !important;
+      }
+      .benefits-card iron-image {
+        height: 60% !important;
+      }
+      .benefits-card {
+        width: 90% !important;
+        margin-bottom: 6%;
+      }
+    }
+
+    @media screen and (min-height: 650px) and (max-height: 850px) {
+      #benefits {
+        height: 120vh !important;
+      }
+      .benefits .benefits-block{
+        height: 40% !important;
+      }
+    }
+
+    #benefits {
+      background-repeat: no-repeat;
+      height: 100vh;
+    }
+    #benefits .l2t-benefit {
+      --paper-slide-dot: rgba(100, 100, 100, .5);
+      --paper-slide-dot-selected: #0B5DA5;
+      --paper-slide-height: calc(100vh - 234px);
+    }
+    .benefits {
+      margin: 0 5%;
+      flex-direction: column;
+      /* height: 100%; */
+    }
+    .benefits .benefits-block{
+      display: flex;
+      justify-content: space-between;
+      height: 30%;
+    }
+    .benefits-center {
+      margin: 0 0;
+      width: 35%;
+      flex-direction: column;
+    }
+    .benefits-left {
+      width: 32.5%;
+      flex-direction: column;
+    }
+    .benefits-right {
+      width: 32.5%;
+      flex-direction: column;
+    }
+    .benefits iron-image {
+      padding: 10px 30px;
+      float: left;
+    }
+    /* .benefits-right iron-image {
+      padding: 10px 30px;
+      float: right;
+    } */
+    .benefits-card {
+      width: 30%;
+      height: 95%;
+      flex-direction: column;
+      /* display: inline-flex; */
+      /* bounceIn transition */
+      /* -webkit-transform: perspective(1px) translateZ(0);
+      transform: perspective(1px) translateZ(0);
+      box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+      -webkit-transition-duration: 0.5s;
+      transition-duration: 0.5s; */
+    }
+    .benefits-card:hover {
+      /* bounceIn transition */
+      /* -webkit-transform: scale(1.2); */
+      /* transform: scale(1.2); */
+      /* -webkit-transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36); */
+      /* transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);  */
+      /* transform: rotateY(180deg); */
+    }
+    .benefits-card iron-image {
+      height: 50%;
+      width: 50%;
+      margin-top: 0;
+      margin: 0 20% 5% 20% !important;
+    }
+    .benefits-card p {
+      color: black;
+      white-space: normal;
+      padding: 0 0;
+      line-height: 3vh !important;
+      margin: 0;
+      font-size: small;
+      overflow: visible !important;
+    }
+    .benefits-card b {
+      font-size: 1.4rem;
+    }
+    .benefits-card h2 {
+      font-weight: lighter;
+      font-size: x-large;
+    }
+
+    /* @media screen and (max-width: 500px) {
       .benefits {
         display: grid !important;
         width: 90% !important;
@@ -1183,10 +1373,6 @@ end Contact style
     }
 
     #benefits {
-      /* border-top: 4px solid var(--default-project-color); */
-      /* height: fit-content; */
-      /* background: linear-gradient(to bottom, white 17%, transparent 30%) repeat scroll 0 0 , url("../../images/bg3.jpg"); */
-      /* background-size: 100vw; */
       height: 130vh;
     }
 
@@ -1204,9 +1390,6 @@ end Contact style
       width: 100%;
       height: 100%;
       position: absolute;
-      /* background-color: #00000077; */
-      /* background-image: url('../../images/bg3.jpg'); */
-      /* background-position: 50% 0%; */
       background-color: #234033CC;
       top:0; left:0; right:0; bottom:0;
       filter: blur(3px);
@@ -1219,20 +1402,6 @@ end Contact style
       z-index: 1;
     }
 
-    /* .benefits-change-background {
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      background: linear-gradient(to bottom, white 17%, transparent 30%) repeat scroll 0 0 , url("../../images/bg2.jpg");
-      background-size: 100vw;
-      z-index: 2;
-    }
-
-    .benefits:hover .benefits-change-background  {
-      background: linear-gradient(to bottom, white 17%, transparent 30%) repeat scroll 0 0 , url("../../images/bg1.jpg") !important;
-      background-size: 100vw;
-      z-index: 2;
-    } */
 
     .benefits-text {
       position: absolute;
@@ -1272,17 +1441,6 @@ end Contact style
       font-size: 1.7em;
       color: white !important;
     }
-    /* .benefits-card-head {
-      padding: 3%;
-      margin: auto 3% auto 1%;
-      background-color: #00000055;
-      border-radius: 50%;
-    }
-    .benefits-icons {
-      --iron-icon-height: 48px;
-      --iron-icon-width: 48px;
-      color: white;
-    } */
     .benefits-card-content {
       text-align: justify;
     }
@@ -1292,7 +1450,7 @@ end Contact style
     .benefits-information {
       padding: 0 5% 5px 5%;
       font-family: 'Comfortaa', cursive !important;
-    }
+    } */
 
     /*
     ==========================================
